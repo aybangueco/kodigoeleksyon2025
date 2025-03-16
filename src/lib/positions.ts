@@ -1,4 +1,3 @@
-
 export interface Candidate {
   id: string;
   name: string;
@@ -424,7 +423,7 @@ export const positions: Position[] = [
       { id: "pl75", name: "KUSUG TAUSUG", party: "KUSUG TAUSUG" },
       { id: "pl76", name: "DAMAYANG FILIPINO", party: "DAMAYANG FILIPINO MOVEMENT, INCORPORATED" },
       { id: "pl77", name: "MPBL", party: "MAHARLIKANG PILIPINO SA BAGONG LIPUNAN" },
-      { id: "pl78", name: "ANGAT AGRIKULTURA", party: "NGAYON GAWING AKMA AT TAMA" },
+      { id: "pl78", name: "ANGAT AKMA AT TAMA", party: "ANG ATMA AT TAMA" },
       { id: "pl79", name: "KALINGA", party: "ADVOCACY FOR SOCIAL EMPOWERMENT AND NATION" },
       { id: "pl80", name: "BOSES PARTY-LIST", party: "BOSES PARTY-LIST" },
       { id: "pl81", name: "ARANGKADA PILIPINO", party: "ARANGKADA PILIPINO" },
