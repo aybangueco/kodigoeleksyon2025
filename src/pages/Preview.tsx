@@ -49,9 +49,12 @@ const Preview: React.FC = () => {
       return;
     }
     
-    // Set the decrypted data and share link
+    // Set the decrypted data and create a properly formatted share link
     setBallotData(decryptedData);
-    setShareLink(window.location.href);
+    
+    // Ensure we have a path-only URL to avoid domain issues when sharing
+    const sharePath = `/preview?data=${encodeURIComponent(encryptedData)}`;
+    setShareLink(sharePath);
     
     // Simulate loading for smoother transition
     setTimeout(() => setIsLoading(false), 700);
