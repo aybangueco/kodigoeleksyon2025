@@ -33,11 +33,11 @@ const PositionCard = ({
   
   const bgColorClass = position.id === 'senators' ? 'bg-[#e6f5e6]' : 
                        position.id === 'party-list' ? 'bg-[#e6f5e6]' :
-                       position.id === 'vice-president' ? 'bg-[#d1e7e7]' : 'bg-[#e6f5e6]';
+                       position.id === 'vice-mayor-zamboanga' ? 'bg-[#d1e7e7]' : 'bg-[#e6f5e6]';
                        
   const headerBgColorClass = position.id === 'senators' ? 'bg-[#e6f5e6]' : 
                             position.id === 'party-list' ? 'bg-[#e6f5e6]' :
-                            position.id === 'vice-president' ? 'bg-[#d1e7e7]' : 'bg-[#e6f5e6]';
+                            position.id === 'vice-mayor-zamboanga' ? 'bg-[#d1e7e7]' : 'bg-[#e6f5e6]';
       
   return (
     <div className={cn(
@@ -83,22 +83,14 @@ const PositionCard = ({
           {/* Candidates Grid - Using table-like layout for ballot style */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
             {position.candidates.map((candidate, index) => (
-              <div key={candidate.id} className="border border-gray-300 p-2">
-                <div className="flex items-center gap-2">
-                  <div className="flex-shrink-0 w-5 h-5 rounded-full border border-gray-400 flex items-center justify-center">
-                    {positionSelections.includes(candidate.id) && (
-                      <div className="w-3 h-3 rounded-full bg-primary"></div>
-                    )}
-                  </div>
-                  <div className="flex-1">
-                    <div className="flex gap-1">
-                      <span className="font-medium">{index + 1}.</span>
-                      <span className="font-medium">{candidate.name}</span>
-                    </div>
-                    <div className="text-xs text-gray-600">({candidate.party})</div>
-                  </div>
-                </div>
-              </div>
+              <CandidateCard
+                key={candidate.id}
+                candidate={candidate}
+                isSelected={positionSelections.includes(candidate.id)}
+                onSelect={(candidateId) => onCandidateSelect(position.id, candidateId)}
+                selectionMode={position.maxSelections === 1 ? 'single' : 'multiple'}
+                index={index + 1}
+              />
             ))}
           </div>
         </>
