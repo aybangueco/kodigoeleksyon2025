@@ -28,7 +28,7 @@ const Preview = () => {
     
     if (!encryptedData) {
       toast.error('No ballot data found');
-      navigate('/ballot');
+      navigate('/');
       return;
     }
     
@@ -37,7 +37,7 @@ const Preview = () => {
     
     if (!decryptedData) {
       toast.error('Invalid ballot data');
-      navigate('/ballot');
+      navigate('/');
       return;
     }
     
@@ -92,7 +92,7 @@ const Preview = () => {
               variant="ghost"
               size="sm"
               className="mb-4 text-muted-foreground hover:text-foreground"
-              onClick={() => navigate('/ballot')}
+              onClick={() => navigate('/')}
             >
               <ArrowLeft className="mr-2 h-4 w-4" />
               Back to Ballot
@@ -147,7 +147,7 @@ const Preview = () => {
                 <Button
                   variant="outline"
                   size="sm"
-                  onClick={() => navigate('/ballot')}
+                  onClick={() => navigate('/')}
                 >
                   <Edit className="mr-2 h-4 w-4" />
                   Edit Selections
