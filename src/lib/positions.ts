@@ -18,32 +18,6 @@ export interface Position {
 // In a real application, this would come from an API
 export const positions: Position[] = [
   {
-    id: "president",
-    title: "President",
-    description: "The head of state and chief executive of the Philippines.",
-    maxSelections: 1,
-    candidates: [
-      { id: "p1", name: "Juan Dela Cruz", party: "Partido ng Mamamayan" },
-      { id: "p2", name: "Maria Santos", party: "Bagong Pag-asa Party" },
-      { id: "p3", name: "Ricardo Reyes", party: "People's Reform Party" },
-      { id: "p4", name: "Ana Bonifacio", party: "Maunlad na Pilipinas" },
-      { id: "p5", name: "Pedro Magtanggol", party: "Democratic Alliance" },
-    ]
-  },
-  {
-    id: "vice-president",
-    title: "Vice President",
-    description: "The second-highest executive official who can assume the presidency if needed.",
-    maxSelections: 1,
-    candidates: [
-      { id: "vp1", name: "Elena Magsaysay", party: "Partido ng Mamamayan" },
-      { id: "vp2", name: "Ramon Estrada", party: "Bagong Pag-asa Party" },
-      { id: "vp3", name: "Victoria Laurel", party: "People's Reform Party" },
-      { id: "vp4", name: "Jaime Quezon", party: "Maunlad na Pilipinas" },
-      { id: "vp5", name: "Sofia Roxas", party: "Democratic Alliance" },
-    ]
-  },
-  {
     id: "senators",
     title: "Senator",
     description: "Members of the Senate, the upper chamber of Congress.",
