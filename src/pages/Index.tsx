@@ -1,3 +1,4 @@
+
 import { useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
@@ -426,27 +427,6 @@ const Index = () => {
               Get Started
             </Button>
           </div>
-        </div>
-      </section>
-      
-      {/* Final CTA Section */}
-      <section className="py-20 px-6 bg-gradient-to-r from-primary/90 to-primary">
-        <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready for the 2025 Elections?
-          </h2>
-          <p className="text-white/80 mb-8 max-w-xl mx-auto">
-            Create your personalized election kodigo now and be prepared when election day comes.
-          </p>
-          <Button 
-            variant="secondary"
-            size="lg"
-            className="transition-all duration-300 transform hover:translate-y-[-2px] active:translate-y-0"
-            onClick={() => setShowBallot(true)}
-          >
-            Create Your Kodigo
-            <ArrowRight className="ml-2 h-4 w-4" />
-          </Button>
         </div>
       </section>
       
