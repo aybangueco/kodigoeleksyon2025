@@ -26,12 +26,12 @@ export const Header = () => {
         to="/" 
         className="flex items-center gap-2 transition-opacity duration-300 hover:opacity-80"
       >
-        <div className="relative">
-          <div className="w-8 h-8 flex items-center justify-center">
-            <div className="w-6 h-6 rounded-full bg-ph-blue absolute animate-pulse-subtle"></div>
-            <div className="w-6 h-6 rounded-full bg-ph-red absolute animate-pulse-subtle" style={{ animationDelay: '0.5s' }}></div>
-            <div className="w-6 h-6 rounded-full bg-ph-yellow absolute animate-pulse-subtle" style={{ animationDelay: '1s' }}></div>
-          </div>
+        <div className="w-8 h-6 overflow-hidden">
+          <img 
+            src="/lovable-uploads/philippines-flag.png" 
+            alt="Philippine Flag" 
+            className="w-full h-full object-cover"
+          />
         </div>
         <span className="font-bold text-lg tracking-tight">KODIGO ELEKSYON 2025</span>
       </Link>
