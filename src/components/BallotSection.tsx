@@ -9,6 +9,7 @@ import BallotHeader from './ballot/BallotHeader';
 import ProgressBar from './ballot/ProgressBar';
 import PositionList from './ballot/PositionList';
 import BallotActions from './ballot/BallotActions';
+import useAnalytics from '@/hooks/useAnalytics';
 
 interface BallotSectionProps {
   selectedCandidates: Record<string, string[]>;
@@ -19,6 +20,7 @@ const BallotSection = ({ selectedCandidates, setSelectedCandidates }: BallotSect
   const navigate = useNavigate();
   const ballotRef = useRef<HTMLDivElement>(null);
   const [isLoading, setIsLoading] = useState(true);
+  const { trackEvent } = useAnalytics();
 
   useEffect(() => {
     setIsLoading(true);
@@ -47,6 +49,11 @@ const BallotSection = ({ selectedCandidates, setSelectedCandidates }: BallotSect
           }
         }
       }
+
+      // Track candidate selection event
+      const candidate = position.candidates.find(c => c.id === candidateId);
+      const action = newSelections.includes(candidateId) ? 'select' : 'deselect';
+      trackEvent('ballot', `${action}_candidate`, `${position.title} - ${candidate?.name || candidateId}`);
       
       return {
         ...prev,
@@ -57,10 +64,20 @@ const BallotSection = ({ selectedCandidates, setSelectedCandidates }: BallotSect
   
   const handlePreview = () => {
     const encryptedData = encryptBallot(selectedCandidates);
+    
+    // Track preview event
+    const totalSelections = Object.values(selectedCandidates).reduce(
+      (sum, selections) => sum + selections.length, 0
+    );
+    trackEvent('ballot', 'preview_ballot', 'Generate preview', totalSelections);
+    
     navigate(`/preview?data=${encryptedData}`);
   };
   
   const handleClearSelections = () => {
+    // Track clear selections event
+    trackEvent('ballot', 'clear_selections', 'Clear all selections');
+    
     setSelectedCandidates({});
   };
   

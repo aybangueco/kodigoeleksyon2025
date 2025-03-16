@@ -12,6 +12,7 @@ import Ballot from "./pages/Ballot";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
 import Header from "./components/Header";
+import AnalyticsTracker from "./components/analytics/AnalyticsTracker";
 import { Alert, AlertDescription, AlertTitle } from "./components/ui/alert";
 import { AlertTriangle } from "lucide-react";
 
@@ -47,6 +48,7 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
+          <AnalyticsTracker />
           <Routes>
             <Route path="/" element={<Layout><Index /></Layout>} />
             <Route path="/ballot" element={<Layout><Ballot /></Layout>} />
