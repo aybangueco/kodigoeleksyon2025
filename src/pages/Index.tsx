@@ -1,4 +1,3 @@
-
 import { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import Header from '@/components/Header';
@@ -44,24 +43,27 @@ const Index = () => {
     <div className="min-h-screen flex flex-col bg-background">
       <Header />
       
+      {/* Disclaimer Alert - Moved to top */}
+      <div className="container mx-auto max-w-6xl px-6 mt-24">
+        <Alert className="border-yellow-200 bg-yellow-50">
+          <AlertTriangle className="h-4 w-4 text-yellow-800" />
+          <AlertTitle className="text-yellow-800">Important Note</AlertTitle>
+          <AlertDescription className="text-yellow-700">
+            This tool is currently available for <strong>Zamboanga City</strong> only. 
+            If you want something similar for your city, please email{' '}
+            <a href="mailto:aljhoenilw@gmail.com" className="font-medium underline hover:text-yellow-900">
+              aljhoenilw@gmail.com
+            </a>
+          </AlertDescription>
+        </Alert>
+      </div>
+      
       {/* Hero Section */}
       <section 
         ref={heroRef}
-        className="pt-32 pb-20 px-6"
+        className="pt-16 pb-20 px-6"
       >
         <div className="container mx-auto max-w-6xl">
-          <Alert className="mb-8 border-yellow-200 bg-yellow-50">
-            <AlertTriangle className="h-4 w-4 text-yellow-800" />
-            <AlertTitle className="text-yellow-800">Important Note</AlertTitle>
-            <AlertDescription className="text-yellow-700">
-              This tool is currently available for <strong>Zamboanga City</strong> only. 
-              If you want something similar for your city, please email{' '}
-              <a href="mailto:aljhoenilw@gmail.com" className="font-medium underline hover:text-yellow-900">
-                aljhoenilw@gmail.com
-              </a>
-            </AlertDescription>
-          </Alert>
-
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="opacity-0" style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}>
               <div className="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
