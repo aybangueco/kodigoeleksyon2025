@@ -49,12 +49,17 @@ const Preview: React.FC = () => {
       return;
     }
     
-    // Set the decrypted data and create a properly formatted share link
+    // Set the decrypted data
     setBallotData(decryptedData);
     
-    // Ensure we have a path-only URL to avoid domain issues when sharing
-    const sharePath = `/preview?data=${encodeURIComponent(encryptedData)}`;
-    setShareLink(sharePath);
+    // Create a shareable URL with absolute path for Netlify deployment
+    const baseUrl = import.meta.env.PROD 
+      ? window.location.origin 
+      : 'https://kodigoeleksyon2025.netlify.app';
+    
+    // Ensure we have a properly formatted absolute URL with the correct domain
+    const fullShareUrl = `${baseUrl}/preview?data=${encodeURIComponent(encryptedData)}`;
+    setShareLink(fullShareUrl);
     
     // Simulate loading for smoother transition
     setTimeout(() => setIsLoading(false), 700);

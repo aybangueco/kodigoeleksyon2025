@@ -21,20 +21,13 @@ const ShareSection: React.FC<ShareSectionProps> = ({ shareLink }) => {
    */
   const handleCopyLink = async (): Promise<void> => {
     try {
-      // Make sure the URL is absolute with proper origin to avoid 404
-      const url = new URL(shareLink, window.location.origin).toString();
-      await navigator.clipboard.writeText(url);
+      await navigator.clipboard.writeText(shareLink);
       toast.success('Link copied to clipboard');
     } catch (error) {
       toast.error('Failed to copy link');
       console.error('Failed to copy link:', error);
     }
   };
-
-  // Ensure the shareLink has the proper origin
-  const fullShareLink = shareLink.startsWith('http') 
-    ? shareLink 
-    : `${window.location.origin}${shareLink}`;
 
   return (
     <div className="mb-8 p-6 rounded-xl border border-border bg-card">
@@ -47,7 +40,7 @@ const ShareSection: React.FC<ShareSectionProps> = ({ shareLink }) => {
           </div>
           <input 
             type="text" 
-            value={fullShareLink}
+            value={shareLink}
             className="block w-full pl-10 pr-4 py-2 rounded-lg border border-border bg-background focus:ring-primary focus:border-primary text-sm"
             readOnly
           />
