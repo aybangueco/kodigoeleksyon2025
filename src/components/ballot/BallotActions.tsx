@@ -2,6 +2,7 @@
 import { ArrowRight, Printer } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { toast } from 'sonner';
+import html2canvas from 'html2canvas';
 
 interface BallotActionsProps {
   hasSelections: boolean;
@@ -10,22 +11,86 @@ interface BallotActionsProps {
 }
 
 const BallotActions = ({ hasSelections, onClear, onPreview }: BallotActionsProps) => {
-  const handlePrint = () => {
-    // Add a class to the document body before printing
-    document.body.classList.add('is-printing');
+  const handlePrint = async () => {
+    toast.success("Preparing your Kodigo for printing...");
     
-    // Wait a moment for styles to apply
-    setTimeout(() => {
-      // Trigger print
-      window.print();
+    try {
+      // Find the ballot container
+      const ballotElement = document.querySelector('.container.mx-auto.max-w-5xl') as HTMLElement;
       
-      // Remove the class after print dialog closes
-      setTimeout(() => {
-        document.body.classList.remove('is-printing');
-      }, 500);
-    }, 100);
-    
-    toast.success("Preparing your Kodigo for printing");
+      if (!ballotElement) {
+        toast.error("Could not find ballot element to print");
+        return;
+      }
+      
+      // Create a canvas from the ballot element
+      const canvas = await html2canvas(ballotElement, {
+        scale: 2, // Higher resolution
+        useCORS: true,
+        backgroundColor: '#ffffff',
+        logging: false,
+      });
+      
+      // Convert canvas to image data URL
+      const imageData = canvas.toDataURL('image/png');
+      
+      // Open a new window with just the image
+      const printWindow = window.open('', '_blank');
+      
+      if (!printWindow) {
+        toast.error("Could not open print window. Please check your popup settings.");
+        return;
+      }
+      
+      // Write HTML content to the new window
+      printWindow.document.write(`
+        <html>
+          <head>
+            <title>Kodigo Eleksyon 2025</title>
+            <style>
+              body {
+                margin: 0;
+                padding: 20px;
+                display: flex;
+                justify-content: center;
+              }
+              img {
+                max-width: 100%;
+                height: auto;
+                box-shadow: 0 0 10px rgba(0,0,0,0.1);
+              }
+              @media print {
+                body {
+                  padding: 0;
+                }
+                img {
+                  max-width: 100%;
+                  box-shadow: none;
+                }
+              }
+            </style>
+          </head>
+          <body>
+            <img src="${imageData}" alt="Kodigo Ballot" />
+            <script>
+              // Automatically print once image is loaded
+              window.onload = () => {
+                setTimeout(() => {
+                  window.print();
+                  // Close the window after print dialog is closed (optional)
+                  // window.close();
+                }, 500);
+              };
+            </script>
+          </body>
+        </html>
+      `);
+      
+      printWindow.document.close();
+    } catch (error) {
+      console.error("Error generating printable image:", error);
+      toast.error("Failed to generate printable image. Please try again.");
+    }
   };
 
   return (
