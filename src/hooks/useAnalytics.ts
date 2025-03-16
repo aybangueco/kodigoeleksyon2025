@@ -1,21 +1,9 @@
 
 /**
- * Custom hook for analytics tracking
+ * Custom hook for analytics tracking with PostHog
  * Provides methods to track page views and events
  */
-
-// Window interface extension to include Google Analytics
-interface WindowWithAnalytics extends Window {
-  gtag?: (
-    command: string,
-    action: string,
-    params?: {
-      [key: string]: any;
-    }
-  ) => void;
-}
-
-declare const window: WindowWithAnalytics;
+import posthog from 'posthog-js';
 
 /**
  * Hook for tracking analytics events and page views
@@ -24,20 +12,20 @@ const useAnalytics = () => {
   /**
    * Track a page view
    * @param path - The path of the page being viewed
-   * @param title - The title of the page being viewed
+   * @param title - Optional title of the page being viewed
    */
   const trackPageView = (path: string, title?: string) => {
-    if (!window.gtag) {
-      console.warn('Google Analytics not loaded');
-      return;
+    try {
+      // PostHog automatically captures page views, but we can force a capture with properties
+      posthog.capture('$pageview', {
+        $current_url: path,
+        page_title: title
+      });
+      
+      console.log(`📊 Analytics: Page view tracked - ${path}`);
+    } catch (error) {
+      console.warn('PostHog analytics error:', error);
     }
-
-    window.gtag('config', 'G-MEASUREMENT_ID', {
-      page_path: path,
-      page_title: title
-    });
-
-    console.log(`📊 Analytics: Page view tracked - ${path}`);
   };
 
   /**
@@ -53,18 +41,19 @@ const useAnalytics = () => {
     label?: string,
     value?: number
   ) => {
-    if (!window.gtag) {
-      console.warn('Google Analytics not loaded');
-      return;
+    try {
+      posthog.capture(action, {
+        category,
+        label,
+        value,
+        // Include the full event name in properties for easier querying
+        event_name: `${category}_${action}${label ? `_${label}` : ''}`
+      });
+      
+      console.log(`📊 Analytics: Event tracked - ${category} / ${action} ${label ? `/ ${label}` : ''}`);
+    } catch (error) {
+      console.warn('PostHog analytics error:', error);
     }
-
-    window.gtag('event', action, {
-      event_category: category,
-      event_label: label,
-      value: value
-    });
-
-    console.log(`📊 Analytics: Event tracked - ${category} / ${action} ${label ? `/ ${label}` : ''}`);
   };
 
   return {

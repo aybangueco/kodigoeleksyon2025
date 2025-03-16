@@ -1,7 +1,9 @@
+
 import { ArrowRight, Printer } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { toast } from 'sonner';
 import html2canvas from 'html2canvas';
+import useAnalytics from '@/hooks/useAnalytics';
 
 interface BallotActionsProps {
   hasSelections: boolean;
@@ -10,8 +12,13 @@ interface BallotActionsProps {
 }
 
 const BallotActions = ({ hasSelections, onClear, onPreview }: BallotActionsProps) => {
+  const { trackEvent } = useAnalytics();
+  
   const handlePrint = async () => {
     toast.success("Preparing your Kodigo for printing...");
+    
+    // Track print event
+    trackEvent('ballot', 'print_ballot', 'Print Kodigo');
     
     try {
       // Find the ballot container
