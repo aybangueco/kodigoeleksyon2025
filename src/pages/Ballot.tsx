@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'sonner';
-import { ArrowLeft, ArrowRight, Save } from 'lucide-react';
+import { ArrowRight, Save } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -107,16 +107,6 @@ const Ballot = () => {
         <div className="container mx-auto max-w-6xl">
           {/* Page Header */}
           <div className="mb-10">
-            <Button
-              variant="ghost"
-              size="sm"
-              className="mb-4 text-muted-foreground hover:text-foreground"
-              onClick={() => navigate('/')}
-            >
-              <ArrowLeft className="mr-2 h-4 w-4" />
-              Back to Home
-            </Button>
-            
             <h1 className="text-3xl md:text-4xl font-bold mb-4">Create Your Kodigo</h1>
             <p className="text-muted-foreground max-w-2xl">
               Select your preferred candidates for each position. Your selections are saved automatically
