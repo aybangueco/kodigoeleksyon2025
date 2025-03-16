@@ -16,7 +16,7 @@ const PreviewHeader: React.FC = () => {
         variant="ghost"
         size="sm"
         className="mb-4 text-muted-foreground hover:text-foreground"
-        onClick={() => navigate('/')}
+        onClick={() => navigate('/ballot')}
       >
         <ArrowLeft className="mr-2 h-4 w-4" />
         Back to Ballot
