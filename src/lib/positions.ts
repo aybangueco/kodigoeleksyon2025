@@ -1,4 +1,3 @@
-
 export interface Candidate {
   id: string;
   name: string;
@@ -23,31 +22,30 @@ export const positions: Position[] = [
     description: "Members of the Senate, the upper chamber of Congress.",
     maxSelections: 12,
     candidates: [
-      { id: "s1", name: "Abalos, Benhur", party: "PPP" },
-      { id: "s2", name: "Adonis, Jerome", party: "MKBYN" },
-      { id: "s3", name: "Amad, Wilson", party: "IND" },
-      { id: "s4", name: "Andamo, Nars Altyn", party: "MKBYN" },
-      { id: "s5", name: "Aquino, Bam", party: "KNP" },
-      { id: "s6", name: "Arambulo, Ronnel", party: "MKBYN" },
-      { id: "s7", name: "Arellano, Ernesto", party: "KTPNAN" },
-      { id: "s8", name: "Ballon, Roberto", party: "IND" },
-      { id: "s9", name: "Binay, Abby", party: "NPC" },
-      { id: "s10", name: "Bondoc, Jimmy", party: "PDPLBN" },
-      { id: "s11", name: "Bong Revilla, Ramon", party: "BLAKAS" },
-      { id: "s12", name: "Bosita, Colonel", party: "IND" },
-      { id: "s13", name: "Brosas, Arlene", party: "MKBYN" },
-      { id: "s14", name: "Cabonegro, Roy", party: "PPP" },
-      { id: "s15", name: "Capuyan, Allen", party: "PPP" },
-      { id: "s16", name: "Casiño, Teddy", party: "MKBYN" },
-      { id: "s17", name: "Castro, Teacher France", party: "MKBYN" },
-      { id: "s18", name: "Cayetano, Pia", party: "NP" },
-      { id: "s19", name: "D'Angelo, David", party: "BUNYOG" },
-      { id: "s20", name: "De Alba, Attorney", party: "IND" },
-      { id: "s21", name: "De Guzman, Ka Leody", party: "PLM" },
-      { id: "s22", name: "Dela Rosa, Bato", party: "PDP" },
-      { id: "s23", name: "Doringo, Nanay Mimi", party: "IND" },
-      { id: "s24", name: "Escobal, Arnel", party: "PM" },
-      // Additional candidates from the image would be added here
+      { id: "s1", name: "ABALOS, BENHUR", party: "PFP" },
+      { id: "s2", name: "ACERON, JOVILYN", party: "IND" },
+      { id: "s3", name: "ACLAN, KUYA", party: "IND" },
+      { id: "s4", name: "ACOPIADO, MERCEDITA", party: "IND" },
+      { id: "s5", name: "ADONIS, JEROME", party: "MKBYN" },
+      { id: "s6", name: "ADORABLE, ABEL", party: "IND" },
+      { id: "s7", name: "ADVINCULA, DINGBICOL", party: "IND" },
+      { id: "s8", name: "ADVINCULA, PETER JOEMEL", party: "IND" },
+      { id: "s9", name: "AGAD, ROBERT", party: "IND" },
+      { id: "s10", name: "AGUILAR, CEZ", party: "WPP" },
+      { id: "s11", name: "ALCANTARA, ERIC", party: "IND" },
+      { id: "s12", name: "AMAD, WILSON", party: "IND" },
+      { id: "s13", name: "AMIR HUSSIN, SALIPADA", party: "PM" },
+      { id: "s14", name: "ANCAJAS, NELSON", party: "IND" },
+      { id: "s15", name: "ANDAMO, NARS ALYN", party: "MKBYN" },
+      { id: "s16", name: "ANDRADA, KUYA MANNY", party: "IND" },
+      { id: "s17", name: "ANDRINO, BOBIE", party: "IND" },
+      { id: "s18", name: "APOLINARIO, JOEL", party: "PM" },
+      { id: "s19", name: "AQUINO, BAM", party: "KNP" },
+      { id: "s20", name: "AQUINO, PRIMO", party: "IND" },
+      { id: "s21", name: "ARAMBULO, RONNEL", party: "MKBYN" },
+      { id: "s22", name: "ARCEGA, GERALD", party: "PM" },
+      { id: "s23", name: "ARELLANO, ERNESTO", party: "KTPNAN" },
+      { id: "s24", name: "ARES, JERSON", party: "IND" },
     ]
   },
   {
@@ -105,7 +103,6 @@ export const positions: Position[] = [
       { id: "sp10", name: "Leonardo, Angie", party: "AKSYON" },
       { id: "sp11", name: "Lipata, Buddy", party: "IND" },
       { id: "sp12", name: "Malupitan, Enteng", party: "NP" },
-      // Additional candidates from the image would be added here
     ]
   },
   {
