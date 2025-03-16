@@ -18,7 +18,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      <div className="container mx-auto max-w-6xl px-6 mt-24 mb-4">
+      <div className="container mx-auto max-w-6xl px-6 mt-24 mb-2">
         <Alert className="border-yellow-200 bg-yellow-50">
           <AlertTriangle className="h-4 w-4 text-yellow-800" />
           <AlertTitle className="text-yellow-800">Important Note</AlertTitle>

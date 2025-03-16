@@ -71,7 +71,7 @@ const BallotSection = ({ selectedCandidates, setSelectedCandidates }: BallotSect
   return (
     <section 
       ref={ballotRef}
-      className="py-12 px-6 bg-white mt-16"
+      className="py-12 px-6 bg-white mt-4"
     >
       <div className="container mx-auto max-w-5xl">
         <BallotHeader />
