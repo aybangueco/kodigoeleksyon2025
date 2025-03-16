@@ -17,6 +17,7 @@ const AnalyticsTracker = () => {
     trackPageView(location.pathname);
     
     // Update PostHog's internal URL for proper attribution
+    // This is recommended in the PostHog React documentation
     posthog.register({
       current_url: window.location.href,
       current_path: location.pathname

@@ -4,6 +4,7 @@
  * Provides methods to track page views and events
  */
 import posthog from 'posthog-js';
+import { useCallback } from 'react';
 
 /**
  * Hook for tracking analytics events and page views
@@ -14,19 +15,21 @@ const useAnalytics = () => {
    * @param path - The path of the page being viewed
    * @param title - Optional title of the page being viewed
    */
-  const trackPageView = (path: string, title?: string) => {
+  const trackPageView = useCallback((path: string, title?: string) => {
     try {
-      // PostHog automatically captures page views, but we can force a capture with properties
+      // Capture page views with properties
       posthog.capture('$pageview', {
-        $current_url: path,
-        page_title: title
+        $current_url: window.location.origin + path,
+        page_title: title || document.title
       });
       
-      console.log(`📊 Analytics: Page view tracked - ${path}`);
+      if (import.meta.env.DEV) {
+        console.log(`📊 Analytics: Page view tracked - ${path}`);
+      }
     } catch (error) {
       console.warn('PostHog analytics error:', error);
     }
-  };
+  }, []);
 
   /**
    * Track a custom event
@@ -35,7 +38,7 @@ const useAnalytics = () => {
    * @param label - Optional label for the event
    * @param value - Optional value for the event
    */
-  const trackEvent = (
+  const trackEvent = useCallback((
     category: string,
     action: string,
     label?: string,
@@ -50,11 +53,13 @@ const useAnalytics = () => {
         event_name: `${category}_${action}${label ? `_${label}` : ''}`
       });
       
-      console.log(`📊 Analytics: Event tracked - ${category} / ${action} ${label ? `/ ${label}` : ''}`);
+      if (import.meta.env.DEV) {
+        console.log(`📊 Analytics: Event tracked - ${category} / ${action} ${label ? `/ ${label}` : ''}`);
+      }
     } catch (error) {
       console.warn('PostHog analytics error:', error);
     }
-  };
+  }, []);
 
   return {
     trackPageView,
