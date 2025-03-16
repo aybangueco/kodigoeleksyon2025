@@ -26,21 +26,21 @@ const Index = () => {
         <title>Kodigo Eleksyon 2025 - Ballot Builder for Zamboanga City</title>
         <meta name="description" content="Create your personalized Kodigo ballot for the 2025 Philippine elections in Zamboanga City. Make the voting process faster and easier." />
         <meta name="keywords" content="kodigo, eleksyon, 2025, philippines elections, ballot builder, voting guide, zamboanga city" />
-        <link rel="canonical" href="https://eleksyon2025ballot.netlify.app/" />
+        <link rel="canonical" href="https://kodigoeleksyon2025.netlify.app/" />
         
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://eleksyon2025ballot.netlify.app/" />
+        <meta property="og:url" content="https://kodigoeleksyon2025.netlify.app/" />
         <meta property="og:title" content="Kodigo Eleksyon 2025 - Ballot Builder for Zamboanga City" />
         <meta property="og:description" content="Create your personalized Kodigo ballot for the 2025 Philippine elections in Zamboanga City. Make the voting process faster and easier." />
-        <meta property="og:image" content="https://eleksyon2025ballot.netlify.app/og-image.png" />
+        <meta property="og:image" content="https://kodigoeleksyon2025.netlify.app/og-image.png" />
         
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:url" content="https://eleksyon2025ballot.netlify.app/" />
+        <meta name="twitter:url" content="https://kodigoeleksyon2025.netlify.app/" />
         <meta name="twitter:title" content="Kodigo Eleksyon 2025 - Ballot Builder for Zamboanga City" />
         <meta name="twitter:description" content="Create your personalized Kodigo ballot for the 2025 Philippine elections in Zamboanga City." />
-        <meta name="twitter:image" content="https://eleksyon2025ballot.netlify.app/og-image.png" />
+        <meta name="twitter:image" content="https://kodigoeleksyon2025.netlify.app/og-image.png" />
         
         {/* Structured Data */}
         <script type="application/ld+json">
@@ -49,7 +49,7 @@ const Index = () => {
             "@type": "WebApplication",
             "name": "Kodigo Eleksyon 2025",
             "description": "Create your personalized Kodigo ballot for the 2025 Philippine elections in Zamboanga City.",
-            "url": "https://eleksyon2025ballot.netlify.app",
+            "url": "https://kodigoeleksyon2025.netlify.app",
             "applicationCategory": "UtilityApplication",
             "operatingSystem": "Web",
             "offers": {
