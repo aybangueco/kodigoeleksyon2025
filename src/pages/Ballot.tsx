@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'sonner';
@@ -11,7 +10,7 @@ import { positions } from '@/lib/positions';
 import { encryptBallot } from '@/lib/encryption';
 import useSessionStorage from '@/lib/useSessionStorage';
 import { Button } from '@/components/ui/button';
-import CandidateCard from './components/CandidateCard';
+import CandidateCard from '@/components/CandidateCard';
 
 const Ballot = () => {
   const navigate = useNavigate();
@@ -24,7 +23,6 @@ const Ballot = () => {
   const [completedPositions, setCompletedPositions] = useState<Set<string>>(new Set());
   const [progress, setProgress] = useState(0);
 
-  // Calculate completed positions and progress
   useEffect(() => {
     setIsLoading(true);
     setTimeout(() => setIsLoading(false), 500); // Simulate loading for smoother transition
@@ -38,19 +36,16 @@ const Ballot = () => {
         completed.add(position.id);
         filledCount++;
       } else if (selected.length > 0) {
-        // Partial selection also counts towards progress
         filledCount += selected.length / position.maxSelections;
       }
     });
     
     setCompletedPositions(completed);
     
-    // Calculate progress percentage (0-100)
     const totalPositions = positions.length;
     setProgress(Math.round((filledCount / totalPositions) * 100));
   }, [selectedCandidates]);
   
-  // Handle candidate selection
   const handleCandidateSelect = (positionId: string, candidateId: string) => {
     setSelectedCandidates(prev => {
       const position = positions.find(p => p.id === positionId);
@@ -59,28 +54,21 @@ const Ballot = () => {
       const currentSelections = prev[positionId] || [];
       let newSelections: string[];
       
-      // If single selection position (maxSelections === 1)
       if (position.maxSelections === 1) {
-        // Toggle selection
         newSelections = currentSelections.includes(candidateId) ? [] : [candidateId];
       } else {
-        // Multiple selection position
         if (currentSelections.includes(candidateId)) {
-          // Remove if already selected
           newSelections = currentSelections.filter(id => id !== candidateId);
         } else {
-          // Add if not at max limit yet
           if (currentSelections.length < position.maxSelections) {
             newSelections = [...currentSelections, candidateId];
           } else {
-            // At limit, show a toast and don't change
             toast.warning(`You can only select ${position.maxSelections} candidates for ${position.title}`);
             return prev;
           }
         }
       }
       
-      // Update the state with new selections
       return {
         ...prev,
         [positionId]: newSelections
@@ -88,14 +76,11 @@ const Ballot = () => {
     });
   };
   
-  // Handle preview navigation
   const handlePreview = () => {
-    // Generate encrypted ballot data and navigate to preview page
     const encryptedData = encryptBallot(selectedCandidates);
     navigate(`/preview?data=${encryptedData}`);
   };
   
-  // Check if any candidates are selected
   const hasSelections = Object.values(selectedCandidates).some(
     selections => selections.length > 0
   );
@@ -106,7 +91,6 @@ const Ballot = () => {
       
       <main className="flex-1 pt-24 pb-16 px-4 transition-opacity duration-500 ease-in-out">
         <div className="container mx-auto max-w-5xl">
-          {/* Page Header */}
           <div className="mb-6">
             <h1 className="text-2xl md:text-3xl font-bold mb-2 text-center">KODIGO ELEKSYON 2025</h1>
             <p className="text-center text-gray-600 max-w-2xl mx-auto text-sm">
@@ -115,7 +99,6 @@ const Ballot = () => {
             </p>
           </div>
           
-          {/* Progress Indicator */}
           <div className="mb-6 bg-white p-4 rounded-lg border border-gray-300">
             <div className="flex items-center justify-between mb-2">
               <h2 className="text-base font-medium">Your Progress</h2>
@@ -134,12 +117,10 @@ const Ballot = () => {
             </div>
           </div>
           
-          {/* Ballot Form - Traditional Kodigo Design */}
           <div className={cn(
             "transition-opacity duration-500 ease-in-out border-2 border-black print:border",
             isLoading ? "opacity-0" : "opacity-100"
           )}>
-            {/* Display the positions with candidates in a ballot format */}
             <div className="bg-white">
               {positions.map(position => (
                 <div key={position.id} className="mb-0 last:mb-0">
@@ -187,7 +168,6 @@ const Ballot = () => {
             </div>
           </div>
           
-          {/* Action Buttons */}
           <div className="mt-6 flex flex-col sm:flex-row gap-4 justify-between">
             <Button
               variant="outline"
