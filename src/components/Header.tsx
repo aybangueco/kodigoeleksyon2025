@@ -1,6 +1,6 @@
 
 import { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { cn } from '@/lib/utils';
 
 export const Header = () => {
@@ -18,7 +18,7 @@ export const Header = () => {
   return (
     <header 
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out px-6 py-4 flex items-center justify-between",
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out px-6 py-4 flex items-center justify-between no-print",
         scrolled ? "bg-white/80 backdrop-blur-md shadow-sm" : "bg-transparent"
       )}
     >
@@ -33,12 +33,12 @@ export const Header = () => {
             <div className="w-6 h-6 rounded-full bg-ph-yellow absolute animate-pulse-subtle" style={{ animationDelay: '1s' }}></div>
           </div>
         </div>
-        <span className="font-semibold text-lg tracking-tight">Kodigo 2025</span>
+        <span className="font-bold text-lg tracking-tight">KODIGO ELEKSYON 2025</span>
       </Link>
       
       <div className="flex items-center gap-4">
-        <h2 className="text-lg font-medium text-muted-foreground hidden md:block">
-          Create Your Election Kodigo
+        <h2 className="text-sm font-medium text-gray-600 hidden md:block">
+          Official Sample Ballot Builder
         </h2>
       </div>
     </header>
