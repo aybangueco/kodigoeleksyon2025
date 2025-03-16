@@ -26,13 +26,17 @@ export const Header = () => {
         to="/" 
         className="flex items-center gap-2 transition-opacity duration-300 hover:opacity-80"
       >
-        <div className="w-8 h-6 overflow-hidden">
-          {/* Using an SVG representation of the Philippine flag since the image is broken */}
+        <div className="w-8 h-6 overflow-hidden rounded-sm">
+          {/* Philippines flag using Tailwind colors */}
           <div className="relative w-full h-full">
-            <div className="absolute inset-0 bg-blue-700" style={{ clipPath: 'polygon(0 0, 100% 0, 100% 50%, 0 50%)' }}></div>
-            <div className="absolute inset-0 bg-red-600" style={{ clipPath: 'polygon(0 50%, 100% 50%, 100% 100%, 0 100%)' }}></div>
+            <div className="absolute inset-0 bg-ph-blue" style={{ clipPath: 'polygon(0 0, 100% 0, 100% 50%, 0 50%)' }}></div>
+            <div className="absolute inset-0 bg-ph-red" style={{ clipPath: 'polygon(0 50%, 100% 50%, 100% 100%, 0 100%)' }}></div>
             <div className="absolute left-0 top-0 w-1/3 h-full flex items-center justify-center">
-              <div className="w-3 h-3 transform rotate-45 bg-yellow-400"></div>
+              <div className="w-4 h-4 transform rotate-45 bg-ph-yellow flex items-center justify-center">
+                <div className="absolute w-1 h-1 bg-ph-yellow rounded-full" style={{ top: '0.5px', left: '0.5px' }}></div>
+                <div className="absolute w-1 h-1 bg-ph-yellow rounded-full" style={{ top: '0.5px', right: '0.5px' }}></div>
+                <div className="absolute w-1 h-1 bg-ph-yellow rounded-full" style={{ bottom: '0.5px', left: '0.5px' }}></div>
+              </div>
             </div>
           </div>
         </div>
