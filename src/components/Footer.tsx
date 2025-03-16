@@ -43,17 +43,6 @@ const Footer = () => {
               do not endorse any particular candidate. Candidate information is based 
               on publicly available data.
             </p>
-            <div className="mt-4 p-3 bg-yellow-50 border border-yellow-200 rounded-md">
-              <p className="text-sm font-medium text-yellow-800">
-                Currently available for Zamboanga City only.
-              </p>
-              <p className="text-xs text-yellow-700 mt-1">
-                If you want something similar for your city, please email: 
-                <a href="mailto:aljhoenilw@gmail.com" className="font-medium underline ml-1 hover:text-yellow-900">
-                  aljhoenilw@gmail.com
-                </a>
-              </p>
-            </div>
           </div>
         </div>
         
