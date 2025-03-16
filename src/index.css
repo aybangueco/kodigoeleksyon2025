@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -189,9 +190,20 @@
     margin: 0 !important;
   }
   
-  /* Remove backgrounds for better printing */
-  .print-no-bg {
-    background-color: transparent !important;
+  /* Stronger print styles for selections */
+  .print\:bg-gray-300,
+  .print\:bg-gray-200, 
+  .print\:bg-gray-100 {
+    background-color: #d1d5db !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  
+  /* Stronger print styles for selection dots */
+  .print\:bg-black {
+    background-color: #000 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
   }
   
   /* Adjust font sizes for print */
@@ -216,6 +228,12 @@
   .border {
     border-width: 1px !important;
     border-color: black !important;
+  }
+  
+  /* Force background colors to print */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
   }
 }
 

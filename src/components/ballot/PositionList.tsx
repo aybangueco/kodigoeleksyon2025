@@ -39,7 +39,7 @@ const PositionList = ({ selectedCandidates, onCandidateSelect, isLoading }: Posi
                       key={candidate.id} 
                       className={cn(
                         "border border-gray-400 p-2 cursor-pointer hover:bg-gray-50",
-                        isSelected && "bg-gray-100 print:bg-gray-200"
+                        isSelected ? "bg-gray-100 !print:bg-gray-300" : ""
                       )}
                       onClick={() => onCandidateSelect(position.id, candidate.id)}
                     >

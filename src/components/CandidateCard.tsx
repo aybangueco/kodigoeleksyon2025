@@ -21,7 +21,7 @@ const CandidateCard = ({
     <div
       className={cn(
         "border border-gray-300 p-2 hover:bg-gray-50 cursor-pointer",
-        isSelected && "bg-gray-100 print:bg-gray-200"
+        isSelected ? "bg-gray-100 !print:bg-gray-300" : ""
       )}
       onClick={() => onSelect(candidate.id)}
     >
