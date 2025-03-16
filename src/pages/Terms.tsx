@@ -9,7 +9,7 @@ const Terms = () => {
       <Helmet>
         <title>Terms of Use - Kodigo Eleksyon 2025</title>
         <meta name="description" content="Terms of use for the Kodigo Eleksyon 2025 ballot builder application." />
-        <link rel="canonical" href="https://kodigoeleksyon2025.com/terms" />
+        <link rel="canonical" href="https://eleksyon2025ballot.netlify.app/terms" />
       </Helmet>
       
       <Header />

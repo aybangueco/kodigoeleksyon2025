@@ -9,7 +9,7 @@ const Privacy = () => {
       <Helmet>
         <title>Privacy Policy - Kodigo Eleksyon 2025</title>
         <meta name="description" content="Privacy policy for the Kodigo Eleksyon 2025 ballot builder application." />
-        <link rel="canonical" href="https://kodigoeleksyon2025.com/privacy" />
+        <link rel="canonical" href="https://eleksyon2025ballot.netlify.app/privacy" />
       </Helmet>
       
       <Header />
