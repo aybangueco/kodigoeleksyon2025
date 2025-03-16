@@ -23,16 +23,10 @@ const Index = () => {
     {}
   );
   
-  const [showBallot, setShowBallot] = useState(true);
+  const [showBallot, setShowBallot] = useState(false);
 
   return (
     <div className="min-h-screen flex flex-col bg-background">
-      {/* Ballot Section (shown by default) */}
-      <BallotSection 
-        selectedCandidates={selectedCandidates}
-        setSelectedCandidates={setSelectedCandidates}
-      />
-      
       {/* Hero Section */}
       <HeroSection />
       
@@ -41,6 +35,14 @@ const Index = () => {
       
       {/* How it Works Section */}
       <HowItWorksSection onGetStarted={() => setShowBallot(true)} />
+      
+      {/* Ballot Section (shown when user clicks Get Started) */}
+      {showBallot && (
+        <BallotSection 
+          selectedCandidates={selectedCandidates}
+          setSelectedCandidates={setSelectedCandidates}
+        />
+      )}
       
       <Footer />
     </div>

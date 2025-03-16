@@ -13,9 +13,10 @@ const HowItWorksSection = ({ onGetStarted }: HowItWorksSectionProps) => {
   return (
     <section 
       ref={howItWorksRef}
-      className="py-10 px-6"
+      className="py-16 px-6 bg-secondary/30"
+      id="how-it-works"
     >
-      <div className="container mx-auto max-w-6xl opacity-0" style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}>
+      <div className="container mx-auto max-w-6xl animate-fade-in" style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}>
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">How It Works</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
@@ -43,10 +44,10 @@ const HowItWorksSection = ({ onGetStarted }: HowItWorksSectionProps) => {
           ].map((step, i) => (
             <div 
               key={i}
-              className="relative opacity-0 animate-fade-up"
+              className="relative bg-white p-6 rounded-lg shadow-sm animate-fade-up"
               style={{ animationDelay: `${0.2 + i * 0.1}s`, animationFillMode: 'forwards' }}
             >
-              <div className="absolute top-0 left-0 text-6xl font-bold text-primary/10">{step.step}</div>
+              <div className="absolute top-0 left-0 text-6xl font-bold text-primary/10 -mt-6 ml-2">{step.step}</div>
               <div className="pt-10 pl-8">
                 <h3 className="text-xl font-medium mb-2">{step.title}</h3>
                 <p className="text-muted-foreground">{step.description}</p>
