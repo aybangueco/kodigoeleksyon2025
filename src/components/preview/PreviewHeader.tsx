@@ -13,9 +13,9 @@ const PreviewHeader: React.FC = () => {
   return (
     <div className="mb-10">
       <Button
-        variant="ghost"
+        variant="outline"
         size="sm"
-        className="mb-4 text-muted-foreground hover:text-foreground"
+        className="mb-4 hover:bg-secondary hover:text-primary transition-colors"
         onClick={() => navigate('/ballot')}
       >
         <ArrowLeft className="mr-2 h-4 w-4" />
