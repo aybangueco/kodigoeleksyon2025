@@ -6,14 +6,27 @@ import { useNavigate } from 'react-router-dom';
 import BallotPositionCard from './BallotPositionCard';
 import { positions, Candidate } from '@/lib/positions';
 
-interface BallotPreviewProps {
+/**
+ * Props for the BallotPreview component
+ */
+export interface BallotPreviewProps {
+  /** Object containing ballot data with position IDs as keys and arrays of selected candidate IDs as values */
   ballotData: Record<string, string[]> | null;
+  /** Flag indicating if the ballot data is still loading */
   isLoading: boolean;
 }
 
-const BallotPreview = ({ ballotData, isLoading }: BallotPreviewProps) => {
+/**
+ * Component that displays the entire ballot preview with all selected candidates
+ */
+const BallotPreview: React.FC<BallotPreviewProps> = ({ ballotData, isLoading }) => {
   const navigate = useNavigate();
   
+  /**
+   * Returns an array of selected candidate objects for a given position
+   * @param positionId - The ID of the position to get candidates for
+   * @returns Array of selected candidate objects
+   */
   const getSelectedCandidatesForPosition = (positionId: string): Candidate[] => {
     if (!ballotData) return [];
     

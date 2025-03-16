@@ -4,12 +4,22 @@ import { toast } from 'sonner';
 import { Copy, Share2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
-interface ShareSectionProps {
+/**
+ * Props for the ShareSection component
+ */
+export interface ShareSectionProps {
+  /** URL that contains the encrypted ballot data */
   shareLink: string;
 }
 
-const ShareSection = ({ shareLink }: ShareSectionProps) => {
-  const handleCopyLink = async () => {
+/**
+ * Component that displays a section for sharing the ballot preview URL
+ */
+const ShareSection: React.FC<ShareSectionProps> = ({ shareLink }) => {
+  /**
+   * Copies the share link to the clipboard
+   */
+  const handleCopyLink = async (): Promise<void> => {
     try {
       await navigator.clipboard.writeText(shareLink);
       toast.success('Link copied to clipboard');

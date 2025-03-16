@@ -11,12 +11,21 @@ import ShareSection from '@/components/preview/ShareSection';
 import BallotPreview from '@/components/preview/BallotPreview';
 import ElectionReminder from '@/components/preview/ElectionReminder';
 
-const Preview = () => {
+/**
+ * Type for the ballot data structure
+ */
+type BallotData = Record<string, string[]> | null;
+
+/**
+ * Preview page that displays the user's ballot selections
+ * Uses URL parameters to retrieve and decrypt the ballot data
+ */
+const Preview: React.FC = () => {
   const location = useLocation();
   const navigate = useNavigate();
-  const [ballotData, setBallotData] = useState<Record<string, string[]> | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const [shareLink, setShareLink] = useState('');
+  const [ballotData, setBallotData] = useState<BallotData>(null);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
+  const [shareLink, setShareLink] = useState<string>('');
   
   useEffect(() => {
     setIsLoading(true);

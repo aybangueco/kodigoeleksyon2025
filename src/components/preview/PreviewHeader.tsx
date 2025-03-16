@@ -3,7 +3,11 @@ import { Button } from '@/components/ui/button';
 import { ArrowLeft } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
-const PreviewHeader = () => {
+/**
+ * Header component for the ballot preview page
+ * Displays title and back button to return to the ballot
+ */
+const PreviewHeader: React.FC = () => {
   const navigate = useNavigate();
   
   return (

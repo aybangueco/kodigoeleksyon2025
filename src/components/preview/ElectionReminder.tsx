@@ -1,7 +1,10 @@
 
 import { Separator } from '@/components/ui/separator';
 
-const ElectionReminder = () => {
+/**
+ * Component that displays election day reminders and tips
+ */
+const ElectionReminder: React.FC = () => {
   return (
     <div className="mt-12 p-6 rounded-xl bg-primary/10 border border-primary/20">
       <h3 className="font-medium mb-2">Remember for Election Day</h3>

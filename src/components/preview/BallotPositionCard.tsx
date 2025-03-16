@@ -1,13 +1,24 @@
 
-import { positions, Candidate } from '@/lib/positions';
+import { positions, Candidate, Position } from '@/lib/positions';
 
-interface BallotPositionCardProps {
+/**
+ * Props for the BallotPositionCard component
+ */
+export interface BallotPositionCardProps {
+  /** Position ID to display candidates for */
   positionId: string;
+  /** Array of selected candidates for this position */
   selectedCandidates: Candidate[];
 }
 
-const BallotPositionCard = ({ positionId, selectedCandidates }: BallotPositionCardProps) => {
-  const position = positions.find(p => p.id === positionId);
+/**
+ * Component that displays a single position and its selected candidates
+ */
+const BallotPositionCard: React.FC<BallotPositionCardProps> = ({ 
+  positionId, 
+  selectedCandidates 
+}) => {
+  const position: Position | undefined = positions.find(p => p.id === positionId);
   
   if (!position) return null;
   
