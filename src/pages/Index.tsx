@@ -1,4 +1,3 @@
-
 import { useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
@@ -243,7 +242,7 @@ const Index = () => {
       {/* Hero Section - now below the ballot */}
       <section 
         ref={heroRef}
-        className="pt-16 pb-20 px-6"
+        className="px-6 pb-10"
       >
         <div className="container mx-auto max-w-6xl">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -319,7 +318,7 @@ const Index = () => {
       {/* Features Section */}
       <section 
         ref={featuresRef}
-        className="py-20 px-6 bg-secondary/30"
+        className="py-10 px-6 bg-secondary/30"
       >
         <div className="container mx-auto max-w-6xl opacity-0" style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}>
           <div className="text-center mb-16">
@@ -370,7 +369,7 @@ const Index = () => {
       {/* How it Works Section */}
       <section 
         ref={howItWorksRef}
-        className="py-20 px-6"
+        className="py-10 px-6"
       >
         <div className="container mx-auto max-w-6xl opacity-0" style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}>
           <div className="text-center mb-16">
