@@ -8,6 +8,8 @@ import { HelmetProvider } from "react-helmet-async";
 import Preview from "./pages/Preview";
 import NotFound from "./pages/NotFound";
 import Index from "./pages/Index";
+import Privacy from "./pages/Privacy";
+import Terms from "./pages/Terms";
 import Header from "./components/Header";
 import { Alert, AlertDescription, AlertTitle } from "./components/ui/alert";
 import { AlertTriangle } from "lucide-react";
@@ -47,6 +49,8 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Layout><Index /></Layout>} />
             <Route path="/preview" element={<Layout><Preview /></Layout>} />
+            <Route path="/privacy" element={<Privacy />} />
+            <Route path="/terms" element={<Terms />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
