@@ -1,4 +1,3 @@
-
 import { useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
 import Footer from '@/components/Footer';
@@ -6,7 +5,6 @@ import useSessionStorage from '@/lib/useSessionStorage';
 import BallotSection from '@/components/BallotSection';
 import HowItWorksSection from '@/components/HowItWorksSection';
 import useAnimationObserver from '@/hooks/useAnimationObserver';
-import AnalyticsTest from '@/components/analytics/AnalyticsTest';
 
 const Index = () => {
   // Refs for animation targets
@@ -74,11 +72,6 @@ const Index = () => {
       
       {/* How it Works Section */}
       <HowItWorksSection />
-      
-      {/* Analytics Test Component (only visible in development) */}
-      <div className="container mx-auto max-w-5xl px-6 mb-8">
-        <AnalyticsTest />
-      </div>
       
       <Footer />
     </div>
