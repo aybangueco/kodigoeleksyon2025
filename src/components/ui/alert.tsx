@@ -14,6 +14,8 @@ const alertVariants = cva(
           "border-destructive/50 text-destructive dark:border-destructive [&>svg]:text-destructive",
         warning:
           "border-yellow-200 bg-yellow-50 text-yellow-800 [&>svg]:text-yellow-800",
+        success:
+          "border-green-200 bg-green-50 text-green-800 [&>svg]:text-green-800",
       },
     },
     defaultVariants: {

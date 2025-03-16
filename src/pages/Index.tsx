@@ -1,11 +1,9 @@
 import { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { ArrowRight, CheckSquare, Share2, Shield, AlertTriangle } from 'lucide-react';
+import { ArrowRight, CheckSquare, Share2, Shield } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
-import { Alert, AlertTitle, AlertDescription } from '@/components/ui/alert';
 
 const Index = () => {
   // Refs for animation targets
@@ -41,23 +39,6 @@ const Index = () => {
 
   return (
     <div className="min-h-screen flex flex-col bg-background">
-      <Header />
-      
-      {/* Disclaimer Alert - Moved to top */}
-      <div className="container mx-auto max-w-6xl px-6 mt-24">
-        <Alert className="border-yellow-200 bg-yellow-50">
-          <AlertTriangle className="h-4 w-4 text-yellow-800" />
-          <AlertTitle className="text-yellow-800">Important Note</AlertTitle>
-          <AlertDescription className="text-yellow-700">
-            This tool is currently available for <strong>Zamboanga City</strong> only. 
-            If you want something similar for your city, please email{' '}
-            <a href="mailto:aljhoenilw@gmail.com" className="font-medium underline hover:text-yellow-900">
-              aljhoenilw@gmail.com
-            </a>
-          </AlertDescription>
-        </Alert>
-      </div>
-      
       {/* Hero Section */}
       <section 
         ref={heroRef}
