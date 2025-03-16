@@ -1,10 +1,9 @@
 
 import { useRef } from 'react';
 import { ArrowRight } from 'lucide-react';
-import { Button } from '@/components/ui/button';
 
 interface HowItWorksSectionProps {
-  onGetStarted: () => void;
+  onGetStarted?: () => void;
 }
 
 const HowItWorksSection = ({ onGetStarted }: HowItWorksSectionProps) => {
@@ -60,16 +59,6 @@ const HowItWorksSection = ({ onGetStarted }: HowItWorksSectionProps) => {
               )}
             </div>
           ))}
-        </div>
-        
-        <div className="mt-16 text-center">
-          <Button 
-            size="lg"
-            className="transition-all duration-300 transform hover:translate-y-[-2px] active:translate-y-0"
-            onClick={onGetStarted}
-          >
-            Get Started
-          </Button>
         </div>
       </div>
     </section>

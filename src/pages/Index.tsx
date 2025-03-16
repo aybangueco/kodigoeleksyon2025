@@ -22,11 +22,15 @@ const Index = () => {
     'kodigo-selections', 
     {}
   );
-  
-  const [showBallot, setShowBallot] = useState(false);
 
   return (
     <div className="min-h-screen flex flex-col bg-background">
+      {/* Ballot Section (always shown at the top) */}
+      <BallotSection 
+        selectedCandidates={selectedCandidates}
+        setSelectedCandidates={setSelectedCandidates}
+      />
+      
       {/* Hero Section */}
       <HeroSection />
       
@@ -34,15 +38,7 @@ const Index = () => {
       <FeaturesSection />
       
       {/* How it Works Section */}
-      <HowItWorksSection onGetStarted={() => setShowBallot(true)} />
-      
-      {/* Ballot Section (shown when user clicks Get Started) */}
-      {showBallot && (
-        <BallotSection 
-          selectedCandidates={selectedCandidates}
-          setSelectedCandidates={setSelectedCandidates}
-        />
-      )}
+      <HowItWorksSection />
       
       <Footer />
     </div>
