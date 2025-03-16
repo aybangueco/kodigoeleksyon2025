@@ -1,0 +1,26 @@
+
+/* Mobile-specific optimizations */
+@media (max-width: 640px) {
+  .container {
+    @apply px-4;
+  }
+  
+  /* Increased touch targets for mobile */
+  button, 
+  [role="button"], 
+  a, 
+  input[type="checkbox"], 
+  input[type="radio"] {
+    @apply min-h-[44px] min-w-[44px];
+  }
+  
+  /* Fix for mobile viewport height issues */
+  .min-h-screen {
+    min-height: 100vh; /* Fallback */
+    min-height: -webkit-fill-available;
+  }
+  
+  html {
+    height: -webkit-fill-available;
+  }
+}

@@ -1,0 +1,71 @@
+
+/* Print styles for ballot */
+@media print {
+  body {
+    background-color: white;
+  }
+  
+  .no-print {
+    display: none !important;
+  }
+  
+  main {
+    padding: 0 !important;
+  }
+  
+  header, footer, button {
+    display: none !important;
+  }
+  
+  .container {
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  
+  /* Stronger print styles for selections */
+  .print\:bg-gray-300,
+  .print\:bg-gray-200, 
+  .print\:bg-gray-100 {
+    background-color: #d1d5db !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  
+  /* Stronger print styles for selection dots */
+  .print\:bg-black {
+    background-color: #000 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  
+  /* Adjust font sizes for print */
+  h1 {
+    font-size: 18pt !important;
+  }
+  
+  h2 {
+    font-size: 14pt !important;
+  }
+  
+  body {
+    font-size: 10pt !important;
+  }
+  
+  /* Force page breaks between positions */
+  .page-break-after {
+    page-break-after: always;
+  }
+  
+  /* Make borders more visible in print */
+  .border {
+    border-width: 1px !important;
+    border-color: black !important;
+  }
+  
+  /* Force background colors to print */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+}
