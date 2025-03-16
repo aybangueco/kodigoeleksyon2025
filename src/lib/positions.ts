@@ -461,7 +461,7 @@ export const positions: Position[] = [
       { id: "pl113", name: "UNITED FRONTLINERS", party: "UNITED FRONTLINERS OF THE PHILIPPINES" },
       { id: "pl114", name: "KASAMBAHAY", party: "KASAMBAHAY TAYO, INC." },
       { id: "pl115", name: "TUTOK TO WIN", party: "TUTOK TO WIN" },
-      { id: "pl116", name: "AKO OFW", party: "ADVOCATES & KEEPERS ORGANIZATION OF OFW, INC" },
+      { id: "pl116", name: "AKO OFW", party: "ADVOCATES & KEEPERS ORGANISASYON & LABAN" },
       { id: "pl117", name: "AGAP", party: "AGRICULTURAL SECTOR ALLIANCE OF THE PHILIPPINES" },
       { id: "pl118", name: "1TAHANAN", party: "1TAHANAN INC." },
       { id: "pl119", name: "COOP-NATCCO", party: "COOPERATIVE NATCCO NETWORK PARTY" },
