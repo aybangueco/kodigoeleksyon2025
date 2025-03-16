@@ -32,7 +32,7 @@ const BallotActions = ({ hasSelections, onClear, onPreview }: BallotActionsProps
     <div className="mt-6 flex flex-col sm:flex-row gap-4 justify-between">
       <Button
         variant="outline"
-        className="transition-all duration-300"
+        className="transition-all duration-300 print:hidden"
         onClick={() => {
           onClear();
           toast.success("Your selections have been cleared");
@@ -42,7 +42,7 @@ const BallotActions = ({ hasSelections, onClear, onPreview }: BallotActionsProps
         Clear All Selections
       </Button>
       
-      <div className="flex flex-col sm:flex-row gap-2">
+      <div className="flex flex-col sm:flex-row gap-2 print:hidden">
         <Button
           variant="outline"
           className="gap-2"
