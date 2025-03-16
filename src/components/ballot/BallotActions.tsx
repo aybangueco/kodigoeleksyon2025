@@ -32,9 +32,10 @@ const BallotActions = ({ hasSelections, onClear, onPreview }: BallotActionsProps
         onClick={onClear}
         disabled={!hasSelections}
         aria-label="Clear all selections"
+        tabIndex={0}
       >
         <Trash2 className="h-4 w-4" aria-hidden="true" />
-        Clear Selections
+        <span>Clear Selections</span>
       </Button>
       
       <div className="flex items-center gap-3 w-full sm:w-auto">
@@ -43,22 +44,24 @@ const BallotActions = ({ hasSelections, onClear, onPreview }: BallotActionsProps
           className="flex items-center gap-2 border-blue-200 text-blue-600 hover:bg-blue-50 hover:text-blue-700 w-full sm:w-auto"
           onClick={handlePrint}
           aria-label="Print ballot"
+          tabIndex={0}
         >
           <Printer className="h-4 w-4" aria-hidden="true" />
-          Print
+          <span>Print</span>
         </Button>
         
         <Button
           className={cn(
-            "flex items-center gap-2 bg-primary hover:bg-primary/90 transition-transform hover:-translate-y-0.5 active:translate-y-0 w-full sm:w-auto",
+            "flex items-center gap-2 bg-primary hover:bg-primary/90 transition-transform active:scale-95 w-full sm:w-auto",
             !hasSelections && "opacity-50 cursor-not-allowed"
           )}
           onClick={onPreview}
           disabled={!hasSelections}
           aria-label="Preview your selections"
+          tabIndex={0}
         >
           <Eye className="h-4 w-4" aria-hidden="true" />
-          Preview
+          <span>Preview</span>
         </Button>
       </div>
     </div>

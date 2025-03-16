@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -91,11 +92,27 @@
   body {
     @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
+    -webkit-tap-highlight-color: transparent;
   }
 
   h1, h2, h3, h4, h5, h6 {
     @apply font-medium tracking-tight;
   }
+
+  /* Better focus styles for mobile */
+  input, button, a, [role="button"], [tabindex="0"] {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary;
+  }
+  
+  /* Enable smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Touch action manipulation for better mobile experience */
+.touch-action-manipulation {
+  touch-action: manipulation;
 }
 
 /* Custom glass effect */
@@ -262,4 +279,30 @@
 
 .ballot-radio-selected {
   @apply w-3 h-3 rounded-full bg-primary;
+}
+
+/* Mobile-specific optimizations */
+@media (max-width: 640px) {
+  .container {
+    @apply px-4;
+  }
+  
+  /* Increased touch targets for mobile */
+  button, 
+  [role="button"], 
+  a, 
+  input[type="checkbox"], 
+  input[type="radio"] {
+    @apply min-h-[44px] min-w-[44px];
+  }
+  
+  /* Fix for mobile viewport height issues */
+  .min-h-screen {
+    min-height: 100vh; /* Fallback */
+    min-height: -webkit-fill-available;
+  }
+  
+  html {
+    height: -webkit-fill-available;
+  }
 }

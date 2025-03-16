@@ -11,7 +11,7 @@ const PreviewHeader: React.FC = () => {
   const navigate = useNavigate();
   
   return (
-    <div className="mb-10">
+    <div className="mb-6 sm:mb-10">
       <Button
         variant="outline"
         size="sm"
@@ -23,8 +23,8 @@ const PreviewHeader: React.FC = () => {
         Back to Ballot
       </Button>
       
-      <h1 className="text-3xl md:text-4xl font-bold mb-4">Your Kodigo Preview</h1>
-      <p className="text-muted-foreground max-w-2xl">
+      <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 sm:mb-4">Your Kodigo Preview</h1>
+      <p className="text-sm sm:text-base text-muted-foreground max-w-2xl">
         Review your selections and share them with friends and family.
       </p>
     </div>

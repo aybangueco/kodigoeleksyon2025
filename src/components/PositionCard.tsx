@@ -73,7 +73,7 @@ const PositionCard = ({
       {/* Position Header */}
       <div 
         className={cn(
-          "py-4 px-5 flex flex-col items-center justify-center cursor-pointer border-b",
+          "py-4 px-4 sm:px-5 flex flex-col items-center justify-center cursor-pointer border-b",
           getHeaderColor()
         )}
         onClick={() => setIsExpanded(!isExpanded)}
@@ -88,7 +88,7 @@ const PositionCard = ({
             <Tooltip>
               <TooltipTrigger asChild>
                 <button 
-                  className="focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-full"
+                  className="focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-full p-1"
                   aria-label={`Information about ${position.title}`}
                 >
                   <Info className="h-4 w-4 text-gray-500 hover:text-gray-700 cursor-help" />
@@ -100,7 +100,7 @@ const PositionCard = ({
             </Tooltip>
           </TooltipProvider>
           
-          <h2 className="text-lg font-bold text-center flex-1 uppercase" id={`position-title-${position.id}`}>
+          <h2 className="text-base sm:text-lg font-bold text-center flex-1 uppercase" id={`position-title-${position.id}`}>
             {position.title}
           </h2>
           
@@ -111,11 +111,11 @@ const PositionCard = ({
           )}
         </div>
         
-        <div className="text-sm text-center w-full flex justify-center items-center gap-2">
+        <div className="text-xs sm:text-sm text-center w-full flex flex-wrap justify-center items-center gap-2">
           <span className="px-3 py-1 bg-white rounded-full text-sm font-medium text-gray-700 shadow-sm">
             Vote for {position.maxSelections}
           </span>
-          <span className="text-gray-700 italic">(Bumoto ng hindi hihigit sa {position.maxSelections})</span>
+          <span className="text-gray-700 italic text-xs sm:text-sm">(Bumoto ng hindi hihigit sa {position.maxSelections})</span>
         </div>
       </div>
       
@@ -125,7 +125,7 @@ const PositionCard = ({
           {/* Selection Reminder */}
           {remainingSelections > 0 && position.maxSelections > 1 && (
             <div 
-              className="px-4 py-2 bg-yellow-50 text-sm border-b border-yellow-200 font-medium"
+              className="px-3 py-2 bg-yellow-50 text-xs sm:text-sm border-b border-yellow-200 font-medium"
               aria-live="polite"
             >
               <div className="flex items-center justify-center gap-2">
