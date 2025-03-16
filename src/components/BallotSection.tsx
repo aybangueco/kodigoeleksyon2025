@@ -1,3 +1,4 @@
+
 import { useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { cn } from '@/lib/utils';
@@ -85,12 +86,13 @@ const BallotSection = ({ selectedCandidates, setSelectedCandidates }: BallotSect
     <section 
       ref={ballotRef}
       className="py-12 px-6 min-h-screen bg-gradient-to-b from-white to-gray-50"
+      aria-label="Ballot selection section"
     >
       <div className="container mx-auto max-w-5xl">
         <BallotHeader />
         <ProgressBar selectedCandidates={selectedCandidates} />
         
-        <div className="space-y-6 mt-8 animate-fade-in">
+        <div className="space-y-6 mt-8 animate-fade-in" role="list" aria-label="Election positions">
           {!isLoading && positions.map(position => (
             <PositionCard 
               key={position.id}

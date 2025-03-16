@@ -17,8 +17,9 @@ const PreviewHeader: React.FC = () => {
         size="sm"
         className="mb-4 hover:bg-secondary hover:text-primary transition-colors"
         onClick={() => navigate('/ballot')}
+        aria-label="Return to ballot page"
       >
-        <ArrowLeft className="mr-2 h-4 w-4" />
+        <ArrowLeft className="mr-2 h-4 w-4" aria-hidden="true" />
         Back to Ballot
       </Button>
       

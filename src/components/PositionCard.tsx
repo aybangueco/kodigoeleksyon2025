@@ -1,5 +1,5 @@
 
-import { useState } from 'react';
+import { useState, KeyboardEvent } from 'react';
 import { ChevronDown, ChevronUp, Info } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Position } from '@/lib/positions';
@@ -52,6 +52,13 @@ const PositionCard = ({
         return 'bg-green-100 border-green-200';
     }
   };
+  
+  const handleKeyDown = (e: KeyboardEvent<HTMLDivElement>) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      setIsExpanded(!isExpanded);
+    }
+  };
       
   return (
     <div className={cn(
@@ -59,7 +66,10 @@ const PositionCard = ({
       isExpanded ? "mb-6" : "mb-2",
       getPositionColor(),
       "bg-gradient-to-br"
-    )}>
+    )}
+    role="region"
+    aria-label={`${position.title} selection panel`}
+    >
       {/* Position Header */}
       <div 
         className={cn(
@@ -67,12 +77,22 @@ const PositionCard = ({
           getHeaderColor()
         )}
         onClick={() => setIsExpanded(!isExpanded)}
+        onKeyDown={handleKeyDown}
+        tabIndex={0}
+        role="button"
+        aria-expanded={isExpanded}
+        aria-controls={`position-content-${position.id}`}
       >
         <div className="flex items-center gap-2 mb-1 w-full justify-between">
           <TooltipProvider>
             <Tooltip>
               <TooltipTrigger asChild>
-                <Info className="h-4 w-4 text-gray-500 hover:text-gray-700 cursor-help" />
+                <button 
+                  className="focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-full"
+                  aria-label={`Information about ${position.title}`}
+                >
+                  <Info className="h-4 w-4 text-gray-500 hover:text-gray-700 cursor-help" />
+                </button>
               </TooltipTrigger>
               <TooltipContent>
                 <p className="max-w-xs text-xs">{position.description}</p>
@@ -80,14 +100,14 @@ const PositionCard = ({
             </Tooltip>
           </TooltipProvider>
           
-          <h2 className="text-lg font-bold text-center flex-1 uppercase">
+          <h2 className="text-lg font-bold text-center flex-1 uppercase" id={`position-title-${position.id}`}>
             {position.title}
           </h2>
           
           {isExpanded ? (
-            <ChevronUp className="h-5 w-5 text-gray-700" />
+            <ChevronUp className="h-5 w-5 text-gray-700" aria-hidden="true" />
           ) : (
-            <ChevronDown className="h-5 w-5 text-gray-700" />
+            <ChevronDown className="h-5 w-5 text-gray-700" aria-hidden="true" />
           )}
         </div>
         
@@ -101,20 +121,33 @@ const PositionCard = ({
       
       {/* Position Content */}
       {isExpanded && (
-        <>
+        <div id={`position-content-${position.id}`}>
           {/* Selection Reminder */}
           {remainingSelections > 0 && position.maxSelections > 1 && (
-            <div className="px-4 py-2 bg-yellow-50 text-sm border-b border-yellow-200 font-medium">
+            <div 
+              className="px-4 py-2 bg-yellow-50 text-sm border-b border-yellow-200 font-medium"
+              aria-live="polite"
+            >
               <div className="flex items-center justify-center gap-2">
-                <span className="inline-block w-2 h-2 bg-yellow-400 rounded-full"></span>
+                <span className="inline-block w-2 h-2 bg-yellow-400 rounded-full" aria-hidden="true"></span>
                 Select <span className="font-bold">{remainingSelections}</span> more candidate{remainingSelections !== 1 ? 's' : ''}
-                <span className="inline-block w-2 h-2 bg-yellow-400 rounded-full"></span>
+                <span className="inline-block w-2 h-2 bg-yellow-400 rounded-full" aria-hidden="true"></span>
               </div>
             </div>
           )}
           
           {/* Candidates Grid - Using table-like layout for ballot style */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-0.5 p-0.5 bg-white">
+          <div 
+            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-0.5 p-0.5 bg-white"
+            role={position.maxSelections === 1 ? "radiogroup" : "group"}
+            aria-labelledby={`position-title-${position.id}`}
+            aria-describedby={`position-description-${position.id}`}
+          >
+            <div id={`position-description-${position.id}`} className="sr-only">
+              You can select up to {position.maxSelections} candidate{position.maxSelections !== 1 ? 's' : ''} for {position.title}. 
+              Current selections: {selectionCount}.
+            </div>
+            
             {position.candidates.map((candidate, index) => (
               <CandidateCard
                 key={candidate.id}
@@ -126,7 +159,7 @@ const PositionCard = ({
               />
             ))}
           </div>
-        </>
+        </div>
       )}
     </div>
   );

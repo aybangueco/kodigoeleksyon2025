@@ -19,7 +19,10 @@ const BallotActions = ({ hasSelections, onClear, onPreview }: BallotActionsProps
       "sticky bottom-0 pt-4 pb-4 bg-white z-10 border-t border-gray-200 mt-8 no-print",
       "animate-fade-in transition-all duration-300 ease-in-out",
       "flex flex-col sm:flex-row justify-end items-center gap-3 sm:gap-4 w-full"
-    )}>
+    )}
+    role="toolbar"
+    aria-label="Ballot actions"
+    >
       <Button
         variant="outline"
         className={cn(
@@ -28,8 +31,9 @@ const BallotActions = ({ hasSelections, onClear, onPreview }: BallotActionsProps
         )}
         onClick={onClear}
         disabled={!hasSelections}
+        aria-label="Clear all selections"
       >
-        <Trash2 className="h-4 w-4" />
+        <Trash2 className="h-4 w-4" aria-hidden="true" />
         Clear Selections
       </Button>
       
@@ -38,8 +42,9 @@ const BallotActions = ({ hasSelections, onClear, onPreview }: BallotActionsProps
           variant="outline"
           className="flex items-center gap-2 border-blue-200 text-blue-600 hover:bg-blue-50 hover:text-blue-700 w-full sm:w-auto"
           onClick={handlePrint}
+          aria-label="Print ballot"
         >
-          <Printer className="h-4 w-4" />
+          <Printer className="h-4 w-4" aria-hidden="true" />
           Print
         </Button>
         
@@ -50,8 +55,9 @@ const BallotActions = ({ hasSelections, onClear, onPreview }: BallotActionsProps
           )}
           onClick={onPreview}
           disabled={!hasSelections}
+          aria-label="Preview your selections"
         >
-          <Eye className="h-4 w-4" />
+          <Eye className="h-4 w-4" aria-hidden="true" />
           Preview
         </Button>
       </div>

@@ -1,6 +1,7 @@
 
 import { cn } from '@/lib/utils';
 import { Candidate } from '@/lib/positions';
+import { KeyboardEvent } from 'react';
 
 interface CandidateCardProps {
   candidate: Candidate;
@@ -17,6 +18,14 @@ const CandidateCard = ({
   selectionMode,
   index
 }: CandidateCardProps) => {
+  
+  const handleKeyDown = (e: KeyboardEvent<HTMLDivElement>) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      onSelect(candidate.id);
+    }
+  };
+  
   return (
     <div
       className={cn(
@@ -25,13 +34,21 @@ const CandidateCard = ({
         isSelected ? "bg-gray-100 !print:bg-gray-300" : "bg-white"
       )}
       onClick={() => onSelect(candidate.id)}
+      onKeyDown={handleKeyDown}
+      role={selectionMode === 'single' ? 'radio' : 'checkbox'}
+      aria-checked={isSelected}
+      tabIndex={0}
+      aria-label={`Candidate ${candidate.name} from ${candidate.party}`}
     >
       <div className="flex items-start gap-3">
-        <div className={cn(
-          "flex-shrink-0 w-5 h-5 mt-0.5 rounded-full border-2 flex items-center justify-center",
-          "print:border-2 print:border-black transition-colors duration-200",
-          isSelected ? "border-primary" : "border-gray-400"
-        )}>
+        <div 
+          className={cn(
+            "flex-shrink-0 w-5 h-5 mt-0.5 rounded-full border-2 flex items-center justify-center",
+            "print:border-2 print:border-black transition-colors duration-200",
+            isSelected ? "border-primary" : "border-gray-400"
+          )}
+          aria-hidden="true"
+        >
           {isSelected && (
             <div className="w-3 h-3 rounded-full bg-primary print:bg-black animate-scale-up"></div>
           )}
