@@ -1,22 +1,18 @@
 
-import { useRef, useState } from 'react';
+import { useRef } from 'react';
 import Footer from '@/components/Footer';
 import useSessionStorage from '@/lib/useSessionStorage';
 import BallotSection from '@/components/BallotSection';
-import HeroSection from '@/components/HeroSection';
-import FeaturesSection from '@/components/FeaturesSection';
 import HowItWorksSection from '@/components/HowItWorksSection';
 import useAnimationObserver from '@/hooks/useAnimationObserver';
 
 const Index = () => {
   // Refs for animation targets
-  const heroRef = useRef<HTMLDivElement>(null);
-  const featuresRef = useRef<HTMLDivElement>(null);
   const howItWorksRef = useRef<HTMLDivElement>(null);
   const ballotRef = useRef<HTMLDivElement>(null);
   
   // Set up animation observer
-  useAnimationObserver([heroRef, featuresRef, howItWorksRef, ballotRef]);
+  useAnimationObserver([howItWorksRef, ballotRef]);
   
   const [selectedCandidates, setSelectedCandidates] = useSessionStorage<Record<string, string[]>>(
     'kodigo-selections', 
@@ -30,12 +26,6 @@ const Index = () => {
         selectedCandidates={selectedCandidates}
         setSelectedCandidates={setSelectedCandidates}
       />
-      
-      {/* Hero Section */}
-      <HeroSection />
-      
-      {/* Features Section */}
-      <FeaturesSection />
       
       {/* How it Works Section */}
       <HowItWorksSection />
