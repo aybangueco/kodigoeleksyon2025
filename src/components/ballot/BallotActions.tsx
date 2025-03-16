@@ -1,4 +1,3 @@
-
 import { ArrowRight, Printer } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { toast } from 'sonner';
@@ -72,16 +71,6 @@ const BallotActions = ({ hasSelections, onClear, onPreview }: BallotActionsProps
           </head>
           <body>
             <img src="${imageData}" alt="Kodigo Ballot" />
-            <script>
-              // Automatically print once image is loaded
-              window.onload = () => {
-                setTimeout(() => {
-                  window.print();
-                  // Close the window after print dialog is closed (optional)
-                  // window.close();
-                }, 500);
-              };
-            </script>
           </body>
         </html>
       `);
