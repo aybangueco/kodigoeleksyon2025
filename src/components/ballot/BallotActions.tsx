@@ -10,6 +10,24 @@ interface BallotActionsProps {
 }
 
 const BallotActions = ({ hasSelections, onClear, onPreview }: BallotActionsProps) => {
+  const handlePrint = () => {
+    // Add a class to the document body before printing
+    document.body.classList.add('is-printing');
+    
+    // Wait a moment for styles to apply
+    setTimeout(() => {
+      // Trigger print
+      window.print();
+      
+      // Remove the class after print dialog closes
+      setTimeout(() => {
+        document.body.classList.remove('is-printing');
+      }, 500);
+    }, 100);
+    
+    toast.success("Preparing your Kodigo for printing");
+  };
+
   return (
     <div className="mt-6 flex flex-col sm:flex-row gap-4 justify-between">
       <Button
@@ -28,7 +46,7 @@ const BallotActions = ({ hasSelections, onClear, onPreview }: BallotActionsProps
         <Button
           variant="outline"
           className="gap-2"
-          onClick={() => window.print()}
+          onClick={handlePrint}
           disabled={!hasSelections}
         >
           <Printer className="h-4 w-4" />
