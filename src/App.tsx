@@ -17,7 +17,7 @@ const queryClient = new QueryClient();
 // Create a layout component that includes the Header and disclaimer
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <>
+    <div className="min-h-screen flex flex-col">
       <Header />
       <div className="container mx-auto max-w-6xl px-6 mt-24 mb-4">
         <Alert className="border-yellow-200 bg-yellow-50">
@@ -33,7 +33,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
         </Alert>
       </div>
       {children}
-    </>
+    </div>
   );
 };
 
