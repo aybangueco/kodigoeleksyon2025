@@ -1,0 +1,6 @@
+
+User-agent: *
+Allow: /
+Disallow: /preview
+
+Sitemap: https://kodigoeleksyon2025.com/sitemap.xml

@@ -1,6 +1,7 @@
 
 import { useState, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { toast } from 'sonner';
 import { ArrowLeft, Copy, Edit, Share2 } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -75,6 +76,12 @@ const Preview = () => {
   
   return (
     <div className="min-h-screen flex flex-col bg-background">
+      <Helmet>
+        <title>Preview Your Kodigo - Eleksyon 2025 Ballot</title>
+        <meta name="description" content="Review and share your personalized Kodigo ballot selections for the 2025 Philippine elections in Zamboanga City." />
+        <meta name="robots" content="noindex, follow" />
+      </Helmet>
+      
       <Header />
       
       <main className="flex-1 pt-32 pb-20 px-6 transition-opacity duration-500 ease-in-out">
