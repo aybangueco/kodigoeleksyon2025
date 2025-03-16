@@ -21,6 +21,7 @@ const ShareSection: React.FC<ShareSectionProps> = ({ shareLink }) => {
    */
   const handleCopyLink = async (): Promise<void> => {
     try {
+      // Ensure we're copying exactly what we display
       await navigator.clipboard.writeText(shareLink);
       toast.success('Link copied to clipboard');
     } catch (error) {

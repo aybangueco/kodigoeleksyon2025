@@ -40,29 +40,35 @@ const Preview: React.FC = () => {
       return;
     }
     
-    // Decrypt the data
-    const decryptedData = decryptBallot(encryptedData);
-    
-    if (!decryptedData) {
+    try {
+      // Decode URI component explicitly in case it was double-encoded
+      const decodedData = decodeURIComponent(encryptedData);
+      
+      // Decrypt the data
+      const decryptedData = decryptBallot(decodedData);
+      
+      if (!decryptedData) {
+        throw new Error('Invalid ballot data');
+      }
+      
+      // Set the decrypted data
+      setBallotData(decryptedData);
+      
+      // Create a shareable URL that will work on Netlify
+      // Use the current origin to ensure it works in all environments
+      const baseUrl = window.location.origin;
+      
+      // Create the absolute URL with the encrypted data
+      const fullShareUrl = `${baseUrl}/preview?data=${encodeURIComponent(decodedData)}`;
+      setShareLink(fullShareUrl);
+      
+      // Simulate loading for smoother transition
+      setTimeout(() => setIsLoading(false), 700);
+    } catch (error) {
+      console.error('Failed to decode or decrypt ballot data:', error);
       toast.error('Invalid ballot data');
       navigate('/');
-      return;
     }
-    
-    // Set the decrypted data
-    setBallotData(decryptedData);
-    
-    // Create a shareable URL with absolute path for Netlify deployment
-    const baseUrl = import.meta.env.PROD 
-      ? window.location.origin 
-      : 'https://kodigoeleksyon2025.netlify.app';
-    
-    // Ensure we have a properly formatted absolute URL with the correct domain
-    const fullShareUrl = `${baseUrl}/preview?data=${encodeURIComponent(encryptedData)}`;
-    setShareLink(fullShareUrl);
-    
-    // Simulate loading for smoother transition
-    setTimeout(() => setIsLoading(false), 700);
   }, [location.search, navigate]);
   
   return (
