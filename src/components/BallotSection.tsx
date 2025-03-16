@@ -1,4 +1,3 @@
-
 import { useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { cn } from '@/lib/utils';
@@ -10,6 +9,7 @@ import ProgressBar from './ballot/ProgressBar';
 import PositionList from './ballot/PositionList';
 import BallotActions from './ballot/BallotActions';
 import useAnalytics from '@/hooks/useAnalytics';
+import PositionCard from './PositionCard';
 
 interface BallotSectionProps {
   selectedCandidates: Record<string, string[]>;
@@ -50,7 +50,6 @@ const BallotSection = ({ selectedCandidates, setSelectedCandidates }: BallotSect
         }
       }
 
-      // Track candidate selection event
       const candidate = position.candidates.find(c => c.id === candidateId);
       const action = newSelections.includes(candidateId) ? 'select' : 'deselect';
       trackEvent('ballot', `${action}_candidate`, `${position.title} - ${candidate?.name || candidateId}`);
@@ -65,7 +64,6 @@ const BallotSection = ({ selectedCandidates, setSelectedCandidates }: BallotSect
   const handlePreview = () => {
     const encryptedData = encryptBallot(selectedCandidates);
     
-    // Track preview event
     const totalSelections = Object.values(selectedCandidates).reduce(
       (sum, selections) => sum + selections.length, 0
     );
@@ -75,9 +73,7 @@ const BallotSection = ({ selectedCandidates, setSelectedCandidates }: BallotSect
   };
   
   const handleClearSelections = () => {
-    // Track clear selections event
     trackEvent('ballot', 'clear_selections', 'Clear all selections');
-    
     setSelectedCandidates({});
   };
   
@@ -88,16 +84,23 @@ const BallotSection = ({ selectedCandidates, setSelectedCandidates }: BallotSect
   return (
     <section 
       ref={ballotRef}
-      className="py-12 px-6 bg-white mt-4"
+      className="py-12 px-6 min-h-screen bg-gradient-to-b from-white to-gray-50"
     >
       <div className="container mx-auto max-w-5xl">
         <BallotHeader />
         <ProgressBar selectedCandidates={selectedCandidates} />
-        <PositionList 
-          selectedCandidates={selectedCandidates}
-          onCandidateSelect={handleCandidateSelect}
-          isLoading={isLoading}
-        />
+        
+        <div className="space-y-6 mt-8 animate-fade-in">
+          {!isLoading && positions.map(position => (
+            <PositionCard 
+              key={position.id}
+              position={position}
+              selectedCandidates={selectedCandidates}
+              onCandidateSelect={handleCandidateSelect}
+            />
+          ))}
+        </div>
+        
         <BallotActions 
           hasSelections={hasSelections}
           onClear={handleClearSelections}

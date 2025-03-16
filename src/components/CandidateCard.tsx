@@ -20,27 +20,38 @@ const CandidateCard = ({
   return (
     <div
       className={cn(
-        "border border-gray-300 p-2 hover:bg-gray-50 cursor-pointer",
-        isSelected ? "bg-gray-100 !print:bg-gray-300" : ""
+        "p-3 hover:bg-gray-50 cursor-pointer transition-colors duration-200",
+        "border border-gray-200 select-none",
+        isSelected ? "bg-gray-100 !print:bg-gray-300" : "bg-white"
       )}
       onClick={() => onSelect(candidate.id)}
     >
-      <div className="flex items-start gap-2">
-        <div className="flex-shrink-0 w-5 h-5 mt-0.5 rounded-full border border-gray-400 flex items-center justify-center print:border-2 print:border-black">
+      <div className="flex items-start gap-3">
+        <div className={cn(
+          "flex-shrink-0 w-5 h-5 mt-0.5 rounded-full border-2 flex items-center justify-center",
+          "print:border-2 print:border-black transition-colors duration-200",
+          isSelected ? "border-primary" : "border-gray-400"
+        )}>
           {isSelected && (
-            <div className="w-3 h-3 rounded-full bg-primary print:bg-black"></div>
+            <div className="w-3 h-3 rounded-full bg-primary print:bg-black animate-scale-up"></div>
           )}
         </div>
         <div className="flex-1">
           <div className="flex gap-1">
-            <span className="font-medium">{index}.</span>
+            <span className="font-medium text-gray-600">{index}.</span>
             <span className={cn(
               "font-medium uppercase",
-              isSelected && "print:font-bold"
+              isSelected ? "text-primary font-semibold print:font-bold" : "text-gray-800"
             )}>
-              {candidate.name}</span>
+              {candidate.name}
+            </span>
           </div>
-          <div className="text-xs text-gray-600">({candidate.party})</div>
+          <div className={cn(
+            "text-xs rounded-full px-2 py-0.5 inline-block mt-1",
+            "bg-gray-100 text-gray-600 font-medium"
+          )}>
+            {candidate.party}
+          </div>
         </div>
       </div>
     </div>

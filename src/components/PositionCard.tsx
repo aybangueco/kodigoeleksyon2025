@@ -31,31 +31,57 @@ const PositionCard = ({
   // Calculate how many candidates can still be selected
   const remainingSelections = maxSelections - selectionCount;
   
-  const bgColorClass = position.id === 'senators' ? 'bg-[#e6f5e6]' : 
-                       position.id === 'party-list' ? 'bg-[#e6f5e6]' :
-                       position.id === 'vice-mayor-zamboanga' ? 'bg-[#d1e7e7]' : 'bg-[#e6f5e6]';
-                       
-  const headerBgColorClass = position.id === 'senators' ? 'bg-[#e6f5e6]' : 
-                            position.id === 'party-list' ? 'bg-[#e6f5e6]' :
-                            position.id === 'vice-mayor-zamboanga' ? 'bg-[#d1e7e7]' : 'bg-[#e6f5e6]';
+  const getPositionColor = () => {
+    switch(position.id) {
+      case 'senators':
+        return 'from-blue-50 to-blue-100 border-blue-200';
+      case 'party-list':
+        return 'from-purple-50 to-purple-100 border-purple-200';
+      default:
+        return 'from-green-50 to-green-100 border-green-200';
+    }
+  };
+  
+  const getHeaderColor = () => {
+    switch(position.id) {
+      case 'senators':
+        return 'bg-blue-100 border-blue-200';
+      case 'party-list':
+        return 'bg-purple-100 border-purple-200';
+      default:
+        return 'bg-green-100 border-green-200';
+    }
+  };
       
   return (
     <div className={cn(
-      "rounded-none border border-gray-400 shadow-sm transition-all duration-300 ease-in-out mb-4",
+      "rounded-lg border shadow-sm transition-all duration-300 ease-in-out overflow-hidden",
       isExpanded ? "mb-6" : "mb-2",
-      bgColorClass
+      getPositionColor(),
+      "bg-gradient-to-br"
     )}>
       {/* Position Header */}
       <div 
         className={cn(
-          "py-3 px-4 flex flex-col items-center justify-center cursor-pointer border-b border-gray-400",
-          headerBgColorClass
+          "py-4 px-5 flex flex-col items-center justify-center cursor-pointer border-b",
+          getHeaderColor()
         )}
         onClick={() => setIsExpanded(!isExpanded)}
       >
         <div className="flex items-center gap-2 mb-1 w-full justify-between">
+          <TooltipProvider>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <Info className="h-4 w-4 text-gray-500 hover:text-gray-700 cursor-help" />
+              </TooltipTrigger>
+              <TooltipContent>
+                <p className="max-w-xs text-xs">{position.description}</p>
+              </TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
+          
           <h2 className="text-lg font-bold text-center flex-1 uppercase">
-            {position.title} / Vote for {position.maxSelections}
+            {position.title}
           </h2>
           
           {isExpanded ? (
@@ -65,7 +91,10 @@ const PositionCard = ({
           )}
         </div>
         
-        <div className="text-sm text-center w-full">
+        <div className="text-sm text-center w-full flex justify-center items-center gap-2">
+          <span className="px-3 py-1 bg-white rounded-full text-sm font-medium text-gray-700 shadow-sm">
+            Vote for {position.maxSelections}
+          </span>
           <span className="text-gray-700 italic">(Bumoto ng hindi hihigit sa {position.maxSelections})</span>
         </div>
       </div>
@@ -75,13 +104,17 @@ const PositionCard = ({
         <>
           {/* Selection Reminder */}
           {remainingSelections > 0 && position.maxSelections > 1 && (
-            <div className="px-4 py-2 bg-yellow-50 text-sm border-b border-gray-400">
-              Select <span className="font-bold">{remainingSelections}</span> more candidate{remainingSelections !== 1 ? 's' : ''}
+            <div className="px-4 py-2 bg-yellow-50 text-sm border-b border-yellow-200 font-medium">
+              <div className="flex items-center justify-center gap-2">
+                <span className="inline-block w-2 h-2 bg-yellow-400 rounded-full"></span>
+                Select <span className="font-bold">{remainingSelections}</span> more candidate{remainingSelections !== 1 ? 's' : ''}
+                <span className="inline-block w-2 h-2 bg-yellow-400 rounded-full"></span>
+              </div>
             </div>
           )}
           
           {/* Candidates Grid - Using table-like layout for ballot style */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-0.5 p-0.5 bg-white">
             {position.candidates.map((candidate, index) => (
               <CandidateCard
                 key={candidate.id}

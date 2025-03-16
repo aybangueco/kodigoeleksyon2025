@@ -1,9 +1,7 @@
 
-import { ArrowRight, Printer } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { toast } from 'sonner';
-import html2canvas from 'html2canvas';
-import useAnalytics from '@/hooks/useAnalytics';
+import { Trash2, Eye, Printer, Save } from 'lucide-react';
+import { cn } from '@/lib/utils';
 
 interface BallotActionsProps {
   hasSelections: boolean;
@@ -12,115 +10,49 @@ interface BallotActionsProps {
 }
 
 const BallotActions = ({ hasSelections, onClear, onPreview }: BallotActionsProps) => {
-  const { trackEvent } = useAnalytics();
-  
-  const handlePrint = async () => {
-    toast.success("Preparing your Kodigo for printing...");
-    
-    // Track print event
-    trackEvent('ballot', 'print_ballot', 'Print Kodigo');
-    
-    try {
-      // Find the ballot container
-      const ballotElement = document.querySelector('.container.mx-auto.max-w-5xl') as HTMLElement;
-      
-      if (!ballotElement) {
-        toast.error("Could not find ballot element to print");
-        return;
-      }
-      
-      // Create a canvas from the ballot element
-      const canvas = await html2canvas(ballotElement, {
-        scale: 2, // Higher resolution
-        useCORS: true,
-        backgroundColor: '#ffffff',
-        logging: false,
-      });
-      
-      // Convert canvas to image data URL
-      const imageData = canvas.toDataURL('image/png');
-      
-      // Open a new window with just the image
-      const printWindow = window.open('', '_blank');
-      
-      if (!printWindow) {
-        toast.error("Could not open print window. Please check your popup settings.");
-        return;
-      }
-      
-      // Write HTML content to the new window
-      printWindow.document.write(`
-        <html>
-          <head>
-            <title>Kodigo Eleksyon 2025</title>
-            <style>
-              body {
-                margin: 0;
-                padding: 20px;
-                display: flex;
-                justify-content: center;
-              }
-              img {
-                max-width: 100%;
-                height: auto;
-                box-shadow: 0 0 10px rgba(0,0,0,0.1);
-              }
-              @media print {
-                body {
-                  padding: 0;
-                }
-                img {
-                  max-width: 100%;
-                  box-shadow: none;
-                }
-              }
-            </style>
-          </head>
-          <body>
-            <img src="${imageData}" alt="Kodigo Ballot" />
-          </body>
-        </html>
-      `);
-      
-      printWindow.document.close();
-    } catch (error) {
-      console.error("Error generating printable image:", error);
-      toast.error("Failed to generate printable image. Please try again.");
-    }
+  const handlePrint = () => {
+    window.print();
   };
-
+  
   return (
-    <div className="mt-6 flex flex-col sm:flex-row gap-4 justify-between">
+    <div className={cn(
+      "sticky bottom-0 pt-4 pb-4 bg-white z-10 border-t border-gray-200 mt-8 no-print",
+      "animate-fade-in transition-all duration-300 ease-in-out",
+      "flex flex-col sm:flex-row justify-end items-center gap-3 sm:gap-4 w-full"
+    )}>
       <Button
         variant="outline"
-        className="transition-all duration-300 print:hidden"
-        onClick={() => {
-          onClear();
-          toast.success("Your selections have been cleared");
-        }}
+        className={cn(
+          "flex items-center gap-2 border-red-200 text-red-600 hover:bg-red-50 hover:text-red-700 w-full sm:w-auto order-1 sm:order-none",
+          !hasSelections && "opacity-50 cursor-not-allowed"
+        )}
+        onClick={onClear}
         disabled={!hasSelections}
       >
-        Clear All Selections
+        <Trash2 className="h-4 w-4" />
+        Clear Selections
       </Button>
       
-      <div className="flex flex-col sm:flex-row gap-2 print:hidden">
+      <div className="flex items-center gap-3 w-full sm:w-auto">
         <Button
           variant="outline"
-          className="gap-2"
+          className="flex items-center gap-2 border-blue-200 text-blue-600 hover:bg-blue-50 hover:text-blue-700 w-full sm:w-auto"
           onClick={handlePrint}
-          disabled={!hasSelections}
         >
           <Printer className="h-4 w-4" />
-          Print Kodigo
+          Print
         </Button>
         
         <Button
-          className="group transition-all duration-300"
+          className={cn(
+            "flex items-center gap-2 bg-primary hover:bg-primary/90 transition-transform hover:-translate-y-0.5 active:translate-y-0 w-full sm:w-auto",
+            !hasSelections && "opacity-50 cursor-not-allowed"
+          )}
           onClick={onPreview}
           disabled={!hasSelections}
         >
-          Share Kodigo
-          <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+          <Eye className="h-4 w-4" />
+          Preview
         </Button>
       </div>
     </div>
