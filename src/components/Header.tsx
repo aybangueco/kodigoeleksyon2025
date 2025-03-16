@@ -38,7 +38,7 @@ export const Header = () => {
       
       <div className="flex items-center gap-4">
         <h2 className="text-sm font-medium text-gray-600 hidden md:block">
-          Official Sample Ballot Builder
+          Sample Ballot Builder
         </h2>
       </div>
     </header>
