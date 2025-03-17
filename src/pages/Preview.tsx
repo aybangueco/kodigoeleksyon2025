@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from 'react';
 import { useSearchParams, useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
@@ -27,7 +26,6 @@ const Preview = () => {
   const encryptedData = searchParams.get('data');
   const cityParam = searchParams.get('city') || 'Zamboanga City';
   
-  // Select position data based on city
   const positionsData = cityParam.includes('Cebu') ? cebuCityPositions : zamboangaPositions;
   
   useEffect(() => {
@@ -72,34 +70,45 @@ const Preview = () => {
     new Set(selectedCandidatesList.map(item => item.position.id))
   );
 
-  // Generate the current URL for the share link
   const shareLink = window.location.href;
 
   return (
-    <div className="min-h-screen flex flex-col bg-background">
+    <div className="min-h-screen flex flex-col bg-gradient-to-b from-background to-muted/20">
       <Helmet>
         <title>Your Personalized Ballot | Kodigo Eleksyon 2025</title>
         <meta name="description" content="Preview and print your personalized ballot for the 2025 Philippine elections." />
         <meta name="robots" content="noindex" /> {/* Don't index preview pages */}
       </Helmet>
       
-      <main className="flex-1 py-24">
-        <div className="container mx-auto max-w-5xl px-4 space-y-8">
+      <main className="flex-1 py-16 md:py-20 px-4">
+        <div className="container mx-auto max-w-5xl space-y-8">
           <PreviewHeader cityName={cityParam} />
           
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
-            <div className="lg:col-span-8 space-y-6">
-              <BallotPreview 
-                selectedCandidatesList={selectedCandidatesList}
-                selectedPositions={selectedPositions}
-                positions={positionsData}
-                cityName={cityParam}
-              />
-            </div>
-            
-            <div className="lg:col-span-4 space-y-6">
-              <ElectionReminder />
-              <ShareSection shareLink={shareLink} />
+          <div className="relative">
+            <div className="absolute -top-12 right-0 w-60 h-60 bg-ph-blue/5 rounded-full blur-3xl -z-10" aria-hidden="true"></div>
+            <div className="absolute -bottom-16 left-8 w-72 h-72 bg-ph-red/5 rounded-full blur-3xl -z-10" aria-hidden="true"></div>
+          
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
+              <div className="lg:col-span-8 space-y-6">
+                <BallotPreview 
+                  selectedCandidatesList={selectedCandidatesList}
+                  selectedPositions={selectedPositions}
+                  positions={positionsData}
+                  cityName={cityParam}
+                />
+              </div>
+              
+              <div className="lg:col-span-4 space-y-6">
+                <ElectionReminder />
+                <ShareSection shareLink={shareLink} />
+                
+                <div className="p-4 bg-white/80 backdrop-blur-sm rounded-lg border border-border shadow-sm">
+                  <h3 className="text-sm font-medium mb-2 text-center">Kodigo Reminder</h3>
+                  <p className="text-xs text-muted-foreground text-center">
+                    This is your personal ballot guide. Use it as reference when voting on Election Day.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>

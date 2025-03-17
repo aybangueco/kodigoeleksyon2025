@@ -1,6 +1,6 @@
 
 import { useRef, useState } from 'react';
-import { Download, Printer } from 'lucide-react';
+import { Download, Printer, CheckCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { Position, Candidate } from '@/lib/positions';
@@ -72,16 +72,16 @@ const BallotPreview = ({
   };
   
   return (
-    <div className="bg-white rounded-lg border overflow-hidden shadow-md">
+    <div className="bg-white rounded-lg border overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
       {/* Preview Header */}
-      <div className="border-b p-4 space-y-2">
-        <h2 className="text-xl font-bold text-center">Your Kodigo Ballot</h2>
+      <div className="border-b p-4 bg-gradient-to-r from-background to-muted/30">
+        <h2 className="text-xl font-bold text-center mb-3">Your Kodigo Ballot</h2>
         
-        <div className="flex justify-center space-x-2">
+        <div className="flex justify-center gap-3">
           <Button
             variant="outline"
             size="sm"
-            className="text-xs flex items-center gap-1"
+            className="text-xs flex items-center gap-1.5 h-9 px-4 bg-white hover:bg-muted/20"
             onClick={handlePrint}
             disabled={isPrinting}
           >
@@ -92,7 +92,7 @@ const BallotPreview = ({
           <Button
             variant="default"
             size="sm"
-            className="text-xs flex items-center gap-1"
+            className="text-xs flex items-center gap-1.5 h-9 px-4"
             onClick={handleDownload}
             disabled={isPrinting}
           >
@@ -106,12 +106,15 @@ const BallotPreview = ({
       <div 
         ref={ballotRef}
         className={cn(
-          "p-6 pt-8 print:p-0 bg-white transition-opacity",
+          "p-6 pt-8 print:p-0 bg-white transition-opacity relative",
           isPrinting ? "opacity-70" : "opacity-100"
         )}
       >
         {/* Ballot Header */}
-        <div className="text-center mb-6 print:mb-4">
+        <div className="text-center mb-8 print:mb-4 relative">
+          {/* Decorative flag colors */}
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-20 h-1 bg-gradient-to-r from-ph-blue via-ph-yellow to-ph-red rounded-full print:hidden"></div>
+          
           <h1 className="text-2xl font-bold text-primary print:text-black">
             KODIGO ELEKSYON 2025
           </h1>
@@ -130,19 +133,19 @@ const BallotPreview = ({
                 const candidatesForPosition = getCandidatesForPosition(position.id);
                 
                 return (
-                  <div key={position.id} className="print:page-break-inside-avoid">
-                    <div className="bg-gray-100 print:bg-gray-200 px-4 py-2 rounded-md print:rounded-none">
+                  <div key={position.id} className="print:page-break-inside-avoid group">
+                    <div className="bg-muted/60 print:bg-gray-200 px-4 py-2 rounded-md print:rounded-none">
                       <h3 className="font-medium text-gray-800 print:text-black">
                         {position.title}
                       </h3>
                     </div>
                     
-                    <div className="mt-2 ml-2 space-y-1 print:mt-1">
+                    <div className="mt-3 ml-3 space-y-2 print:mt-1">
                       {candidatesForPosition.map(candidate => (
-                        <div key={candidate.id} className="flex items-center gap-2">
-                          <div className="w-3 h-3 rounded-full bg-primary print:bg-black"></div>
+                        <div key={candidate.id} className="flex items-center gap-2 p-1.5 rounded-md group-hover:bg-muted/30 transition-colors duration-150">
+                          <div className="w-3 h-3 rounded-full bg-primary print:bg-black flex-shrink-0"></div>
                           <span className="font-medium">{candidate.name}</span>
-                          <span className="text-sm text-muted-foreground print:text-gray-600">
+                          <span className="text-sm text-muted-foreground print:text-gray-600 max-w-[180px] overflow-hidden text-ellipsis">
                             ({candidate.party})
                           </span>
                         </div>
@@ -152,8 +155,11 @@ const BallotPreview = ({
                 );
               })
           ) : (
-            <div className="py-8 text-center text-muted-foreground">
-              No candidates selected. Go back to make your selections.
+            <div className="py-16 text-center text-muted-foreground">
+              <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-muted mb-3">
+                <CheckCircle className="h-6 w-6 text-muted-foreground" />
+              </div>
+              <p>No candidates selected. Go back to make your selections.</p>
             </div>
           )}
         </div>
