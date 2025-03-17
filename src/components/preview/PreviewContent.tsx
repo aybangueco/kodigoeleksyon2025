@@ -5,6 +5,7 @@ import { useIsMobile } from '@/hooks/use-mobile';
 import { BallotCandidate } from '@/hooks/useBallotData';
 import BallotPreview from '@/components/preview/BallotPreview';
 import ElectionReminder from '@/components/preview/ElectionReminder';
+import ShareSection from '@/components/preview/ShareSection';
 
 interface PreviewContentProps {
   selectedCandidatesList: BallotCandidate[];
@@ -39,6 +40,8 @@ const PreviewContent: React.FC<PreviewContentProps> = ({
       </div>
       
       <div className="grid grid-cols-1 gap-5 md:gap-6">
+        <ShareSection shareLink={shareLink} />
+        
         <ElectionReminder />
         
         <div className="p-4 bg-white/80 backdrop-blur-sm rounded-lg border border-border shadow-sm">
