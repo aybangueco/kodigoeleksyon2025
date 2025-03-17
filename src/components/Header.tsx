@@ -1,29 +1,34 @@
-
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { cn } from '@/lib/utils';
+import { Menu } from 'lucide-react';
 
 export const Header = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false); // State for mobile menu
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 10);
     };
-    
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
-    <header 
+    <header
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out px-6 py-4 flex items-center justify-between print:hidden",
         scrolled ? "bg-white/80 backdrop-blur-md shadow-sm" : "bg-transparent"
       )}
     >
-      <Link 
-        to="/" 
+      <Link
+        to="/"
         className="flex items-center gap-2 transition-opacity duration-300 hover:opacity-80"
       >
         <div className="w-8 h-6 overflow-hidden rounded-sm">
@@ -42,24 +47,79 @@ export const Header = () => {
         </div>
         <span className="font-bold text-lg tracking-tight">KODIGO ELEKSYON 2025</span>
       </Link>
-      
+
       <div className="flex items-center gap-4">
-      <Link 
-          to="/" 
-          className="flex items-center gap-2 transition-opacity duration-300 hover:opacity-80"
+        {/* Mobile Menu Button */}
+        <button
+          className="md:hidden text-gray-600 hover:text-gray-800"
+          onClick={toggleMenu}
+          aria-label="Toggle Menu"
         >
-          <span className="text-sm font-medium text-gray-600">ZAMBOANGA CITY</span>
-        </Link>
-        <Link 
-          to="/cebu-city" 
-          className="flex items-center gap-2 transition-opacity duration-300 hover:opacity-80"
-        >
-          <span className="text-sm font-medium text-gray-600">CEBU CITY</span>
-        </Link>
-        <h2 className="text-sm font-medium text-gray-600 hidden md:block">
-          Sample Ballot Builder
-        </h2>
+          <Menu />
+        </button>
+
+        {/* Desktop Links */}
+        <div className="hidden md:flex items-center gap-4">
+          <Link
+            to="/"
+            className="flex items-center gap-2 transition-opacity duration-300 hover:opacity-80"
+          >
+            <span className="text-sm font-medium text-gray-600">ZAMBOANGA CITY</span>
+          </Link>
+          <Link
+            to="/cebu-city"
+            className="flex items-center gap-2 transition-opacity duration-300 hover:opacity-80"
+          >
+            <span className="text-sm font-medium text-gray-600">CEBU CITY</span>
+          </Link>
+          <h2 className="text-sm font-medium text-gray-600">
+            Sample Ballot Builder
+          </h2>
+        </div>
       </div>
+
+      {/* Mobile Menu Overlay */}
+      {isMenuOpen && (
+        <div className="fixed top-0 left-0 w-full h-full bg-white z-40 md:hidden">
+          <div className="p-6">
+            <button
+              className="text-gray-600 hover:text-gray-800 mb-4"
+              onClick={toggleMenu}
+              aria-label="Close Menu"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="w-6 h-6"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+            <div className="flex flex-col gap-4">
+              <Link
+                to="/"
+                className="flex items-center gap-2 transition-opacity duration-300 hover:opacity-80"
+                onClick={toggleMenu}
+              >
+                <span className="text-sm font-medium text-gray-600">ZAMBOANGA CITY</span>
+              </Link>
+              <Link
+                to="/cebu-city"
+                className="flex items-center gap-2 transition-opacity duration-300 hover:opacity-80"
+                onClick={toggleMenu}
+              >
+                <span className="text-sm font-medium text-gray-600">CEBU CITY</span>
+              </Link>
+              <h2 className="text-sm font-medium text-gray-600">
+                Sample Ballot Builder
+              </h2>
+            </div>
+          </div>
+        </div>
+      )}
     </header>
   );
 };
