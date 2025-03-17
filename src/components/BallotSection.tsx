@@ -96,7 +96,7 @@ const BallotSection = ({
     >
       <div className="container mx-auto max-w-5xl">
         <BallotHeader cityName={cityName} />
-        <ProgressBar selectedCandidates={selectedCandidates} positions={positions} />
+        <ProgressBar selectedCandidates={selectedCandidates} positions={positionsToUse} />
         
         <div className="space-y-6 mt-8 animate-fade-in" role="list" aria-label="Election positions">
           {!isLoading && positionsToUse.map(position => (
