@@ -1,3 +1,4 @@
+
 import { useRef, useState } from 'react';
 import { Download, Printer, Share2, CheckCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -5,6 +6,18 @@ import { cn } from '@/lib/utils';
 import { Position, Candidate } from '@/lib/positions';
 import html2canvas from 'html2canvas';
 import useAnalytics from '@/hooks/useAnalytics';
+import { 
+  FacebookShareButton, 
+  TwitterShareButton, 
+  WhatsappShareButton,
+  TelegramShareButton,
+  FacebookIcon,
+  TwitterIcon,
+  WhatsappIcon,
+  TelegramIcon
+} from 'react-share';
+import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
+import { toast } from 'sonner';
 
 type BallotCandidate = {
   position: Position;
@@ -71,25 +84,21 @@ const BallotPreview = ({
     }
   };
   
-  const handleShare = async () => {
+  const handleCopyLink = async () => {
     if (!shareLink) return;
     
     try {
-      if (navigator.share) {
-        await navigator.share({
-          title: 'My Kodigo Eleksyon 2025 Ballot',
-          text: `Check out my personalized ${cityName} ballot for the 2025 elections!`,
-          url: shareLink,
-        });
-        trackEvent('preview', 'native_share', 'Used native share API');
-      } else {
-        await navigator.clipboard.writeText(shareLink);
-        trackEvent('preview', 'copy_share_link', 'Copied share link to clipboard');
-      }
+      await navigator.clipboard.writeText(shareLink);
+      toast.success('Link copied to clipboard!');
+      trackEvent('preview', 'copy_share_link', 'Copied share link to clipboard');
     } catch (error) {
-      console.error('Error sharing:', error);
+      console.error('Error copying link:', error);
+      toast.error('Failed to copy link');
     }
   };
+  
+  const shareTitle = `My Kodigo Eleksyon 2025 ${cityName} Ballot`;
+  const shareDescription = `Check out my personalized ${cityName} ballot for the 2025 Philippine elections!`;
   
   return (
     <div className="bg-white rounded-lg border overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
@@ -120,16 +129,48 @@ const BallotPreview = ({
           </Button>
           
           {shareLink && (
-            <Button
-              variant="secondary"
-              size="sm"
-              className="text-xs flex items-center gap-1.5 h-9 px-4"
-              onClick={handleShare}
-              disabled={isPrinting}
-            >
-              <Share2 className="h-3.5 w-3.5" />
-              <span>Share</span>
-            </Button>
+            <Popover>
+              <PopoverTrigger asChild>
+                <Button
+                  variant="secondary"
+                  size="sm"
+                  className="text-xs flex items-center gap-1.5 h-9 px-4"
+                  disabled={isPrinting}
+                >
+                  <Share2 className="h-3.5 w-3.5" />
+                  <span>Share</span>
+                </Button>
+              </PopoverTrigger>
+              <PopoverContent className="w-auto p-3" align="center">
+                <div className="space-y-2">
+                  <h4 className="text-sm font-medium text-center mb-2">Share via</h4>
+                  <div className="flex gap-2 justify-center">
+                    <FacebookShareButton url={shareLink} quote={shareDescription} title={shareTitle}>
+                      <FacebookIcon size={32} round />
+                    </FacebookShareButton>
+                    <TwitterShareButton url={shareLink} title={shareTitle}>
+                      <TwitterIcon size={32} round />
+                    </TwitterShareButton>
+                    <WhatsappShareButton url={shareLink} title={shareTitle}>
+                      <WhatsappIcon size={32} round />
+                    </WhatsappShareButton>
+                    <TelegramShareButton url={shareLink} title={shareTitle}>
+                      <TelegramIcon size={32} round />
+                    </TelegramShareButton>
+                  </div>
+                  <div className="mt-2 pt-2 border-t">
+                    <Button 
+                      variant="outline" 
+                      size="sm" 
+                      className="w-full text-xs"
+                      onClick={handleCopyLink}
+                    >
+                      Copy Link
+                    </Button>
+                  </div>
+                </div>
+              </PopoverContent>
+            </Popover>
           )}
         </div>
       </div>
