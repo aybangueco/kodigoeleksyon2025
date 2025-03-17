@@ -38,7 +38,7 @@ const Preview = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
       </Helmet>
       
-      <main className={`flex-1 ${isMobile ? 'py-8 px-3' : 'py-16 md:py-20 px-4'}`}>
+      <main className={`flex-1 ${isMobile ? 'py-24 px-3' : 'py-16 md:py-20 px-4'}`}>
         <div className="container mx-auto max-w-5xl space-y-6 md:space-y-8">
           <PreviewHeader cityName={cityParam} />
           
