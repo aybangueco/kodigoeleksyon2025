@@ -44,6 +44,12 @@ export const Header = () => {
       </Link>
       
       <div className="flex items-center gap-4">
+        <Link 
+          to="/cebu-city" 
+          className="flex items-center gap-2 transition-opacity duration-300 hover:opacity-80"
+        >
+          <span className="font-bold text-lg tracking-tight">CEBU CITY</span>
+        </Link>
         <h2 className="text-sm font-medium text-gray-600 hidden md:block">
           Sample Ballot Builder
         </h2>
