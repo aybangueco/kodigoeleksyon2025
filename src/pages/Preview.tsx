@@ -72,6 +72,9 @@ const Preview = () => {
     new Set(selectedCandidatesList.map(item => item.position.id))
   );
 
+  // Generate the current URL for the share link
+  const shareLink = window.location.href;
+
   return (
     <div className="min-h-screen flex flex-col bg-background">
       <Helmet>
@@ -96,7 +99,7 @@ const Preview = () => {
             
             <div className="lg:col-span-4 space-y-6">
               <ElectionReminder />
-              <ShareSection />
+              <ShareSection shareLink={shareLink} />
             </div>
           </div>
         </div>
