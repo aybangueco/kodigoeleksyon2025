@@ -3,6 +3,7 @@ import { Home, ChevronLeft } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import useAnalytics from '@/hooks/useAnalytics';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 interface PreviewHeaderProps {
   cityName?: string;
@@ -10,6 +11,7 @@ interface PreviewHeaderProps {
 
 const PreviewHeader = ({ cityName = "Zamboanga City" }: PreviewHeaderProps) => {
   const { trackEvent } = useAnalytics();
+  const isMobile = useIsMobile();
   
   const handleBackClick = () => {
     trackEvent('preview', 'back_to_ballot', 'Return to ballot builder');
@@ -19,21 +21,21 @@ const PreviewHeader = ({ cityName = "Zamboanga City" }: PreviewHeaderProps) => {
   const returnPath = cityName.includes('Cebu') ? '/cebu-city' : '/';
   
   return (
-    <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
+    <div className="flex flex-col sm:flex-row justify-between items-center gap-3 sm:gap-4">
       <div>
-        <h1 className="text-2xl font-bold">Your Ballot Preview</h1>
-        <p className="text-muted-foreground">
+        <h1 className="text-xl sm:text-2xl font-bold">Your Ballot Preview</h1>
+        <p className="text-sm text-muted-foreground">
           Review, print, or download your selections for {cityName}
         </p>
       </div>
       
-      <div className="flex items-center gap-2">
+      <div className="flex items-center gap-2 mt-2 sm:mt-0">
         <Button
           variant="outline"
-          size="sm" 
+          size={isMobile ? "sm" : "default"}
           asChild
           onClick={handleBackClick}
-          className="flex items-center gap-1"
+          className="flex items-center gap-1 h-9 touch-manipulation"
         >
           <Link to={returnPath}>
             <ChevronLeft className="h-4 w-4" />
@@ -45,7 +47,7 @@ const PreviewHeader = ({ cityName = "Zamboanga City" }: PreviewHeaderProps) => {
           variant="ghost"
           size="icon"
           asChild
-          className="h-8 w-8"
+          className="h-9 w-9 touch-manipulation"
         >
           <Link to="/" title="Home">
             <Home className="h-4 w-4" />

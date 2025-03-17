@@ -11,6 +11,7 @@ import BallotPreview from '@/components/preview/BallotPreview';
 import PreviewHeader from '@/components/preview/PreviewHeader';
 import ElectionReminder from '@/components/preview/ElectionReminder';
 import useAnalytics from '@/hooks/useAnalytics';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 type BallotCandidate = {
   position: Position;
@@ -22,6 +23,7 @@ const Preview = () => {
   const navigate = useNavigate();
   const [selectedCandidatesList, setSelectedCandidatesList] = useState<BallotCandidate[]>([]);
   const { trackEvent } = useAnalytics();
+  const isMobile = useIsMobile();
 
   const encryptedData = searchParams.get('data');
   const cityParam = searchParams.get('city') || 'Zamboanga City';
@@ -78,17 +80,18 @@ const Preview = () => {
         <title>Your Personalized Ballot | Kodigo Eleksyon 2025</title>
         <meta name="description" content="Preview and print your personalized ballot for the 2025 Philippine elections." />
         <meta name="robots" content="noindex" /> {/* Don't index preview pages */}
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
       </Helmet>
       
-      <main className="flex-1 py-16 md:py-20 px-4">
-        <div className="container mx-auto max-w-5xl space-y-8">
+      <main className={`flex-1 ${isMobile ? 'py-8 px-3' : 'py-16 md:py-20 px-4'}`}>
+        <div className="container mx-auto max-w-5xl space-y-6 md:space-y-8">
           <PreviewHeader cityName={cityParam} />
           
           <div className="relative">
             <div className="absolute -top-12 right-0 w-60 h-60 bg-ph-blue/5 rounded-full blur-3xl -z-10" aria-hidden="true"></div>
             <div className="absolute -bottom-16 left-8 w-72 h-72 bg-ph-red/5 rounded-full blur-3xl -z-10" aria-hidden="true"></div>
           
-            <div className="mb-8">
+            <div className="mb-6 md:mb-8">
               <BallotPreview 
                 selectedCandidatesList={selectedCandidatesList}
                 selectedPositions={selectedPositions}
@@ -98,7 +101,7 @@ const Preview = () => {
               />
             </div>
             
-            <div className="grid grid-cols-1 gap-6">
+            <div className="grid grid-cols-1 gap-5 md:gap-6">
               <ElectionReminder />
               
               <div className="p-4 bg-white/80 backdrop-blur-sm rounded-lg border border-border shadow-sm">
