@@ -1,4 +1,3 @@
-
 import { useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { cn } from '@/lib/utils';
@@ -97,10 +96,7 @@ const BallotSection = ({
     >
       <div className="container mx-auto max-w-5xl">
         <BallotHeader cityName={cityName} />
-        <ProgressBar 
-          selectedCandidates={selectedCandidates} 
-          positions={positionsToUse}
-        />
+        <ProgressBar selectedCandidates={selectedCandidates} />
         
         <div className="space-y-6 mt-8 animate-fade-in" role="list" aria-label="Election positions">
           {!isLoading && positionsToUse.map(position => (
