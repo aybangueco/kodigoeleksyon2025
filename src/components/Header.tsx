@@ -44,6 +44,12 @@ export const Header = () => {
       </Link>
       
       <div className="flex items-center gap-4">
+      <Link 
+          to="/" 
+          className="flex items-center gap-2 transition-opacity duration-300 hover:opacity-80"
+        >
+          <span className="text-sm font-medium text-gray-600">ZAMBOANGA CITY</span>
+        </Link>
         <Link 
           to="/cebu-city" 
           className="flex items-center gap-2 transition-opacity duration-300 hover:opacity-80"
