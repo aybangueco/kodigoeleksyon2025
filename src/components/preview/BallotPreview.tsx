@@ -1,6 +1,5 @@
-
 import { useRef, useState } from 'react';
-import { Download, Printer, CheckCircle } from 'lucide-react';
+import { Download, Printer, Share2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { Position, Candidate } from '@/lib/positions';
@@ -17,13 +16,15 @@ interface BallotPreviewProps {
   selectedPositions: string[];
   positions: Position[];
   cityName?: string;
+  shareLink?: string;
 }
 
 const BallotPreview = ({ 
   selectedCandidatesList, 
   selectedPositions,
   positions,
-  cityName = "Zamboanga City"
+  cityName = "Zamboanga City",
+  shareLink
 }: BallotPreviewProps) => {
   const [isPrinting, setIsPrinting] = useState(false);
   const ballotRef = useRef<HTMLDivElement>(null);
@@ -55,7 +56,6 @@ const BallotPreview = ({
       
       const dataUrl = canvas.toDataURL('image/png');
       
-      // Create a link and trigger download
       const link = document.createElement('a');
       link.href = dataUrl;
       link.download = `kodigo-eleksyon-${cityName.toLowerCase().replace(/\s+/g, '-')}-ballot.png`;
@@ -71,9 +71,28 @@ const BallotPreview = ({
     }
   };
   
+  const handleShare = async () => {
+    if (!shareLink) return;
+    
+    try {
+      if (navigator.share) {
+        await navigator.share({
+          title: 'My Kodigo Eleksyon 2025 Ballot',
+          text: `Check out my personalized ${cityName} ballot for the 2025 elections!`,
+          url: shareLink,
+        });
+        trackEvent('preview', 'native_share', 'Used native share API');
+      } else {
+        await navigator.clipboard.writeText(shareLink);
+        trackEvent('preview', 'copy_share_link', 'Copied share link to clipboard');
+      }
+    } catch (error) {
+      console.error('Error sharing:', error);
+    }
+  };
+  
   return (
     <div className="bg-white rounded-lg border overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
-      {/* Preview Header */}
       <div className="border-b p-4 bg-gradient-to-r from-background to-muted/30">
         <h2 className="text-xl font-bold text-center mb-3">Your Kodigo Ballot</h2>
         
@@ -99,10 +118,22 @@ const BallotPreview = ({
             <Download className="h-3.5 w-3.5" />
             <span>Download</span>
           </Button>
+          
+          {shareLink && (
+            <Button
+              variant="secondary"
+              size="sm"
+              className="text-xs flex items-center gap-1.5 h-9 px-4"
+              onClick={handleShare}
+              disabled={isPrinting}
+            >
+              <Share2 className="h-3.5 w-3.5" />
+              <span>Share</span>
+            </Button>
+          )}
         </div>
       </div>
       
-      {/* Ballot Preview Section */}
       <div 
         ref={ballotRef}
         className={cn(
@@ -110,9 +141,7 @@ const BallotPreview = ({
           isPrinting ? "opacity-70" : "opacity-100"
         )}
       >
-        {/* Ballot Header */}
         <div className="text-center mb-8 print:mb-4 relative">
-          {/* Decorative flag colors */}
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-20 h-1 bg-gradient-to-r from-ph-blue via-ph-yellow to-ph-red rounded-full print:hidden"></div>
           
           <h1 className="text-2xl font-bold text-primary print:text-black">
@@ -124,7 +153,6 @@ const BallotPreview = ({
           <div className="border-b-2 border-dashed border-gray-300 my-4 print:border-gray-400"></div>
         </div>
         
-        {/* Ballot Positions and Selections */}
         <div className="space-y-6 print:space-y-2">
           {selectedPositions.length > 0 ? (
             positions
@@ -164,7 +192,6 @@ const BallotPreview = ({
           )}
         </div>
         
-        {/* Footer note */}
         <div className="mt-8 print:mt-6 text-center text-xs text-muted-foreground">
           <div className="border-t-2 border-dashed border-gray-300 mb-4 print:border-gray-400"></div>
           <p className="print:text-gray-700">

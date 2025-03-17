@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from 'react';
 import { useSearchParams, useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
@@ -95,6 +96,7 @@ const Preview = () => {
                   selectedPositions={selectedPositions}
                   positions={positionsData}
                   cityName={cityParam}
+                  shareLink={shareLink}
                 />
               </div>
               

@@ -1,7 +1,6 @@
 
-import { useState } from 'react';
+import { Share2, Copy } from 'lucide-react';
 import { toast } from 'sonner';
-import { Copy, Share2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 /**
@@ -31,8 +30,11 @@ const ShareSection: React.FC<ShareSectionProps> = ({ shareLink }) => {
   };
 
   return (
-    <div className="mb-8 p-6 rounded-xl border border-border bg-card">
-      <h2 className="text-xl font-medium mb-4">Share Your Kodigo</h2>
+    <div className="p-6 rounded-xl border border-border bg-card">
+      <h2 className="text-xl font-medium mb-4 flex items-center gap-2">
+        <Share2 className="h-5 w-5 text-muted-foreground" />
+        Share Your Kodigo
+      </h2>
       
       <div className="flex flex-col sm:flex-row gap-4">
         <div className="flex-1 relative">
@@ -51,7 +53,7 @@ const ShareSection: React.FC<ShareSectionProps> = ({ shareLink }) => {
           className="transition-all duration-300 transform hover:translate-y-[-2px] active:translate-y-0"
           onClick={handleCopyLink}
         >
-          <Copy className="mr-2 h-4 w-4" />
+          <Copy className="h-4 w-4" />
           Copy Link
         </Button>
       </div>
