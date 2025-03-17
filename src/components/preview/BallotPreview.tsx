@@ -1,5 +1,5 @@
 import { useRef, useState } from 'react';
-import { Download, Printer, Share2 } from 'lucide-react';
+import { Download, Printer, Share2, CheckCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { Position, Candidate } from '@/lib/positions';
