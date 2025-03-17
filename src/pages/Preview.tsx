@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from 'react';
 import { useSearchParams, useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
@@ -89,27 +88,25 @@ const Preview = () => {
             <div className="absolute -top-12 right-0 w-60 h-60 bg-ph-blue/5 rounded-full blur-3xl -z-10" aria-hidden="true"></div>
             <div className="absolute -bottom-16 left-8 w-72 h-72 bg-ph-red/5 rounded-full blur-3xl -z-10" aria-hidden="true"></div>
           
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
-              <div className="lg:col-span-8 space-y-6">
-                <BallotPreview 
-                  selectedCandidatesList={selectedCandidatesList}
-                  selectedPositions={selectedPositions}
-                  positions={positionsData}
-                  cityName={cityParam}
-                  shareLink={shareLink}
-                />
-              </div>
+            <div className="mb-8">
+              <BallotPreview 
+                selectedCandidatesList={selectedCandidatesList}
+                selectedPositions={selectedPositions}
+                positions={positionsData}
+                cityName={cityParam}
+                shareLink={shareLink}
+              />
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <ElectionReminder />
+              <ShareSection shareLink={shareLink} />
               
-              <div className="lg:col-span-4 space-y-6">
-                <ElectionReminder />
-                <ShareSection shareLink={shareLink} />
-                
-                <div className="p-4 bg-white/80 backdrop-blur-sm rounded-lg border border-border shadow-sm">
-                  <h3 className="text-sm font-medium mb-2 text-center">Kodigo Reminder</h3>
-                  <p className="text-xs text-muted-foreground text-center">
-                    This is your personal ballot guide. Use it as reference when voting on Election Day.
-                  </p>
-                </div>
+              <div className="p-4 bg-white/80 backdrop-blur-sm rounded-lg border border-border shadow-sm md:col-span-2">
+                <h3 className="text-sm font-medium mb-2 text-center">Kodigo Reminder</h3>
+                <p className="text-xs text-muted-foreground text-center">
+                  This is your personal ballot guide. Use it as reference when voting on Election Day.
+                </p>
               </div>
             </div>
           </div>
