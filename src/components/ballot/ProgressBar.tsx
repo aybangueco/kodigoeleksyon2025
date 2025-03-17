@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from 'react';
 import { positions as defaultPositions, Position } from '@/lib/positions';
-import { Progress } from '@/components/ui/progress';
+import { cn } from '@/lib/utils';
 
 interface ProgressBarProps {
   selectedCandidates: Record<string, string[]>;
@@ -35,11 +35,20 @@ const ProgressBar = ({ selectedCandidates, positions = defaultPositions }: Progr
         <span className="text-sm font-medium text-gray-700">Your ballot completion</span>
         <span className="text-sm font-medium text-primary">{progress}%</span>
       </div>
-      <Progress 
-        value={progress} 
-        className="h-2" 
-        aria-label="Ballot completion percentage" 
-      />
+      <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
+        <div 
+          className={cn(
+            "h-full transition-all duration-500 ease-out",
+            progress < 50 ? "bg-red-400" : progress < 100 ? "bg-yellow-400" : "bg-green-500"
+          )}
+          style={{ width: `${progress}%` }}
+          role="progressbar"
+          aria-valuenow={progress}
+          aria-valuemin={0}
+          aria-valuemax={100}
+          aria-label="Ballot completion percentage"
+        ></div>
+      </div>
       <div className="flex justify-between mt-1 text-xs text-gray-500">
         <span>Not started</span>
         <span>In progress</span>
