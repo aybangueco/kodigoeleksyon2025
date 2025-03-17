@@ -6,7 +6,11 @@ import {
   FacebookShareButton, 
   TwitterShareButton,
   FacebookIcon,
-  TwitterIcon 
+  TwitterIcon,
+  RedditShareButton,
+  RedditIcon,
+  FacebookMessengerShareButton,
+  FacebookMessengerIcon
 } from 'react-share';
 
 /**
@@ -79,9 +83,17 @@ const ShareSection: React.FC<ShareSectionProps> = ({ shareLink }) => {
           <FacebookIcon size={40} round className="touch-manipulation" />
         </FacebookShareButton>
 
+        <FacebookMessengerShareButton url={shareLink} appId="258890396486471">
+          <FacebookMessengerIcon size={40} round className="touch-manipulation" />
+        </FacebookMessengerShareButton>
+
         <TwitterShareButton url={shareLink} title={shareTitle}>
           <TwitterIcon size={40} round className="touch-manipulation" />
         </TwitterShareButton>
+
+        <RedditShareButton url={shareLink} title={shareTitle}>
+          <RedditIcon size={40} round className="touch-manipulation" />
+        </RedditShareButton>
 
         <Button 
           variant="ghost" 
