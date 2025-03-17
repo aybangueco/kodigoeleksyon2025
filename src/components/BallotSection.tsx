@@ -2,12 +2,11 @@
 import { useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { cn } from '@/lib/utils';
-import { positions } from '@/lib/positions';
+import { positions, Position } from '@/lib/positions';
 import { encryptBallot } from '@/lib/encryption';
 import { toast } from 'sonner';
 import BallotHeader from './ballot/BallotHeader';
 import ProgressBar from './ballot/ProgressBar';
-import PositionList from './ballot/PositionList';
 import BallotActions from './ballot/BallotActions';
 import useAnalytics from '@/hooks/useAnalytics';
 import PositionCard from './PositionCard';
@@ -15,13 +14,21 @@ import PositionCard from './PositionCard';
 interface BallotSectionProps {
   selectedCandidates: Record<string, string[]>;
   setSelectedCandidates: (value: Record<string, string[]> | ((prev: Record<string, string[]>) => Record<string, string[]>)) => void;
+  positions?: Position[];
+  cityName?: string;
 }
 
-const BallotSection = ({ selectedCandidates, setSelectedCandidates }: BallotSectionProps) => {
+const BallotSection = ({ 
+  selectedCandidates, 
+  setSelectedCandidates,
+  positions: customPositions,
+  cityName = "Zamboanga City"
+}: BallotSectionProps) => {
   const navigate = useNavigate();
   const ballotRef = useRef<HTMLDivElement>(null);
   const [isLoading, setIsLoading] = useState(true);
   const { trackEvent } = useAnalytics();
+  const positionsToUse = customPositions || positions;
 
   useEffect(() => {
     setIsLoading(true);
@@ -30,7 +37,7 @@ const BallotSection = ({ selectedCandidates, setSelectedCandidates }: BallotSect
   
   const handleCandidateSelect = (positionId: string, candidateId: string) => {
     setSelectedCandidates(prev => {
-      const position = positions.find(p => p.id === positionId);
+      const position = positionsToUse.find(p => p.id === positionId);
       if (!position) return prev;
       
       const currentSelections = prev[positionId] || [];
@@ -70,7 +77,7 @@ const BallotSection = ({ selectedCandidates, setSelectedCandidates }: BallotSect
     );
     trackEvent('ballot', 'preview_ballot', 'Generate preview', totalSelections);
     
-    navigate(`/preview?data=${encryptedData}`);
+    navigate(`/preview?data=${encryptedData}&city=${encodeURIComponent(cityName)}`);
   };
   
   const handleClearSelections = () => {
@@ -89,11 +96,14 @@ const BallotSection = ({ selectedCandidates, setSelectedCandidates }: BallotSect
       aria-label="Ballot selection section"
     >
       <div className="container mx-auto max-w-5xl">
-        <BallotHeader />
-        <ProgressBar selectedCandidates={selectedCandidates} />
+        <BallotHeader cityName={cityName} />
+        <ProgressBar 
+          selectedCandidates={selectedCandidates} 
+          positions={positionsToUse}
+        />
         
         <div className="space-y-6 mt-8 animate-fade-in" role="list" aria-label="Election positions">
-          {!isLoading && positions.map(position => (
+          {!isLoading && positionsToUse.map(position => (
             <PositionCard 
               key={position.id}
               position={position}

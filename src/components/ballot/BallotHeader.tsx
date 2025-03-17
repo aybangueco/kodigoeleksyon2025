@@ -1,26 +1,46 @@
 
-const BallotHeader = () => {
+import { useEffect, useState } from 'react';
+import { cn } from '@/lib/utils';
+
+interface BallotHeaderProps {
+  cityName?: string;
+}
+
+const BallotHeader = ({ cityName = "Zamboanga City" }: BallotHeaderProps) => {
+  const [isVisible, setIsVisible] = useState(false);
+  
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsVisible(true);
+    }, 100);
+    
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
-    <div className="mb-8 text-center">
-      <div className="inline-block mb-4">
-        <div className="relative">
-          <div className="w-20 h-1 bg-accent absolute top-1/2 left-0 transform -translate-x-full -translate-y-1/2"></div>
-          <h1 className="text-3xl md:text-4xl font-bold text-center relative px-6">
-            KODIGO ELEKSYON 2025
-          </h1>
-          <div className="w-20 h-1 bg-accent absolute top-1/2 right-0 transform translate-x-full -translate-y-1/2"></div>
+    <div className={cn(
+      "transition-all duration-500 ease-in-out transform",
+      isVisible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-10"
+    )}>
+      <div className="text-center mb-8">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary">
+          <span className="inline-block relative">
+            Kodigo
+            <span className="absolute -top-1 -right-1 w-2 h-2 bg-red-500 rounded-full"></span>
+          </span>
+          <span className="text-gray-800"> Eleksyon</span>
+          <span className="bg-blue-100 text-blue-800 px-2 py-1 text-xl sm:text-2xl md:text-3xl rounded ml-2">
+            2025
+          </span>
+        </h1>
+        <p className="text-gray-600 mt-3 text-lg sm:text-xl">
+          Create your personalized ballot for {cityName}
+        </p>
+        <div className="mt-4 flex justify-center space-x-2 text-sm text-gray-500">
+          <span>🗳️ Select your candidates below</span>
+          <span>➡️</span>
+          <span>📋 Generate your printable kodigo</span>
         </div>
-      </div>
-      
-      <div className="text-center text-gray-600 max-w-2xl mx-auto space-y-3">
-        <p className="text-sm md:text-base">
-          Select your preferred candidates for each position. Your selections are saved automatically
-          in your browser, and you can print or share your kodigo after.
-        </p>
-        <p className="text-sm text-gray-500">
-          This ballot maker helps you prepare before election day. Create your personalized voting guide, 
-          save it to your device, or share it with friends and family to make the voting process faster and easier.
-        </p>
       </div>
     </div>
   );

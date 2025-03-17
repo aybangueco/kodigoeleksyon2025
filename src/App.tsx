@@ -8,6 +8,7 @@ import { HelmetProvider } from "react-helmet-async";
 import Preview from "./pages/Preview";
 import NotFound from "./pages/NotFound";
 import Index from "./pages/Index";
+import CebuCity from "./pages/CebuCity";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
 import Header from "./components/Header";
@@ -18,23 +19,25 @@ import { AlertTriangle } from "lucide-react";
 const queryClient = new QueryClient();
 
 // Create a layout component that includes the Header and disclaimer
-const Layout = ({ children }: { children: React.ReactNode }) => {
+const Layout = ({ children, showAlert = true, cityName }: { children: React.ReactNode, showAlert?: boolean, cityName?: string }) => {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      <div className="container mx-auto max-w-6xl px-6 mt-24 mb-2">
-        <Alert className="border-yellow-200 bg-yellow-50">
-          <AlertTriangle className="h-4 w-4 text-yellow-800" />
-          <AlertTitle className="text-yellow-800">Important Note</AlertTitle>
-          <AlertDescription className="text-yellow-700">
-            This tool is currently available for <strong>Zamboanga City</strong> only. 
-            If you want something similar for your city, please email{' '}
-            <a href="mailto:aljhoenilw@gmail.com" className="font-medium underline hover:text-yellow-900">
-              aljhoenilw@gmail.com
-            </a>
-          </AlertDescription>
-        </Alert>
-      </div>
+      {showAlert && (
+        <div className="container mx-auto max-w-6xl px-6 mt-24 mb-2">
+          <Alert className="border-yellow-200 bg-yellow-50">
+            <AlertTriangle className="h-4 w-4 text-yellow-800" />
+            <AlertTitle className="text-yellow-800">Important Note</AlertTitle>
+            <AlertDescription className="text-yellow-700">
+              This tool is currently available for <strong>{cityName || "Zamboanga City"}</strong> only. 
+              If you want something similar for your city, please email{' '}
+              <a href="mailto:aljhoenilw@gmail.com" className="font-medium underline hover:text-yellow-900">
+                aljhoenilw@gmail.com
+              </a>
+            </AlertDescription>
+          </Alert>
+        </div>
+      )}
       {children}
     </div>
   );
@@ -50,7 +53,8 @@ const App = () => (
           <AnalyticsTracker />
           <Routes>
             <Route path="/" element={<Layout><Index /></Layout>} />
-            <Route path="/preview" element={<Layout><Preview /></Layout>} />
+            <Route path="/cebu-city" element={<Layout cityName="Cebu City"><CebuCity /></Layout>} />
+            <Route path="/preview" element={<Layout showAlert={false}><Preview /></Layout>} />
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/terms" element={<Terms />} />
             <Route path="*" element={<NotFound />} />

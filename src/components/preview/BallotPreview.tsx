@@ -1,88 +1,170 @@
 
-import { cn } from '@/lib/utils';
+import { useRef, useState } from 'react';
+import { Download, Printer } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Edit } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
-import BallotPositionCard from './BallotPositionCard';
-import { positions, Candidate } from '@/lib/positions';
+import { cn } from '@/lib/utils';
+import { Position, Candidate } from '@/lib/positions';
+import html2canvas from 'html2canvas';
+import useAnalytics from '@/hooks/useAnalytics';
 
-/**
- * Props for the BallotPreview component
- */
-export interface BallotPreviewProps {
-  /** Object containing ballot data with position IDs as keys and arrays of selected candidate IDs as values */
-  ballotData: Record<string, string[]> | null;
-  /** Flag indicating if the ballot data is still loading */
-  isLoading: boolean;
+type BallotCandidate = {
+  position: Position;
+  candidate: Candidate;
+};
+
+interface BallotPreviewProps {
+  selectedCandidatesList: BallotCandidate[];
+  selectedPositions: string[];
+  positions: Position[];
+  cityName?: string;
 }
 
-/**
- * Component that displays the entire ballot preview with all selected candidates
- */
-const BallotPreview: React.FC<BallotPreviewProps> = ({ ballotData, isLoading }) => {
-  const navigate = useNavigate();
+const BallotPreview = ({ 
+  selectedCandidatesList, 
+  selectedPositions,
+  positions,
+  cityName = "Zamboanga City"
+}: BallotPreviewProps) => {
+  const [isPrinting, setIsPrinting] = useState(false);
+  const ballotRef = useRef<HTMLDivElement>(null);
+  const { trackEvent } = useAnalytics();
   
-  /**
-   * Returns an array of selected candidate objects for a given position
-   * @param positionId - The ID of the position to get candidates for
-   * @returns Array of selected candidate objects
-   */
-  const getSelectedCandidatesForPosition = (positionId: string): Candidate[] => {
-    if (!ballotData) return [];
+  const getCandidatesForPosition = (positionId: string) => {
+    return selectedCandidatesList
+      .filter(item => item.position.id === positionId)
+      .map(item => item.candidate);
+  };
+  
+  const handlePrint = () => {
+    trackEvent('preview', 'print_ballot', 'Print ballot');
+    window.print();
+  };
+  
+  const handleDownload = async () => {
+    if (!ballotRef.current) return;
     
-    const selectedIds = ballotData[positionId] || [];
-    const position = positions.find(p => p.id === positionId);
+    setIsPrinting(true);
     
-    if (!position) return [];
-    
-    return position.candidates.filter(candidate => 
-      selectedIds.includes(candidate.id)
-    );
+    try {
+      const canvas = await html2canvas(ballotRef.current, {
+        scale: 2,
+        useCORS: true,
+        logging: false,
+        backgroundColor: 'white',
+      });
+      
+      const dataUrl = canvas.toDataURL('image/png');
+      
+      // Create a link and trigger download
+      const link = document.createElement('a');
+      link.href = dataUrl;
+      link.download = `kodigo-eleksyon-${cityName.toLowerCase().replace(/\s+/g, '-')}-ballot.png`;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      
+      trackEvent('preview', 'download_ballot', 'Download ballot image');
+    } catch (error) {
+      console.error('Error generating ballot image:', error);
+    } finally {
+      setIsPrinting(false);
+    }
   };
   
   return (
-    <div className={cn(
-      "rounded-xl border border-border overflow-hidden shadow-sm",
-      "transform transition-all duration-500",
-      isLoading ? "opacity-0 translate-y-4" : "opacity-100 translate-y-0"
-    )}>
-      <div className="bg-card p-6 border-b border-border">
-        <div className="flex items-center justify-between">
-          <h2 className="text-xl font-medium">My Selected Candidates</h2>
+    <div className="bg-white rounded-lg border overflow-hidden shadow-md">
+      {/* Preview Header */}
+      <div className="border-b p-4 space-y-2">
+        <h2 className="text-xl font-bold text-center">Your Kodigo Ballot</h2>
+        
+        <div className="flex justify-center space-x-2">
           <Button
             variant="outline"
             size="sm"
-            onClick={() => navigate('/')}
+            className="text-xs flex items-center gap-1"
+            onClick={handlePrint}
+            disabled={isPrinting}
           >
-            <Edit className="mr-2 h-4 w-4" />
-            Edit Selections
+            <Printer className="h-3.5 w-3.5" />
+            <span>Print</span>
+          </Button>
+          
+          <Button
+            variant="default"
+            size="sm"
+            className="text-xs flex items-center gap-1"
+            onClick={handleDownload}
+            disabled={isPrinting}
+          >
+            <Download className="h-3.5 w-3.5" />
+            <span>Download</span>
           </Button>
         </div>
       </div>
       
-      <div className="divide-y divide-border">
-        {isLoading ? (
-          // Loading skeleton
-          Array(4).fill(0).map((_, index) => (
-            <div key={index} className="p-6 animate-pulse">
-              <div className="h-5 bg-muted/50 rounded w-1/4 mb-4"></div>
-              <div className="space-y-3">
-                {Array(index + 1).fill(0).map((_, i) => (
-                  <div key={i} className="h-12 bg-muted/30 rounded"></div>
-                ))}
-              </div>
-            </div>
-          ))
-        ) : (
-          // Actual content
-          positions.map(position => (
-            <BallotPositionCard 
-              key={position.id}
-              positionId={position.id}
-              selectedCandidates={getSelectedCandidatesForPosition(position.id)}
-            />
-          ))
+      {/* Ballot Preview Section */}
+      <div 
+        ref={ballotRef}
+        className={cn(
+          "p-6 pt-8 print:p-0 bg-white transition-opacity",
+          isPrinting ? "opacity-70" : "opacity-100"
         )}
+      >
+        {/* Ballot Header */}
+        <div className="text-center mb-6 print:mb-4">
+          <h1 className="text-2xl font-bold text-primary print:text-black">
+            KODIGO ELEKSYON 2025
+          </h1>
+          <p className="text-sm text-muted-foreground print:text-gray-700 mt-1">
+            Your personalized ballot guide for {cityName}
+          </p>
+          <div className="border-b-2 border-dashed border-gray-300 my-4 print:border-gray-400"></div>
+        </div>
+        
+        {/* Ballot Positions and Selections */}
+        <div className="space-y-6 print:space-y-2">
+          {selectedPositions.length > 0 ? (
+            positions
+              .filter(position => selectedPositions.includes(position.id))
+              .map(position => {
+                const candidatesForPosition = getCandidatesForPosition(position.id);
+                
+                return (
+                  <div key={position.id} className="print:page-break-inside-avoid">
+                    <div className="bg-gray-100 print:bg-gray-200 px-4 py-2 rounded-md print:rounded-none">
+                      <h3 className="font-medium text-gray-800 print:text-black">
+                        {position.title}
+                      </h3>
+                    </div>
+                    
+                    <div className="mt-2 ml-2 space-y-1 print:mt-1">
+                      {candidatesForPosition.map(candidate => (
+                        <div key={candidate.id} className="flex items-center gap-2">
+                          <div className="w-3 h-3 rounded-full bg-primary print:bg-black"></div>
+                          <span className="font-medium">{candidate.name}</span>
+                          <span className="text-sm text-muted-foreground print:text-gray-600">
+                            ({candidate.party})
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                );
+              })
+          ) : (
+            <div className="py-8 text-center text-muted-foreground">
+              No candidates selected. Go back to make your selections.
+            </div>
+          )}
+        </div>
+        
+        {/* Footer note */}
+        <div className="mt-8 print:mt-6 text-center text-xs text-muted-foreground">
+          <div className="border-t-2 border-dashed border-gray-300 mb-4 print:border-gray-400"></div>
+          <p className="print:text-gray-700">
+            Generated at kodigoeleksyon2025.netlify.app • Election day: May 12, 2025
+          </p>
+        </div>
       </div>
     </div>
   );
