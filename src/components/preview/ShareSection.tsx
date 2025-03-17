@@ -83,10 +83,6 @@ const ShareSection: React.FC<ShareSectionProps> = ({ shareLink }) => {
           <FacebookIcon size={40} round className="touch-manipulation" />
         </FacebookShareButton>
 
-        <FacebookMessengerShareButton url={shareLink} appId="258890396486471">
-          <FacebookMessengerIcon size={40} round className="touch-manipulation" />
-        </FacebookMessengerShareButton>
-
         <TwitterShareButton url={shareLink} title={shareTitle}>
           <TwitterIcon size={40} round className="touch-manipulation" />
         </TwitterShareButton>
