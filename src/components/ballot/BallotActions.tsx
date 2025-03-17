@@ -40,17 +40,6 @@ const BallotActions = ({ hasSelections, onClear, onPreview }: BallotActionsProps
       
       <div className="flex items-center gap-3 w-full sm:w-auto">
         <Button
-          variant="outline"
-          className="flex items-center gap-2 border-blue-200 text-blue-600 hover:bg-blue-50 hover:text-blue-700 w-full sm:w-auto"
-          onClick={handlePrint}
-          aria-label="Print ballot"
-          tabIndex={0}
-        >
-          <Printer className="h-4 w-4" aria-hidden="true" />
-          <span>Print</span>
-        </Button>
-        
-        <Button
           className={cn(
             "flex items-center gap-2 bg-primary hover:bg-primary/90 transition-transform active:scale-95 w-full sm:w-auto",
             !hasSelections && "opacity-50 cursor-not-allowed"
