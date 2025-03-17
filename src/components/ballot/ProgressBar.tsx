@@ -1,13 +1,14 @@
 
 import { useState, useEffect } from 'react';
-import { positions } from '@/lib/positions';
+import { Position } from '@/lib/positions';
 import { cn } from '@/lib/utils';
 
 interface ProgressBarProps {
   selectedCandidates: Record<string, string[]>;
+  positions: Position[];
 }
 
-const ProgressBar = ({ selectedCandidates }: ProgressBarProps) => {
+const ProgressBar = ({ selectedCandidates, positions }: ProgressBarProps) => {
   const [completedPositions, setCompletedPositions] = useState<Set<string>>(new Set());
   const [progress, setProgress] = useState(0);
   
