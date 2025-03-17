@@ -1,4 +1,3 @@
-
 import { useRef, useState } from 'react';
 import { Download, Printer, Share2, CheckCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -145,7 +144,7 @@ const BallotPreview = ({
                 <div className="space-y-2">
                   <h4 className="text-sm font-medium text-center mb-2">Share via</h4>
                   <div className="flex gap-2 justify-center">
-                    <FacebookShareButton url={shareLink} quote={shareDescription} title={shareTitle}>
+                    <FacebookShareButton url={shareLink} title={shareTitle}>
                       <FacebookIcon size={32} round />
                     </FacebookShareButton>
                     <TwitterShareButton url={shareLink} title={shareTitle}>

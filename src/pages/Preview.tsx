@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from 'react';
 import { useSearchParams, useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
@@ -9,7 +10,6 @@ import Footer from '@/components/Footer';
 import BallotPreview from '@/components/preview/BallotPreview';
 import PreviewHeader from '@/components/preview/PreviewHeader';
 import ElectionReminder from '@/components/preview/ElectionReminder';
-import ShareSection from '@/components/preview/ShareSection';
 import useAnalytics from '@/hooks/useAnalytics';
 
 type BallotCandidate = {
@@ -98,11 +98,10 @@ const Preview = () => {
               />
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 gap-6">
               <ElectionReminder />
-              <ShareSection shareLink={shareLink} />
               
-              <div className="p-4 bg-white/80 backdrop-blur-sm rounded-lg border border-border shadow-sm md:col-span-2">
+              <div className="p-4 bg-white/80 backdrop-blur-sm rounded-lg border border-border shadow-sm">
                 <h3 className="text-sm font-medium mb-2 text-center">Kodigo Reminder</h3>
                 <p className="text-xs text-muted-foreground text-center">
                   This is your personal ballot guide. Use it as reference when voting on Election Day.
