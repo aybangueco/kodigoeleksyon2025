@@ -56,7 +56,6 @@ const BallotPreview = ({
         scale: isMobile ? 1 : 2,
         useCORS: true,
         logging: false,
-        backgroundColor: 'white',
       });
       
       const dataUrl = canvas.toDataURL('image/png');
