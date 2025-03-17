@@ -21,21 +21,21 @@ const PreviewHeader = ({ cityName = "Zamboanga City" }: PreviewHeaderProps) => {
   const returnPath = cityName.includes('Cebu') ? '/cebu-city' : '/';
   
   return (
-    <div className="flex flex-col sm:flex-row justify-between items-center gap-3 sm:gap-4">
+    <div className="flex flex-col w-full gap-3 sm:gap-4 sm:flex-row sm:justify-between sm:items-center">
       <div>
         <h1 className="text-xl sm:text-2xl font-bold">Your Ballot Preview</h1>
-        <p className="text-sm text-muted-foreground">
+        <p className="text-sm text-muted-foreground mb-3 sm:mb-0">
           Review, print, or download your selections for {cityName}
         </p>
       </div>
       
-      <div className="flex items-center gap-2 mt-2 sm:mt-0">
+      <div className="flex items-center gap-2 w-full sm:w-auto justify-between sm:justify-end">
         <Button
           variant="outline"
           size={isMobile ? "sm" : "default"}
           asChild
           onClick={handleBackClick}
-          className="flex items-center gap-1 h-9 touch-manipulation"
+          className="flex-1 sm:flex-none items-center gap-1 h-9 touch-manipulation"
         >
           <Link to={returnPath}>
             <ChevronLeft className="h-4 w-4" />
