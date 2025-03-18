@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { X } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -15,18 +14,19 @@ const CandidateSummaryModal: React.FC<CandidateSummaryModalProps> = ({
   isOpen,
   onClose
 }) => {
-  if (!isOpen || !candidate) return null;
+  const bodyStyleRef = React.useRef<string>('');
 
-  // Prevent background scrolling when modal is open
   React.useEffect(() => {
-    const originalStyle = window.getComputedStyle(document.body).overflow;
-    document.body.style.overflow = 'hidden';
+    if (isOpen) {
+      bodyStyleRef.current = document.body.style.overflow;
+      document.body.style.overflow = 'hidden';
+    }
+    
     return () => {
-      document.body.style.overflow = originalStyle;
+      document.body.style.overflow = bodyStyleRef.current;
     };
   }, [isOpen]);
 
-  // Close on escape key
   React.useEffect(() => {
     const handleEsc = (event: KeyboardEvent) => {
       if (event.key === 'Escape') onClose();
@@ -36,6 +36,8 @@ const CandidateSummaryModal: React.FC<CandidateSummaryModalProps> = ({
       window.removeEventListener('keydown', handleEsc);
     };
   }, [onClose]);
+
+  if (!isOpen || !candidate) return null;
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm animate-fade-in print:hidden">
@@ -74,7 +76,6 @@ const CandidateSummaryModal: React.FC<CandidateSummaryModalProps> = ({
             </div>
           </div>
           
-          {/* Candidate Bio */}
           <div className="mb-4">
             <h4 className="font-medium text-gray-800 mb-1">Background</h4>
             <p className="text-sm text-gray-600">
@@ -82,7 +83,6 @@ const CandidateSummaryModal: React.FC<CandidateSummaryModalProps> = ({
             </p>
           </div>
           
-          {/* Platform/Advocacies */}
           {candidate.platform && (
             <div className="mb-4">
               <h4 className="font-medium text-gray-800 mb-1">Platform & Advocacies</h4>
@@ -90,7 +90,6 @@ const CandidateSummaryModal: React.FC<CandidateSummaryModalProps> = ({
             </div>
           )}
           
-          {/* Achievements */}
           {candidate.achievements && (
             <div>
               <h4 className="font-medium text-gray-800 mb-1">Achievements</h4>
