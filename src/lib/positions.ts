@@ -1,4 +1,3 @@
-
 import { senatorCandidates } from './candidateData/senators';
 import { partyListCandidates } from './candidateData/partyList';
 import { 
@@ -15,6 +14,9 @@ export interface Candidate {
   name: string;
   party: string;
   image?: string; // Path to candidate image
+  bio?: string; // Candidate biography/background
+  platform?: string; // Candidate platform/advocacies
+  achievements?: string; // Candidate achievements
 }
 
 export interface Position {

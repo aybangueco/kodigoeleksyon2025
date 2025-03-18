@@ -2,6 +2,7 @@
 import { cn } from '@/lib/utils';
 import { Candidate } from '@/lib/positions';
 import { KeyboardEvent } from 'react';
+import { Info } from 'lucide-react';
 
 interface CandidateCardProps {
   candidate: Candidate;
@@ -9,6 +10,7 @@ interface CandidateCardProps {
   onSelect: (id: string) => void;
   selectionMode: 'single' | 'multiple';
   index: number;
+  onViewSummary?: (candidate: Candidate) => void;
 }
 
 const CandidateCard = ({ 
@@ -16,7 +18,8 @@ const CandidateCard = ({
   isSelected, 
   onSelect,
   selectionMode,
-  index
+  index,
+  onViewSummary
 }: CandidateCardProps) => {
   
   const handleKeyDown = (e: KeyboardEvent<HTMLDivElement>) => {
@@ -25,12 +28,19 @@ const CandidateCard = ({
       onSelect(candidate.id);
     }
   };
+
+  const handleSummaryClick = (e: React.MouseEvent) => {
+    e.stopPropagation(); // Prevent selecting candidate when clicking info
+    if (onViewSummary) {
+      onViewSummary(candidate);
+    }
+  };
   
   return (
     <div
       className={cn(
         "p-3 md:p-3 hover:bg-gray-50 active:bg-gray-100 cursor-pointer transition-colors duration-200",
-        "border border-gray-200 select-none",
+        "border border-gray-200 select-none relative",
         isSelected ? "bg-gray-100 !print:bg-gray-300" : "bg-white"
       )}
       onClick={() => onSelect(candidate.id)}
@@ -70,6 +80,16 @@ const CandidateCard = ({
             {candidate.party}
           </div>
         </div>
+        
+        {onViewSummary && (
+          <button
+            className="p-1 rounded-full hover:bg-gray-200 ml-1 text-gray-500 hover:text-gray-700 transition-colors"
+            onClick={handleSummaryClick}
+            aria-label={`View summary for ${candidate.name}`}
+          >
+            <Info size={16} />
+          </button>
+        )}
       </div>
     </div>
   );

@@ -1,8 +1,7 @@
-
 import { useState, KeyboardEvent } from 'react';
 import { ChevronDown, ChevronUp, Info } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import { Position } from '@/lib/positions';
+import { Position, Candidate } from '@/lib/positions';
 import { 
   Tooltip,
   TooltipContent,
@@ -10,6 +9,7 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import CandidateCard from './CandidateCard';
+import CandidateSummaryModal from './CandidateSummaryModal';
 
 interface PositionCardProps {
   position: Position;
@@ -23,6 +23,7 @@ const PositionCard = ({
   onCandidateSelect 
 }: PositionCardProps) => {
   const [isExpanded, setIsExpanded] = useState(true);
+  const [summaryCandidate, setSummaryCandidate] = useState<Candidate | null>(null);
   
   const positionSelections = selectedCandidates[position.id] || [];
   const selectionCount = positionSelections.length;
@@ -58,6 +59,14 @@ const PositionCard = ({
       e.preventDefault();
       setIsExpanded(!isExpanded);
     }
+  };
+
+  const handleViewSummary = (candidate: Candidate) => {
+    setSummaryCandidate(candidate);
+  };
+
+  const handleCloseSummary = () => {
+    setSummaryCandidate(null);
   };
       
   return (
@@ -156,11 +165,19 @@ const PositionCard = ({
                 onSelect={(candidateId) => onCandidateSelect(position.id, candidateId)}
                 selectionMode={position.maxSelections === 1 ? 'single' : 'multiple'}
                 index={index + 1}
+                onViewSummary={handleViewSummary}
               />
             ))}
           </div>
         </div>
       )}
+
+      {/* Candidate Summary Modal */}
+      <CandidateSummaryModal
+        candidate={summaryCandidate}
+        isOpen={summaryCandidate !== null}
+        onClose={handleCloseSummary}
+      />
     </div>
   );
 };
