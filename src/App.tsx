@@ -29,7 +29,7 @@ const Layout = ({ children, showAlert = true, cityName }: { children: React.Reac
             <AlertTriangle className="h-4 w-4 text-yellow-800" />
             <AlertTitle className="text-yellow-800">Important Note</AlertTitle>
             <AlertDescription className="text-yellow-700">
-              This tool is currently available for <strong>{cityName, "Zamboanga City"}</strong> only. 
+              This tool is currently available for <strong>{cityName || "Zamboanga City"}</strong> only. 
               If you want something similar for your city, please email{' '}
               <a href="mailto:aljhoenilw@gmail.com" className="font-medium underline hover:text-yellow-900">
                 aljhoenilw@gmail.com
