@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { cn } from '@/lib/utils';
@@ -72,6 +73,12 @@ export const Header = () => {
           >
             <span className="text-sm font-medium text-gray-600">CEBU CITY</span>
           </Link>
+          <Link
+            to="/makati-city"
+            className="flex items-center gap-2 transition-opacity duration-300 hover:opacity-80"
+          >
+            <span className="text-sm font-medium text-gray-600">MAKATI CITY</span>
+          </Link>
           <h2 className="text-sm font-medium text-gray-600">
             Sample Ballot Builder
           </h2>
@@ -112,6 +119,13 @@ export const Header = () => {
                 onClick={toggleMenu}
               >
                 <span className="text-sm font-medium text-gray-600">CEBU CITY</span>
+              </Link>
+              <Link
+                to="/makati-city"
+                className="flex items-center gap-2 transition-opacity duration-300 hover:opacity-80"
+                onClick={toggleMenu}
+              >
+                <span className="text-sm font-medium text-gray-600">MAKATI CITY</span>
               </Link>
               <h2 className="text-sm font-medium text-gray-600">
                 Sample Ballot Builder
