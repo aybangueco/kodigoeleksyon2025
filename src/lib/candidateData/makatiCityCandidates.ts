@@ -1,11 +1,14 @@
-
 import { Candidate } from '../positions';
 
 export const makatiCityHouseRepFirstCandidates: Candidate[] = [
-  { id: "makati-hr1", name: "CAMPOS, LUIS", party: "PDP-LABAN" },
-  { id: "makati-hr2", name: "ROMERO, MONIQUE", party: "LP" },
-  { id: "makati-hr3", name: "VILLANUEVA, JUAN", party: "LAKAS" },
-  { id: "makati-hr4", name: "DIMAPORO, ADNAN", party: "NPC" },
+  { id: "makati-hr1-1", name: "ANTONIO, MINNIE (IND)", party: "INDEPENDENT" },
+  { id: "makati-hr1-2", name: "BASE, ANGELO (IND)", party: "INDEPENDENT" },
+  { id: "makati-hr1-3", name: "LAGDAMEO, MONIQUE (MKTZNU)", party: "MAKATIZENS UNITED PARTY" },
+];
+
+export const makatiCityHouseRepSecondCandidates: Candidate[] = [
+  { id: "makati-hr2-1", name: "ALMARIO, ALDEN (MKTZNU)", party: "MAKATIZENS UNITED PARTY" },
+  { id: "makati-hr2-2", name: "SESE, VINCENT (UNA)", party: "UNITED NATIONALIST ALLIANCE" },
 ];
 
 export const makatiCityMayorCandidates: Candidate[] = [

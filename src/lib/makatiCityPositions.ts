@@ -4,6 +4,7 @@ import { senatorCandidates } from './candidateData/senators';
 import { partyListCandidates } from './candidateData/partyList';
 import {
   makatiCityHouseRepFirstCandidates,
+  makatiCityHouseRepSecondCandidates,
   makatiCityMayorCandidates,
   makatiCityViceMayorCandidates,
   makatiCityCouncilorFirstCandidates,
@@ -13,11 +14,18 @@ import {
 // Makati City positions
 export const makatiCityPositions: Position[] = [
   {
-    id: "house-rep-makati",
-    title: "Member, House of Representatives - Makati City (Lone District)",
-    description: "Representatives of Makati City's Lone District in the House of Representatives.",
+    id: "house-rep-makati-first",
+    title: "Member, House of Representatives - Makati City (First District)",
+    description: "Representatives of Makati City's First District in the House of Representatives.",
     maxSelections: 1,
     candidates: makatiCityHouseRepFirstCandidates
+  },
+  {
+    id: "house-rep-makati-second",
+    title: "Member, House of Representatives - Makati City (Second District)",
+    description: "Representatives of Makati City's Second District in the House of Representatives.",
+    maxSelections: 1,
+    candidates: makatiCityHouseRepSecondCandidates
   },
   {
     id: "mayor-makati",
