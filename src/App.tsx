@@ -9,6 +9,7 @@ import Preview from "./pages/Preview";
 import NotFound from "./pages/NotFound";
 import Index from "./pages/Index";
 import CebuCity from "./pages/CebuCity";
+import MakatiCity from "./pages/MakatiCity";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
 import Header from "./components/Header";
@@ -54,6 +55,7 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Layout><Index /></Layout>} />
             <Route path="/cebu-city" element={<Layout cityName="Cebu City"><CebuCity /></Layout>} />
+            <Route path="/makati-city" element={<Layout cityName="Makati City"><MakatiCity /></Layout>} />
             <Route path="/preview" element={<Layout showAlert={false}><Preview /></Layout>} />
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/terms" element={<Terms />} />
