@@ -8,6 +8,7 @@ import PreviewHeader from '@/components/preview/PreviewHeader';
 import PreviewContent from '@/components/preview/PreviewContent';
 import { useIsMobile } from '@/hooks/use-mobile';
 import { useBallotData } from '@/hooks/useBallotData';
+import { makatiCityPositions } from '@/lib/makatiCityPositions';
 
 const Preview = () => {
   const [searchParams] = useSearchParams();
@@ -18,7 +19,8 @@ const Preview = () => {
   const cityParam = searchParams.get('city') || 'Zamboanga City';
   
   // Determine positions data based on city
-  const positionsData = cityParam.includes('Cebu') ? cebuCityPositions : zamboangaPositions;
+  // TODO: refactor later on
+  const positionsData = cityParam.includes('Cebu') ? cebuCityPositions : cityParam.includes('Makati') ? makatiCityPositions : zamboangaPositions;
   
   // Get ballot data using custom hook
   const { selectedCandidatesList, selectedPositions } = useBallotData({
