@@ -1,3 +1,4 @@
+
 import { useState, KeyboardEvent } from 'react';
 import { ChevronDown, ChevronUp, Info } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -10,6 +11,9 @@ import {
 } from "@/components/ui/tooltip";
 import CandidateCard from './CandidateCard';
 import CandidateSummaryModal from './CandidateSummaryModal';
+
+// Get environment variable (default is false)
+const showCandidateInfo = import.meta.env.VITE_SHOW_CANDIDATE_INFO === 'true';
 
 interface PositionCardProps {
   position: Position;
@@ -62,7 +66,9 @@ const PositionCard = ({
   };
 
   const handleViewSummary = (candidate: Candidate) => {
-    setSummaryCandidate(candidate);
+    if (showCandidateInfo) {
+      setSummaryCandidate(candidate);
+    }
   };
 
   const handleCloseSummary = () => {
@@ -165,7 +171,7 @@ const PositionCard = ({
                 onSelect={(candidateId) => onCandidateSelect(position.id, candidateId)}
                 selectionMode={position.maxSelections === 1 ? 'single' : 'multiple'}
                 index={index + 1}
-                onViewSummary={handleViewSummary}
+                onViewSummary={showCandidateInfo ? handleViewSummary : undefined}
               />
             ))}
           </div>
@@ -173,11 +179,13 @@ const PositionCard = ({
       )}
 
       {/* Candidate Summary Modal */}
-      <CandidateSummaryModal
-        candidate={summaryCandidate}
-        isOpen={summaryCandidate !== null}
-        onClose={handleCloseSummary}
-      />
+      {showCandidateInfo && (
+        <CandidateSummaryModal
+          candidate={summaryCandidate}
+          isOpen={summaryCandidate !== null}
+          onClose={handleCloseSummary}
+        />
+      )}
     </div>
   );
 };

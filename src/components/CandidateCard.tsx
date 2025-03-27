@@ -4,6 +4,9 @@ import { Candidate } from '@/lib/positions';
 import { KeyboardEvent } from 'react';
 import { Info } from 'lucide-react';
 
+// Get environment variable (default is false)
+const showCandidateInfo = import.meta.env.VITE_SHOW_CANDIDATE_INFO === 'true';
+
 interface CandidateCardProps {
   candidate: Candidate;
   isSelected: boolean;
@@ -81,7 +84,7 @@ const CandidateCard = ({
           </div>
         </div>
         
-        {onViewSummary && (
+        {showCandidateInfo && onViewSummary && (
           <button
             className="p-1 rounded-full hover:bg-gray-200 ml-1 text-gray-500 hover:text-gray-700 transition-colors"
             onClick={handleSummaryClick}
