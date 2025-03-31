@@ -42,14 +42,14 @@ const Index = () => {
         <meta property="og:url" content="https://kodigoeleksyon2025.netlify.app/" />
         <meta property="og:title" content="Kodigo Eleksyon 2025 - Ballot Builder for Zamboanga City" />
         <meta property="og:description" content="Create your personalized Kodigo ballot for the 2025 Philippine elections in Zamboanga City. Make the voting process faster and easier." />
-        <meta property="og:image" content="/lovable-uploads/philippines-flag.png" />
+        <meta property="og:image" content="/kodigo-eleksyon.png" />
         
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:url" content="https://kodigoeleksyon2025.netlify.app/" />
         <meta name="twitter:title" content="Kodigo Eleksyon 2025 - Ballot Builder for Zamboanga City" />
         <meta name="twitter:description" content="Create your personalized Kodigo ballot for the 2025 Philippine elections in Zamboanga City." />
-        <meta name="twitter:image" content="/lovable-uploads/philippines-flag.png" />
+        <meta name="twitter:image" content="/kodigo-eleksyon.png" />
         
         {/* Accessibility meta tags */}
         <html lang="en" />
