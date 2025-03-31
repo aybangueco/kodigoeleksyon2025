@@ -43,14 +43,14 @@ const MakatiCity = () => {
         <meta property="og:url" content="https://kodigoeleksyon2025.netlify.app/makati-city" />
         <meta property="og:title" content="Kodigo Eleksyon 2025 - Ballot Builder for Makati City" />
         <meta property="og:description" content="Create your personalized Kodigo ballot for the 2025 Philippine elections in Makati City. Make the voting process faster and easier." />
-        <meta property="og:image" content="/kodigo-eleksyon.png" />
+        <meta property="og:image" content="https://kodigoeleksyon2025.netlify.app/kodigo-eleksyon.png" />
         
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:url" content="https://kodigoeleksyon2025.netlify.app/makati-city" />
         <meta name="twitter:title" content="Kodigo Eleksyon 2025 - Ballot Builder for Makati City" />
         <meta name="twitter:description" content="Create your personalized Kodigo ballot for the 2025 Philippine elections in Makati City." />
-        <meta name="twitter:image" content="/kodigo-eleksyon.png" />
+        <meta name="twitter:image" content="https://kodigoeleksyon2025.netlify.app/kodigo-eleksyon.png" />
         
         {/* Accessibility meta tags */}
         <html lang="en" />
