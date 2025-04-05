@@ -83,7 +83,8 @@ const National = () => {
         <BallotSection 
           selectedCandidates={selectedCandidates}
           setSelectedCandidates={setSelectedCandidates}
-          positionsData={nationalPositions}
+          positions={nationalPositions}
+          cityName="National"
         />
         
         {/* How it Works Section */}
@@ -96,3 +97,4 @@ const National = () => {
 };
 
 export default National;
+
