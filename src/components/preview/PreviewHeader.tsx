@@ -18,7 +18,7 @@ const PreviewHeader = ({ cityName = "Zamboanga City" }: PreviewHeaderProps) => {
   };
 
   // Determine the return path based on city name
-  const returnPath = cityName.includes('Zamboanga') ? '/' : `${cityName.split(' ')[0]}-city`;
+  const returnPath = cityName.includes('Zamboanga') ? '/' : `/${cityName.split(' ')[0]}-city`;
   
   return (
     <div className="flex flex-col w-full gap-3 sm:gap-4 sm:flex-row sm:justify-between sm:items-center">
