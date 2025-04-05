@@ -13,9 +13,9 @@ import { taguigCityPositions } from '@/lib/taguigCityPositions';
 
 function getPositionsData(cityParam) {
   const cityMap = {
-    'Cebu': cebuCityPositions,
-    'Makati': makatiCityPositions,
-    'Taguig': taguigCityPositions,
+    'Cebu City': cebuCityPositions,
+    'Makati City': makatiCityPositions,
+    'Taguig City': taguigCityPositions,
   };
 
   // Use the cityParam as a key to look up the corresponding positions data.
