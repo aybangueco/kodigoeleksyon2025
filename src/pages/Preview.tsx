@@ -9,6 +9,19 @@ import PreviewContent from '@/components/preview/PreviewContent';
 import { useIsMobile } from '@/hooks/use-mobile';
 import { useBallotData } from '@/hooks/useBallotData';
 import { makatiCityPositions } from '@/lib/makatiCityPositions';
+import { taguigCityPositions } from '@/lib/taguigCityPositions';
+
+function getPositionsData(cityParam) {
+  const cityMap = {
+    'Cebu': cebuCityPositions,
+    'Makati': makatiCityPositions,
+    'Taguig': taguigCityPositions,
+  };
+
+  // Use the cityParam as a key to look up the corresponding positions data.
+  // If the city is not found in the map, default to zamboangaPositions.
+  return cityMap[cityParam] || zamboangaPositions;
+}
 
 const Preview = () => {
   const [searchParams] = useSearchParams();
@@ -18,9 +31,7 @@ const Preview = () => {
   const encryptedData = searchParams.get('data');
   const cityParam = searchParams.get('city') || 'Zamboanga City';
   
-  // Determine positions data based on city
-  // TODO: refactor later on
-  const positionsData = cityParam.includes('Cebu') ? cebuCityPositions : cityParam.includes('Makati') ? makatiCityPositions : zamboangaPositions;
+  const positionsData = getPositionsData(cityParam);
   
   // Get ballot data using custom hook
   const { selectedCandidatesList, selectedPositions } = useBallotData({
