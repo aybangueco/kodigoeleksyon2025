@@ -3,19 +3,21 @@ import { useSearchParams } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { positions as zamboangaPositions } from '@/lib/positions';
 import { cebuCityPositions } from '@/lib/cebuCityPositions';
+import { makatiCityPositions } from '@/lib/makatiCityPositions';
+import { taguigCityPositions } from '@/lib/taguigCityPositions';
+import { nationalPositions } from '@/lib/nationalPositions';
 import Footer from '@/components/Footer';
 import PreviewHeader from '@/components/preview/PreviewHeader';
 import PreviewContent from '@/components/preview/PreviewContent';
 import { useIsMobile } from '@/hooks/use-mobile';
 import { useBallotData } from '@/hooks/useBallotData';
-import { makatiCityPositions } from '@/lib/makatiCityPositions';
-import { taguigCityPositions } from '@/lib/taguigCityPositions';
 
 function getPositionsData(cityParam) {
   const cityMap = {
     'Cebu City': cebuCityPositions,
     'Makati City': makatiCityPositions,
     'Taguig City': taguigCityPositions,
+    'National': nationalPositions
   };
 
   // Use the cityParam as a key to look up the corresponding positions data.
