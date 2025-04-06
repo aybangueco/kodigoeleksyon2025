@@ -22,7 +22,7 @@ const PreviewHeader = ({ cityName = "Zamboanga City" }: PreviewHeaderProps) => {
     if (cityName === "National") return "/national";
     if (cityName.includes('Zamboanga')) return "/";
 
-    return `/${cityName.split(", ").join("-").toLowerCase()};
+    return `/${cityName.split(", ").join("-").toLowerCase()}`;
   };
   
   const returnPath = getReturnPath();
