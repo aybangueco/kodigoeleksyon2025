@@ -11,13 +11,15 @@ import PreviewHeader from '@/components/preview/PreviewHeader';
 import PreviewContent from '@/components/preview/PreviewContent';
 import { useIsMobile } from '@/hooks/use-mobile';
 import { useBallotData } from '@/hooks/useBallotData';
+import { caintaRizalPositions } from '@/lib/caintaRizalPositions';
 
 function getPositionsData(cityParam) {
   const cityMap = {
     'Cebu City': cebuCityPositions,
     'Makati City': makatiCityPositions,
     'Taguig City': taguigCityPositions,
-    'National': nationalPositions
+    'National': nationalPositions,
+    'Cainta, Rizal': caintaRizalPositions,
   };
 
   // Use the cityParam as a key to look up the corresponding positions data.
