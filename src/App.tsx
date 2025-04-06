@@ -3,7 +3,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Link, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import Preview from "./pages/Preview";
 import NotFound from "./pages/NotFound";
@@ -38,7 +38,7 @@ const Layout = ({ children, showAlert = true, cityName }: { children: React.Reac
                 aljhoenilw@gmail.com
               </a>
               <br />
-              If you only want to see national candidates (Senators and Party List), <a href="/national" className="font-medium underline hover:text-yellow-900">click here</a>.
+              If you only want to see national candidates (Senators and Party List), <Link to="/national" className="font-medium underline hover:text-yellow-900">click here</Link>.
             </AlertDescription>
           </Alert>
         </div>
