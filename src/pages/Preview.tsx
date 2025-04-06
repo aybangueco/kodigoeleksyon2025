@@ -6,12 +6,13 @@ import { cebuCityPositions } from '@/lib/cebuCityPositions';
 import { makatiCityPositions } from '@/lib/makatiCityPositions';
 import { taguigCityPositions } from '@/lib/taguigCityPositions';
 import { nationalPositions } from '@/lib/nationalPositions';
+import { caintaRizalPositions } from '@/lib/caintaRizalPositions';
+import { taytayRizalPositions } from '@/lib/taytayRizalPositions';
 import Footer from '@/components/Footer';
 import PreviewHeader from '@/components/preview/PreviewHeader';
 import PreviewContent from '@/components/preview/PreviewContent';
 import { useIsMobile } from '@/hooks/use-mobile';
 import { useBallotData } from '@/hooks/useBallotData';
-import { caintaRizalPositions } from '@/lib/caintaRizalPositions';
 
 function getPositionsData(cityParam) {
   const cityMap = {
@@ -20,6 +21,7 @@ function getPositionsData(cityParam) {
     'Taguig City': taguigCityPositions,
     'National': nationalPositions,
     'Cainta, Rizal': caintaRizalPositions,
+    'Taytay, Rizal': taytayRizalPositions,
   };
 
   // Use the cityParam as a key to look up the corresponding positions data.
