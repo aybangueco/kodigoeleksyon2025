@@ -79,7 +79,7 @@ const National = () => {
       </Helmet>
 
       <main id="main-content" ref={mainContentRef}>
-        <div className="container mx-auto max-w-6xl px-6 mt-12 mb-2">
+        <div className="container mx-auto max-w-6xl px-6 mt-24 mb-2">
           <div className="bg-orange-50 border border-orange-200 p-4 rounded-lg">
             <h1 className="text-2xl font-bold text-orange-800 text-center">National Elections Ballot Builder</h1>
             <p className="text-orange-700 text-center mt-2">
