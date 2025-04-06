@@ -37,6 +37,8 @@ const Layout = ({ children, showAlert = true, cityName }: { children: React.Reac
               <a href="mailto:aljhoenilw@gmail.com" className="font-medium underline hover:text-yellow-900">
                 aljhoenilw@gmail.com
               </a>
+              <br />
+              If you only want to see national candidates (Senators and Party List), <a href="/national" className="font-medium underline hover:text-yellow-900">click here</a>.
             </AlertDescription>
           </Alert>
         </div>
