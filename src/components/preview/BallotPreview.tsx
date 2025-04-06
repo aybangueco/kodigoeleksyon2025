@@ -1,10 +1,8 @@
 
 import { useRef, useState } from 'react';
 import html2canvas from 'html2canvas';
-import { cn } from '@/lib/utils';
 import { Position, Candidate } from '@/lib/positions';
 import useAnalytics from '@/hooks/useAnalytics';
-import { useIsMobile } from '@/hooks/use-mobile';
 import BallotActionButtons from './BallotActionButtons';
 import CandidateSelections from './CandidateSelections';
 import BallotHeader from './BallotHeader';
@@ -33,7 +31,6 @@ const BallotPreview = ({
   const [isPrinting, setIsPrinting] = useState(false);
   const ballotRef = useRef<HTMLDivElement>(null);
   const { trackEvent } = useAnalytics();
-  const isMobile = useIsMobile();
   
   const getCandidatesForPosition = (positionId: string) => {
     return selectedCandidatesList
@@ -53,7 +50,6 @@ const BallotPreview = ({
     
     try {
       const canvas = await html2canvas(ballotRef.current, {
-        scale: isMobile ? 1 : 2,
         useCORS: true,
         logging: false,
       });
