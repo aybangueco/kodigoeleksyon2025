@@ -1,69 +1,76 @@
-# Welcome to your Lovable project
+# Kodigo Eleksyon 2025
 
-## Project info
+## Project Overview
 
-**URL**: https://lovable.dev/projects/a9279b5a-adbf-4dcc-bac6-8c5f7a44ab84
+**Kodigo Eleksyon 2025** is a ballot builder application for the 2025 Philippine elections. The app allows voters to:
 
-## How can I edit this code?
+- Create personalized Kodigo ballots (voting guides) for specific cities and municipalities
+- Select candidates for various positions (national and local)
+- Preview and print their selections to use on election day
+- Access national candidates (Senators and Party List) regardless of location
 
-There are several ways of editing your application.
+This project was partly built using [Lovable](https://lovable.dev), a vibe coding platform.
 
-**Use Lovable**
+Currently supported locations:
+- Zamboanga City (main)
+- Cebu City
+- Makati City
+- Taguig City
+- Cainta, Rizal
+- Taytay, Rizal
+- National candidates only
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/a9279b5a-adbf-4dcc-bac6-8c5f7a44ab84) and start prompting.
+## Features
 
-Changes made via Lovable will be committed automatically to this repo.
+- **City-specific ballot builders**: Customized for various Philippine cities
+- **Candidate selection**: Easy-to-use interface for selecting candidates by position
+- **Ballot preview**: Generate a printable ballot with selected candidates
+- **Progress tracking**: Visual indicators of ballot completion
+- **Responsive design**: Works on mobile devices and desktops
+- **Accessibility**: Screen reader support and keyboard navigation
+- **Analytics**: Anonymous usage tracking to improve the app
 
-**Use your preferred IDE**
+## Tech Stack
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+This project is built with:
+- **Vite**: For fast development and optimized builds
+- **TypeScript**: For type safety and better developer experience
+- **React**: UI library for building component-based interfaces
+- **React Router**: For navigation between pages
+- **shadcn/ui**: Component library built on Radix UI
+- **Tailwind CSS**: Utility-first CSS framework
+- **Posthog**: For analytics tracking
+- **React Query**: For data fetching and management
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## Project Setup
 
-Follow these steps:
+To run this project locally:
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
+# Clone the repository
 git clone <YOUR_GIT_URL>
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# Navigate to the project directory
+cd kodigoeleksyon2025
 
-# Step 3: Install the necessary dependencies.
+# Install dependencies
 npm i
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start the development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+## Deployment
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+The app is deployed on Netlify. You can deploy it by:
+1. Opening [Lovable](https://lovable.dev/projects/a9279b5a-adbf-4dcc-bac6-8c5f7a44ab84)
+2. Clicking on Share -> Publish
 
-**Use GitHub Codespaces**
+## Contact
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+If you want a similar app for your city or have other inquiries, please email:
+[aljhoenilw@gmail.com](mailto:aljhoenilw+kodigoeleksyon2025@gmail.com)
 
-## What technologies are used for this project?
+## Custom Domains
 
-This project is built with .
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/a9279b5a-adbf-4dcc-bac6-8c5f7a44ab84) and click on Share -> Publish.
-
-## I want to use a custom domain - is that possible?
-
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+Custom domains are not directly supported by the platform. If you want to deploy this project under your own domain, we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
