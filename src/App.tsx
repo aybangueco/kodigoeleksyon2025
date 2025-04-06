@@ -11,6 +11,7 @@ import Index from "./pages/Index";
 import CebuCity from "./pages/CebuCity";
 import MakatiCity from "./pages/MakatiCity";
 import TaguigCity from "./pages/TaguigCity";
+import CaintaRizal from "./pages/CaintaRizal";
 import National from "./pages/National";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
@@ -61,6 +62,7 @@ const App = () => (
             <Route path="/cebu-city" element={<Layout cityName="Cebu City"><CebuCity /></Layout>} />
             <Route path="/makati-city" element={<Layout cityName="Makati City"><MakatiCity /></Layout>} />
             <Route path="/taguig-city" element={<Layout cityName="Taguig City"><TaguigCity /></Layout>} />
+            <Route path="/cainta-rizal" element={<Layout cityName="Cainta, Rizal"><CaintaRizal /></Layout>} />
             <Route path="/national" element={<Layout cityName="National" showAlert={false}><National /></Layout>} />
             <Route path="/preview" element={<Layout showAlert={false}><Preview /></Layout>} />
             <Route path="/privacy" element={<Privacy />} />
