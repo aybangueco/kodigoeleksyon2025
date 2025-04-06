@@ -91,7 +91,10 @@ const NotFound = () => {
           </Card>
           
           <p className="mt-6 text-sm text-gray-500 animate-fade-in">
-            If you think this is an error, please contact support
+            If you think this is an error, please contact 
+            <a href="mailto:aljhoenilw+kodigoeleksyon2025@gmail.com" className="font-medium underline hover:text-yellow-900">
+                aljhoenilw@gmail.com
+              </a>
           </p>
         </div>
       </div>

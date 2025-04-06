@@ -36,7 +36,7 @@ const Layout = ({ children, showAlert = true, cityName }: { children: React.Reac
             <AlertDescription className="text-yellow-700">
               This tool is currently available for <strong>{cityName || "Zamboanga City"}</strong> only. 
               If you want something similar for your city, please email{' '}
-              <a href="mailto:aljhoenilw@gmail.com" className="font-medium underline hover:text-yellow-900">
+              <a href="mailto:aljhoenilw+kodigoeleksyon2025@gmail.com" className="font-medium underline hover:text-yellow-900">
                 aljhoenilw@gmail.com
               </a>
               <br />
