@@ -1,12 +1,13 @@
 
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { cn } from '@/lib/utils';
-import { Menu } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 export const Header = () => {
   const [scrolled, setScrolled] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false); // State for mobile menu
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,22 +18,41 @@ export const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Close mobile menu when route changes
+  useEffect(() => {
+    setIsMenuOpen(false);
+  }, [location.pathname]);
+
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const isActive = (path: string) => {
+    return location.pathname === path;
+  };
+
+  const locations = [
+    { name: "ZAMBOANGA CITY", path: "/" },
+    { name: "CEBU CITY", path: "/cebu-city" },
+    { name: "MAKATI CITY", path: "/makati-city" },
+    { name: "TAGUIG CITY", path: "/taguig-city" },
+    { name: "CAINTA, RIZAL", path: "/cainta-rizal" },
+    { name: "TAYTAY, RIZAL", path: "/taytay-rizal" },
+    { name: "NATIONAL", path: "/national" },
+  ];
+
   return (
     <header
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out px-6 py-4 flex items-center justify-between print:hidden",
-        scrolled ? "bg-white/80 backdrop-blur-md shadow-sm" : "bg-transparent"
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out px-4 sm:px-6 py-4 flex items-center justify-between print:hidden",
+        scrolled ? "bg-white/95 backdrop-blur-md shadow-sm" : "bg-transparent"
       )}
     >
       <Link
         to="/"
         className="flex items-center gap-2 transition-opacity duration-300 hover:opacity-80"
       >
-        <div className="w-8 h-6 overflow-hidden rounded-sm">
+        <div className="w-8 h-6 overflow-hidden rounded-sm shadow-sm">
           {/* Philippines flag using Tailwind colors */}
           <div className="relative w-full h-full">
             <div className="absolute inset-0 bg-ph-blue" style={{ clipPath: 'polygon(0 0, 100% 0, 100% 50%, 0 50%)' }}></div>
@@ -52,98 +72,95 @@ export const Header = () => {
       <div className="flex items-center gap-4">
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-gray-600 hover:text-gray-800"
+          className="md:hidden flex items-center justify-center w-10 h-10 text-gray-600 hover:text-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 rounded-full"
           onClick={toggleMenu}
-          aria-label="Toggle Menu"
+          aria-label={isMenuOpen ? "Close Menu" : "Open Menu"}
+          aria-expanded={isMenuOpen}
         >
-          <Menu />
+          {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
         </button>
 
-        {/* Desktop Links */}
-        <div className="hidden md:flex items-center gap-4">
-          <Link
-            to="/"
-            className="flex items-center gap-2 transition-opacity duration-300 hover:opacity-80"
-          >
-            <span className="text-sm font-medium text-gray-600">ZAMBOANGA CITY</span>
-          </Link>
-          <Link
-            to="/cebu-city"
-            className="flex items-center gap-2 transition-opacity duration-300 hover:opacity-80"
-          >
-            <span className="text-sm font-medium text-gray-600">CEBU CITY</span>
-          </Link>
-          <Link
-            to="/makati-city"
-            className="flex items-center gap-2 transition-opacity duration-300 hover:opacity-80"
-          >
-            <span className="text-sm font-medium text-gray-600">MAKATI CITY</span>
-          </Link>
-          <Link
-            to="/taguig-city"
-            className="flex items-center gap-2 transition-opacity duration-300 hover:opacity-80"
-          >
-            <span className="text-sm font-medium text-gray-600">TAGUIG CITY</span>
-          </Link>
-          <h2 className="text-sm font-medium text-gray-600">
+        {/* Desktop Navigation */}
+        <nav className="hidden md:flex items-center space-x-1 lg:space-x-2">
+          {locations.map((loc) => (
+            <Link
+              key={loc.path}
+              to={loc.path}
+              className={cn(
+                "px-2 lg:px-3 py-1.5 text-sm font-medium rounded-md transition-colors",
+                isActive(loc.path)
+                  ? "bg-blue-50 text-blue-700"
+                  : "text-gray-600 hover:text-gray-900 hover:bg-gray-100"
+              )}
+              aria-current={isActive(loc.path) ? "page" : undefined}
+            >
+              {loc.name}
+            </Link>
+          ))}
+          <div className="h-6 border-l border-gray-300 mx-1"></div>
+          <span className="text-sm font-medium text-gray-500 whitespace-nowrap">
             Sample Ballot Builder
-          </h2>
-        </div>
+          </span>
+        </nav>
       </div>
 
       {/* Mobile Menu Overlay */}
       {isMenuOpen && (
-        <div className="fixed top-0 left-0 w-full h-full bg-white z-40 md:hidden">
-          <div className="p-6">
-            <button
-              className="text-gray-600 hover:text-gray-800 mb-4"
-              onClick={toggleMenu}
-              aria-label="Close Menu"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={1.5}
-                stroke="currentColor"
-                className="w-6 h-6"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
-            <div className="flex flex-col gap-4">
+        <div className="fixed inset-0 z-40 bg-white/95 backdrop-blur-sm md:hidden">
+          <div className="flex flex-col h-full">
+            <div className="flex justify-between items-center p-4 border-b">
               <Link
                 to="/"
-                className="flex items-center gap-2 transition-opacity duration-300 hover:opacity-80"
-                onClick={toggleMenu}
+                className="flex items-center gap-2"
+                onClick={() => setIsMenuOpen(false)}
               >
-                <span className="text-sm font-medium text-gray-600">ZAMBOANGA CITY</span>
+                <div className="w-8 h-6 overflow-hidden rounded-sm">
+                  {/* Philippines flag (same as above) */}
+                  <div className="relative w-full h-full">
+                    <div className="absolute inset-0 bg-ph-blue" style={{ clipPath: 'polygon(0 0, 100% 0, 100% 50%, 0 50%)' }}></div>
+                    <div className="absolute inset-0 bg-ph-red" style={{ clipPath: 'polygon(0 50%, 100% 50%, 100% 100%, 0 100%)' }}></div>
+                    <div className="absolute left-0 top-0 w-1/3 h-full flex items-center justify-center">
+                      <div className="w-4 h-4 transform rotate-45 bg-ph-yellow flex items-center justify-center">
+                        <div className="absolute w-1 h-1 bg-ph-yellow rounded-full" style={{ top: '0.5px', left: '0.5px' }}></div>
+                        <div className="absolute w-1 h-1 bg-ph-yellow rounded-full" style={{ top: '0.5px', right: '0.5px' }}></div>
+                        <div className="absolute w-1 h-1 bg-ph-yellow rounded-full" style={{ bottom: '0.5px', left: '0.5px' }}></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <span className="font-bold text-lg tracking-tight">KODIGO ELEKSYON 2025</span>
               </Link>
-              <Link
-                to="/cebu-city"
-                className="flex items-center gap-2 transition-opacity duration-300 hover:opacity-80"
-                onClick={toggleMenu}
+              <button
+                className="flex items-center justify-center w-10 h-10 text-gray-600 hover:text-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 rounded-full"
+                onClick={() => setIsMenuOpen(false)}
+                aria-label="Close Menu"
               >
-                <span className="text-sm font-medium text-gray-600">CEBU CITY</span>
-              </Link>
-              <Link
-                to="/makati-city"
-                className="flex items-center gap-2 transition-opacity duration-300 hover:opacity-80"
-                onClick={toggleMenu}
-              >
-                <span className="text-sm font-medium text-gray-600">MAKATI CITY</span>
-              </Link>
-              <Link
-                to="/taguig-city"
-                className="flex items-center gap-2 transition-opacity duration-300 hover:opacity-80"
-                onClick={toggleMenu}
-              >
-                <span className="text-sm font-medium text-gray-600">TAGUIG CITY</span>
-              </Link>
-              <h2 className="text-sm font-medium text-gray-600">
-                Sample Ballot Builder
-              </h2>
+                <X className="h-5 w-5" />
+              </button>
             </div>
+            
+            <nav className="flex flex-col p-4 space-y-3 overflow-y-auto">
+              {locations.map((loc) => (
+                <Link
+                  key={loc.path}
+                  to={loc.path}
+                  className={cn(
+                    "px-4 py-3 text-base font-medium rounded-md transition-colors",
+                    isActive(loc.path)
+                      ? "bg-blue-50 text-blue-700"
+                      : "text-gray-600 hover:text-gray-900 hover:bg-gray-100"
+                  )}
+                  onClick={() => setIsMenuOpen(false)}
+                  aria-current={isActive(loc.path) ? "page" : undefined}
+                >
+                  {loc.name}
+                </Link>
+              ))}
+              <div className="h-px bg-gray-200 my-2"></div>
+              <div className="px-4 py-3 text-base font-medium text-gray-500">
+                Sample Ballot Builder
+              </div>
+            </nav>
           </div>
         </div>
       )}
