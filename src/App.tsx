@@ -18,6 +18,7 @@ import National from "./pages/National";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
 import Header from "./components/Header";
+import BackToTop from "./components/BackToTop";
 import AnalyticsTracker from "./components/analytics/AnalyticsTracker";
 import { Alert, AlertDescription, AlertTitle } from "./components/ui/alert";
 import { AlertTriangle } from "lucide-react";
@@ -47,6 +48,7 @@ const Layout = ({ children, showAlert = true, cityName }: { children: React.Reac
         </div>
       )}
       {children}
+      <BackToTop />
     </div>
   );
 };
