@@ -1,4 +1,3 @@
-
 import { useState, KeyboardEvent } from 'react';
 import { ChevronDown, ChevronUp, Info } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -88,7 +87,7 @@ const PositionCard = ({
       {/* Position Header - Improved sticky positioning */}
       <div 
         className={cn(
-          "py-4 px-4 sm:px-5 flex flex-col items-center justify-center cursor-pointer border-b sticky top-0 z-50",
+          "sticky top-0 z-20 py-3 px-4 flex flex-col items-center justify-center border-b-2 border-black",
           getHeaderColor(),
           "shadow-sm"
         )}

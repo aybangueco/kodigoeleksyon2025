@@ -94,11 +94,11 @@ const BallotSection = ({
       className="py-12 px-6 min-h-screen bg-gradient-to-b from-white to-gray-50"
       aria-label="Ballot selection section"
     >
-      <div className="container mx-auto max-w-5xl">
+      <div className="container mx-auto max-w-5xl relative">
         <BallotHeader cityName={cityName} />
         <ProgressBar selectedCandidates={selectedCandidates} positions={positionsToUse} />
         
-        <div className="space-y-6 mt-8 animate-fade-in" role="list" aria-label="Election positions">
+        <div className="space-y-6 mt-8 animate-fade-in overflow-y-auto" role="list" aria-label="Election positions">
           {!isLoading && positionsToUse.map(position => (
             <PositionCard 
               key={position.id}
