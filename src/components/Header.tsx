@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { cn } from '@/lib/utils';
@@ -105,7 +104,7 @@ export const Header = () => {
               <NavigationMenuList className="space-x-0.5">
                 <NavigationMenuItem>
                   <NavigationMenuTrigger className={cn(
-                    "px-3 text-sm font-medium rounded-md transition-colors",
+                    "px-3 text-sm font-medium rounded-md",
                     isActive("/") || isActive("/cebu-city") || isActive("/makati-city") || 
                     isActive("/pasig-city") || isActive("/taguig-city")
                       ? "bg-blue-50 text-blue-700"
@@ -121,7 +120,7 @@ export const Header = () => {
                             <Link
                               to={loc.path}
                               className={cn(
-                                "block px-3 py-2 text-sm font-medium rounded-md transition-colors",
+                                "block px-3 py-2 text-sm font-medium rounded-md",
                                 isActive(loc.path)
                                   ? "bg-blue-50 text-blue-700"
                                   : "text-gray-600 hover:text-gray-900 hover:bg-gray-100"
@@ -139,7 +138,7 @@ export const Header = () => {
                 
                 <NavigationMenuItem>
                   <NavigationMenuTrigger className={cn(
-                    "px-3 text-sm font-medium rounded-md transition-colors",
+                    "px-3 text-sm font-medium rounded-md",
                     isActive("/cainta-rizal") || isActive("/taytay-rizal") 
                       ? "bg-blue-50 text-blue-700"
                       : "text-gray-600 hover:text-gray-900 hover:bg-gray-100"
@@ -154,7 +153,7 @@ export const Header = () => {
                             <Link
                               to={loc.path}
                               className={cn(
-                                "block px-3 py-2 text-sm font-medium rounded-md transition-colors",
+                                "block px-3 py-2 text-sm font-medium rounded-md",
                                 isActive(loc.path)
                                   ? "bg-blue-50 text-blue-700"
                                   : "text-gray-600 hover:text-gray-900 hover:bg-gray-100"
@@ -174,7 +173,7 @@ export const Header = () => {
                   <Link
                     to="/national"
                     className={cn(
-                      "inline-flex items-center justify-center px-3 py-2 text-sm font-medium rounded-md transition-colors",
+                      "inline-flex items-center justify-center px-3 py-2 text-sm font-medium rounded-md",
                       isActive("/national")
                         ? "bg-blue-50 text-blue-700"
                         : "text-gray-600 hover:text-gray-900 hover:bg-gray-100"
@@ -243,7 +242,7 @@ export const Header = () => {
                   key={loc.path}
                   to={loc.path}
                   className={cn(
-                    "px-4 py-3 text-base font-medium rounded-md transition-colors",
+                    "px-4 py-3 text-base font-medium rounded-md",
                     isActive(loc.path)
                       ? "bg-blue-50 text-blue-700"
                       : "text-gray-600 hover:text-gray-900 hover:bg-gray-100"
@@ -263,7 +262,7 @@ export const Header = () => {
                   key={loc.path}
                   to={loc.path}
                   className={cn(
-                    "px-4 py-3 text-base font-medium rounded-md transition-colors",
+                    "px-4 py-3 text-base font-medium rounded-md",
                     isActive(loc.path)
                       ? "bg-blue-50 text-blue-700"
                       : "text-gray-600 hover:text-gray-900 hover:bg-gray-100"
@@ -280,7 +279,7 @@ export const Header = () => {
               <Link
                 to="/national"
                 className={cn(
-                  "px-4 py-3 text-base font-medium rounded-md transition-colors",
+                  "px-4 py-3 text-base font-medium rounded-md",
                   isActive("/national")
                     ? "bg-blue-50 text-blue-700"
                     : "text-gray-600 hover:text-gray-900 hover:bg-gray-100"
