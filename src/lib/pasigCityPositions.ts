@@ -37,14 +37,14 @@ export const pasigCityPositions: Position[] = [
     id: "councilor-pasig-first",
     title: "Councilor - City of Pasig (First District)",
     description: "Members of the city council for Pasig City's First District.",
-    maxSelections: 8,
+    maxSelections: 6,
     candidates: pasigCityCouncilorFirstCandidates
   },
   {
     id: "councilor-pasig-second",
     title: "Councilor - City of Pasig (Second District)",
     description: "Members of the city council for Pasig City's Second District.",
-    maxSelections: 8,
+    maxSelections: 6,
     candidates: pasigCityCouncilorSecondCandidates
   },
   {
