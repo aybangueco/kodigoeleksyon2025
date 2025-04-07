@@ -85,10 +85,10 @@ const PositionCard = ({
     role="region"
     aria-label={`${position.title} selection panel`}
     >
-      {/* Position Header */}
+      {/* Position Header - Added sticky positioning */}
       <div 
         className={cn(
-          "py-4 px-4 sm:px-5 flex flex-col items-center justify-center cursor-pointer border-b",
+          "py-4 px-4 sm:px-5 flex flex-col items-center justify-center cursor-pointer border-b sticky top-0 z-30",
           getHeaderColor()
         )}
         onClick={() => setIsExpanded(!isExpanded)}
@@ -140,7 +140,7 @@ const PositionCard = ({
           {/* Selection Reminder */}
           {remainingSelections > 0 && position.maxSelections > 1 && (
             <div 
-              className="px-3 py-2 bg-yellow-50 text-xs sm:text-sm border-b border-yellow-200 font-medium"
+              className="px-3 py-2 bg-yellow-50 text-xs sm:text-sm border-b border-yellow-200 font-medium sticky top-[88px] z-20"
               aria-live="polite"
             >
               <div className="flex items-center justify-center gap-2">
