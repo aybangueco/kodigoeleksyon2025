@@ -6,13 +6,13 @@ export const taguigCityHouseRepFirstCandidates: Candidate[] = [
   { id: "taguig-hr1-2", name: "CERAFICA, ALLAN (PFP)", party: "PARTIDO FEDERAL NG PILIPINAS" },
   { id: "taguig-hr1-3", name: "CRUZ, ADING (NP)", party: "NACIONALISTA PARTY" },
   { id: "taguig-hr1-4", name: "DELA CRUZ, PETER (IND)", party: "INDEPENDENT" },
-  { id: "taguig-hr1-5", name: "DELA CRUZ, PETER (IND)", party: "INDEPENDENT" },
+  { id: "taguig-hr1-5", name: "OPOC, RICARDO (IND)", party: "INDEPENDENT" },
 ];
 
 export const taguigCityHouseRepSecondCandidates: Candidate[] = [
-  { id: "taguig-hr2-1", name: "DEFENSOR, JORGE DANIEL (NPC)", party: "NATIONALIST PEOPLE'S COALITION" },
+  { id: "taguig-hr2-1", name: "BOCOBO, JORGE DANIEL (NP)", party: "NACIONALISTA PARTY" },
   { id: "taguig-hr2-2", name: "MANILA, NOE (IND)", party: "INDEPENDENT" },
-  { id: "taguig-hr2-3", name: "TEAMONA, PAMMY (IND)", party: "INDEPENDENT" },
+  { id: "taguig-hr2-3", name: "ZAMORA, PAMMY (LAKAS)", party: "LAKAS" },
 ];
 
 export const taguigCityMayorCandidates: Candidate[] = [
