@@ -20,6 +20,10 @@ const CandidateSummaryModal: React.FC<CandidateSummaryModalProps> = ({
     if (isOpen) {
       bodyStyleRef.current = document.body.style.overflow;
       document.body.style.overflow = 'hidden';
+      const ballotActions = document.querySelector('[aria-label="Ballot actions"') as HTMLElement | null
+      if (ballotActions) {
+        ballotActions.style.zIndex = '-1';
+      }
     }
     
     return () => {
