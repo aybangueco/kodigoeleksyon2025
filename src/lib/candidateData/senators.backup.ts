@@ -183,9 +183,9 @@ export const senatorCandidates: Candidate[] = [
     "id": "s23",
     "name": "DORINGO, NANAY MIMI (MKBYN)",
     "party": "MAKABAYANG KOALISYON NG MAMAMAYAN",
-    "bio": "Eufemia “Mimi” Pet Doringo is an urban poor leader and activist. She serves as the Secretary-General of the Kalipunan ng Damayang Mahihirap (Kadamay), a militant organization advocating for the rights of the urban poor.\n\nBorn into a poor family, she struggled to complete high school and was unable to pursue college, opting instead to work at an early age. At 19, she began working for a cosmetics company, where she was exposed to issues such as contractual employment and labor exploitation.\n\nIn 2012, she joined a local urban poor community organization that developed a people’s plan for in-city relocation. Her involvement with Kadamay began in 2017, and she quickly rose to the position of National Spokesperson in 2018, eventually becoming the National Secretary-General in 2020. Throughout her activism, she has been a vocal advocate against demolitions, fare hikes, state violence, and the lack of decent work opportunities. In 2021, after criticizing alleged corruption in Pandi town in Bulacan, particularly concerning housing issues, she was declared persona non grata in the town.\n\nShe publicly opposed in 2022 the Maharlika Wealth Fund, and criticized in 2024 Presidential Adviser on Poverty Larry Gadon for dismissing the severity of poverty in the country.\n\nOn August 26, 2024, National Heroes Day, she was announced as part of the Makabayan senatorial slate for the 2025 elections.",
+    "bio": "Soft-spoken and gentle, Luis Antonio Tagle is a simple, no-frills dresser who does not have the air of someone who wields power",
     "image": "https://www.rappler.com/tachyon/2025/03/alyansa-para-bagong-pilipinas-cavite-march-2025-scaled.jpg?resize=644%2C362&crop=0px%2C2px%2C2560px%2C1439px",
-    "profileUrl": "https://www.rappler.com/people/p18828948-mimi-doringo/"
+    "profileUrl": "https://www.rappler.com/people/"
   },
   {
     "id": "s24",
