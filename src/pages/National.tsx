@@ -7,6 +7,7 @@ import BallotSection from '@/components/BallotSection';
 import HowItWorksSection from '@/components/HowItWorksSection';
 import useAnimationObserver from '@/hooks/useAnimationObserver';
 import { nationalPositions } from '@/lib/nationalPositions';
+import { Link } from "react-router-dom";
 
 const National = () => {
   // Refs for animation targets
@@ -85,6 +86,24 @@ const National = () => {
             <p className="text-orange-700 text-center mt-2">
               Create your personalized ballot for the National 2025 elections
             </p>
+          </div>
+
+          {/* Senator Match Tool Link */}
+          <div className="bg-blue-50 border border-blue-200 p-4 rounded-lg mt-4 mb-6">
+            <h2 className="text-xl font-bold text-blue-800 text-center">Find Your Senator Matches in 2 Minutes</h2>
+            <p className="text-blue-700 text-center mt-2 mb-3">
+              Not sure which senators to vote for? Try this helpful matching tool
+            </p>
+            <div className="flex justify-center">
+              <Link
+                  to="https://senator-match.vercel.app?utm_source=kodigoeleksyon&utm_medium=website&utm_campaign=senatorial_election_2025_matching"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-md transition-colors"
+              >
+                Find Your Senator Matches
+              </Link>
+            </div>
           </div>
         </div>
 
