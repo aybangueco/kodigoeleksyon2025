@@ -7,7 +7,7 @@ import HowItWorksSection from "@/components/HowItWorksSection";
 import useAnimationObserver from "@/hooks/useAnimationObserver";
 import { samalBataanPositions } from "@/lib/samalBataanPositions";
 
-const Bataan = () => {
+const SamalBataan = () => {
   // Refs for animation targets
   const howItWorksRef = useRef<HTMLDivElement>(null);
   const ballotRef = useRef<HTMLDivElement>(null);
@@ -140,4 +140,4 @@ const Bataan = () => {
   );
 };
 
-export default Bataan;
+export default SamalBataan;
