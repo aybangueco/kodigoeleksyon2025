@@ -51,12 +51,15 @@ export const Header = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 print:hidden h-full">
-      <div className={cn("container mx-auto px-4 sm:px-6 flex items-center justify-between py-3 transition-all duration-300 ease-in-out",
+    <header
+      className={cn(
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out py-3 print:hidden",
         scrolled 
-        ? "bg-white/95 backdrop-blur-md shadow-sm" 
-        : "bg-transparent"
-      )}>
+          ? "bg-white/95 backdrop-blur-md shadow-sm" 
+          : "bg-transparent"
+      )}
+    >
+      <div className="container mx-auto px-4 sm:px-6 flex items-center justify-between">
         <Link
           to="/"
           className="flex items-center gap-2.5 transition-opacity duration-300 hover:opacity-80 group"
