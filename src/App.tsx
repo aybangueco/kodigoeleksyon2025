@@ -10,6 +10,7 @@ import NotFound from "./pages/NotFound";
 import Index from "./pages/Index";
 import CebuCity from "./pages/CebuCity";
 import MakatiCity from "./pages/MakatiCity";
+import ManilaCity from "@/pages/ManilaCity.tsx";
 import PasigCity from "./pages/PasigCity";
 import TaguigCity from "./pages/TaguigCity";
 import PasayCity from "./pages/PasayCity";
@@ -67,6 +68,7 @@ const App = () => (
             <Route path="/" element={<Layout><Index /></Layout>} />
             <Route path="/cebu-city" element={<Layout cityName="Cebu City"><CebuCity /></Layout>} />
             <Route path="/makati-city" element={<Layout cityName="Makati City"><MakatiCity /></Layout>} />
+            <Route path="/manila-city" element={<Layout cityName="Manila City"><ManilaCity /></Layout>} />
             <Route path="/pasig-city" element={<Layout cityName="Pasig City"><PasigCity /></Layout>} />
             <Route path="/pasay-city" element={<Layout cityName="Pasay City"><PasayCity /></Layout>} />
             <Route path="/quezon-city" element={<Layout cityName="Quezon City"><QuezonCity /></Layout>} />

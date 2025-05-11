@@ -42,6 +42,7 @@ export const Header = () => {
     { name: "ZAMBOANGA CITY", path: "/" },
     { name: "QUEZON CITY", path: "/quezon-city" },
     { name: "MAKATI CITY", path: "/makati-city" },
+    { name: "MANILA CITY", path: "/manila-city" },
     { name: "TAGUIG CITY", path: "/taguig-city" },
     { name: "PASIG CITY", path: "/pasig-city" },
     { name: "PASAY CITY", path: "/pasay-city" },
