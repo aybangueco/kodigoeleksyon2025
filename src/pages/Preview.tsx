@@ -7,6 +7,7 @@ import { makatiCityPositions } from '@/lib/makatiCityPositions';
 import { taguigCityPositions } from '@/lib/taguigCityPositions';
 import { pasigCityPositions } from "@/lib/pasigCityPositions.ts";
 import { pasayCityPositions } from "@/lib/pasayCityPositions.ts";
+import { quezonCityPositions } from "@/lib/quezonCityPositions.ts";
 import { nationalPositions } from '@/lib/nationalPositions';
 import { caintaRizalPositions } from '@/lib/caintaRizalPositions';
 import { taytayRizalPositions } from '@/lib/taytayRizalPositions';
@@ -23,6 +24,7 @@ function getPositionsData(cityParam) {
     'Taguig City': taguigCityPositions,
     'Pasig City': pasigCityPositions,
     'Pasay City': pasayCityPositions,
+    'Quezon City': quezonCityPositions,
     'National': nationalPositions,
     'Cainta, Rizal': caintaRizalPositions,
     'Taytay, Rizal': taytayRizalPositions,
