@@ -39,16 +39,16 @@ export const quezonCityHouseRepSixthCandidates: Candidate[] = [
 // Mayor candidates
 export const quezonCityMayorCandidates: Candidate[] = [
   { id: "qc-m-1", name: "BELMONTE, JOY (SBP)", party: "SERBISYO SA BAYAN PARTY" },
-  { id: "qc-m-2", name: "CRISOLOGO, JONATHAN (KBL)", party: "KILUSANG BAGONG LIPUNAN" },
-  { id: "qc-m-3", name: "JOTA, ROLANDO (PUP)", party: "PARTIDO NG PAGBABAGO NG PILIPINO" },
-  { id: "qc-m-4", name: "NAVAT, MOL (IND)", party: "INDEPENDENT" },
-  { id: "qc-m-5", name: "VELASCO, DIGAMAD (KBL)", party: "KILUSANG BAGONG LIPUNAN" }
+  { id: "qc-m-2", name: "CABALO, JONATHAN (IND)", party: "INDEPENDENT" },
+  { id: "qc-m-3", name: "JOTA, ROLANDO (IND)", party: "INDEPENDENT" },
+  { id: "qc-m-4", name: "NAVAT, NOLI (IND)", party: "INDEPENDENT" },
+  { id: "qc-m-5", name: "VELASCO, DIOSDADO (IND)", party: "INDEPENDENT" }
 ];
 
 // Vice Mayor candidates
 export const quezonCityViceMayorCandidates: Candidate[] = [
-  { id: "qc-vm-1", name: "FARIÑASROCO, JANE (IND)", party: "INDEPENDENT" },
-  { id: "qc-vm-2", name: "RIGUEZ, INVENTOR (IND)", party: "INDEPENDENT" },
+  { id: "qc-vm-1", name: "FAELANGCO, JUNE (IND)", party: "INDEPENDENT" },
+  { id: "qc-vm-2", name: "INGLES, INVENTOR (IND)", party: "INDEPENDENT" },
   { id: "qc-vm-3", name: "SOTTO, GIAN (SBP)", party: "SERBISYO SA BAYAN PARTY" },
   { id: "qc-vm-4", name: "VILLARTA, DANTE (IND)", party: "INDEPENDENT" }
 ];
