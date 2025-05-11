@@ -18,7 +18,7 @@ const SamalBataan = () => {
 
   const [selectedCandidates, setSelectedCandidates] = useSessionStorage<
     Record<string, string[]>
-  >("kodigo-cainta-selections", {});
+  >("kodigo-samal-selections", {});
 
   return (
     <div className="min-h-screen flex flex-col bg-background">
@@ -117,8 +117,7 @@ const SamalBataan = () => {
               Samal, Bataan Ballot Builder
             </h1>
             <p className="text-orange-700 text-center mt-2">
-              Create your personalized ballot for Samal, Bataan 2025
-              elections
+              Create your personalized ballot for Samal, Bataan 2025 elections
             </p>
           </div>
         </div>
