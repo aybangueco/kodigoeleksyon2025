@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import { positions as zamboangaPositions } from '@/lib/positions';
 import { cebuCityPositions } from '@/lib/cebuCityPositions';
 import { makatiCityPositions } from '@/lib/makatiCityPositions';
+import { manilaCityPositions } from "@/lib/manilaCityPositions.ts";
 import { taguigCityPositions } from '@/lib/taguigCityPositions';
 import { pasigCityPositions } from "@/lib/pasigCityPositions.ts";
 import { pasayCityPositions } from "@/lib/pasayCityPositions.ts";
@@ -21,6 +22,7 @@ function getPositionsData(cityParam) {
   const cityMap = {
     'Cebu City': cebuCityPositions,
     'Makati City': makatiCityPositions,
+    'Manila City': manilaCityPositions,
     'Taguig City': taguigCityPositions,
     'Pasig City': pasigCityPositions,
     'Pasay City': pasayCityPositions,
