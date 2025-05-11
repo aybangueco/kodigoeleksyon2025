@@ -44,6 +44,7 @@ export const Header = () => {
     { name: "MAKATI CITY", path: "/makati-city" },
     { name: "PASIG CITY", path: "/pasig-city" },
     { name: "TAGUIG CITY", path: "/taguig-city" },
+    { name: "PASAY CITY", path: "/pasay-city" },
     { name: "CAINTA, RIZAL", path: "/cainta-rizal" },
     { name: "TAYTAY, RIZAL", path: "/taytay-rizal" },
     { name: "NATIONAL", path: "/national" },
@@ -114,7 +115,7 @@ export const Header = () => {
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
                     <ul className="grid grid-cols-1 w-[200px] gap-1 p-2">
-                      {locations.slice(0, 5).map((loc) => (
+                      {locations.slice(0, 6).map((loc) => (
                         <li key={loc.path}>
                           <NavigationMenuLink asChild>
                             <Link
@@ -147,7 +148,7 @@ export const Header = () => {
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
                     <ul className="grid grid-cols-1 w-[200px] gap-1 p-2">
-                      {locations.slice(5, 7).map((loc) => (
+                      {locations.slice(6, 7).map((loc) => (
                         <li key={loc.path}>
                           <NavigationMenuLink asChild>
                             <Link
@@ -237,7 +238,7 @@ export const Header = () => {
             
             <nav className="flex flex-col p-4 space-y-1 overflow-y-auto">
               <div className="px-3 py-2 text-sm font-medium text-gray-500 uppercase">Major Cities</div>
-              {locations.slice(0, 5).map((loc) => (
+              {locations.slice(0, 6).map((loc) => (
                 <Link
                   key={loc.path}
                   to={loc.path}
@@ -257,7 +258,7 @@ export const Header = () => {
               <div className="h-px bg-gray-200 my-2"></div>
               
               <div className="px-3 py-2 text-sm font-medium text-gray-500 uppercase">Rizal Province</div>
-              {locations.slice(5, 7).map((loc) => (
+              {locations.slice(6, 8).map((loc) => (
                 <Link
                   key={loc.path}
                   to={loc.path}
