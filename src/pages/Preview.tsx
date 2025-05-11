@@ -12,6 +12,7 @@ import { quezonCityPositions } from "@/lib/quezonCityPositions.ts";
 import { nationalPositions } from '@/lib/nationalPositions';
 import { caintaRizalPositions } from '@/lib/caintaRizalPositions';
 import { taytayRizalPositions } from '@/lib/taytayRizalPositions';
+import { samalBataanPositions } from '@/lib/samalBataanPositions';
 import Footer from '@/components/Footer';
 import PreviewHeader from '@/components/preview/PreviewHeader';
 import PreviewContent from '@/components/preview/PreviewContent';
@@ -30,6 +31,7 @@ function getPositionsData(cityParam) {
     'National': nationalPositions,
     'Cainta, Rizal': caintaRizalPositions,
     'Taytay, Rizal': taytayRizalPositions,
+    'Samal, Bataan': samalBataanPositions,
   };
 
   // Use the cityParam as a key to look up the corresponding positions data.
