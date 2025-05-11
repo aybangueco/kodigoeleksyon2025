@@ -184,7 +184,7 @@ export const Header = () => {
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
                     <ul className="grid grid-cols-1 w-[200px] gap-1 p-2">
-                      {locations.slice(7, 8).map((loc) => (
+                      {locations.slice(10, 11).map((loc) => (
                         <li key={loc.path}>
                           <NavigationMenuLink asChild>
                             <Link
