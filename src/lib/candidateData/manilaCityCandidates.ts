@@ -1,4 +1,3 @@
-
 import { Candidate } from '../positions';
 
 // Manila City House Representatives candidates - UPDATED DATA
@@ -37,13 +36,15 @@ export const manilaCityHouseRepSixthCandidates: Candidate[] = [
     { id: "manila-hr6-2", name: "UY, JOEY (AKSYON)", party: "AKSYON DEMOKRATIKO" },
 ];
 
-// Vice Mayor candidates
+// Updated Vice Mayor candidates
 export const manilaCityViceMayorCandidates: Candidate[] = [
-    { id: "manila-vm1", name: "LACUNA, CHI (AKSYON)", party: "AKSYON DEMOKRATIKO" },
-    { id: "manila-vm2", name: "NIETO, YUL SERVO (AKSYON)", party: "AKSYON DEMOKRATIKO" },
-    { id: "manila-vm3", name: "OYALES, REMY (UNA)", party: "UNITED NATIONALIST ALLIANCE" },
-    { id: "manila-vm4", name: "REYES, AIWIN (NUP)", party: "NATIONAL UNITY PARTY" },
-    { id: "manila-vm5", name: "SAY, SOLOMON (UB)", party: "UNITED BANGSAMORO" },
+    { id: "manila-vm1", name: "ATIENZA, CHI (AKSYON)", party: "AKSYON DEMOKRATIKO" },
+    { id: "manila-vm2", name: "MAGNO, NIÑO ANTHONY (IND)", party: "INDEPENDENT" },
+    { id: "manila-vm3", name: "NIETO, YUL SERVO (ASENSO)", party: "ASENSO MANILEÑO" },
+    { id: "manila-vm4", name: "OCAMPO, PABLO CHIKEE (PFP)", party: "PARTIDO FEDERAL NG PILIPINAS" },
+    { id: "manila-vm5", name: "OYALES, REMY (KBL)", party: "KILUSANG BAGONG LIPUNAN" },
+    { id: "manila-vm6", name: "REYES, ARVIN (IND)", party: "INDEPENDENT" },
+    { id: "manila-vm7", name: "SAY, SOLOMON (ID)", party: "INDEPENDENT" },
 ];
 
 // Updated Councilors for all districts based on the provided data
@@ -201,15 +202,17 @@ export const manilaCityCouncilorSixthCandidates: Candidate[] = [
     { id: "manila-c6-18", name: "VERGEL, FERNANDO (IND)", party: "INDEPENDENT" },
 ];
 
-// Mayor candidates
+// Updated Mayor candidates
 export const manilaCityMayorCandidates: Candidate[] = [
     { id: "manila-mayor-1", name: "BAGATSING, RAYMOND (IND)", party: "INDEPENDENT" },
-    { id: "manila-mayor-2", name: "DOMAGOSO, GEO MORENO (AKSYON)", party: "AKSYON DEMOKRATIKO" },
-    { id: "manila-mayor-3", name: "GARAFIL, ALVIN (IND)", party: "INDEPENDENT" },
-    { id: "manila-mayor-4", name: "LACUNA, HONEY (AKSYON)", party: "AKSYON DEMOKRATIKO" },
-    { id: "manila-mayor-5", name: "REYES, ENRICO (IND)", party: "INDEPENDENT" },
-    { id: "manila-mayor-6", name: "SAY, BAMBAN DATO NG TONDO (UB)", party: "UNITED BANGSAMORO" },
-    { id: "manila-mayor-7", name: "SOLANO-GARCIA, MARIA (IND)", party: "INDEPENDENT" },
-    { id: "manila-mayor-8", name: "TAN, ERWIN (IND)", party: "INDEPENDENT" },
-    { id: "manila-mayor-9", name: "VERSOSA, SAM SY (IND)", party: "INDEPENDENT" },
+    { id: "manila-mayor-2", name: "DOMAGOSO, ISKO MORENO (AKSYON)", party: "AKSYON DEMOKRATIKO" },
+    { id: "manila-mayor-3", name: "GARCIA, JERRY (IND)", party: "INDEPENDENT" },
+    { id: "manila-mayor-4", name: "KARINGAL, ALVIN (IND)", party: "INDEPENDENT" },
+    { id: "manila-mayor-5", name: "LACUNA, HONEY (ASENSO)", party: "ASENSO MANILEÑO" },
+    { id: "manila-mayor-6", name: "OCAMPO, JOPOY (IND)", party: "INDEPENDENT" },
+    { id: "manila-mayor-7", name: "REYES, ENRICO (IND)", party: "INDEPENDENT" },
+    { id: "manila-mayor-8", name: "SAY, MICHAEL DAD NG BAYAN (ID)", party: "INDEPENDENT" },
+    { id: "manila-mayor-9", name: "TAMONDONG, MAHRA (KBL)", party: "KILUSANG BAGONG LIPUNAN" },
+    { id: "manila-mayor-10", name: "TAN, ERVIN (IND)", party: "INDEPENDENT" },
+    { id: "manila-mayor-11", name: "VERZOSA, SAM SV (IND)", party: "INDEPENDENT" },
 ];
