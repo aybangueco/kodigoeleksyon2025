@@ -13,6 +13,7 @@ import MakatiCity from "./pages/MakatiCity";
 import PasigCity from "./pages/PasigCity";
 import TaguigCity from "./pages/TaguigCity";
 import PasayCity from "./pages/PasayCity";
+import QuezonCity from "./pages/QuezonCity";
 import CaintaRizal from "./pages/CaintaRizal";
 import TaytayRizal from "./pages/TaytayRizal";
 import National from "./pages/National";
@@ -68,6 +69,7 @@ const App = () => (
             <Route path="/makati-city" element={<Layout cityName="Makati City"><MakatiCity /></Layout>} />
             <Route path="/pasig-city" element={<Layout cityName="Pasig City"><PasigCity /></Layout>} />
             <Route path="/pasay-city" element={<Layout cityName="Pasay City"><PasayCity /></Layout>} />
+            <Route path="/quezon-city" element={<Layout cityName="Quezon City"><QuezonCity /></Layout>} />
             <Route path="/taguig-city" element={<Layout cityName="Taguig City"><TaguigCity /></Layout>} />
             <Route path="/cainta-rizal" element={<Layout cityName="Cainta, Rizal"><CaintaRizal /></Layout>} />
             <Route path="/taytay-rizal" element={<Layout cityName="Taytay, Rizal"><TaytayRizal /></Layout>} />
