@@ -3,6 +3,7 @@ import {
   samalBataanCouncilorCandidates,
   samalBataanHouseRepCandidates,
   samalBataanMayorCandidates,
+  samalBataanViceMayorCandidates,
   samalBataanProvincialGovernorCandidates,
   samalBataanProvincialViceGovernorCandidates,
 } from "./candidateData/samalBataanCandidates";
@@ -45,7 +46,7 @@ export const samalBataanPositions: Position[] = [
     description:
       "The second highest executive of the Municipality of Samal, Bataan.",
     maxSelections: 1,
-    candidates: samalBataanMayorCandidates,
+    candidates: samalBataanViceMayorCandidates,
   },
   {
     id: "councilor-samal",
