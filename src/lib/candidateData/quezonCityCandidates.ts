@@ -3,38 +3,37 @@ import { Candidate } from '../positions';
 
 // Extract house representative candidates from the uploaded images
 export const quezonCityHouseRepFirstCandidates: Candidate[] = [
-  { id: "qc-hr1-1", name: "ATUATCO, ADO (PFP)", party: "PARTIDO FEDERAL NG PILIPINAS" },
-  { id: "qc-hr1-2", name: "BRINGAS, ALLAN BENEDICT (PFP)", party: "PARTIDO FEDERAL NG PILIPINAS" },
-  { id: "qc-hr1-3", name: "LIN, ATE ROSE (NPC)", party: "NATIONALIST PEOPLES COALITION" },
-  { id: "qc-hr1-4", name: "MALLARI, FIDELA (IND)", party: "INDEPENDENT" },
-  { id: "qc-hr1-5", name: "VARGAS, PM (LAKAS)", party: "LAKAS-CMD" }
+  { id: "qc-hr1-1", name: "ATAYDE, ARJO (NP)", party: "NACIONALISTA PARTY" },
+  { id: "qc-hr1-2", name: "CRISOLOGO, BINGBONG (PFP)", party: "PARTIDO FEDERAL NG PILIPINAS" },
 ];
 
 export const quezonCityHouseRepSecondCandidates: Candidate[] = [
-  { id: "qc-hr2-1", name: "BERNIDO, NOEL (PUP)", party: "PARTIDO NG PAGBABAGO NG PILIPINO" },
+  { id: "qc-hr2-1", name: "BERNIDO, ROEL (IND)", party: "INDEPENDENT" },
   { id: "qc-hr2-2", name: "GARCIA, ATTY. VIRGIL (IND)", party: "INDEPENDENT" },
-  { id: "qc-hr2-3", name: "TULFO, RALPH (PFP)", party: "PARTIDO FEDERAL NG PILIPINAS" },
-  { id: "qc-hr2-4", name: "VALERA, FRANCISCO (IND)", party: "INDEPENDENT" }
+  { id: "qc-hr2-3", name: "PALMA, FRANCISCO  (IND)", party: "INDEPENDENT" },
+  { id: "qc-hr2-4", name: "TULFO, RALPH (PFP)", party: "PARTIDO FEDERAL NG PILIPINAS" }
 ];
 
 export const quezonCityHouseRepThirdCandidates: Candidate[] = [
-  { id: "qc-hr3-1", name: "HERRERA, ATTY. ROSE (NPC)", party: "NATIONALIST PEOPLES COALITION" },
-  { id: "qc-hr3-2", name: "PUMAREN, FRANZ (NUP)", party: "NATIONAL UNITY PARTY" }
+  { id: "qc-hr3-1", name: "PUMAREN, FRANZ (NUP)", party: "NATIONAL UNITY PARTY" },
+  { id: "qc-hr3-2", name: " REYES, ALLAN BENEDICT (PFP)", party: "PARTIDO FEDERAL NG PILIPINAS" }
 ];
 
 export const quezonCityHouseRepFourthCandidates: Candidate[] = [
-  { id: "qc-hr4-1", name: "CASTELO, MARVIN (LAKAS)", party: "LAKAS-CMD" },
-  { id: "qc-hr4-2", name: "SUNTAY, BONG (DNA)", party: "DEMOCRATIC PARTY OF THE PHILIPPINES - DNA" }
+  { id: "qc-hr4-1", name: "RILLO, MARVIN (LAKAS) ", party: "LAKAS-CMD" },
+  { id: "qc-hr4-2", name: "SUNTAY, BONG (UNA)", party: "UNITED NATIONALIST ALLIANCE" }
 ];
 
 export const quezonCityHouseRepFifthCandidates: Candidate[] = [
-  { id: "qc-hr5-1", name: "LIM, ATE ROSE (PRP)", party: "PEOPLE'S REFORM PARTY" },
-  { id: "qc-hr5-2", name: "PUSPUSA, MARIKIT (NCP)", party: "NATIONALIST PEOPLES COALITION" }
+  { id: "qc-hr5-1", name: "DE GUZMAN, ATE ROSE  (WPP)", party: "PEOPLE'S REFORM PARTY" },
+  { id: "qc-hr5-2", name: "LIN, ATE ROSE (IND)", party: "INDEPENDENT" },
+  { id: "qc-hr5-2", name: "JOTA, ROLANDO (IND)", party: "INDEPENDENT" },
+  { id: "qc-hr5-2", name: "NAVAT, NOLI (IND)", party: "INDEPENDENT" },
+  { id: "qc-hr5-2", name: "VELASCO, DIOSDADO  (IND)", party: "INDEPENDENT" }
 ];
 
 export const quezonCityHouseRepSixthCandidates: Candidate[] = [
-  { id: "qc-hr6-1", name: "BELLO, MARVIN (LAKAS)", party: "LAKAS-CMD" },
-  { id: "qc-hr6-2", name: "BUSTA, ANGEL JR (PUP)", party: "PARTIDO NG PAGBABAGO NG PILIPINO" }
+  { id: "qc-hr6-1", name: "CO-PILAR, MARIVIC  (NUP)", party: "NUP" }
 ];
 
 // Mayor candidates
