@@ -1,3 +1,4 @@
+
 import { Position } from './positions';
 import { senatorCandidates } from './candidateData/senators';
 import { partyListCandidates } from './candidateData/partyList';
