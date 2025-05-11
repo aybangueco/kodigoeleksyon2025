@@ -1,37 +1,39 @@
 import { Candidate } from '../positions';
 
-// Manila City House Representatives candidates from the images
+// Manila City House Representatives candidates - UPDATED DATA
 export const manilaCityHouseRepFirstCandidates: Candidate[] = [
-    { id: "manila-hr1-1", name: "DIONISIO, ERNIE (LAKAS)", party: "LAKAS-CMD" },
-    { id: "manila-hr1-2", name: "LACSON, MANNY (AKSYON)", party: "AKSYON DEMOKRATIKO" },
-    { id: "manila-hr1-3", name: "NIETO, APPLE (AKSYON)", party: "AKSYON DEMOKRATIKO" },
-    { id: "manila-hr1-4", name: "SANTOS, ROSA (LAKAS)", party: "LAKAS-CMD" },
+    { id: "manila-hr1-1", name: "DIONISIO, ERNIX (LAKAS)", party: "LAKAS-CMD" },
+    { id: "manila-hr1-2", name: "LOPEZ, MANNY (ASENSO)", party: "ASENSO MANILEÑO" },
+    { id: "manila-hr1-3", name: "LUMBAD, JOSEPH (FRPAMM)", party: "FRPAMM" },
+    { id: "manila-hr1-4", name: "SANTOS, EDSA IV (IND)", party: "INDEPENDENT" },
 ];
 
 export const manilaCityHouseRepSecondCandidates: Candidate[] = [
     { id: "manila-hr2-1", name: "LOPEZ, CARLO (NP)", party: "NACIONALISTA PARTY" },
-    { id: "manila-hr2-2", name: "VILLARASIN, ROLLY (UNA)", party: "UNITED NATIONALIST ALLIANCE" },
+    { id: "manila-hr2-2", name: "VALERIANO, ROLAN CRV (NUP)", party: "NATIONAL UNITY PARTY" },
 ];
 
 export const manilaCityHouseRepThirdCandidates: Candidate[] = [
     { id: "manila-hr3-1", name: "CHUA, JOEL (LAKAS)", party: "LAKAS-CMD" },
-    { id: "manila-hr3-2", name: "CHUA, DOC LOUIE (IND)", party: "INDEPENDENT" },
-    { id: "manila-hr3-3", name: "NIEVA-DERIGAY, GISELLE (AKSYON)", party: "AKSYON DEMOKRATIKO" },
-    { id: "manila-hr3-4", name: "VILLALUZ, JAY (AKSYON)", party: "AKSYON DEMOKRATIKO" },
+    { id: "manila-hr3-2", name: "MORALES, RAMON (PDPLBN)", party: "PDP LABAN" },
+    { id: "manila-hr3-3", name: "NIETO, APPLE (AKSYON)", party: "AKSYON DEMOKRATIKO" },
 ];
 
 export const manilaCityHouseRepFourthCandidates: Candidate[] = [
-    { id: "manila-hr4-1", name: "ASILO, EDWARD AMADO (AKSYON)", party: "AKSYON DEMOKRATIKO" },
-    { id: "manila-hr4-2", name: "TREKI, IRWIN (LAKAS)", party: "LAKAS-CMD" },
+    { id: "manila-hr4-1", name: "BONOAN-DAVID, TRISHA (IND)", party: "INDEPENDENT" },
+    { id: "manila-hr4-2", name: "CHUA, DOC LOUIE (IND)", party: "INDEPENDENT" },
+    { id: "manila-hr4-3", name: "MACEDA, DRA. GISELLE (ASENSO)", party: "ASENSO MANILEÑO" },
+    { id: "manila-hr4-4", name: "VILLANUEVA, JTV (AKSYON)", party: "AKSYON DEMOKRATIKO" },
 ];
 
 export const manilaCityHouseRepFifthCandidates: Candidate[] = [
-    { id: "manila-hr5-1", name: "ABANTE, BENNY (NUP)", party: "NATIONAL UNITY PARTY" },
-    { id: "manila-hr5-2", name: "UY, JOEY (AKSYON)", party: "AKSYON DEMOKRATIKO" },
+    { id: "manila-hr5-1", name: "BAGATSING, AMADO (AKSYON)", party: "AKSYON DEMOKRATIKO" },
+    { id: "manila-hr5-2", name: "TIENG, IRWIN (LAKAS)", party: "LAKAS-CMD" },
 ];
 
 export const manilaCityHouseRepSixthCandidates: Candidate[] = [
-    { id: "manila-hr6-1", name: "LACUNA, HONEY (AKSYON)", party: "AKSYON DEMOKRATIKO" },
+    { id: "manila-hr6-1", name: "ABANTE, BENNY (NUP)", party: "NATIONAL UNITY PARTY" },
+    { id: "manila-hr6-2", name: "UY, JOEY (AKSYON)", party: "AKSYON DEMOKRATIKO" },
 ];
 
 // Vice Mayor candidates
