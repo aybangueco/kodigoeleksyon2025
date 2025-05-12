@@ -27,3 +27,5 @@ export interface ElectionResult {
   locationName: string;
   contestLocationName: string;
 }
+
+export type ResultType = 'senator' | 'partylist';

@@ -1,15 +1,25 @@
-import { ElectionResult } from "@/types/electionResults";
+import { ElectionResult, ResultType } from "@/types/electionResults";
 
-const API_URL = "https://blob-prod-senator.abs-cbn.com/feed-0/senator-00399000-nation-location-1.json";
+const SENATOR_API_URL = "https://blob-prod-senator.abs-cbn.com/feed-0/senator-00399000-nation-location-1.json";
+const PARTYLIST_API_URL = "https://blob-prod-party-list.abs-cbn.com/feed-0/party-list-01199000-nation-location-1.json";
 
-export const fetchSenatorResults = async (): Promise<ElectionResult> => {
-  const response = await fetch(API_URL);
+export const fetchElectionResults = async (type: ResultType): Promise<ElectionResult> => {
+  const apiUrl = type === 'senator' ? SENATOR_API_URL : PARTYLIST_API_URL;
+  const response = await fetch(apiUrl);
   
   if (!response.ok) {
-    throw new Error(`Failed to fetch election results: ${response.status}`);
+    throw new Error(`Failed to fetch ${type} results: ${response.status}`);
   }
   
   return response.json();
+};
+
+export const fetchSenatorResults = (): Promise<ElectionResult> => {
+  return fetchElectionResults('senator');
+};
+
+export const fetchPartyListResults = (): Promise<ElectionResult> => {
+  return fetchElectionResults('partylist');
 };
 
 // Keep existing mock data as a fallback in case API is unavailable
