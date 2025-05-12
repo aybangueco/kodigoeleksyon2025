@@ -1,5 +1,6 @@
 import { Handler, HandlerEvent, HandlerContext } from "@netlify/functions";
 import { chromium } from 'playwright';
+import * as path from 'path';
 
 // API URLs
 const SENATOR_API_URL = "https://blob-prod-senator.abs-cbn.com/feed-0/senator-00399000-nation-location-1.json";
@@ -8,45 +9,60 @@ const PARTYLIST_API_URL = "https://blob-prod-party-list.abs-cbn.com/feed-0/party
 async function scrapeElectionResults(type: 'senator' | 'partylist') {
     console.log(`Starting to fetch ${type} election results directly in Netlify Function...`);
 
-    // Launch headless browser
-    console.log('Launching browser... headless set to true for Netlify Function');
-    const browser = await chromium.launch({ headless: true }); // Set headless to true for serverless environments
-    const context = await browser.newContext({
-        userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+    // Construct the expected path to the Chromium executable in the Netlify environment
+    const chromiumExecutablePath = path.join(__dirname, '..', '..', '.cache', 'ms-playwright', 'chromium-*', 'chrome-linux', 'chrome');
+
+    // Launch headless browser with explicit executable path
+    console.log(`Attempting to launch Chromium with executable path: ${chromiumExecutablePath}`);
+    const browser = await chromium.launch({
+        headless: true,
+        executablePath: chromiumExecutablePath,
     });
 
     try {
-        const page = await context.newPage();
-        let apiUrl: string;
 
-        if (type === 'senator') {
-            apiUrl = SENATOR_API_URL;
-            console.log(`Fetching senator results from ${apiUrl}...`);
-        } else if (type === 'partylist') {
-            apiUrl = PARTYLIST_API_URL;
-            console.log(`Fetching party list results from ${apiUrl}...`);
-        } else {
-            console.error('Invalid result type provided to scraper.');
-            return null;
+        const context = await browser.newContext({
+            userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+        });
+
+        try {
+            const page = await context.newPage();
+            let apiUrl: string;
+
+            if (type === 'senator') {
+                apiUrl = SENATOR_API_URL;
+                console.log(`Fetching senator results from ${apiUrl}...`);
+            } else if (type === 'partylist') {
+                apiUrl = PARTYLIST_API_URL;
+                console.log(`Fetching party list results from ${apiUrl}...`);
+            } else {
+                console.error('Invalid result type provided to scraper.');
+                return null;
+            }
+
+            const response = await page.goto(apiUrl);
+
+            if (response && response.ok()) {
+                const data = await response.json();
+                console.log(`✅ Successfully fetched ${type} results.`);
+                return data;
+            } else {
+                console.error(`❌ Failed to fetch ${type} results: ${response?.status()}`);
+                return null;
+            }
+
+        } finally {
+            await context.close();
         }
-
-        const response = await page.goto(apiUrl);
-
-        if (response && response.ok()) {
-            const data = await response.json();
-            console.log(`✅ Successfully fetched ${type} results.`);
-            return data;
-        } else {
-            console.error(`❌ Failed to fetch ${type} results: ${response?.status()}`);
-            return null;
-        }
-
-    } catch (error) {
+    } catch (error: any) {
         console.error(`Error during scraping ${type} results in Netlify Function:`, error);
+        console.error('Playwright Error Stack:', error.stack);
         return null;
     } finally {
-        await browser.close();
-        console.log('Browser closed in Netlify Function.');
+        if (browser) {
+            await browser.close();
+            console.log('Browser closed in Netlify Function.');
+        }
     }
 }
 
