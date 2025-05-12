@@ -1,15 +1,15 @@
 import { Candidate } from '../positions';
 
 export const samalBataanHouseRepCandidates: Candidate[] = [
-  { id: "samal-hr1", name: "ROMAN, TONY", party: "" },
+  { id: "samal-hr1", name: "ROMAN, TONY", party: "PUSONG PINOY" },
 ];
 
 export const samalBataanProvincialGovernorCandidates: Candidate[] = [
-  { id: "samal-pg1", name: "GARCIA, JOSE ENRIQUE III", party: "" },
+  { id: "samal-pg1", name: "GARCIA, JOSE ENRIQUE III", party: "PUSONG PINOY" },
 ];
 
 export const samalBataanProvincialViceGovernorCandidates: Candidate[] = [
-  { id: "samal-pvg1", name: "GARCIA, MARIA CRISTINA", party: "" },
+  { id: "samal-pvg1", name: "GARCIA, MARIA CRISTINA", party: "PUSONG PINOY" },
 ];
 
 export const samalBataanMayorCandidates: Candidate[] = [
