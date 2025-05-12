@@ -9,3 +9,6 @@
     "playwright-core/lib/server/launchApp",
     "playwright-core/lib/server/electron/electron"
   ]
+
+[[plugins]]
+package = "netlify-plugin-playwright-cache"
