@@ -1,6 +1,5 @@
 import { Handler, HandlerEvent, HandlerContext } from "@netlify/functions";
 import { chromium } from 'playwright';
-import * as path from 'path';
 
 // API URLs
 const SENATOR_API_URL = "https://blob-prod-senator.abs-cbn.com/feed-0/senator-00399000-nation-location-1.json";
@@ -9,14 +8,8 @@ const PARTYLIST_API_URL = "https://blob-prod-party-list.abs-cbn.com/feed-0/party
 async function scrapeElectionResults(type: 'senator' | 'partylist') {
     console.log(`Starting to fetch ${type} election results directly in Netlify Function...`);
 
-    // Construct the expected path to the Chromium executable in the Netlify environment
-    const chromiumExecutablePath = path.join(__dirname, '..', '..', '.cache', 'ms-playwright', 'chromium-*', 'chrome-linux', 'chrome');
-
-    // Launch headless browser with explicit executable path
-    console.log(`Attempting to launch Chromium with executable path: ${chromiumExecutablePath}`);
     const browser = await chromium.launch({
         headless: true,
-        executablePath: chromiumExecutablePath,
     });
 
     try {
@@ -54,7 +47,7 @@ async function scrapeElectionResults(type: 'senator' | 'partylist') {
         } finally {
             await context.close();
         }
-    } catch (error: any) {
+    } catch (error) {
         console.error(`Error during scraping ${type} results in Netlify Function:`, error);
         console.error('Playwright Error Stack:', error.stack);
         return null;
