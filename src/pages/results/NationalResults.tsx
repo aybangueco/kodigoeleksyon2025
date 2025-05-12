@@ -1,7 +1,10 @@
 
 import { useQuery } from "@tanstack/react-query";
 import { Helmet } from "react-helmet-async";
-import { fetchSenatorResults, fetchPartyListResults } from "@/services/resultsService";
+import {
+  fetchSenatorResultsFromJson,
+  fetchPartyListResultsFromJson
+} from "@/services/resultsService";
 import ResultsTable from "@/components/results/ResultsTable";
 import ResultsStats from "@/components/results/ResultsStats";
 import Footer from "@/components/Footer";
@@ -17,14 +20,14 @@ const NationalResults = () => {
 
   const senatorQuery = useQuery({
     queryKey: ["senatorResults"],
-    queryFn: fetchSenatorResults,
+    queryFn: fetchSenatorResultsFromJson,
     refetchInterval: 30000, // Refetch every 30 seconds
     retry: 3,
   });
 
   const partyListQuery = useQuery({
     queryKey: ["partyListResults"],
-    queryFn: fetchPartyListResults,
+    queryFn: fetchPartyListResultsFromJson,
     refetchInterval: 30000, // Refetch every 30 seconds
     retry: 3,
     enabled: selectedTab === "partylist", // Only fetch when this tab is selected

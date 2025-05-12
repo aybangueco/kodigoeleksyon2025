@@ -1,37 +1,40 @@
 import { ElectionResult, ResultType } from "@/types/electionResults";
+import * as fs from 'fs/promises';
+import * as path from 'path';
 
-export const fetchElectionResults = async (type: ResultType): Promise<ElectionResult> => {
-  const functionUrl = `/.netlify/functions/election-results?type=${type}`;
+const PARTylist_FILE_PATH = path.resolve(__dirname, '../../partylist_results.json');
+const SENATOR_FILE_PATH = path.resolve(__dirname, '../../senator_results.json');
+
+export const fetchElectionResultsFromJson = async (type: ResultType): Promise<ElectionResult | null> => {
+  let filePath: string;
+  if (type === 'senator') {
+    filePath = SENATOR_FILE_PATH;
+  } else if (type === 'partylist') {
+    filePath = PARTylist_FILE_PATH;
+  } else {
+    console.error(`Invalid result type: ${type}`);
+    return null;
+  }
 
   try {
-    console.log(`Attempting to fetch ${type} results from Netlify Function: ${functionUrl}`);
-    const response = await fetch(functionUrl);
-
-    if (!response.ok) {
-      console.error(`Netlify Function response not OK: ${response.status} - ${response.statusText}. Using mock data.`);
-      throw new Error(`Failed to fetch ${type} results from function: ${response.status}`);
-    }
-
-    console.log(`Successfully fetched ${type} results from Netlify Function`);
-    const data = await response.json();
-    console.log("Response Data:", data); // Log the parsed JSON data
-    return data as ElectionResult;
+    console.log(`Reading ${type} results from: ${filePath}`);
+    const fileContent = await fs.readFile(filePath, 'utf-8');
+    const jsonData = JSON.parse(fileContent) as ElectionResult;
+    console.log(`Successfully read ${type} results.`);
+    return jsonData;
   } catch (error) {
-    console.error(`Error fetching ${type} results from Netlify Function:`, error);
-    console.log(`Falling back to mock ${type} data`);
-
-    // If Netlify Function call fails, use mock data
-    return type === 'senator' ? mockSenatorResults : mockPartyListResults;
+    console.error(`Error reading ${type} results from ${filePath}:`, error);
+    return null;
   }
 };
 
-export const fetchSenatorResults = (): Promise<ElectionResult> => {
-  return fetchElectionResults('senator');
+export const fetchSenatorResultsFromJson = (): Promise<ElectionResult | null> => {
+  return fetchElectionResultsFromJson('senator');
 };
 
-export const fetchPartyListResults = (): Promise<ElectionResult> => {
-  return fetchElectionResults('partylist');
-}
+export const fetchPartyListResultsFromJson = (): Promise<ElectionResult | null> => {
+  return fetchElectionResultsFromJson('partylist');
+};
 
 // Mock data for senators
 export const mockSenatorResults: ElectionResult = {
