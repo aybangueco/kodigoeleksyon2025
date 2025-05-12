@@ -89,7 +89,7 @@ const National = () => {
           </div>
 
           {/* Senator Match Tool Link */}
-          <div className="bg-blue-50 border border-blue-200 p-4 rounded-lg mt-4 mb-6">
+          <div className="bg-blue-50 border border-blue-200 p-4 rounded-lg mt-4 mb-4">
             <h2 className="text-xl font-bold text-blue-800 text-center">Find Your Senator Matches in 2 Minutes</h2>
             <p className="text-blue-700 text-center mt-2 mb-3">
               Not sure which senators to vote for? Try this helpful matching tool
@@ -102,6 +102,22 @@ const National = () => {
                   className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-md transition-colors"
               >
                 Find Your Senator Matches
+              </Link>
+            </div>
+          </div>
+          
+          {/* Election Results Link */}
+          <div className="bg-green-50 border border-green-200 p-4 rounded-lg mt-4 mb-6">
+            <h2 className="text-xl font-bold text-green-800 text-center">View Election Results</h2>
+            <p className="text-green-700 text-center mt-2 mb-3">
+              Check the latest senatorial election results as they come in
+            </p>
+            <div className="flex justify-center">
+              <Link
+                to="/results/national"
+                className="bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-6 rounded-md transition-colors"
+              >
+                View Election Results
               </Link>
             </div>
           </div>
@@ -125,4 +141,3 @@ const National = () => {
 };
 
 export default National;
-
