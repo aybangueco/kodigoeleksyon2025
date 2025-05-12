@@ -1,41 +1,65 @@
 import { Handler, HandlerEvent, HandlerContext } from "@netlify/functions";
-import { exec } from 'child_process';
-import { promisify } from 'util';
-import { ElectionResult, ResultType } from '../../src/types/electionResults';
+import { chromium } from 'playwright';
+import { checkEnvironment } from '../../src/scripts/check-env';
 
-const execAsync = promisify(exec);
+// API URLs
+const SENATOR_API_URL = "https://blob-prod-senator.abs-cbn.com/feed-0/senator-00399000-nation-location-1.json";
+const PARTYLIST_API_URL = "https://blob-prod-party-list.abs-cbn.com/feed-0/party-list-01199000-nation-location-1.json";
 
-async function runScrapeResults(type: ResultType): Promise<ElectionResult | null> {
+async function scrapeElectionResults(type: 'senator' | 'partylist') {
+    console.log(`Starting to fetch ${type} election results directly in Netlify Function...`);
+
+    // Check environment (ensure this works in the Netlify environment)
+    const envReady = await checkEnvironment();
+    if (!envReady) {
+        console.error('Environment checks failed. Please fix the issues before running the scraper.');
+        return null;
+    }
+
+    // Launch headless browser
+    console.log('Launching browser... headless set to true for Netlify Function');
+    const browser = await chromium.launch({ headless: true }); // Set headless to true for serverless environments
+    const context = await browser.newContext({
+        userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+    });
+
     try {
-        const scriptName = `npm run scrape-results -- `;
-        const argument = type === 'senator' ? '--senator' : '--partylist';
-        const command = `${scriptName} ${argument}`;
+        const page = await context.newPage();
+        let apiUrl: string;
 
-        console.log(`Running command: ${command}...`);
-        const { stdout, stderr } = await execAsync(command);
-        console.log(`Successfully executed command.`);
-        if (stdout) {
-            try {
-                const results = JSON.parse(stdout) as ElectionResult;
-                return results;
-            } catch (error) {
-                console.error('Error parsing JSON output from script:', error);
-                return null;
-            }
+        if (type === 'senator') {
+            apiUrl = SENATOR_API_URL;
+            console.log(`Fetching senator results from ${apiUrl}...`);
+        } else if (type === 'partylist') {
+            apiUrl = PARTYLIST_API_URL;
+            console.log(`Fetching party list results from ${apiUrl}...`);
+        } else {
+            console.error('Invalid result type provided to scraper.');
+            return null;
         }
-        if (stderr) {
-            console.error('Error from script:', stderr);
+
+        const response = await page.goto(apiUrl);
+
+        if (response && response.ok()) {
+            const data = await response.json();
+            console.log(`✅ Successfully fetched ${type} results.`);
+            return data;
+        } else {
+            console.error(`❌ Failed to fetch ${type} results: ${response?.status()}`);
+            return null;
         }
-        return null;
+
     } catch (error) {
-        console.error(`Failed to execute npm script: scrape-results with type ${type}`);
-        console.error(error);
+        console.error(`Error during scraping ${type} results in Netlify Function:`, error);
         return null;
+    } finally {
+        await browser.close();
+        console.log('Browser closed in Netlify Function.');
     }
 }
 
 const handler: Handler = async (event: HandlerEvent, context: HandlerContext) => {
-    const type = event.queryStringParameters?.type as ResultType;
+    const type = event.queryStringParameters?.type as 'senator' | 'partylist' | undefined;
 
     if (!type || (type !== 'senator' && type !== 'partylist')) {
         return {
@@ -44,7 +68,7 @@ const handler: Handler = async (event: HandlerEvent, context: HandlerContext) =>
         };
     }
 
-    const scrapedResults = await runScrapeResults(type);
+    const scrapedResults = await scrapeElectionResults(type);
 
     if (scrapedResults) {
         return {
@@ -55,10 +79,10 @@ const handler: Handler = async (event: HandlerEvent, context: HandlerContext) =>
             },
         };
     } else {
-        console.log(`Falling back to mock ${type} data for Netlify Function request`);
+        console.log(`Falling back to returning an error for Netlify Function request`);
         return {
             statusCode: 400,
-            body: JSON.stringify('No data fetched'),
+            body: JSON.stringify('Failed to fetch data'),
             headers: {
                 "Content-Type": "application/json",
             },
