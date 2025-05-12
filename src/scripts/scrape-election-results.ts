@@ -12,8 +12,8 @@ import * as fs from 'fs/promises';
 import * as path from 'path';
 
 // API URLs
-const SENATOR_API_URL = "https://blob-prod-senator.abs-cbn.com/feed-0/senator-00399000-nation-location-1.json";
-const PARTYLIST_API_URL = "https://blob-prod-party-list.abs-cbn.com/feed-0/party-list-01199000-nation-location-1.json";
+const SENATOR_API_URL = "https://blob-prod-senator.abs-cbn.com/feed-5/senator-00399000-nation-location-1.json";
+const PARTYLIST_API_URL = "https://blob-prod-party-list.abs-cbn.com/feed-5/party-list-01199000-nation-location-1.json";
 
 async function scrapeElectionResults(type: 'senator' | 'partylist'): Promise<any | null> {
   const envReady = await checkEnvironment();
