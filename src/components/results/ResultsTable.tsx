@@ -79,7 +79,7 @@ const ResultsTable = ({ data, isLoading }: ResultsTableProps) => {
                   <TableCell>
                     <Badge variant="outline">{candidate.partyNameShort}</Badge>
                   </TableCell>
-                  <TableCell className="text-right">{candidate.voteCount}</TableCell>
+                  <TableCell className="text-right">{candidate.voteCount.toLocaleString()}</TableCell>
                 </TableRow>
               ))}
             </TableBody>
