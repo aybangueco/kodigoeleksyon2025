@@ -1,4 +1,4 @@
-name: Scheduled and Manual Scrape to File
+name: Scheduled and Manual Scrape to File (Headed)
 
 on:
   schedule:
@@ -23,24 +23,36 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      # Add this step to install Playwright browsers
+      # Add this step to install Playwright browsers and dependencies
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps chromium
 
-      - name: Run scrape-results for partylist and write to file
+      # Install xvfb for headed mode
+      - name: Install xvfb
+        run: sudo apt-get update && sudo apt-get install -y xvfb
+
+      # Start xvfb in the background
+      - name: Start xvfb
+        run: Xvfb :99 -screen 0 1280x1024x24 &
+
+      - name: Run scrape-results for partylist (headed) and write to file
+        env:
+          DISPLAY: ':99.0'
         run: |
           npm run scrape-results -- --partylist --output src/partylist_results.ts
-          echo "Partylist results written to partylist_results.ts"
+          echo "Partylist results written to partylist_results.ts (headed)"
 
-      - name: Run scrape-results for senator and write to file
+      - name: Run scrape-results for senator (headed) and write to file
+        env:
+          DISPLAY: ':99.0'
         run: |
           npm run scrape-results -- --senator --output src/senator_results.ts
-          echo "Senator results written to senator_results.ts"
+          echo "Senator results written to senator_results.ts (headed)"
 
       - name: Commit and push changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "Automated scrape and update results"
-          file_pattern: "*.json"
+          commit_message: "Automated scrape and update results (headed)"
+          file_pattern: "src/*.ts" # Update to match .ts files
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
