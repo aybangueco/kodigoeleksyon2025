@@ -1,6 +1,5 @@
 import { Handler, HandlerEvent, HandlerContext } from "@netlify/functions";
 import { chromium } from 'playwright';
-import { checkEnvironment } from '../../src/scripts/check-env';
 
 // API URLs
 const SENATOR_API_URL = "https://blob-prod-senator.abs-cbn.com/feed-0/senator-00399000-nation-location-1.json";
@@ -8,13 +7,6 @@ const PARTYLIST_API_URL = "https://blob-prod-party-list.abs-cbn.com/feed-0/party
 
 async function scrapeElectionResults(type: 'senator' | 'partylist') {
     console.log(`Starting to fetch ${type} election results directly in Netlify Function...`);
-
-    // Check environment (ensure this works in the Netlify environment)
-    const envReady = await checkEnvironment();
-    if (!envReady) {
-        console.error('Environment checks failed. Please fix the issues before running the scraper.');
-        return null;
-    }
 
     // Launch headless browser
     console.log('Launching browser... headless set to true for Netlify Function');
