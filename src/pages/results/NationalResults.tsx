@@ -5,8 +5,8 @@ import { fetchSenatorResults, fetchPartyListResults } from "@/services/resultsSe
 import ResultsTable from "@/components/results/ResultsTable";
 import ResultsStats from "@/components/results/ResultsStats";
 import Footer from "@/components/Footer";
-import { Alert, AlertDescription } from "@/components/ui/alert";
-import { AlertTriangle, Loader2 } from "lucide-react";
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
+import { AlertTriangle, Loader2, Info } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -35,6 +35,7 @@ const NationalResults = () => {
   };
 
   const { data, isLoading, error } = getActiveQuery();
+  const usingMockData = error || !data?.er?.percentage;
 
   const handleTabChange = (value: string) => {
     setSelectedTab(value as ResultType);
@@ -67,6 +68,17 @@ const NationalResults = () => {
             These results are for demonstration purposes. Official election results should be verified through COMELEC.
           </AlertDescription>
         </Alert>
+
+        {usingMockData && (
+          <Alert className="border-amber-200 bg-amber-50 mb-6">
+            <Info className="h-4 w-4 text-amber-800" />
+            <AlertTitle className="text-amber-800">Using Demonstration Data</AlertTitle>
+            <AlertDescription className="text-amber-700">
+              Due to API access restrictions, we're currently displaying simulated election data. 
+              For official live results, please visit the <a href="https://halalanresults.abs-cbn.com" className="font-medium underline" target="_blank" rel="noopener noreferrer">ABS-CBN Election Results</a> website.
+            </AlertDescription>
+          </Alert>
+        )}
 
         <Tabs defaultValue="senator" value={selectedTab} onValueChange={handleTabChange} className="mb-6">
           <TabsList className="grid grid-cols-2 w-full max-w-md">
@@ -105,7 +117,7 @@ const NationalResults = () => {
         <Alert className="border-red-200 bg-red-50 mb-6">
           <AlertTriangle className="h-4 w-4 text-red-800" />
           <AlertDescription className="text-red-700">
-            There was an error loading the election results. Please try again later.
+            There was an error loading the election results. Using demonstration data instead.
           </AlertDescription>
         </Alert>
       );

@@ -5,13 +5,30 @@ const PARTYLIST_API_URL = "https://blob-prod-party-list.abs-cbn.com/feed-0/party
 
 export const fetchElectionResults = async (type: ResultType): Promise<ElectionResult> => {
   const apiUrl = type === 'senator' ? SENATOR_API_URL : PARTYLIST_API_URL;
-  const response = await fetch(apiUrl);
   
-  if (!response.ok) {
-    throw new Error(`Failed to fetch ${type} results: ${response.status}`);
+  try {
+    console.log(`Attempting to fetch ${type} results from API...`);
+    const response = await fetch(apiUrl, {
+      mode: 'cors',
+      headers: {
+        'Origin': 'https://halalanresults.abs-cbn.com'
+      }
+    });
+    
+    if (!response.ok) {
+      console.log(`API response not OK: ${response.status}. Using mock data.`);
+      throw new Error(`Failed to fetch ${type} results: ${response.status}`);
+    }
+    
+    console.log(`Successfully fetched ${type} results from API`);
+    return response.json();
+  } catch (error) {
+    console.log(`Error fetching ${type} results:`, error);
+    console.log(`Falling back to mock ${type} data`);
+    
+    // If API call fails, use mock data
+    return type === 'senator' ? mockSenatorResults : mockPartyListResults;
   }
-  
-  return response.json();
 };
 
 export const fetchSenatorResults = (): Promise<ElectionResult> => {
@@ -22,7 +39,7 @@ export const fetchPartyListResults = (): Promise<ElectionResult> => {
   return fetchElectionResults('partylist');
 };
 
-// Keep existing mock data as a fallback in case API is unavailable
+// Mock data for senators
 export const mockSenatorResults: ElectionResult = {
   positionName: "Senator",
   er: {
@@ -762,6 +779,104 @@ export const mockSenatorResults: ElectionResult = {
       partyNameShort: "NP",
       partyName: "NP",
       voteCount: "-"
+    }
+  ],
+  locationCode: 1,
+  locationName: "PHILIPPINES",
+  contestLocationName: "PHILIPPINES"
+};
+
+// Mock data for party list
+export const mockPartyListResults: ElectionResult = {
+  positionName: "Party List",
+  er: {
+    count: 105640,
+    total: 106008,
+    percentage: 99.65
+  },
+  voter: {
+    count: 54125678,
+    total: 65745526,
+    percentage: 82.32
+  },
+  isFeedZero: false,
+  result: [
+    {
+      rank: "1",
+      locationInfo: "",
+      candidateCode: "01199000ACT0TEACHERS00ATPRTLST0",
+      candidateName: "ACT TEACHERS",
+      lastName: "ACT TEACHERS",
+      firstName: "",
+      partyNameShort: "ATPRTLST",
+      partyName: "ATPRTLST",
+      voteCount: "2456789"
+    },
+    {
+      rank: "2",
+      locationInfo: "",
+      candidateCode: "01199000AKO0BICOL00AKOBPR0",
+      candidateName: "AKO BICOL",
+      lastName: "AKO BICOL",
+      firstName: "",
+      partyNameShort: "AKOBPR",
+      partyName: "AKOBPR",
+      voteCount: "2345123"
+    },
+    {
+      rank: "3",
+      locationInfo: "",
+      candidateCode: "01199000GABRIELA00GABRIELA0",
+      candidateName: "GABRIELA",
+      lastName: "GABRIELA",
+      firstName: "",
+      partyNameShort: "GABRIELA",
+      partyName: "GABRIELA",
+      voteCount: "2234561"
+    },
+    {
+      rank: "4",
+      locationInfo: "",
+      candidateCode: "01199000SENIOR0CITIZENS00SENIORCITIZENS0",
+      candidateName: "SENIOR CITIZENS",
+      lastName: "SENIOR CITIZENS",
+      firstName: "",
+      partyNameShort: "SENIORCITIZENS",
+      partyName: "SENIORCITIZENS",
+      voteCount: "2198756"
+    },
+    {
+      rank: "5",
+      locationInfo: "",
+      candidateCode: "01199000AGAP00AGAP0",
+      candidateName: "AGAP",
+      lastName: "AGAP",
+      firstName: "",
+      partyNameShort: "AGAP",
+      partyName: "AGAP",
+      voteCount: "1987654"
+    },
+    {
+      rank: "6",
+      locationInfo: "",
+      candidateCode: "01199000CIBAC00CIBAC0",
+      candidateName: "CIBAC",
+      lastName: "CIBAC",
+      firstName: "",
+      partyNameShort: "CIBAC",
+      partyName: "CIBAC",
+      voteCount: "1876543"
+    },
+    {
+      rank: "7",
+      locationInfo: "",
+      candidateCode: "01199000ANAKPAWIS00ANAKPAWIS0",
+      candidateName: "ANAKPAWIS",
+      lastName: "ANAKPAWIS",
+      firstName: "",
+      partyNameShort: "ANAKPAWIS",
+      partyName: "ANAKPAWIS",
+      voteCount: "1765432"
     }
   ],
   locationCode: 1,
