@@ -13,22 +13,22 @@ export const src_senator_results = {
       "firstName": "BONG GO",
       "partyName": "PARTIDO DEMOKRATIKO PILIPINO LAKAS NG BAYAN",
       "partyNameShort": "PDPLBN",
-      "voteCount": 23882819,
+      "voteCount": 24105805,
       "contestCode": "00399000",
       "locationCode": 1,
       "locationName": "PHILIPPINES",
       "er": {
-        "count": 64375,
+        "count": 65159,
         "total": 93629,
-        "percentage": 68.76
+        "percentage": 69.59
       },
       "voter": {
-        "count": 39885669,
+        "count": 40335916,
         "total": 69773653,
-        "percentage": 57.1644,
-        "actualCount": 383464201
+        "percentage": 57.8097,
+        "actualCount": 386609246
       },
-      "timestamp": "2025-05-12T13:46:00.000Z"
+      "timestamp": "2025-05-12T13:54:00.000Z"
     },
     {
       "rank": "2",
@@ -38,22 +38,22 @@ export const src_senator_results = {
       "firstName": "BAM",
       "partyName": "KATIPUNAN NG NAGKAKAISANG PILIPINO PARTY",
       "partyNameShort": "KNP",
-      "voteCount": 19052172,
+      "voteCount": 19190010,
       "contestCode": "00399000",
       "locationCode": 1,
       "locationName": "PHILIPPINES",
       "er": {
-        "count": 64375,
+        "count": 65159,
         "total": 93629,
-        "percentage": 68.76
+        "percentage": 69.59
       },
       "voter": {
-        "count": 39885669,
+        "count": 40335916,
         "total": 69773653,
-        "percentage": 57.1644,
-        "actualCount": 383464201
+        "percentage": 57.8097,
+        "actualCount": 386609246
       },
-      "timestamp": "2025-05-12T13:46:00.000Z"
+      "timestamp": "2025-05-12T13:54:00.000Z"
     },
     {
       "rank": "3",
@@ -63,22 +63,22 @@ export const src_senator_results = {
       "firstName": "BATO",
       "partyName": "PARTIDO DEMOKRATIKO PILIPINO LAKAS NG BAYAN",
       "partyNameShort": "PDPLBN",
-      "voteCount": 18257185,
+      "voteCount": 18432639,
       "contestCode": "00399000",
       "locationCode": 1,
       "locationName": "PHILIPPINES",
       "er": {
-        "count": 64375,
+        "count": 65159,
         "total": 93629,
-        "percentage": 68.76
+        "percentage": 69.59
       },
       "voter": {
-        "count": 39885669,
+        "count": 40335916,
         "total": 69773653,
-        "percentage": 57.1644,
-        "actualCount": 383464201
+        "percentage": 57.8097,
+        "actualCount": 386609246
       },
-      "timestamp": "2025-05-12T13:46:00.000Z"
+      "timestamp": "2025-05-12T13:54:00.000Z"
     },
     {
       "rank": "4",
@@ -88,22 +88,22 @@ export const src_senator_results = {
       "firstName": "ERWIN",
       "partyName": "LAKAS CHRISTIAN MUSLIM DEMOCRATS",
       "partyNameShort": "LAKAS",
-      "voteCount": 15263737,
+      "voteCount": 15389693,
       "contestCode": "00399000",
       "locationCode": 1,
       "locationName": "PHILIPPINES",
       "er": {
-        "count": 64375,
+        "count": 65159,
         "total": 93629,
-        "percentage": 68.76
+        "percentage": 69.59
       },
       "voter": {
-        "count": 39885669,
+        "count": 40335916,
         "total": 69773653,
-        "percentage": 57.1644,
-        "actualCount": 383464201
+        "percentage": 57.8097,
+        "actualCount": 386609246
       },
-      "timestamp": "2025-05-12T13:46:00.000Z"
+      "timestamp": "2025-05-12T13:54:00.000Z"
     },
     {
       "rank": "5",
@@ -113,22 +113,22 @@ export const src_senator_results = {
       "firstName": "KIKO",
       "partyName": "LIBERAL PARTY",
       "partyNameShort": "LP",
-      "voteCount": 13916909,
+      "voteCount": 14017321,
       "contestCode": "00399000",
       "locationCode": 1,
       "locationName": "PHILIPPINES",
       "er": {
-        "count": 64375,
+        "count": 65159,
         "total": 93629,
-        "percentage": 68.76
+        "percentage": 69.59
       },
       "voter": {
-        "count": 39885669,
+        "count": 40335916,
         "total": 69773653,
-        "percentage": 57.1644,
-        "actualCount": 383464201
+        "percentage": 57.8097,
+        "actualCount": 386609246
       },
-      "timestamp": "2025-05-12T13:46:00.000Z"
+      "timestamp": "2025-05-12T13:54:00.000Z"
     },
     {
       "rank": "6",
@@ -138,22 +138,22 @@ export const src_senator_results = {
       "firstName": "PING",
       "partyName": "INDEPENDENT",
       "partyNameShort": "IND",
-      "voteCount": 13616273,
+      "voteCount": 13719661,
       "contestCode": "00399000",
       "locationCode": 1,
       "locationName": "PHILIPPINES",
       "er": {
-        "count": 64375,
+        "count": 65159,
         "total": 93629,
-        "percentage": 68.76
+        "percentage": 69.59
       },
       "voter": {
-        "count": 39885669,
+        "count": 40335916,
         "total": 69773653,
-        "percentage": 57.1644,
-        "actualCount": 383464201
+        "percentage": 57.8097,
+        "actualCount": 386609246
       },
-      "timestamp": "2025-05-12T13:46:00.000Z"
+      "timestamp": "2025-05-12T13:54:00.000Z"
     },
     {
       "rank": "7",
@@ -163,22 +163,22 @@ export const src_senator_results = {
       "firstName": "RODANTE",
       "partyName": "INDEPENDENT",
       "partyNameShort": "IND",
-      "voteCount": 13575311,
+      "voteCount": 13694787,
       "contestCode": "00399000",
       "locationCode": 1,
       "locationName": "PHILIPPINES",
       "er": {
-        "count": 64375,
+        "count": 65159,
         "total": 93629,
-        "percentage": 68.76
+        "percentage": 69.59
       },
       "voter": {
-        "count": 39885669,
+        "count": 40335916,
         "total": 69773653,
-        "percentage": 57.1644,
-        "actualCount": 383464201
+        "percentage": 57.8097,
+        "actualCount": 386609246
       },
-      "timestamp": "2025-05-12T13:46:00.000Z"
+      "timestamp": "2025-05-12T13:54:00.000Z"
     },
     {
       "rank": "8",
@@ -188,22 +188,22 @@ export const src_senator_results = {
       "firstName": "TITO",
       "partyName": "NATIONALIST PEOPLE’S COALITION",
       "partyNameShort": "NPC",
-      "voteCount": 13394616,
+      "voteCount": 13496911,
       "contestCode": "00399000",
       "locationCode": 1,
       "locationName": "PHILIPPINES",
       "er": {
-        "count": 64375,
+        "count": 65159,
         "total": 93629,
-        "percentage": 68.76
+        "percentage": 69.59
       },
       "voter": {
-        "count": 39885669,
+        "count": 40335916,
         "total": 69773653,
-        "percentage": 57.1644,
-        "actualCount": 383464201
+        "percentage": 57.8097,
+        "actualCount": 386609246
       },
-      "timestamp": "2025-05-12T13:46:00.000Z"
+      "timestamp": "2025-05-12T13:54:00.000Z"
     },
     {
       "rank": "9",
@@ -213,22 +213,22 @@ export const src_senator_results = {
       "firstName": "PIA",
       "partyName": "NACIONALISTA PARTY",
       "partyNameShort": "NP",
-      "voteCount": 13075493,
+      "voteCount": 13181344,
       "contestCode": "00399000",
       "locationCode": 1,
       "locationName": "PHILIPPINES",
       "er": {
-        "count": 64375,
+        "count": 65159,
         "total": 93629,
-        "percentage": 68.76
+        "percentage": 69.59
       },
       "voter": {
-        "count": 39885669,
+        "count": 40335916,
         "total": 69773653,
-        "percentage": 57.1644,
-        "actualCount": 383464201
+        "percentage": 57.8097,
+        "actualCount": 386609246
       },
-      "timestamp": "2025-05-12T13:46:00.000Z"
+      "timestamp": "2025-05-12T13:54:00.000Z"
     },
     {
       "rank": "10",
@@ -238,22 +238,22 @@ export const src_senator_results = {
       "firstName": "CAMILLE",
       "partyName": "NACIONALISTA PARTY",
       "partyNameShort": "NP",
-      "voteCount": 12041860,
+      "voteCount": 12152481,
       "contestCode": "00399000",
       "locationCode": 1,
       "locationName": "PHILIPPINES",
       "er": {
-        "count": 64375,
+        "count": 65159,
         "total": 93629,
-        "percentage": 68.76
+        "percentage": 69.59
       },
       "voter": {
-        "count": 39885669,
+        "count": 40335916,
         "total": 69773653,
-        "percentage": 57.1644,
-        "actualCount": 383464201
+        "percentage": 57.8097,
+        "actualCount": 386609246
       },
-      "timestamp": "2025-05-12T13:46:00.000Z"
+      "timestamp": "2025-05-12T13:54:00.000Z"
     },
     {
       "rank": "11",
@@ -263,22 +263,22 @@ export const src_senator_results = {
       "firstName": "IMEE R.",
       "partyName": "NACIONALISTA PARTY",
       "partyNameShort": "NP",
-      "voteCount": 11864193,
+      "voteCount": 11966694,
       "contestCode": "00399000",
       "locationCode": 1,
       "locationName": "PHILIPPINES",
       "er": {
-        "count": 64375,
+        "count": 65159,
         "total": 93629,
-        "percentage": 68.76
+        "percentage": 69.59
       },
       "voter": {
-        "count": 39885669,
+        "count": 40335916,
         "total": 69773653,
-        "percentage": 57.1644,
-        "actualCount": 383464201
+        "percentage": 57.8097,
+        "actualCount": 386609246
       },
-      "timestamp": "2025-05-12T13:46:00.000Z"
+      "timestamp": "2025-05-12T13:54:00.000Z"
     },
     {
       "rank": "12",
@@ -288,22 +288,22 @@ export const src_senator_results = {
       "firstName": "LITO",
       "partyName": "NATIONALIST PEOPLE’S COALITION",
       "partyNameShort": "NPC",
-      "voteCount": 11791223,
+      "voteCount": 11893896,
       "contestCode": "00399000",
       "locationCode": 1,
       "locationName": "PHILIPPINES",
       "er": {
-        "count": 64375,
+        "count": 65159,
         "total": 93629,
-        "percentage": 68.76
+        "percentage": 69.59
       },
       "voter": {
-        "count": 39885669,
+        "count": 40335916,
         "total": 69773653,
-        "percentage": 57.1644,
-        "actualCount": 383464201
+        "percentage": 57.8097,
+        "actualCount": 386609246
       },
-      "timestamp": "2025-05-12T13:46:00.000Z"
+      "timestamp": "2025-05-12T13:54:00.000Z"
     },
     {
       "rank": "13",
@@ -313,22 +313,22 @@ export const src_senator_results = {
       "firstName": "BEN BITAG",
       "partyName": "INDEPENDENT",
       "partyNameShort": "IND",
-      "voteCount": 10830496,
+      "voteCount": 10915727,
       "contestCode": "00399000",
       "locationCode": 1,
       "locationName": "PHILIPPINES",
       "er": {
-        "count": 64375,
+        "count": 65159,
         "total": 93629,
-        "percentage": 68.76
+        "percentage": 69.59
       },
       "voter": {
-        "count": 39885669,
+        "count": 40335916,
         "total": 69773653,
-        "percentage": 57.1644,
-        "actualCount": 383464201
+        "percentage": 57.8097,
+        "actualCount": 386609246
       },
-      "timestamp": "2025-05-12T13:46:00.000Z"
+      "timestamp": "2025-05-12T13:54:00.000Z"
     },
     {
       "rank": "14",
@@ -338,22 +338,22 @@ export const src_senator_results = {
       "firstName": "RAMON, JR.",
       "partyName": "LAKAS CHRISTIAN MUSLIM DEMOCRATS",
       "partyNameShort": "LAKAS",
-      "voteCount": 10623035,
+      "voteCount": 10721313,
       "contestCode": "00399000",
       "locationCode": 1,
       "locationName": "PHILIPPINES",
       "er": {
-        "count": 64375,
+        "count": 65159,
         "total": 93629,
-        "percentage": 68.76
+        "percentage": 69.59
       },
       "voter": {
-        "count": 39885669,
+        "count": 40335916,
         "total": 69773653,
-        "percentage": 57.1644,
-        "actualCount": 383464201
+        "percentage": 57.8097,
+        "actualCount": 386609246
       },
-      "timestamp": "2025-05-12T13:46:00.000Z"
+      "timestamp": "2025-05-12T13:54:00.000Z"
     },
     {
       "rank": "15",
@@ -363,22 +363,22 @@ export const src_senator_results = {
       "firstName": "ABBY",
       "partyName": "NATIONALIST PEOPLE’S COALITION",
       "partyNameShort": "NPC",
-      "voteCount": 10486716,
+      "voteCount": 10574393,
       "contestCode": "00399000",
       "locationCode": 1,
       "locationName": "PHILIPPINES",
       "er": {
-        "count": 64375,
+        "count": 65159,
         "total": 93629,
-        "percentage": 68.76
+        "percentage": 69.59
       },
       "voter": {
-        "count": 39885669,
+        "count": 40335916,
         "total": 69773653,
-        "percentage": 57.1644,
-        "actualCount": 383464201
+        "percentage": 57.8097,
+        "actualCount": 386609246
       },
-      "timestamp": "2025-05-12T13:46:00.000Z"
+      "timestamp": "2025-05-12T13:54:00.000Z"
     },
     {
       "rank": "16",
@@ -388,22 +388,22 @@ export const src_senator_results = {
       "firstName": "BENHUR",
       "partyName": "PARTIDO FEDERAL NG PILIPINAS",
       "partyNameShort": "PFP",
-      "voteCount": 10361494,
+      "voteCount": 10447430,
       "contestCode": "00399000",
       "locationCode": 1,
       "locationName": "PHILIPPINES",
       "er": {
-        "count": 64375,
+        "count": 65159,
         "total": 93629,
-        "percentage": 68.76
+        "percentage": 69.59
       },
       "voter": {
-        "count": 39885669,
+        "count": 40335916,
         "total": 69773653,
-        "percentage": 57.1644,
-        "actualCount": 383464201
+        "percentage": 57.8097,
+        "actualCount": 386609246
       },
-      "timestamp": "2025-05-12T13:46:00.000Z"
+      "timestamp": "2025-05-12T13:54:00.000Z"
     },
     {
       "rank": "17",
@@ -413,22 +413,22 @@ export const src_senator_results = {
       "firstName": "JIMMY",
       "partyName": "PARTIDO DEMOKRATIKO PILIPINO LAKAS NG BAYAN",
       "partyNameShort": "PDPLBN",
-      "voteCount": 9339938,
+      "voteCount": 9430943,
       "contestCode": "00399000",
       "locationCode": 1,
       "locationName": "PHILIPPINES",
       "er": {
-        "count": 64375,
+        "count": 65159,
         "total": 93629,
-        "percentage": 68.76
+        "percentage": 69.59
       },
       "voter": {
-        "count": 39885669,
+        "count": 40335916,
         "total": 69773653,
-        "percentage": 57.1644,
-        "actualCount": 383464201
+        "percentage": 57.8097,
+        "actualCount": 386609246
       },
-      "timestamp": "2025-05-12T13:46:00.000Z"
+      "timestamp": "2025-05-12T13:54:00.000Z"
     },
     {
       "rank": "18",
@@ -438,22 +438,22 @@ export const src_senator_results = {
       "firstName": "MANNY PACMAN",
       "partyName": "PARTIDO FEDERAL NG PILIPINAS",
       "partyNameShort": "PFP",
-      "voteCount": 9203353,
+      "voteCount": 9285649,
       "contestCode": "00399000",
       "locationCode": 1,
       "locationName": "PHILIPPINES",
       "er": {
-        "count": 64375,
+        "count": 65159,
         "total": 93629,
-        "percentage": 68.76
+        "percentage": 69.59
       },
       "voter": {
-        "count": 39885669,
+        "count": 40335916,
         "total": 69773653,
-        "percentage": 57.1644,
-        "actualCount": 383464201
+        "percentage": 57.8097,
+        "actualCount": 386609246
       },
-      "timestamp": "2025-05-12T13:46:00.000Z"
+      "timestamp": "2025-05-12T13:54:00.000Z"
     },
     {
       "rank": "19",
@@ -463,22 +463,22 @@ export const src_senator_results = {
       "firstName": "COLONEL",
       "partyName": "INDEPENDENT",
       "partyNameShort": "IND",
-      "voteCount": 9017896,
+      "voteCount": 9074096,
       "contestCode": "00399000",
       "locationCode": 1,
       "locationName": "PHILIPPINES",
       "er": {
-        "count": 64375,
+        "count": 65159,
         "total": 93629,
-        "percentage": 68.76
+        "percentage": 69.59
       },
       "voter": {
-        "count": 39885669,
+        "count": 40335916,
         "total": 69773653,
-        "percentage": 57.1644,
-        "actualCount": 383464201
+        "percentage": 57.8097,
+        "actualCount": 386609246
       },
-      "timestamp": "2025-05-12T13:46:00.000Z"
+      "timestamp": "2025-05-12T13:54:00.000Z"
     },
     {
       "rank": "20",
@@ -488,22 +488,22 @@ export const src_senator_results = {
       "firstName": "PHILLIP IPE",
       "partyName": "PARTIDO DEMOKRATIKO PILIPINO LAKAS NG BAYAN",
       "partyNameShort": "PDPLBN",
-      "voteCount": 8895829,
+      "voteCount": 8988615,
       "contestCode": "00399000",
       "locationCode": 1,
       "locationName": "PHILIPPINES",
       "er": {
-        "count": 64375,
+        "count": 65159,
         "total": 93629,
-        "percentage": 68.76
+        "percentage": 69.59
       },
       "voter": {
-        "count": 39885669,
+        "count": 40335916,
         "total": 69773653,
-        "percentage": 57.1644,
-        "actualCount": 383464201
+        "percentage": 57.8097,
+        "actualCount": 386609246
       },
-      "timestamp": "2025-05-12T13:46:00.000Z"
+      "timestamp": "2025-05-12T13:54:00.000Z"
     },
     {
       "rank": "21",
@@ -513,22 +513,22 @@ export const src_senator_results = {
       "firstName": "HEIDI",
       "partyName": "INDEPENDENT",
       "partyNameShort": "IND",
-      "voteCount": 8091008,
+      "voteCount": 8139344,
       "contestCode": "00399000",
       "locationCode": 1,
       "locationName": "PHILIPPINES",
       "er": {
-        "count": 64375,
+        "count": 65159,
         "total": 93629,
-        "percentage": 68.76
+        "percentage": 69.59
       },
       "voter": {
-        "count": 39885669,
+        "count": 40335916,
         "total": 69773653,
-        "percentage": 57.1644,
-        "actualCount": 383464201
+        "percentage": 57.8097,
+        "actualCount": 386609246
       },
-      "timestamp": "2025-05-12T13:46:00.000Z"
+      "timestamp": "2025-05-12T13:54:00.000Z"
     },
     {
       "rank": "22",
@@ -538,22 +538,22 @@ export const src_senator_results = {
       "firstName": "WILLIE WIL",
       "partyName": "INDEPENDENT",
       "partyNameShort": "IND",
-      "voteCount": 7587874,
+      "voteCount": 7655194,
       "contestCode": "00399000",
       "locationCode": 1,
       "locationName": "PHILIPPINES",
       "er": {
-        "count": 64375,
+        "count": 65159,
         "total": 93629,
-        "percentage": 68.76
+        "percentage": 69.59
       },
       "voter": {
-        "count": 39885669,
+        "count": 40335916,
         "total": 69773653,
-        "percentage": 57.1644,
-        "actualCount": 383464201
+        "percentage": 57.8097,
+        "actualCount": 386609246
       },
-      "timestamp": "2025-05-12T13:46:00.000Z"
+      "timestamp": "2025-05-12T13:54:00.000Z"
     },
     {
       "rank": "23",
@@ -563,22 +563,22 @@ export const src_senator_results = {
       "firstName": "ATTY. VIC",
       "partyName": "INDEPENDENT",
       "partyNameShort": "IND",
-      "voteCount": 7484464,
+      "voteCount": 7553683,
       "contestCode": "00399000",
       "locationCode": 1,
       "locationName": "PHILIPPINES",
       "er": {
-        "count": 64375,
+        "count": 65159,
         "total": 93629,
-        "percentage": 68.76
+        "percentage": 69.59
       },
       "voter": {
-        "count": 39885669,
+        "count": 40335916,
         "total": 69773653,
-        "percentage": 57.1644,
-        "actualCount": 383464201
+        "percentage": 57.8097,
+        "actualCount": 386609246
       },
-      "timestamp": "2025-05-12T13:46:00.000Z"
+      "timestamp": "2025-05-12T13:54:00.000Z"
     },
     {
       "rank": "24",
@@ -588,22 +588,22 @@ export const src_senator_results = {
       "firstName": "RAUL",
       "partyName": "PARTIDO DEMOKRATIKO PILIPINO LAKAS NG BAYAN",
       "partyNameShort": "PDPLBN",
-      "voteCount": 7371936,
+      "voteCount": 7443515,
       "contestCode": "00399000",
       "locationCode": 1,
       "locationName": "PHILIPPINES",
       "er": {
-        "count": 64375,
+        "count": 65159,
         "total": 93629,
-        "percentage": 68.76
+        "percentage": 69.59
       },
       "voter": {
-        "count": 39885669,
+        "count": 40335916,
         "total": 69773653,
-        "percentage": 57.1644,
-        "actualCount": 383464201
+        "percentage": 57.8097,
+        "actualCount": 386609246
       },
-      "timestamp": "2025-05-12T13:46:00.000Z"
+      "timestamp": "2025-05-12T13:54:00.000Z"
     },
     {
       "rank": "25",
@@ -613,22 +613,22 @@ export const src_senator_results = {
       "firstName": "FRANCIS TOL",
       "partyName": "PARTIDO FEDERAL NG PILIPINAS",
       "partyNameShort": "PFP",
-      "voteCount": 6901020,
+      "voteCount": 6958602,
       "contestCode": "00399000",
       "locationCode": 1,
       "locationName": "PHILIPPINES",
       "er": {
-        "count": 64375,
+        "count": 65159,
         "total": 93629,
-        "percentage": 68.76
+        "percentage": 69.59
       },
       "voter": {
-        "count": 39885669,
+        "count": 40335916,
         "total": 69773653,
-        "percentage": 57.1644,
-        "actualCount": 383464201
+        "percentage": 57.8097,
+        "actualCount": 386609246
       },
-      "timestamp": "2025-05-12T13:46:00.000Z"
+      "timestamp": "2025-05-12T13:54:00.000Z"
     },
     {
       "rank": "26",
@@ -638,22 +638,22 @@ export const src_senator_results = {
       "firstName": "DOC WILLIE",
       "partyName": "AKSYON DEMOKRATIKO",
       "partyNameShort": "AKSYON",
-      "voteCount": 6736978,
+      "voteCount": 6781429,
       "contestCode": "00399000",
       "locationCode": 1,
       "locationName": "PHILIPPINES",
       "er": {
-        "count": 64375,
+        "count": 65159,
         "total": 93629,
-        "percentage": 68.76
+        "percentage": 69.59
       },
       "voter": {
-        "count": 39885669,
+        "count": 40335916,
         "total": 69773653,
-        "percentage": 57.1644,
-        "actualCount": 383464201
+        "percentage": 57.8097,
+        "actualCount": 386609246
       },
-      "timestamp": "2025-05-12T13:46:00.000Z"
+      "timestamp": "2025-05-12T13:54:00.000Z"
     },
     {
       "rank": "27",
@@ -663,22 +663,22 @@ export const src_senator_results = {
       "firstName": "JAYVEE",
       "partyName": "PARTIDO DEMOKRATIKO PILIPINO LAKAS NG BAYAN",
       "partyNameShort": "PDPLBN",
-      "voteCount": 6561733,
+      "voteCount": 6626642,
       "contestCode": "00399000",
       "locationCode": 1,
       "locationName": "PHILIPPINES",
       "er": {
-        "count": 64375,
+        "count": 65159,
         "total": 93629,
-        "percentage": 68.76
+        "percentage": 69.59
       },
       "voter": {
-        "count": 39885669,
+        "count": 40335916,
         "total": 69773653,
-        "percentage": 57.1644,
-        "actualCount": 383464201
+        "percentage": 57.8097,
+        "actualCount": 386609246
       },
-      "timestamp": "2025-05-12T13:46:00.000Z"
+      "timestamp": "2025-05-12T13:54:00.000Z"
     },
     {
       "rank": "28",
@@ -688,22 +688,22 @@ export const src_senator_results = {
       "firstName": "GRINGO",
       "partyName": "REFORM PH-PEOPLE’S PARTY",
       "partyNameShort": "RP",
-      "voteCount": 6086813,
+      "voteCount": 6130772,
       "contestCode": "00399000",
       "locationCode": 1,
       "locationName": "PHILIPPINES",
       "er": {
-        "count": 64375,
+        "count": 65159,
         "total": 93629,
-        "percentage": 68.76
+        "percentage": 69.59
       },
       "voter": {
-        "count": 39885669,
+        "count": 40335916,
         "total": 69773653,
-        "percentage": 57.1644,
-        "actualCount": 383464201
+        "percentage": 57.8097,
+        "actualCount": 386609246
       },
-      "timestamp": "2025-05-12T13:46:00.000Z"
+      "timestamp": "2025-05-12T13:54:00.000Z"
     },
     {
       "rank": "29",
@@ -713,22 +713,22 @@ export const src_senator_results = {
       "firstName": "LUKE",
       "partyName": "PARTIDO LAKAS NG MASA",
       "partyNameShort": "PLM",
-      "voteCount": 6004318,
+      "voteCount": 6039464,
       "contestCode": "00399000",
       "locationCode": 1,
       "locationName": "PHILIPPINES",
       "er": {
-        "count": 64375,
+        "count": 65159,
         "total": 93629,
-        "percentage": 68.76
+        "percentage": 69.59
       },
       "voter": {
-        "count": 39885669,
+        "count": 40335916,
         "total": 69773653,
-        "percentage": 57.1644,
-        "actualCount": 383464201
+        "percentage": 57.8097,
+        "actualCount": 386609246
       },
-      "timestamp": "2025-05-12T13:46:00.000Z"
+      "timestamp": "2025-05-12T13:54:00.000Z"
     },
     {
       "rank": "30",
@@ -738,22 +738,22 @@ export const src_senator_results = {
       "firstName": "DOC MARITES",
       "partyName": "INDEPENDENT",
       "partyNameShort": "IND",
-      "voteCount": 5147795,
+      "voteCount": 5195502,
       "contestCode": "00399000",
       "locationCode": 1,
       "locationName": "PHILIPPINES",
       "er": {
-        "count": 64375,
+        "count": 65159,
         "total": 93629,
-        "percentage": 68.76
+        "percentage": 69.59
       },
       "voter": {
-        "count": 39885669,
+        "count": 40335916,
         "total": 69773653,
-        "percentage": 57.1644,
-        "actualCount": 383464201
+        "percentage": 57.8097,
+        "actualCount": 386609246
       },
-      "timestamp": "2025-05-12T13:46:00.000Z"
+      "timestamp": "2025-05-12T13:54:00.000Z"
     },
     {
       "rank": "31",
@@ -763,22 +763,22 @@ export const src_senator_results = {
       "firstName": "APOLLO",
       "partyName": "INDEPENDENT",
       "partyNameShort": "IND",
-      "voteCount": 5020290,
+      "voteCount": 5072688,
       "contestCode": "00399000",
       "locationCode": 1,
       "locationName": "PHILIPPINES",
       "er": {
-        "count": 64375,
+        "count": 65159,
         "total": 93629,
-        "percentage": 68.76
+        "percentage": 69.59
       },
       "voter": {
-        "count": 39885669,
+        "count": 40335916,
         "total": 69773653,
-        "percentage": 57.1644,
-        "actualCount": 383464201
+        "percentage": 57.8097,
+        "actualCount": 386609246
       },
-      "timestamp": "2025-05-12T13:46:00.000Z"
+      "timestamp": "2025-05-12T13:54:00.000Z"
     },
     {
       "rank": "32",
@@ -788,22 +788,22 @@ export const src_senator_results = {
       "firstName": "TEDDY",
       "partyName": "MAKABAYANG KOALISYON NG MAMAMAYAN",
       "partyNameShort": "MKBYN",
-      "voteCount": 4320063,
+      "voteCount": 4344582,
       "contestCode": "00399000",
       "locationCode": 1,
       "locationName": "PHILIPPINES",
       "er": {
-        "count": 64375,
+        "count": 65159,
         "total": 93629,
-        "percentage": 68.76
+        "percentage": 69.59
       },
       "voter": {
-        "count": 39885669,
+        "count": 40335916,
         "total": 69773653,
-        "percentage": 57.1644,
-        "actualCount": 383464201
+        "percentage": 57.8097,
+        "actualCount": 386609246
       },
-      "timestamp": "2025-05-12T13:46:00.000Z"
+      "timestamp": "2025-05-12T13:54:00.000Z"
     },
     {
       "rank": "33",
@@ -813,22 +813,22 @@ export const src_senator_results = {
       "firstName": "ARLENE",
       "partyName": "MAKABAYANG KOALISYON NG MAMAMAYAN",
       "partyNameShort": "MKBYN",
-      "voteCount": 4033306,
+      "voteCount": 4056306,
       "contestCode": "00399000",
       "locationCode": 1,
       "locationName": "PHILIPPINES",
       "er": {
-        "count": 64375,
+        "count": 65159,
         "total": 93629,
-        "percentage": 68.76
+        "percentage": 69.59
       },
       "voter": {
-        "count": 39885669,
+        "count": 40335916,
         "total": 69773653,
-        "percentage": 57.1644,
-        "actualCount": 383464201
+        "percentage": 57.8097,
+        "actualCount": 386609246
       },
-      "timestamp": "2025-05-12T13:46:00.000Z"
+      "timestamp": "2025-05-12T13:54:00.000Z"
     },
     {
       "rank": "34",
@@ -838,22 +838,22 @@ export const src_senator_results = {
       "firstName": "KA LEODY",
       "partyName": "PARTIDO LAKAS NG MASA",
       "partyNameShort": "PLM",
-      "voteCount": 3824295,
+      "voteCount": 3846858,
       "contestCode": "00399000",
       "locationCode": 1,
       "locationName": "PHILIPPINES",
       "er": {
-        "count": 64375,
+        "count": 65159,
         "total": 93629,
-        "percentage": 68.76
+        "percentage": 69.59
       },
       "voter": {
-        "count": 39885669,
+        "count": 40335916,
         "total": 69773653,
-        "percentage": 57.1644,
-        "actualCount": 383464201
+        "percentage": 57.8097,
+        "actualCount": 386609246
       },
-      "timestamp": "2025-05-12T13:46:00.000Z"
+      "timestamp": "2025-05-12T13:54:00.000Z"
     },
     {
       "rank": "35",
@@ -863,22 +863,22 @@ export const src_senator_results = {
       "firstName": "DANILO",
       "partyName": "MAKABAYANG KOALISYON NG MAMAMAYAN",
       "partyNameShort": "MKBYN",
-      "voteCount": 3777274,
+      "voteCount": 3799393,
       "contestCode": "00399000",
       "locationCode": 1,
       "locationName": "PHILIPPINES",
       "er": {
-        "count": 64375,
+        "count": 65159,
         "total": 93629,
-        "percentage": 68.76
+        "percentage": 69.59
       },
       "voter": {
-        "count": 39885669,
+        "count": 40335916,
         "total": 69773653,
-        "percentage": 57.1644,
-        "actualCount": 383464201
+        "percentage": 57.8097,
+        "actualCount": 386609246
       },
-      "timestamp": "2025-05-12T13:46:00.000Z"
+      "timestamp": "2025-05-12T13:54:00.000Z"
     },
     {
       "rank": "36",
@@ -888,22 +888,22 @@ export const src_senator_results = {
       "firstName": "LIZA",
       "partyName": "MAKABAYANG KOALISYON NG MAMAMAYAN",
       "partyNameShort": "MKBYN",
-      "voteCount": 3640183,
+      "voteCount": 3661152,
       "contestCode": "00399000",
       "locationCode": 1,
       "locationName": "PHILIPPINES",
       "er": {
-        "count": 64375,
+        "count": 65159,
         "total": 93629,
-        "percentage": 68.76
+        "percentage": 69.59
       },
       "voter": {
-        "count": 39885669,
+        "count": 40335916,
         "total": 69773653,
-        "percentage": 57.1644,
-        "actualCount": 383464201
+        "percentage": 57.8097,
+        "actualCount": 386609246
       },
-      "timestamp": "2025-05-12T13:46:00.000Z"
+      "timestamp": "2025-05-12T13:54:00.000Z"
     },
     {
       "rank": "37",
@@ -913,22 +913,22 @@ export const src_senator_results = {
       "firstName": "ARIEL PORFIRIO",
       "partyName": "NACIONALISTA PARTY",
       "partyNameShort": "NP",
-      "voteCount": 3589092,
+      "voteCount": 3615790,
       "contestCode": "00399000",
       "locationCode": 1,
       "locationName": "PHILIPPINES",
       "er": {
-        "count": 64375,
+        "count": 65159,
         "total": 93629,
-        "percentage": 68.76
+        "percentage": 69.59
       },
       "voter": {
-        "count": 39885669,
+        "count": 40335916,
         "total": 69773653,
-        "percentage": 57.1644,
-        "actualCount": 383464201
+        "percentage": 57.8097,
+        "actualCount": 386609246
       },
-      "timestamp": "2025-05-12T13:46:00.000Z"
+      "timestamp": "2025-05-12T13:54:00.000Z"
     },
     {
       "rank": "38",
@@ -938,22 +938,22 @@ export const src_senator_results = {
       "firstName": "ATTY.  SONNY",
       "partyName": "WORKERS AND PEASANTS PARTY",
       "partyNameShort": "WPP",
-      "voteCount": 3575752,
+      "voteCount": 3597799,
       "contestCode": "00399000",
       "locationCode": 1,
       "locationName": "PHILIPPINES",
       "er": {
-        "count": 64375,
+        "count": 65159,
         "total": 93629,
-        "percentage": 68.76
+        "percentage": 69.59
       },
       "voter": {
-        "count": 39885669,
+        "count": 40335916,
         "total": 69773653,
-        "percentage": 57.1644,
-        "actualCount": 383464201
+        "percentage": 57.8097,
+        "actualCount": 386609246
       },
-      "timestamp": "2025-05-12T13:46:00.000Z"
+      "timestamp": "2025-05-12T13:54:00.000Z"
     },
     {
       "rank": "39",
@@ -963,22 +963,22 @@ export const src_senator_results = {
       "firstName": "RONNEL",
       "partyName": "MAKABAYANG KOALISYON NG MAMAMAYAN",
       "partyNameShort": "MKBYN",
-      "voteCount": 3560644,
+      "voteCount": 3581194,
       "contestCode": "00399000",
       "locationCode": 1,
       "locationName": "PHILIPPINES",
       "er": {
-        "count": 64375,
+        "count": 65159,
         "total": 93629,
-        "percentage": 68.76
+        "percentage": 69.59
       },
       "voter": {
-        "count": 39885669,
+        "count": 40335916,
         "total": 69773653,
-        "percentage": 57.1644,
-        "actualCount": 383464201
+        "percentage": 57.8097,
+        "actualCount": 386609246
       },
-      "timestamp": "2025-05-12T13:46:00.000Z"
+      "timestamp": "2025-05-12T13:54:00.000Z"
     },
     {
       "rank": "40",
@@ -988,22 +988,22 @@ export const src_senator_results = {
       "firstName": "TEACHER FRANCE",
       "partyName": "MAKABAYANG KOALISYON NG MAMAMAYAN",
       "partyNameShort": "MKBYN",
-      "voteCount": 3386176,
+      "voteCount": 3407318,
       "contestCode": "00399000",
       "locationCode": 1,
       "locationName": "PHILIPPINES",
       "er": {
-        "count": 64375,
+        "count": 65159,
         "total": 93629,
-        "percentage": 68.76
+        "percentage": 69.59
       },
       "voter": {
-        "count": 39885669,
+        "count": 40335916,
         "total": 69773653,
-        "percentage": 57.1644,
-        "actualCount": 383464201
+        "percentage": 57.8097,
+        "actualCount": 386609246
       },
-      "timestamp": "2025-05-12T13:46:00.000Z"
+      "timestamp": "2025-05-12T13:54:00.000Z"
     },
     {
       "rank": "41",
@@ -1013,22 +1013,22 @@ export const src_senator_results = {
       "firstName": "ATTORNEY ANGELO",
       "partyName": "INDEPENDENT",
       "partyNameShort": "IND",
-      "voteCount": 2350766,
+      "voteCount": 2365416,
       "contestCode": "00399000",
       "locationCode": 1,
       "locationName": "PHILIPPINES",
       "er": {
-        "count": 64375,
+        "count": 65159,
         "total": 93629,
-        "percentage": 68.76
+        "percentage": 69.59
       },
       "voter": {
-        "count": 39885669,
+        "count": 40335916,
         "total": 69773653,
-        "percentage": 57.1644,
-        "actualCount": 383464201
+        "percentage": 57.8097,
+        "actualCount": 386609246
       },
-      "timestamp": "2025-05-12T13:46:00.000Z"
+      "timestamp": "2025-05-12T13:54:00.000Z"
     },
     {
       "rank": "42",
@@ -1038,22 +1038,22 @@ export const src_senator_results = {
       "firstName": "ROBERTO",
       "partyName": "INDEPENDENT",
       "partyNameShort": "IND",
-      "voteCount": 2192711,
+      "voteCount": 2206658,
       "contestCode": "00399000",
       "locationCode": 1,
       "locationName": "PHILIPPINES",
       "er": {
-        "count": 64375,
+        "count": 65159,
         "total": 93629,
-        "percentage": 68.76
+        "percentage": 69.59
       },
       "voter": {
-        "count": 39885669,
+        "count": 40335916,
         "total": 69773653,
-        "percentage": 57.1644,
-        "actualCount": 383464201
+        "percentage": 57.8097,
+        "actualCount": 386609246
       },
-      "timestamp": "2025-05-12T13:46:00.000Z"
+      "timestamp": "2025-05-12T13:54:00.000Z"
     },
     {
       "rank": "43",
@@ -1063,22 +1063,22 @@ export const src_senator_results = {
       "firstName": "NORMAN",
       "partyName": "INDEPENDENT",
       "partyNameShort": "IND",
-      "voteCount": 1038632,
+      "voteCount": 1046133,
       "contestCode": "00399000",
       "locationCode": 1,
       "locationName": "PHILIPPINES",
       "er": {
-        "count": 64375,
+        "count": 65159,
         "total": 93629,
-        "percentage": 68.76
+        "percentage": 69.59
       },
       "voter": {
-        "count": 39885669,
+        "count": 40335916,
         "total": 69773653,
-        "percentage": 57.1644,
-        "actualCount": 383464201
+        "percentage": 57.8097,
+        "actualCount": 386609246
       },
-      "timestamp": "2025-05-12T13:46:00.000Z"
+      "timestamp": "2025-05-12T13:54:00.000Z"
     },
     {
       "rank": "44",
@@ -1088,22 +1088,22 @@ export const src_senator_results = {
       "firstName": "ERIC",
       "partyName": "INDEPENDENT",
       "partyNameShort": "IND",
-      "voteCount": 909130,
+      "voteCount": 916538,
       "contestCode": "00399000",
       "locationCode": 1,
       "locationName": "PHILIPPINES",
       "er": {
-        "count": 64375,
+        "count": 65159,
         "total": 93629,
-        "percentage": 68.76
+        "percentage": 69.59
       },
       "voter": {
-        "count": 39885669,
+        "count": 40335916,
         "total": 69773653,
-        "percentage": 57.1644,
-        "actualCount": 383464201
+        "percentage": 57.8097,
+        "actualCount": 386609246
       },
-      "timestamp": "2025-05-12T13:46:00.000Z"
+      "timestamp": "2025-05-12T13:54:00.000Z"
     },
     {
       "rank": "45",
@@ -1113,22 +1113,22 @@ export const src_senator_results = {
       "firstName": "NORBERTO",
       "partyName": "PARTIDO DEMOKRATIKO SOSYALISTA NG PILIPINAS",
       "partyNameShort": "PDSP",
-      "voteCount": 882434,
+      "voteCount": 889584,
       "contestCode": "00399000",
       "locationCode": 1,
       "locationName": "PHILIPPINES",
       "er": {
-        "count": 64375,
+        "count": 65159,
         "total": 93629,
-        "percentage": 68.76
+        "percentage": 69.59
       },
       "voter": {
-        "count": 39885669,
+        "count": 40335916,
         "total": 69773653,
-        "percentage": 57.1644,
-        "actualCount": 383464201
+        "percentage": 57.8097,
+        "actualCount": 386609246
       },
-      "timestamp": "2025-05-12T13:46:00.000Z"
+      "timestamp": "2025-05-12T13:54:00.000Z"
     },
     {
       "rank": "46",
@@ -1138,22 +1138,22 @@ export const src_senator_results = {
       "firstName": "NARS ALYN",
       "partyName": "MAKABAYANG KOALISYON NG MAMAMAYAN",
       "partyNameShort": "MKBYN",
-      "voteCount": 745438,
+      "voteCount": 751096,
       "contestCode": "00399000",
       "locationCode": 1,
       "locationName": "PHILIPPINES",
       "er": {
-        "count": 64375,
+        "count": 65159,
         "total": 93629,
-        "percentage": 68.76
+        "percentage": 69.59
       },
       "voter": {
-        "count": 39885669,
+        "count": 40335916,
         "total": 69773653,
-        "percentage": 57.1644,
-        "actualCount": 383464201
+        "percentage": 57.8097,
+        "actualCount": 386609246
       },
-      "timestamp": "2025-05-12T13:46:00.000Z"
+      "timestamp": "2025-05-12T13:54:00.000Z"
     },
     {
       "rank": "47",
@@ -1163,22 +1163,22 @@ export const src_senator_results = {
       "firstName": "ERNESTO",
       "partyName": "KATIPUNAN NG KAMALAYANG KAYUMANGGI",
       "partyNameShort": "KTPNAN",
-      "voteCount": 708745,
+      "voteCount": 714807,
       "contestCode": "00399000",
       "locationCode": 1,
       "locationName": "PHILIPPINES",
       "er": {
-        "count": 64375,
+        "count": 65159,
         "total": 93629,
-        "percentage": 68.76
+        "percentage": 69.59
       },
       "voter": {
-        "count": 39885669,
+        "count": 40335916,
         "total": 69773653,
-        "percentage": 57.1644,
-        "actualCount": 383464201
+        "percentage": 57.8097,
+        "actualCount": 386609246
       },
-      "timestamp": "2025-05-12T13:46:00.000Z"
+      "timestamp": "2025-05-12T13:54:00.000Z"
     },
     {
       "rank": "48",
@@ -1188,22 +1188,22 @@ export const src_senator_results = {
       "firstName": "ALLEN",
       "partyName": "PARTIDO PILIPINO SA PAGBABAGO",
       "partyNameShort": "PPP",
-      "voteCount": 705075,
+      "voteCount": 712558,
       "contestCode": "00399000",
       "locationCode": 1,
       "locationName": "PHILIPPINES",
       "er": {
-        "count": 64375,
+        "count": 65159,
         "total": 93629,
-        "percentage": 68.76
+        "percentage": 69.59
       },
       "voter": {
-        "count": 39885669,
+        "count": 40335916,
         "total": 69773653,
-        "percentage": 57.1644,
-        "actualCount": 383464201
+        "percentage": 57.8097,
+        "actualCount": 386609246
       },
-      "timestamp": "2025-05-12T13:46:00.000Z"
+      "timestamp": "2025-05-12T13:54:00.000Z"
     },
     {
       "rank": "49",
@@ -1213,22 +1213,22 @@ export const src_senator_results = {
       "firstName": "JEROME",
       "partyName": "MAKABAYANG KOALISYON NG MAMAMAYAN",
       "partyNameShort": "MKBYN",
-      "voteCount": 686763,
+      "voteCount": 692834,
       "contestCode": "00399000",
       "locationCode": 1,
       "locationName": "PHILIPPINES",
       "er": {
-        "count": 64375,
+        "count": 65159,
         "total": 93629,
-        "percentage": 68.76
+        "percentage": 69.59
       },
       "voter": {
-        "count": 39885669,
+        "count": 40335916,
         "total": 69773653,
-        "percentage": 57.1644,
-        "actualCount": 383464201
+        "percentage": 57.8097,
+        "actualCount": 386609246
       },
-      "timestamp": "2025-05-12T13:46:00.000Z"
+      "timestamp": "2025-05-12T13:54:00.000Z"
     },
     {
       "rank": "50",
@@ -1238,22 +1238,22 @@ export const src_senator_results = {
       "firstName": "NANAY MIMI",
       "partyName": "MAKABAYANG KOALISYON NG MAMAMAYAN",
       "partyNameShort": "MKBYN",
-      "voteCount": 663376,
+      "voteCount": 668784,
       "contestCode": "00399000",
       "locationCode": 1,
       "locationName": "PHILIPPINES",
       "er": {
-        "count": 64375,
+        "count": 65159,
         "total": 93629,
-        "percentage": 68.76
+        "percentage": 69.59
       },
       "voter": {
-        "count": 39885669,
+        "count": 40335916,
         "total": 69773653,
-        "percentage": 57.1644,
-        "actualCount": 383464201
+        "percentage": 57.8097,
+        "actualCount": 386609246
       },
-      "timestamp": "2025-05-12T13:46:00.000Z"
+      "timestamp": "2025-05-12T13:54:00.000Z"
     },
     {
       "rank": "51",
@@ -1263,22 +1263,22 @@ export const src_senator_results = {
       "firstName": "ARNEL",
       "partyName": "PARTIDO MAHARLIKA",
       "partyNameShort": "PM",
-      "voteCount": 649546,
+      "voteCount": 655196,
       "contestCode": "00399000",
       "locationCode": 1,
       "locationName": "PHILIPPINES",
       "er": {
-        "count": 64375,
+        "count": 65159,
         "total": 93629,
-        "percentage": 68.76
+        "percentage": 69.59
       },
       "voter": {
-        "count": 39885669,
+        "count": 40335916,
         "total": 69773653,
-        "percentage": 57.1644,
-        "actualCount": 383464201
+        "percentage": 57.8097,
+        "actualCount": 386609246
       },
-      "timestamp": "2025-05-12T13:46:00.000Z"
+      "timestamp": "2025-05-12T13:54:00.000Z"
     },
     {
       "rank": "52",
@@ -1288,22 +1288,22 @@ export const src_senator_results = {
       "firstName": "JOEY",
       "partyName": "INDEPENDENT",
       "partyNameShort": "IND",
-      "voteCount": 595420,
+      "voteCount": 600363,
       "contestCode": "00399000",
       "locationCode": 1,
       "locationName": "PHILIPPINES",
       "er": {
-        "count": 64375,
+        "count": 65159,
         "total": 93629,
-        "percentage": 68.76
+        "percentage": 69.59
       },
       "voter": {
-        "count": 39885669,
+        "count": 40335916,
         "total": 69773653,
-        "percentage": 57.1644,
-        "actualCount": 383464201
+        "percentage": 57.8097,
+        "actualCount": 386609246
       },
-      "timestamp": "2025-05-12T13:46:00.000Z"
+      "timestamp": "2025-05-12T13:54:00.000Z"
     },
     {
       "rank": "53",
@@ -1313,22 +1313,22 @@ export const src_senator_results = {
       "firstName": "DAVID",
       "partyName": "BUNYOG (PAGKAKAISA) ",
       "partyNameShort": "BUNYOG",
-      "voteCount": 544163,
+      "voteCount": 548577,
       "contestCode": "00399000",
       "locationCode": 1,
       "locationName": "PHILIPPINES",
       "er": {
-        "count": 64375,
+        "count": 65159,
         "total": 93629,
-        "percentage": 68.76
+        "percentage": 69.59
       },
       "voter": {
-        "count": 39885669,
+        "count": 40335916,
         "total": 69773653,
-        "percentage": 57.1644,
-        "actualCount": 383464201
+        "percentage": 57.8097,
+        "actualCount": 386609246
       },
-      "timestamp": "2025-05-12T13:46:00.000Z"
+      "timestamp": "2025-05-12T13:54:00.000Z"
     },
     {
       "rank": "54",
@@ -1338,22 +1338,22 @@ export const src_senator_results = {
       "firstName": "MAR MANIBELA",
       "partyName": "INDEPENDENT",
       "partyNameShort": "IND",
-      "voteCount": 541637,
+      "voteCount": 546111,
       "contestCode": "00399000",
       "locationCode": 1,
       "locationName": "PHILIPPINES",
       "er": {
-        "count": 64375,
+        "count": 65159,
         "total": 93629,
-        "percentage": 68.76
+        "percentage": 69.59
       },
       "voter": {
-        "count": 39885669,
+        "count": 40335916,
         "total": 69773653,
-        "percentage": 57.1644,
-        "actualCount": 383464201
+        "percentage": 57.8097,
+        "actualCount": 386609246
       },
-      "timestamp": "2025-05-12T13:46:00.000Z"
+      "timestamp": "2025-05-12T13:54:00.000Z"
     },
     {
       "rank": "55",
@@ -1363,22 +1363,22 @@ export const src_senator_results = {
       "firstName": "WILSON",
       "partyName": "INDEPENDENT",
       "partyNameShort": "IND",
-      "voteCount": 533998,
+      "voteCount": 539350,
       "contestCode": "00399000",
       "locationCode": 1,
       "locationName": "PHILIPPINES",
       "er": {
-        "count": 64375,
+        "count": 65159,
         "total": 93629,
-        "percentage": 68.76
+        "percentage": 69.59
       },
       "voter": {
-        "count": 39885669,
+        "count": 40335916,
         "total": 69773653,
-        "percentage": 57.1644,
-        "actualCount": 383464201
+        "percentage": 57.8097,
+        "actualCount": 386609246
       },
-      "timestamp": "2025-05-12T13:46:00.000Z"
+      "timestamp": "2025-05-12T13:54:00.000Z"
     },
     {
       "rank": "56",
@@ -1388,22 +1388,22 @@ export const src_senator_results = {
       "firstName": "MANOY WILBERT",
       "partyName": "AKSYON DEMOKRATIKO",
       "partyNameShort": "AKSYON",
-      "voteCount": 521048,
+      "voteCount": 525658,
       "contestCode": "00399000",
       "locationCode": 1,
       "locationName": "PHILIPPINES",
       "er": {
-        "count": 64375,
+        "count": 65159,
         "total": 93629,
-        "percentage": 68.76
+        "percentage": 69.59
       },
       "voter": {
-        "count": 39885669,
+        "count": 40335916,
         "total": 69773653,
-        "percentage": 57.1644,
-        "actualCount": 383464201
+        "percentage": 57.8097,
+        "actualCount": 386609246
       },
-      "timestamp": "2025-05-12T13:46:00.000Z"
+      "timestamp": "2025-05-12T13:54:00.000Z"
     },
     {
       "rank": "57",
@@ -1413,22 +1413,22 @@ export const src_senator_results = {
       "firstName": "MARC LOUIE",
       "partyName": "INDEPENDENT",
       "partyNameShort": "IND",
-      "voteCount": 505717,
+      "voteCount": 510043,
       "contestCode": "00399000",
       "locationCode": 1,
       "locationName": "PHILIPPINES",
       "er": {
-        "count": 64375,
+        "count": 65159,
         "total": 93629,
-        "percentage": 68.76
+        "percentage": 69.59
       },
       "voter": {
-        "count": 39885669,
+        "count": 40335916,
         "total": 69773653,
-        "percentage": 57.1644,
-        "actualCount": 383464201
+        "percentage": 57.8097,
+        "actualCount": 386609246
       },
-      "timestamp": "2025-05-12T13:46:00.000Z"
+      "timestamp": "2025-05-12T13:54:00.000Z"
     },
     {
       "rank": "58",
@@ -1438,22 +1438,22 @@ export const src_senator_results = {
       "firstName": "AMIRAH",
       "partyName": "MAKABAYANG KOALISYON NG MAMAMAYAN",
       "partyNameShort": "MKBYN",
-      "voteCount": 492770,
+      "voteCount": 496947,
       "contestCode": "00399000",
       "locationCode": 1,
       "locationName": "PHILIPPINES",
       "er": {
-        "count": 64375,
+        "count": 65159,
         "total": 93629,
-        "percentage": 68.76
+        "percentage": 69.59
       },
       "voter": {
-        "count": 39885669,
+        "count": 40335916,
         "total": 69773653,
-        "percentage": 57.1644,
-        "actualCount": 383464201
+        "percentage": 57.8097,
+        "actualCount": 386609246
       },
-      "timestamp": "2025-05-12T13:46:00.000Z"
+      "timestamp": "2025-05-12T13:54:00.000Z"
     },
     {
       "rank": "59",
@@ -1463,22 +1463,22 @@ export const src_senator_results = {
       "firstName": "MODY PISTON",
       "partyName": "MAKABAYANG KOALISYON NG MAMAMAYAN",
       "partyNameShort": "MKBYN",
-      "voteCount": 490350,
+      "voteCount": 494483,
       "contestCode": "00399000",
       "locationCode": 1,
       "locationName": "PHILIPPINES",
       "er": {
-        "count": 64375,
+        "count": 65159,
         "total": 93629,
-        "percentage": 68.76
+        "percentage": 69.59
       },
       "voter": {
-        "count": 39885669,
+        "count": 40335916,
         "total": 69773653,
-        "percentage": 57.1644,
-        "actualCount": 383464201
+        "percentage": 57.8097,
+        "actualCount": 386609246
       },
-      "timestamp": "2025-05-12T13:46:00.000Z"
+      "timestamp": "2025-05-12T13:54:00.000Z"
     },
     {
       "rank": "60",
@@ -1488,22 +1488,22 @@ export const src_senator_results = {
       "firstName": "NUR-ANA",
       "partyName": "INDEPENDENT",
       "partyNameShort": "IND",
-      "voteCount": 404332,
+      "voteCount": 409980,
       "contestCode": "00399000",
       "locationCode": 1,
       "locationName": "PHILIPPINES",
       "er": {
-        "count": 64375,
+        "count": 65159,
         "total": 93629,
-        "percentage": 68.76
+        "percentage": 69.59
       },
       "voter": {
-        "count": 39885669,
+        "count": 40335916,
         "total": 69773653,
-        "percentage": 57.1644,
-        "actualCount": 383464201
+        "percentage": 57.8097,
+        "actualCount": 386609246
       },
-      "timestamp": "2025-05-12T13:46:00.000Z"
+      "timestamp": "2025-05-12T13:54:00.000Z"
     },
     {
       "rank": "61",
@@ -1513,22 +1513,22 @@ export const src_senator_results = {
       "firstName": "RELLY JR.",
       "partyName": "KILUSANG BAGONG LIPUNAN",
       "partyNameShort": "KBL",
-      "voteCount": 398608,
+      "voteCount": 402465,
       "contestCode": "00399000",
       "locationCode": 1,
       "locationName": "PHILIPPINES",
       "er": {
-        "count": 64375,
+        "count": 65159,
         "total": 93629,
-        "percentage": 68.76
+        "percentage": 69.59
       },
       "voter": {
-        "count": 39885669,
+        "count": 40335916,
         "total": 69773653,
-        "percentage": 57.1644,
-        "actualCount": 383464201
+        "percentage": 57.8097,
+        "actualCount": 386609246
       },
-      "timestamp": "2025-05-12T13:46:00.000Z"
+      "timestamp": "2025-05-12T13:54:00.000Z"
     },
     {
       "rank": "62",
@@ -1538,22 +1538,22 @@ export const src_senator_results = {
       "firstName": "MICHAEL BONGBONG",
       "partyName": "PARTIDO MAHARLIKA",
       "partyNameShort": "PM",
-      "voteCount": 395740,
+      "voteCount": 399825,
       "contestCode": "00399000",
       "locationCode": 1,
       "locationName": "PHILIPPINES",
       "er": {
-        "count": 64375,
+        "count": 65159,
         "total": 93629,
-        "percentage": 68.76
+        "percentage": 69.59
       },
       "voter": {
-        "count": 39885669,
+        "count": 40335916,
         "total": 69773653,
-        "percentage": 57.1644,
-        "actualCount": 383464201
+        "percentage": 57.8097,
+        "actualCount": 386609246
       },
-      "timestamp": "2025-05-12T13:46:00.000Z"
+      "timestamp": "2025-05-12T13:54:00.000Z"
     },
     {
       "rank": "63",
@@ -1563,22 +1563,22 @@ export const src_senator_results = {
       "firstName": "JOSE JESSIE",
       "partyName": "INDEPENDENT",
       "partyNameShort": "IND",
-      "voteCount": 391180,
+      "voteCount": 394867,
       "contestCode": "00399000",
       "locationCode": 1,
       "locationName": "PHILIPPINES",
       "er": {
-        "count": 64375,
+        "count": 65159,
         "total": 93629,
-        "percentage": 68.76
+        "percentage": 69.59
       },
       "voter": {
-        "count": 39885669,
+        "count": 40335916,
         "total": 69773653,
-        "percentage": 57.1644,
-        "actualCount": 383464201
+        "percentage": 57.8097,
+        "actualCount": 386609246
       },
-      "timestamp": "2025-05-12T13:46:00.000Z"
+      "timestamp": "2025-05-12T13:54:00.000Z"
     },
     {
       "rank": "64",
@@ -1588,22 +1588,22 @@ export const src_senator_results = {
       "firstName": "ROY",
       "partyName": "DEMOCRATIC PARTY OF THE PHILIPPINES",
       "partyNameShort": "DPP",
-      "voteCount": 332663,
+      "voteCount": 336035,
       "contestCode": "00399000",
       "locationCode": 1,
       "locationName": "PHILIPPINES",
       "er": {
-        "count": 64375,
+        "count": 65159,
         "total": 93629,
-        "percentage": 68.76
+        "percentage": 69.59
       },
       "voter": {
-        "count": 39885669,
+        "count": 40335916,
         "total": 69773653,
-        "percentage": 57.1644,
-        "actualCount": 383464201
+        "percentage": 57.8097,
+        "actualCount": 386609246
       },
-      "timestamp": "2025-05-12T13:46:00.000Z"
+      "timestamp": "2025-05-12T13:54:00.000Z"
     },
     {
       "rank": "65",
@@ -1613,22 +1613,22 @@ export const src_senator_results = {
       "firstName": "SUBAIR",
       "partyName": "WORKERS AND PEASANTS PARTY",
       "partyNameShort": "WPP",
-      "voteCount": 316926,
+      "voteCount": 320461,
       "contestCode": "00399000",
       "locationCode": 1,
       "locationName": "PHILIPPINES",
       "er": {
-        "count": 64375,
+        "count": 65159,
         "total": 93629,
-        "percentage": 68.76
+        "percentage": 69.59
       },
       "voter": {
-        "count": 39885669,
+        "count": 40335916,
         "total": 69773653,
-        "percentage": 57.1644,
-        "actualCount": 383464201
+        "percentage": 57.8097,
+        "actualCount": 386609246
       },
-      "timestamp": "2025-05-12T13:46:00.000Z"
+      "timestamp": "2025-05-12T13:54:00.000Z"
     },
     {
       "rank": "66",
@@ -1638,35 +1638,35 @@ export const src_senator_results = {
       "firstName": "LEANDRO",
       "partyName": "INDEPENDENT",
       "partyNameShort": "IND",
-      "voteCount": 275471,
+      "voteCount": 277842,
       "contestCode": "00399000",
       "locationCode": 1,
       "locationName": "PHILIPPINES",
       "er": {
-        "count": 64375,
+        "count": 65159,
         "total": 93629,
-        "percentage": 68.76
+        "percentage": 69.59
       },
       "voter": {
-        "count": 39885669,
+        "count": 40335916,
         "total": 69773653,
-        "percentage": 57.1644,
-        "actualCount": 383464201
+        "percentage": 57.8097,
+        "actualCount": 386609246
       },
-      "timestamp": "2025-05-12T13:46:00.000Z"
+      "timestamp": "2025-05-12T13:54:00.000Z"
     }
   ],
   "isFeedZero": false,
   "er": {
-    "count": 64375,
+    "count": 65159,
     "total": 93629,
-    "percentage": 68.76
+    "percentage": 69.59
   },
   "voter": {
-    "count": 39885669,
+    "count": 40335916,
     "total": 69773653,
-    "percentage": 57.1644,
-    "actualCount": 383464201
+    "percentage": 57.8097,
+    "actualCount": 386609246
   },
-  "timestamp": "2025-05-12T13:46:00.000Z"
+  "timestamp": "2025-05-12T13:54:00.000Z"
 } as const;
