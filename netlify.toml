@@ -3,7 +3,8 @@
 
 [functions."election-results"]
   external_node_modules = [
-    "chromium-bidi"
+    "chromium-bidi",
+    "../../../package.json"
   ]
 
 [[plugins]]
