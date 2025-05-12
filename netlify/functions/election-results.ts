@@ -2,15 +2,14 @@ import { Handler, HandlerEvent, HandlerContext } from "@netlify/functions";
 import { exec } from 'child_process';
 import { promisify } from 'util';
 import { ElectionResult, ResultType } from '../../src/types/electionResults';
-import * as path from "path"; // Adjust path
 
 const execAsync = promisify(exec);
 
 async function runScrapeResults(type: ResultType): Promise<ElectionResult | null> {
     try {
-        const scriptPath = path.join(__dirname, '../../src/scripts/scrape-election-results.ts');
-        const argument = type === 'senator' ? 'senator' : 'partylist';
-        const command = `tsx ${scriptPath} ${argument}`;
+        const scriptName = `npm run scrape-results -- `;
+        const argument = type === 'senator' ? '--senator' : '--partylist';
+        const command = `${scriptName} ${argument}`;
 
         console.log(`Running command: ${command}...`);
         const { stdout, stderr } = await execAsync(command);
