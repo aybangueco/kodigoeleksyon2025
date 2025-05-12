@@ -1,14 +1,5 @@
 [build]
   functions = "netlify/functions"
 
-[functions."election-results"]
-  external_node_modules = [
-    "playwright-core",
-    "chromium-bidi",
-    "playwright-core/lib/server/utils/nodePlatform",
-    "playwright-core/lib/server/launchApp",
-    "playwright-core/lib/server/electron/electron"
-  ]
-
 [[plugins]]
 package = "netlify-plugin-playwright-cache"
