@@ -1,32 +1,26 @@
 import { ElectionResult, ResultType } from "@/types/electionResults";
 
-const SENATOR_API_URL = "https://blob-prod-senator.abs-cbn.com/feed-0/senator-00399000-nation-location-1.json";
-const PARTYLIST_API_URL = "https://blob-prod-party-list.abs-cbn.com/feed-0/party-list-01199000-nation-location-1.json";
-
 export const fetchElectionResults = async (type: ResultType): Promise<ElectionResult> => {
-  const apiUrl = type === 'senator' ? SENATOR_API_URL : PARTYLIST_API_URL;
-  
+  const functionUrl = `/.netlify/functions/election-results?type=${type}`;
+
   try {
-    console.log(`Attempting to fetch ${type} results from API...`);
-    const response = await fetch(apiUrl, {
-      mode: 'cors',
-      headers: {
-        'Origin': 'https://halalanresults.abs-cbn.com'
-      }
-    });
-    
+    console.log(`Attempting to fetch ${type} results from Netlify Function: ${functionUrl}`);
+    const response = await fetch(functionUrl);
+
     if (!response.ok) {
-      console.log(`API response not OK: ${response.status}. Using mock data.`);
-      throw new Error(`Failed to fetch ${type} results: ${response.status}`);
+      console.error(`Netlify Function response not OK: ${response.status} - ${response.statusText}. Using mock data.`);
+      throw new Error(`Failed to fetch ${type} results from function: ${response.status}`);
     }
-    
-    console.log(`Successfully fetched ${type} results from API`);
-    return response.json();
+
+    console.log(`Successfully fetched ${type} results from Netlify Function`);
+    const data = await response.json();
+    console.log("Response Data:", data); // Log the parsed JSON data
+    return data as ElectionResult;
   } catch (error) {
-    console.log(`Error fetching ${type} results:`, error);
+    console.error(`Error fetching ${type} results from Netlify Function:`, error);
     console.log(`Falling back to mock ${type} data`);
-    
-    // If API call fails, use mock data
+
+    // If Netlify Function call fails, use mock data
     return type === 'senator' ? mockSenatorResults : mockPartyListResults;
   }
 };
@@ -37,7 +31,7 @@ export const fetchSenatorResults = (): Promise<ElectionResult> => {
 
 export const fetchPartyListResults = (): Promise<ElectionResult> => {
   return fetchElectionResults('partylist');
-};
+}
 
 // Mock data for senators
 export const mockSenatorResults: ElectionResult = {

@@ -13,10 +13,12 @@
     "check-env": "tsx src/scripts/check-env.ts",
     "scrape": "tsx src/scripts/scrape.ts",
     "scrape:abalos": "tsx src/scripts/scrape.ts --name \"ABALOS, BENHUR\"",
-    "scrape:all": "tsx src/scripts/scrape.ts --all"
+    "scrape:all": "tsx src/scripts/scrape.ts --all",
+    "scrape-results": "tsx src/scripts/scrape-election-results.ts"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",
+    "@netlify/functions": "^3.1.8",
     "@radix-ui/react-accordion": "^1.2.0",
     "@radix-ui/react-alert-dialog": "^1.1.1",
     "@radix-ui/react-aspect-ratio": "^1.1.0",
