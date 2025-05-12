@@ -1,7 +1,19 @@
 import { ElectionResult } from "@/types/electionResults";
 
-// Mock data for now - this would be replaced with actual API calls
-const mockSenatorResults: ElectionResult = {
+const API_URL = "https://blob-prod-senator.abs-cbn.com/feed-0/senator-00399000-nation-location-1.json";
+
+export const fetchSenatorResults = async (): Promise<ElectionResult> => {
+  const response = await fetch(API_URL);
+  
+  if (!response.ok) {
+    throw new Error(`Failed to fetch election results: ${response.status}`);
+  }
+  
+  return response.json();
+};
+
+// Keep existing mock data as a fallback in case API is unavailable
+export const mockSenatorResults: ElectionResult = {
   positionName: "Senator",
   er: {
     count: 0,
@@ -745,12 +757,4 @@ const mockSenatorResults: ElectionResult = {
   locationCode: 1,
   locationName: "PHILIPPINES",
   contestLocationName: "PHILIPPINES"
-};
-
-export const fetchSenatorResults = async (): Promise<ElectionResult> => {
-  // Simulating API request with a delay
-  await new Promise(resolve => setTimeout(resolve, 500));
-  
-  // In a real app, this would be an API call
-  return mockSenatorResults;
 };

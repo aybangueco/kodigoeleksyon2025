@@ -6,13 +6,15 @@ import ResultsTable from "@/components/results/ResultsTable";
 import ResultsStats from "@/components/results/ResultsStats";
 import Footer from "@/components/Footer";
 import { Alert, AlertDescription } from "@/components/ui/alert";
-import { AlertTriangle } from "lucide-react";
+import { AlertTriangle, Loader2 } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const NationalResults = () => {
   const { data, isLoading, error } = useQuery({
     queryKey: ["senatorResults"],
     queryFn: fetchSenatorResults,
+    refetchInterval: 30000, // Refetch every 30 seconds
+    retry: 3,
   });
 
   return (
@@ -36,7 +38,19 @@ const NationalResults = () => {
           </div>
         </div>
 
-        {error ? (
+        <Alert className="border-blue-200 bg-blue-50 mb-6">
+          <AlertTriangle className="h-4 w-4 text-blue-800" />
+          <AlertDescription className="text-blue-700">
+            These results are for demonstration purposes. Official election results should be verified through COMELEC.
+          </AlertDescription>
+        </Alert>
+
+        {isLoading ? (
+          <div className="flex flex-col items-center justify-center py-12">
+            <Loader2 className="h-12 w-12 animate-spin text-primary mb-4" />
+            <p className="text-muted-foreground">Loading latest election results...</p>
+          </div>
+        ) : error ? (
           <Alert className="border-red-200 bg-red-50 mb-6">
             <AlertTriangle className="h-4 w-4 text-red-800" />
             <AlertDescription className="text-red-700">
@@ -45,17 +59,10 @@ const NationalResults = () => {
           </Alert>
         ) : (
           <>
-            <Alert className="border-blue-200 bg-blue-50 mb-6">
-              <AlertTriangle className="h-4 w-4 text-blue-800" />
-              <AlertDescription className="text-blue-700">
-                These results are for demonstration purposes only. Official election results should be verified through COMELEC.
-              </AlertDescription>
-            </Alert>
-
             {data && <ResultsStats data={data} />}
             
             <div className="mt-6">
-              <ResultsTable data={data!} isLoading={isLoading} />
+              <ResultsTable data={data!} isLoading={false} />
             </div>
           </>
         )}
