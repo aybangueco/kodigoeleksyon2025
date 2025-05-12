@@ -11,11 +11,39 @@ import { checkEnvironment } from './check-env';
 import * as fs from 'fs/promises';
 import * as path from 'path';
 
-// API URLs
-const SENATOR_API_URL = "https://blob-prod-senator.abs-cbn.com/feed-5/senator-00399000-nation-location-1.json";
-const PARTYLIST_API_URL = "https://blob-prod-party-list.abs-cbn.com/feed-5/party-list-01199000-nation-location-1.json";
+// Base API URLs
+const SENATOR_BASE_API_URL = "https://blob-prod-senator.abs-cbn.com";
+const SENATOR_FEED_LIST_URL = `${SENATOR_BASE_API_URL}/misc/feed-senator.json`;
+const PARTYLIST_BASE_API_URL = "https://blob-prod-party-list.abs-cbn.com";
+const PARTYLIST_FEED_LIST_URL = `${PARTYLIST_BASE_API_URL}/misc/feed-party-list.json`;
 
-async function scrapeElectionResults(type: 'senator' | 'partylist'): Promise<any | null> {
+interface FeedResponse {
+  feedNo?: string;
+  groupCode?: string;
+  setupType?: string;
+}
+
+async function fetchFeedNumber(url: string): Promise<string | null> {
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      console.error(`Failed to fetch feed list from ${url}: ${response.status}`);
+      return null;
+    }
+    const data: FeedResponse = await response.json();
+    if (data && data.feedNo) {
+      return data.feedNo;
+    } else {
+      console.error(`Could not find feedNo in the fetched data from ${url}`);
+      return null;
+    }
+  } catch (error) {
+    console.error(`Error fetching feed list from ${url}:`, error);
+    return null;
+  }
+}
+
+async function scrapeElectionResults(type: 'senator' | 'partylist') {
   const envReady = await checkEnvironment();
   if (!envReady) {
     console.error('Environment checks failed. Please fix the issues before running the scraper.');
@@ -31,23 +59,37 @@ async function scrapeElectionResults(type: 'senator' | 'partylist'): Promise<any
 
   try {
     const page = await context.newPage();
-    let apiUrl: string;
+    let apiUrl: string | null = null;
 
     if (type === 'senator') {
-      apiUrl = SENATOR_API_URL;
+      const feedNo = await fetchFeedNumber(SENATOR_FEED_LIST_URL);
+      if (feedNo) {
+        apiUrl = `${SENATOR_BASE_API_URL}/feed-${feedNo}/senator-00399000-nation-location-1.json`;
+      } else {
+        console.error('Failed to fetch senator feed number.');
+        return null;
+      }
     } else if (type === 'partylist') {
-      apiUrl = PARTYLIST_API_URL;
+      const feedNo = await fetchFeedNumber(PARTYLIST_FEED_LIST_URL);
+      if (feedNo) {
+        apiUrl = `${PARTYLIST_BASE_API_URL}/feed-${feedNo}/party-list-01199000-nation-location-1.json`;
+      } else {
+        console.error('Failed to fetch partylist feed number.');
+        return null;
+      }
     } else {
       console.error('Invalid result type provided to scraper.');
       return null;
     }
 
-    const response = await page.goto(apiUrl);
+    if (apiUrl) {
+      const response = await page.goto(apiUrl);
 
-    if (response && response.ok()) {
-      results = await response.json();
-    } else {
-      console.error(`Failed to fetch ${type} results: ${response?.status()}`);
+      if (response && response.ok()) {
+        results = await response.json();
+      } else {
+        console.error(`Failed to fetch ${type} results from ${apiUrl}: ${response?.status()}`);
+      }
     }
 
   } catch (error) {

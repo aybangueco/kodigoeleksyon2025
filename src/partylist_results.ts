@@ -13,7 +13,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 2219662
+      "voteCount": 2335850
     },
     {
       "rank": "2",
@@ -23,7 +23,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 1720224
+      "voteCount": 1814377
     },
     {
       "rank": "3",
@@ -33,7 +33,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 1224365
+      "voteCount": 1299580
     },
     {
       "rank": "4",
@@ -43,7 +43,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 1015296
+      "voteCount": 1073903
     },
     {
       "rank": "5",
@@ -53,7 +53,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 950663
+      "voteCount": 1000334
     },
     {
       "rank": "6",
@@ -63,7 +63,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 769695
+      "voteCount": 816969
     },
     {
       "rank": "7",
@@ -73,7 +73,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 599090
+      "voteCount": 626618
     },
     {
       "rank": "8",
@@ -83,7 +83,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 560678
+      "voteCount": 590174
     },
     {
       "rank": "9",
@@ -93,7 +93,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 475057
+      "voteCount": 498191
     },
     {
       "rank": "10",
@@ -103,7 +103,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 463718
+      "voteCount": 489463
     },
     {
       "rank": "11",
@@ -113,27 +113,27 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 441886
+      "voteCount": 465317
     },
     {
       "rank": "12",
-      "candidateCode": "01199000ML",
-      "candidateName": "ML",
-      "lastName": "",
-      "firstName": "",
-      "partyName": "",
-      "partyNameShort": "",
-      "voteCount": 429153
-    },
-    {
-      "rank": "13",
       "candidateCode": "01199000MALASAKIT@BAYANIHAN",
       "candidateName": "MALASAKIT@BAYANIHAN",
       "lastName": "",
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 428759
+      "voteCount": 451998
+    },
+    {
+      "rank": "13",
+      "candidateCode": "01199000ML",
+      "candidateName": "ML",
+      "lastName": "",
+      "firstName": "",
+      "partyName": "",
+      "partyNameShort": "",
+      "voteCount": 451613
     },
     {
       "rank": "14",
@@ -143,7 +143,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 424172
+      "voteCount": 445515
     },
     {
       "rank": "15",
@@ -153,7 +153,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 412137
+      "voteCount": 433570
     },
     {
       "rank": "16",
@@ -163,7 +163,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 410243
+      "voteCount": 429726
     },
     {
       "rank": "17",
@@ -173,7 +173,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 395726
+      "voteCount": 414436
     },
     {
       "rank": "18",
@@ -183,7 +183,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 364858
+      "voteCount": 384345
     },
     {
       "rank": "19",
@@ -193,7 +193,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 363612
+      "voteCount": 380245
     },
     {
       "rank": "20",
@@ -203,7 +203,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 344263
+      "voteCount": 361051
     },
     {
       "rank": "21",
@@ -213,7 +213,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 340792
+      "voteCount": 355258
     },
     {
       "rank": "22",
@@ -223,7 +223,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 332229
+      "voteCount": 351625
     },
     {
       "rank": "23",
@@ -233,7 +233,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 321961
+      "voteCount": 347227
     },
     {
       "rank": "24",
@@ -243,7 +243,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 321288
+      "voteCount": 336969
     },
     {
       "rank": "25",
@@ -253,7 +253,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 316460
+      "voteCount": 334043
     },
     {
       "rank": "26",
@@ -263,7 +263,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 308132
+      "voteCount": 324364
     },
     {
       "rank": "27",
@@ -273,27 +273,27 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 306023
+      "voteCount": 322650
     },
     {
       "rank": "28",
-      "candidateCode": "01199000KAMANGGAGAWA",
-      "candidateName": "KAMANGGAGAWA",
-      "lastName": "",
-      "firstName": "",
-      "partyName": "",
-      "partyNameShort": "",
-      "voteCount": 301006
-    },
-    {
-      "rank": "29",
       "candidateCode": "01199000ASENSO0PINOY",
       "candidateName": "ASENSO PINOY",
       "lastName": "",
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 299164
+      "voteCount": 317692
+    },
+    {
+      "rank": "29",
+      "candidateCode": "01199000KAMANGGAGAWA",
+      "candidateName": "KAMANGGAGAWA",
+      "lastName": "",
+      "firstName": "",
+      "partyName": "",
+      "partyNameShort": "",
+      "voteCount": 316505
     },
     {
       "rank": "30",
@@ -303,7 +303,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 297957
+      "voteCount": 311922
     },
     {
       "rank": "31",
@@ -313,7 +313,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 274063
+      "voteCount": 289846
     },
     {
       "rank": "32",
@@ -323,7 +323,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 272371
+      "voteCount": 286403
     },
     {
       "rank": "33",
@@ -333,37 +333,37 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 252884
+      "voteCount": 262432
     },
     {
       "rank": "34",
-      "candidateCode": "01199000KM0NGAYON0NA",
-      "candidateName": "KM NGAYON NA",
-      "lastName": "",
-      "firstName": "",
-      "partyName": "",
-      "partyNameShort": "",
-      "voteCount": 246121
-    },
-    {
-      "rank": "35",
       "candidateCode": "01199000BH000BAGONG0HENERASYON",
       "candidateName": "BH - BAGONG HENERASYON",
       "lastName": "",
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 245150
+      "voteCount": 258015
     },
     {
-      "rank": "36",
-      "candidateCode": "01199000AKO0ILOCANO0AKO",
-      "candidateName": "AKO ILOCANO AKO",
+      "rank": "35",
+      "candidateCode": "01199000ALONA",
+      "candidateName": "ALONA",
       "lastName": "",
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 241436
+      "voteCount": 255915
+    },
+    {
+      "rank": "36",
+      "candidateCode": "01199000KM0NGAYON0NA",
+      "candidateName": "KM NGAYON NA",
+      "lastName": "",
+      "firstName": "",
+      "partyName": "",
+      "partyNameShort": "",
+      "voteCount": 255642
     },
     {
       "rank": "37",
@@ -373,17 +373,17 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 241163
+      "voteCount": 254107
     },
     {
       "rank": "38",
-      "candidateCode": "01199000ALONA",
-      "candidateName": "ALONA",
+      "candidateCode": "01199000AKO0ILOCANO0AKO",
+      "candidateName": "AKO ILOCANO AKO",
       "lastName": "",
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 237441
+      "voteCount": 251203
     },
     {
       "rank": "39",
@@ -393,7 +393,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 234609
+      "voteCount": 250232
     },
     {
       "rank": "40",
@@ -403,7 +403,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 231626
+      "voteCount": 244499
     },
     {
       "rank": "41",
@@ -413,7 +413,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 230505
+      "voteCount": 241057
     },
     {
       "rank": "42",
@@ -423,7 +423,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 228756
+      "voteCount": 240245
     },
     {
       "rank": "43",
@@ -433,7 +433,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 226704
+      "voteCount": 239675
     },
     {
       "rank": "44",
@@ -443,7 +443,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 224615
+      "voteCount": 238407
     },
     {
       "rank": "45",
@@ -453,7 +453,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 216359
+      "voteCount": 226028
     },
     {
       "rank": "46",
@@ -463,7 +463,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 210348
+      "voteCount": 219585
     },
     {
       "rank": "47",
@@ -473,7 +473,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 206017
+      "voteCount": 215948
     },
     {
       "rank": "48",
@@ -483,7 +483,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 203752
+      "voteCount": 214539
     },
     {
       "rank": "49",
@@ -493,7 +493,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 199813
+      "voteCount": 212600
     },
     {
       "rank": "50",
@@ -503,7 +503,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 196847
+      "voteCount": 210358
     },
     {
       "rank": "51",
@@ -513,7 +513,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 194618
+      "voteCount": 204297
     },
     {
       "rank": "52",
@@ -523,37 +523,37 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 188768
+      "voteCount": 199596
     },
     {
       "rank": "53",
-      "candidateCode": "01199000MURANG0KURYENTE",
-      "candidateName": "MURANG KURYENTE",
-      "lastName": "",
-      "firstName": "",
-      "partyName": "",
-      "partyNameShort": "",
-      "voteCount": 187365
-    },
-    {
-      "rank": "54",
-      "candidateCode": "01199000OFW",
-      "candidateName": "OFW",
-      "lastName": "",
-      "firstName": "",
-      "partyName": "",
-      "partyNameShort": "",
-      "voteCount": 186701
-    },
-    {
-      "rank": "55",
       "candidateCode": "01199000TUCP",
       "candidateName": "TUCP",
       "lastName": "",
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 183634
+      "voteCount": 199503
+    },
+    {
+      "rank": "54",
+      "candidateCode": "01199000MURANG0KURYENTE",
+      "candidateName": "MURANG KURYENTE",
+      "lastName": "",
+      "firstName": "",
+      "partyName": "",
+      "partyNameShort": "",
+      "voteCount": 196496
+    },
+    {
+      "rank": "55",
+      "candidateCode": "01199000OFW",
+      "candidateName": "OFW",
+      "lastName": "",
+      "firstName": "",
+      "partyName": "",
+      "partyNameShort": "",
+      "voteCount": 196017
     },
     {
       "rank": "56",
@@ -563,7 +563,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 182401
+      "voteCount": 192194
     },
     {
       "rank": "57",
@@ -573,27 +573,27 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 176617
+      "voteCount": 191399
     },
     {
       "rank": "58",
-      "candidateCode": "01199000SWERTE",
-      "candidateName": "SWERTE",
-      "lastName": "",
-      "firstName": "",
-      "partyName": "",
-      "partyNameShort": "",
-      "voteCount": 174397
-    },
-    {
-      "rank": "59",
       "candidateCode": "01199000ANG0PROBINSIYANO",
       "candidateName": "ANG PROBINSIYANO",
       "lastName": "",
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 173996
+      "voteCount": 185208
+    },
+    {
+      "rank": "59",
+      "candidateCode": "01199000SWERTE",
+      "candidateName": "SWERTE",
+      "lastName": "",
+      "firstName": "",
+      "partyName": "",
+      "partyNameShort": "",
+      "voteCount": 184099
     },
     {
       "rank": "60",
@@ -603,7 +603,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 173781
+      "voteCount": 183494
     },
     {
       "rank": "61",
@@ -613,27 +613,27 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 172247
+      "voteCount": 181028
     },
     {
       "rank": "62",
-      "candidateCode": "01199000ANGAT",
-      "candidateName": "ANGAT",
-      "lastName": "",
-      "firstName": "",
-      "partyName": "",
-      "partyNameShort": "",
-      "voteCount": 169714
-    },
-    {
-      "rank": "63",
       "candidateCode": "01199000KAPUSO0PM",
       "candidateName": "KAPUSO PM",
       "lastName": "",
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 168423
+      "voteCount": 180492
+    },
+    {
+      "rank": "63",
+      "candidateCode": "01199000ANGAT",
+      "candidateName": "ANGAT",
+      "lastName": "",
+      "firstName": "",
+      "partyName": "",
+      "partyNameShort": "",
+      "voteCount": 179219
     },
     {
       "rank": "64",
@@ -643,7 +643,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 164006
+      "voteCount": 174024
     },
     {
       "rank": "65",
@@ -653,7 +653,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 163090
+      "voteCount": 171278
     },
     {
       "rank": "66",
@@ -663,7 +663,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 150845
+      "voteCount": 157417
     },
     {
       "rank": "67",
@@ -673,7 +673,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 146923
+      "voteCount": 153476
     },
     {
       "rank": "68",
@@ -683,7 +683,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 144054
+      "voteCount": 151126
     },
     {
       "rank": "69",
@@ -693,7 +693,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 141514
+      "voteCount": 149701
     },
     {
       "rank": "70",
@@ -703,7 +703,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 140128
+      "voteCount": 147754
     },
     {
       "rank": "71",
@@ -713,7 +713,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 135377
+      "voteCount": 142650
     },
     {
       "rank": "72",
@@ -723,7 +723,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 131686
+      "voteCount": 138486
     },
     {
       "rank": "73",
@@ -733,7 +733,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 130378
+      "voteCount": 136221
     },
     {
       "rank": "74",
@@ -743,37 +743,37 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 126401
+      "voteCount": 134054
     },
     {
       "rank": "75",
-      "candidateCode": "011990001MUNTI",
-      "candidateName": "1MUNTI",
-      "lastName": "",
-      "firstName": "",
-      "partyName": "",
-      "partyNameShort": "",
-      "voteCount": 125683
-    },
-    {
-      "rank": "76",
-      "candidateCode": "01199000BAYAN0MUNA",
-      "candidateName": "BAYAN MUNA",
-      "lastName": "",
-      "firstName": "",
-      "partyName": "",
-      "partyNameShort": "",
-      "voteCount": 124287
-    },
-    {
-      "rank": "77",
       "candidateCode": "01199000PINUNO",
       "candidateName": "PINUNO",
       "lastName": "",
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 123542
+      "voteCount": 132981
+    },
+    {
+      "rank": "76",
+      "candidateCode": "011990001MUNTI",
+      "candidateName": "1MUNTI",
+      "lastName": "",
+      "firstName": "",
+      "partyName": "",
+      "partyNameShort": "",
+      "voteCount": 131506
+    },
+    {
+      "rank": "77",
+      "candidateCode": "01199000BAYAN0MUNA",
+      "candidateName": "BAYAN MUNA",
+      "lastName": "",
+      "firstName": "",
+      "partyName": "",
+      "partyNameShort": "",
+      "voteCount": 130972
     },
     {
       "rank": "78",
@@ -783,7 +783,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 122420
+      "voteCount": 129089
     },
     {
       "rank": "79",
@@ -793,7 +793,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 122383
+      "voteCount": 127984
     },
     {
       "rank": "80",
@@ -803,27 +803,27 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 120990
+      "voteCount": 127619
     },
     {
       "rank": "81",
-      "candidateCode": "01199000A0TEACHER",
-      "candidateName": "A TEACHER",
-      "lastName": "",
-      "firstName": "",
-      "partyName": "",
-      "partyNameShort": "",
-      "voteCount": 119515
-    },
-    {
-      "rank": "82",
       "candidateCode": "01199000AHON0MAHIRAP",
       "candidateName": "AHON MAHIRAP",
       "lastName": "",
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 119138
+      "voteCount": 126320
+    },
+    {
+      "rank": "82",
+      "candidateCode": "01199000A0TEACHER",
+      "candidateName": "A TEACHER",
+      "lastName": "",
+      "firstName": "",
+      "partyName": "",
+      "partyNameShort": "",
+      "voteCount": 125996
     },
     {
       "rank": "83",
@@ -833,7 +833,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 118149
+      "voteCount": 124385
     },
     {
       "rank": "84",
@@ -843,7 +843,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 117439
+      "voteCount": 123226
     },
     {
       "rank": "85",
@@ -853,7 +853,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 113397
+      "voteCount": 120151
     },
     {
       "rank": "86",
@@ -863,7 +863,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 112161
+      "voteCount": 118868
     },
     {
       "rank": "87",
@@ -873,7 +873,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 109440
+      "voteCount": 115908
     },
     {
       "rank": "88",
@@ -883,27 +883,27 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 108627
+      "voteCount": 114154
     },
     {
       "rank": "89",
-      "candidateCode": "01199000WIFI",
-      "candidateName": "WIFI",
-      "lastName": "",
-      "firstName": "",
-      "partyName": "",
-      "partyNameShort": "",
-      "voteCount": 105408
-    },
-    {
-      "rank": "90",
       "candidateCode": "01199000BATANG0QUIAPO",
       "candidateName": "BATANG QUIAPO",
       "lastName": "",
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 104996
+      "voteCount": 112096
+    },
+    {
+      "rank": "90",
+      "candidateCode": "01199000WIFI",
+      "candidateName": "WIFI",
+      "lastName": "",
+      "firstName": "",
+      "partyName": "",
+      "partyNameShort": "",
+      "voteCount": 110358
     },
     {
       "rank": "91",
@@ -913,7 +913,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 103201
+      "voteCount": 108678
     },
     {
       "rank": "92",
@@ -923,7 +923,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 100097
+      "voteCount": 105871
     },
     {
       "rank": "93",
@@ -933,7 +933,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 92311
+      "voteCount": 97831
     },
     {
       "rank": "94",
@@ -943,7 +943,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 91353
+      "voteCount": 96483
     },
     {
       "rank": "95",
@@ -953,7 +953,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 90810
+      "voteCount": 96180
     },
     {
       "rank": "96",
@@ -963,7 +963,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 87887
+      "voteCount": 92316
     },
     {
       "rank": "97",
@@ -973,7 +973,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 86127
+      "voteCount": 90551
     },
     {
       "rank": "98",
@@ -983,27 +983,27 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 82827
+      "voteCount": 87624
     },
     {
       "rank": "99",
-      "candidateCode": "01199000HEALTH0WORKERS",
-      "candidateName": "HEALTH WORKERS",
-      "lastName": "",
-      "firstName": "",
-      "partyName": "",
-      "partyNameShort": "",
-      "voteCount": 81268
-    },
-    {
-      "rank": "100",
       "candidateCode": "01199000KABABAIHAN",
       "candidateName": "KABABAIHAN",
       "lastName": "",
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 81060
+      "voteCount": 85610
+    },
+    {
+      "rank": "100",
+      "candidateCode": "01199000HEALTH0WORKERS",
+      "candidateName": "HEALTH WORKERS",
+      "lastName": "",
+      "firstName": "",
+      "partyName": "",
+      "partyNameShort": "",
+      "voteCount": 85534
     },
     {
       "rank": "101",
@@ -1013,7 +1013,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 76340
+      "voteCount": 81607
     },
     {
       "rank": "102",
@@ -1023,7 +1023,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 76147
+      "voteCount": 80977
     },
     {
       "rank": "103",
@@ -1033,7 +1033,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 73704
+      "voteCount": 77793
     },
     {
       "rank": "104",
@@ -1043,7 +1043,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 73057
+      "voteCount": 76736
     },
     {
       "rank": "105",
@@ -1053,7 +1053,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 72504
+      "voteCount": 76599
     },
     {
       "rank": "106",
@@ -1063,7 +1063,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 70752
+      "voteCount": 74793
     },
     {
       "rank": "107",
@@ -1073,7 +1073,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 65607
+      "voteCount": 69495
     },
     {
       "rank": "108",
@@ -1083,7 +1083,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 64640
+      "voteCount": 68446
     },
     {
       "rank": "109",
@@ -1093,47 +1093,47 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 63246
+      "voteCount": 66490
     },
     {
       "rank": "110",
-      "candidateCode": "01199000MAHARLIKA",
-      "candidateName": "MAHARLIKA",
-      "lastName": "",
-      "firstName": "",
-      "partyName": "",
-      "partyNameShort": "",
-      "voteCount": 59955
-    },
-    {
-      "rank": "111",
-      "candidateCode": "01199000MAGDALO",
-      "candidateName": "MAGDALO",
-      "lastName": "",
-      "firstName": "",
-      "partyName": "",
-      "partyNameShort": "",
-      "voteCount": 59827
-    },
-    {
-      "rank": "112",
       "candidateCode": "01199000KASAMBAHAY",
       "candidateName": "KASAMBAHAY",
       "lastName": "",
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 59744
+      "voteCount": 65922
     },
     {
-      "rank": "113",
+      "rank": "111",
+      "candidateCode": "01199000MAHARLIKA",
+      "candidateName": "MAHARLIKA",
+      "lastName": "",
+      "firstName": "",
+      "partyName": "",
+      "partyNameShort": "",
+      "voteCount": 62796
+    },
+    {
+      "rank": "112",
       "candidateCode": "01199000BG0PARTY0LIST",
       "candidateName": "BG PARTY-LIST",
       "lastName": "",
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 59597
+      "voteCount": 62707
+    },
+    {
+      "rank": "113",
+      "candidateCode": "01199000MAGDALO",
+      "candidateName": "MAGDALO",
+      "lastName": "",
+      "firstName": "",
+      "partyName": "",
+      "partyNameShort": "",
+      "voteCount": 62647
     },
     {
       "rank": "114",
@@ -1143,7 +1143,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 55023
+      "voteCount": 57491
     },
     {
       "rank": "115",
@@ -1153,7 +1153,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 51536
+      "voteCount": 54299
     },
     {
       "rank": "116",
@@ -1163,7 +1163,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 51102
+      "voteCount": 53826
     },
     {
       "rank": "117",
@@ -1173,27 +1173,27 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 47928
+      "voteCount": 50379
     },
     {
       "rank": "118",
-      "candidateCode": "01199000AKTIBONG0KAAGAPAY",
-      "candidateName": "AKTIBONG KAAGAPAY",
-      "lastName": "",
-      "firstName": "",
-      "partyName": "",
-      "partyNameShort": "",
-      "voteCount": 45484
-    },
-    {
-      "rank": "119",
       "candidateCode": "01199000ARANGKADA0PILIPINO",
       "candidateName": "ARANGKADA PILIPINO",
       "lastName": "",
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 44641
+      "voteCount": 48357
+    },
+    {
+      "rank": "119",
+      "candidateCode": "01199000AKTIBONG0KAAGAPAY",
+      "candidateName": "AKTIBONG KAAGAPAY",
+      "lastName": "",
+      "firstName": "",
+      "partyName": "",
+      "partyNameShort": "",
+      "voteCount": 47571
     },
     {
       "rank": "120",
@@ -1203,7 +1203,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 44452
+      "voteCount": 47302
     },
     {
       "rank": "121",
@@ -1213,7 +1213,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 44391
+      "voteCount": 46815
     },
     {
       "rank": "122",
@@ -1223,7 +1223,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 44210
+      "voteCount": 46315
     },
     {
       "rank": "123",
@@ -1233,7 +1233,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 40409
+      "voteCount": 42498
     },
     {
       "rank": "124",
@@ -1243,7 +1243,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 39098
+      "voteCount": 41979
     },
     {
       "rank": "125",
@@ -1253,7 +1253,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 38477
+      "voteCount": 40871
     },
     {
       "rank": "126",
@@ -1263,7 +1263,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 38258
+      "voteCount": 40618
     },
     {
       "rank": "127",
@@ -1273,7 +1273,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 37812
+      "voteCount": 40106
     },
     {
       "rank": "128",
@@ -1283,27 +1283,27 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 37491
+      "voteCount": 39469
     },
     {
       "rank": "129",
-      "candidateCode": "01199000ABP",
-      "candidateName": "ABP",
-      "lastName": "",
-      "firstName": "",
-      "partyName": "",
-      "partyNameShort": "",
-      "voteCount": 36849
-    },
-    {
-      "rank": "130",
       "candidateCode": "01199000AKO0TANOD",
       "candidateName": "AKO TANOD",
       "lastName": "",
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 36215
+      "voteCount": 38965
+    },
+    {
+      "rank": "130",
+      "candidateCode": "01199000ABP",
+      "candidateName": "ABP",
+      "lastName": "",
+      "firstName": "",
+      "partyName": "",
+      "partyNameShort": "",
+      "voteCount": 38819
     },
     {
       "rank": "131",
@@ -1313,7 +1313,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 34514
+      "voteCount": 37928
     },
     {
       "rank": "132",
@@ -1323,7 +1323,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 33384
+      "voteCount": 34449
     },
     {
       "rank": "133",
@@ -1333,7 +1333,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 31974
+      "voteCount": 33761
     },
     {
       "rank": "134",
@@ -1343,7 +1343,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 30444
+      "voteCount": 32497
     },
     {
       "rank": "135",
@@ -1353,37 +1353,37 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 30168
+      "voteCount": 32421
     },
     {
       "rank": "136",
-      "candidateCode": "01199000LINGAP",
-      "candidateName": "LINGAP",
-      "lastName": "",
-      "firstName": "",
-      "partyName": "",
-      "partyNameShort": "",
-      "voteCount": 29614
-    },
-    {
-      "rank": "137",
-      "candidateCode": "01199000TURISMO",
-      "candidateName": "TURISMO",
-      "lastName": "",
-      "firstName": "",
-      "partyName": "",
-      "partyNameShort": "",
-      "voteCount": 28794
-    },
-    {
-      "rank": "138",
       "candidateCode": "01199000BANAT",
       "candidateName": "BANAT",
       "lastName": "",
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 27755
+      "voteCount": 31469
+    },
+    {
+      "rank": "137",
+      "candidateCode": "01199000LINGAP",
+      "candidateName": "LINGAP",
+      "lastName": "",
+      "firstName": "",
+      "partyName": "",
+      "partyNameShort": "",
+      "voteCount": 30858
+    },
+    {
+      "rank": "138",
+      "candidateCode": "01199000TURISMO",
+      "candidateName": "TURISMO",
+      "lastName": "",
+      "firstName": "",
+      "partyName": "",
+      "partyNameShort": "",
+      "voteCount": 30691
     },
     {
       "rank": "139",
@@ -1393,7 +1393,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 26515
+      "voteCount": 27832
     },
     {
       "rank": "140",
@@ -1403,27 +1403,27 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 26267
+      "voteCount": 27594
     },
     {
       "rank": "141",
-      "candidateCode": "01199000ILOCANO0DEFENDERS",
-      "candidateName": "ILOCANO DEFENDERS",
-      "lastName": "",
-      "firstName": "",
-      "partyName": "",
-      "partyNameShort": "",
-      "voteCount": 24751
-    },
-    {
-      "rank": "142",
       "candidateCode": "01199000ANG0KOMADRONA",
       "candidateName": "ANG KOMADRONA",
       "lastName": "",
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 23424
+      "voteCount": 26233
+    },
+    {
+      "rank": "142",
+      "candidateCode": "01199000ILOCANO0DEFENDERS",
+      "candidateName": "ILOCANO DEFENDERS",
+      "lastName": "",
+      "firstName": "",
+      "partyName": "",
+      "partyNameShort": "",
+      "voteCount": 25901
     },
     {
       "rank": "143",
@@ -1433,7 +1433,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 23295
+      "voteCount": 24455
     },
     {
       "rank": "144",
@@ -1443,7 +1443,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 21871
+      "voteCount": 22991
     },
     {
       "rank": "145",
@@ -1453,7 +1453,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 20836
+      "voteCount": 21606
     },
     {
       "rank": "146",
@@ -1463,7 +1463,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 19964
+      "voteCount": 21411
     },
     {
       "rank": "147",
@@ -1473,7 +1473,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 19736
+      "voteCount": 20680
     },
     {
       "rank": "148",
@@ -1483,7 +1483,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 18476
+      "voteCount": 19785
     },
     {
       "rank": "149",
@@ -1493,7 +1493,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 18063
+      "voteCount": 19058
     },
     {
       "rank": "150",
@@ -1503,7 +1503,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 16853
+      "voteCount": 17605
     },
     {
       "rank": "151",
@@ -1513,7 +1513,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 15936
+      "voteCount": 16692
     },
     {
       "rank": "152",
@@ -1523,7 +1523,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 13311
+      "voteCount": 14115
     },
     {
       "rank": "153",
@@ -1533,7 +1533,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 10923
+      "voteCount": 11476
     },
     {
       "rank": "154",
@@ -1543,7 +1543,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 8254
+      "voteCount": 8849
     },
     {
       "rank": "155",
@@ -1553,20 +1553,20 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 5612
+      "voteCount": 5921
     }
   ],
   "isFeedZero": false,
   "er": {
-    "count": 55143,
+    "count": 58238,
     "total": 93629,
-    "percentage": 58.9
+    "percentage": 62.2
   },
   "voter": {
-    "count": 34256573,
+    "count": 36184832,
     "total": 69773653,
-    "percentage": 49.0967,
-    "actualCount": 30619659
+    "percentage": 51.8603,
+    "actualCount": 32294752
   },
-  "timestamp": "2025-05-12T13:05:00.000Z"
+  "timestamp": "2025-05-12T13:13:00.000Z"
 } as const;
