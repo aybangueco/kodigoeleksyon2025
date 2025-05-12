@@ -13,6 +13,7 @@ import MakatiCity from "./pages/MakatiCity";
 import ManilaCity from "@/pages/ManilaCity.tsx";
 import PasigCity from "./pages/PasigCity";
 import TaguigCity from "./pages/TaguigCity";
+import SamalBataan from "./pages/SamalBataan";
 import PasayCity from "./pages/PasayCity";
 import QuezonCity from "./pages/QuezonCity";
 import CaintaRizal from "./pages/CaintaRizal";
@@ -66,6 +67,7 @@ const App = () => (
           <AnalyticsTracker />
           <Routes>
             <Route path="/" element={<Layout><Index /></Layout>} />
+            <Route path="/samal-bataan" element={<Layout cityName="Samal, Bataan"><SamalBataan /></Layout>} />
             <Route path="/cebu-city" element={<Layout cityName="Cebu City"><CebuCity /></Layout>} />
             <Route path="/makati-city" element={<Layout cityName="Makati City"><MakatiCity /></Layout>} />
             <Route path="/manila-city" element={<Layout cityName="Manila City"><ManilaCity /></Layout>} />
