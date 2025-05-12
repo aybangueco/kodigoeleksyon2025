@@ -67,7 +67,6 @@ const ResultsTable = ({ data, isLoading }: ResultsTableProps) => {
               <TableRow>
                 <TableHead className="w-14">Rank</TableHead>
                 <TableHead>Candidate</TableHead>
-                <TableHead>Party</TableHead>
                 <TableHead className="text-right">Votes</TableHead>
               </TableRow>
             </TableHeader>
@@ -75,10 +74,7 @@ const ResultsTable = ({ data, isLoading }: ResultsTableProps) => {
               {data.result.map((candidate) => (
                 <TableRow key={candidate.candidateCode}>
                   <TableCell className="font-medium">{candidate.rank}</TableCell>
-                  <TableCell>{candidate.candidateName}</TableCell>
-                  <TableCell>
-                    <Badge variant="outline">{candidate.partyNameShort}</Badge>
-                  </TableCell>
+                  <TableCell>{candidate.candidateName} {candidate.partyNameShort && `(${candidate.partyNameShort})`}</TableCell>
                   <TableCell className="text-right">{candidate.voteCount.toLocaleString()}</TableCell>
                 </TableRow>
               ))}
