@@ -1,5 +1,10 @@
 [build]
   functions = "netlify/functions"
 
+[functions."election-results"]
+  external_node_modules = [
+    "chromium-bidi"
+  ]
+
 [[plugins]]
-package = "netlify-plugin-playwright-cache"
+  package = "netlify-plugin-playwright-cache"
