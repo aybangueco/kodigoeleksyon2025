@@ -2,15 +2,15 @@ import { Handler, HandlerEvent, HandlerContext } from "@netlify/functions";
 import { exec } from 'child_process';
 import { promisify } from 'util';
 import { ElectionResult, ResultType } from '../../src/types/electionResults';
-import { mockPartyListResults, mockSenatorResults } from "../../src/services/resultsService"; // Adjust path
+import * as path from "path"; // Adjust path
 
 const execAsync = promisify(exec);
 
 async function runScrapeResults(type: ResultType): Promise<ElectionResult | null> {
     try {
-        const scriptName = `npm run scrape-results -- `;
-        const argument = type === 'senator' ? '--senator' : '--partylist';
-        const command = `${scriptName} ${argument}`;
+        const scriptPath = path.join(__dirname, '../../src/scripts/scrape-election-results.ts');
+        const argument = type === 'senator' ? 'senator' : 'partylist';
+        const command = `tsx ${scriptPath} ${argument}`;
 
         console.log(`Running command: ${command}...`);
         const { stdout, stderr } = await execAsync(command);
@@ -57,10 +57,9 @@ const handler: Handler = async (event: HandlerEvent, context: HandlerContext) =>
         };
     } else {
         console.log(`Falling back to mock ${type} data for Netlify Function request`);
-        const mockData = type === 'senator' ? mockSenatorResults : mockPartyListResults;
         return {
-            statusCode: 200,
-            body: JSON.stringify(mockData),
+            statusCode: 400,
+            body: JSON.stringify('No data fetched'),
             headers: {
                 "Content-Type": "application/json",
             },
