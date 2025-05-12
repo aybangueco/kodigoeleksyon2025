@@ -1,4 +1,4 @@
-name: Scheduled Scrape to File
+name: Scheduled and Manual Scrape to File
 
 on:
   schedule:
@@ -25,16 +25,18 @@ jobs:
 
       - name: Run scrape-results for partylist and write to file
         run: |
-          npx ts-node src/scripts/scrape-election-results.ts --partylist > partylist_results.json
-          echo "Partylist results written to partylist_results.json"
+          npm run scrape-results -- --partylist --output src/partylist_results.ts
+          echo "Partylist results written to partylist_results.ts"
 
       - name: Run scrape-results for senator and write to file
         run: |
-          npx ts-node src/scripts/scrape-election-results.ts --senator > senator_results.json
-          echo "Senator results written to senator_results.json"
+          npm run scrape-results -- --senator --output src/senator_results.ts
+          echo "Senator results written to senator_results.ts"
 
       - name: Commit and push changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "Automated scrape and update results"
           file_pattern: "*.json"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

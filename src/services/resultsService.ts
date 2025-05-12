@@ -1,29 +1,14 @@
 import { ElectionResult, ResultType } from "@/types/electionResults";
-import * as fs from 'fs/promises';
-import * as path from 'path';
-
-const PARTylist_FILE_PATH = path.resolve(__dirname, '../../partylist_results.json');
-const SENATOR_FILE_PATH = path.resolve(__dirname, '../../senator_results.json');
+import { src_senator_results as senatorResults } from "../senator_results.ts";
+import { src_partylist_results as partylistResults } from "../partylist_results.ts";
 
 export const fetchElectionResultsFromJson = async (type: ResultType): Promise<ElectionResult | null> => {
-  let filePath: string;
   if (type === 'senator') {
-    filePath = SENATOR_FILE_PATH;
+    return senatorResults as unknown as ElectionResult;
   } else if (type === 'partylist') {
-    filePath = PARTylist_FILE_PATH;
+    return partylistResults as unknown as ElectionResult;
   } else {
     console.error(`Invalid result type: ${type}`);
-    return null;
-  }
-
-  try {
-    console.log(`Reading ${type} results from: ${filePath}`);
-    const fileContent = await fs.readFile(filePath, 'utf-8');
-    const jsonData = JSON.parse(fileContent) as ElectionResult;
-    console.log(`Successfully read ${type} results.`);
-    return jsonData;
-  } catch (error) {
-    console.error(`Error reading ${type} results from ${filePath}:`, error);
     return null;
   }
 };
