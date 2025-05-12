@@ -21,7 +21,7 @@ async function checkPlaywright() {
 
 // Run environment checks
 async function checkEnvironment() {
-  console.log('Checking environment for Rappler scraper');
+  console.log('Checking environment for scraper');
   
   let success = true;
   

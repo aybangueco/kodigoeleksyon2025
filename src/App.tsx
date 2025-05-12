@@ -21,6 +21,7 @@ import TaytayRizal from "./pages/TaytayRizal";
 import National from "./pages/National";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
+import NationalResults from "./pages/results/NationalResults";
 import Header from "./components/Header";
 import BackToTop from "./components/BackToTop";
 import AnalyticsTracker from "./components/analytics/AnalyticsTracker";
@@ -79,6 +80,7 @@ const App = () => (
             <Route path="/taytay-rizal" element={<Layout cityName="Taytay, Rizal"><TaytayRizal /></Layout>} />
             <Route path="/national" element={<Layout cityName="National" showAlert={false}><National /></Layout>} />
             <Route path="/preview" element={<Layout showAlert={false}><Preview /></Layout>} />
+            <Route path="/results/national" element={<Layout showAlert={false}><NationalResults /></Layout>} />
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/terms" element={<Terms />} />
             <Route path="*" element={<NotFound />} />
