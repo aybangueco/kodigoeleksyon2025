@@ -23,6 +23,10 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      # Add this step to install Playwright browsers
+      - name: Install Playwright Browsers
+        run: npx playwright install --with-deps chromium
+
       - name: Run scrape-results for partylist and write to file
         run: |
           npm run scrape-results -- --partylist --output src/partylist_results.ts
