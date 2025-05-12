@@ -2,7 +2,7 @@ name: Scheduled and Manual Scrape to File (Headed)
 
 on:
   schedule:
-    - cron: '*/5 * * * *'
+    - cron: '*/30 * * * *'
   workflow_dispatch:
 
 permissions:
