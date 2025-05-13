@@ -118,7 +118,7 @@ export const Header = () => {
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
                     <ul className="grid grid-cols-1 w-[200px] gap-1 p-2">
-                      {locations.slice(0, 7).map((loc) => (
+                      {locations.slice(0, 8).map((loc) => (
                         <li key={loc.path}>
                           <NavigationMenuLink asChild>
                             <Link
@@ -151,7 +151,7 @@ export const Header = () => {
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
                     <ul className="grid grid-cols-1 w-[200px] gap-1 p-2">
-                      {locations.slice(7, 9).map((loc) => (
+                      {locations.slice(8, 10).map((loc) => (
                         <li key={loc.path}>
                           <NavigationMenuLink asChild>
                             <Link
@@ -176,7 +176,7 @@ export const Header = () => {
                 <NavigationMenuItem>
                   <NavigationMenuTrigger className={cn(
                     "px-3 text-sm font-medium rounded-md transition-colors",
-                    isActive("/samal-bataan") || isActive("/coming-bataan") 
+                    isActive("/samal-bataan")
                       ? "bg-blue-50 text-blue-700"
                       : "text-gray-600 hover:text-gray-900 hover:bg-gray-100"
                   )}>
@@ -274,7 +274,7 @@ export const Header = () => {
             
             <nav className="flex flex-col p-4 space-y-1 overflow-y-auto">
               <div className="px-3 py-2 text-sm font-medium text-gray-500 uppercase">Major Cities</div>
-              {locations.slice(0, 7).map((loc) => (
+              {locations.slice(0, 8).map((loc) => (
                 <Link
                   key={loc.path}
                   to={loc.path}
@@ -294,7 +294,7 @@ export const Header = () => {
               <div className="h-px bg-gray-200 my-2"></div>
               
               <div className="px-3 py-2 text-sm font-medium text-gray-500 uppercase">Rizal Province</div>
-              {locations.slice(7, 9).map((loc) => (
+              {locations.slice(8, 10).map((loc) => (
                 <Link
                   key={loc.path}
                   to={loc.path}
@@ -312,6 +312,27 @@ export const Header = () => {
               ))}
               
               <div className="h-px bg-gray-200 my-2"></div>
+
+              <div className="px-3 py-2 text-sm font-medium text-gray-500 uppercase">Bataan</div>
+              {locations.slice(10, 11).map((loc) => (
+                  <Link
+                      key={loc.path}
+                      to={loc.path}
+                      className={cn(
+                          "px-4 py-3 text-base font-medium rounded-md transition-colors",
+                          isActive(loc.path)
+                              ? "bg-blue-50 text-blue-700"
+                              : "text-gray-600 hover:text-gray-900 hover:bg-gray-100"
+                      )}
+                      onClick={() => setIsMenuOpen(false)}
+                      aria-current={isActive(loc.path) ? "page" : undefined}
+                  >
+                    {loc.name}
+                  </Link>
+              ))}
+
+              <div className="h-px bg-gray-200 my-2"></div>
+
               
               <Link
                 to="/national"
