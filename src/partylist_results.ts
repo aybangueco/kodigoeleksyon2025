@@ -273,7 +273,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 397200
+      "voteCount": 397201
     },
     {
       "rank": "28",
@@ -407,6 +407,16 @@ export const src_partylist_results = {
     },
     {
       "rank": "41",
+      "candidateCode": "01199000TUCP",
+      "candidateName": "TUCP",
+      "lastName": "",
+      "firstName": "",
+      "partyName": "",
+      "partyNameShort": "",
+      "voteCount": 306111
+    },
+    {
+      "rank": "42",
       "candidateCode": "01199000MAGBUBUKID",
       "candidateName": "MAGBUBUKID",
       "lastName": "",
@@ -416,7 +426,7 @@ export const src_partylist_results = {
       "voteCount": 305880
     },
     {
-      "rank": "42",
+      "rank": "43",
       "candidateCode": "011990001TAHANAN",
       "candidateName": "1TAHANAN",
       "lastName": "",
@@ -424,16 +434,6 @@ export const src_partylist_results = {
       "partyName": "",
       "partyNameShort": "",
       "voteCount": 305222
-    },
-    {
-      "rank": "43",
-      "candidateCode": "01199000TUCP",
-      "candidateName": "TUCP",
-      "lastName": "",
-      "firstName": "",
-      "partyName": "",
-      "partyNameShort": "",
-      "voteCount": 305215
     },
     {
       "rank": "44",
@@ -933,7 +933,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 132489
+      "voteCount": 132490
     },
     {
       "rank": "94",
@@ -1558,15 +1558,15 @@ export const src_partylist_results = {
   ],
   "isFeedZero": false,
   "er": {
-    "count": 91156,
+    "count": 91157,
     "total": 93629,
     "percentage": 97.36
   },
   "voter": {
-    "count": 56087610,
+    "count": 56088529,
     "total": 69773653,
-    "percentage": 80.3851,
-    "actualCount": 41018985
+    "percentage": 80.3864,
+    "actualCount": 41019883
   },
-  "timestamp": "2025-05-13T16:45:00.000Z"
+  "timestamp": "2025-05-13T17:30:00.000Z"
 } as const;
