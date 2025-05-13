@@ -273,7 +273,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 397196
+      "voteCount": 397200
     },
     {
       "rank": "28",
@@ -343,7 +343,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 348918
+      "voteCount": 348919
     },
     {
       "rank": "35",
@@ -433,7 +433,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 304631
+      "voteCount": 305215
     },
     {
       "rank": "44",
@@ -1558,15 +1558,15 @@ export const src_partylist_results = {
   ],
   "isFeedZero": false,
   "er": {
-    "count": 91155,
+    "count": 91156,
     "total": 93629,
     "percentage": 97.36
   },
   "voter": {
-    "count": 56087017,
+    "count": 56087610,
     "total": 69773653,
-    "percentage": 80.3842,
-    "actualCount": 41018396
+    "percentage": 80.3851,
+    "actualCount": 41018985
   },
-  "timestamp": "2025-05-13T16:15:00.000Z"
+  "timestamp": "2025-05-13T16:45:00.000Z"
 } as const;
