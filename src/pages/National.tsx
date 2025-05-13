@@ -110,7 +110,7 @@ const National = () => {
           <div className="bg-green-50 border border-green-200 p-4 rounded-lg mt-4 mb-6">
             <h2 className="text-xl font-bold text-green-800 text-center">View Election Results</h2>
             <p className="text-green-700 text-center mt-2 mb-3">
-              Check the latest senatorial election results as they come in
+              Check the latest senatorial and partylist election results as they come in
             </p>
             <div className="flex justify-center">
               <Link
