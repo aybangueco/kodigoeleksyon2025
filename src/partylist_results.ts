@@ -13,7 +13,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 2750858
+      "voteCount": 2750864
     },
     {
       "rank": "2",
@@ -23,7 +23,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 2301358
+      "voteCount": 2301442
     },
     {
       "rank": "3",
@@ -43,7 +43,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 1435800
+      "voteCount": 1435831
     },
     {
       "rank": "5",
@@ -53,7 +53,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 1222576
+      "voteCount": 1222577
     },
     {
       "rank": "6",
@@ -93,7 +93,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 648272
+      "voteCount": 648275
     },
     {
       "rank": "10",
@@ -113,7 +113,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 570352
+      "voteCount": 570356
     },
     {
       "rank": "12",
@@ -123,7 +123,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 569871
+      "voteCount": 569877
     },
     {
       "rank": "13",
@@ -133,7 +133,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 568171
+      "voteCount": 568173
     },
     {
       "rank": "14",
@@ -163,7 +163,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 526736
+      "voteCount": 526738
     },
     {
       "rank": "17",
@@ -173,7 +173,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 505617
+      "voteCount": 505618
     },
     {
       "rank": "18",
@@ -223,7 +223,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 462313
+      "voteCount": 462314
     },
     {
       "rank": "23",
@@ -263,7 +263,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 401336
+      "voteCount": 401338
     },
     {
       "rank": "27",
@@ -273,7 +273,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 397207
+      "voteCount": 397210
     },
     {
       "rank": "28",
@@ -303,7 +303,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 378188
+      "voteCount": 378189
     },
     {
       "rank": "31",
@@ -333,7 +333,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 361146
+      "voteCount": 361148
     },
     {
       "rank": "34",
@@ -343,7 +343,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 348930
+      "voteCount": 348935
     },
     {
       "rank": "35",
@@ -363,7 +363,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 319874
+      "voteCount": 319876
     },
     {
       "rank": "37",
@@ -383,7 +383,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 315516
+      "voteCount": 315517
     },
     {
       "rank": "39",
@@ -403,7 +403,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 308152
+      "voteCount": 308158
     },
     {
       "rank": "41",
@@ -423,7 +423,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 305882
+      "voteCount": 305887
     },
     {
       "rank": "43",
@@ -443,7 +443,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 303743
+      "voteCount": 303744
     },
     {
       "rank": "45",
@@ -483,7 +483,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 287155
+      "voteCount": 287156
     },
     {
       "rank": "49",
@@ -513,7 +513,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 271049
+      "voteCount": 271065
     },
     {
       "rank": "52",
@@ -553,7 +553,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 254039
+      "voteCount": 254040
     },
     {
       "rank": "56",
@@ -573,7 +573,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 248203
+      "voteCount": 248204
     },
     {
       "rank": "58",
@@ -583,7 +583,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 245276
+      "voteCount": 245277
     },
     {
       "rank": "59",
@@ -593,7 +593,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 242746
+      "voteCount": 242753
     },
     {
       "rank": "60",
@@ -603,7 +603,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 232877
+      "voteCount": 232880
     },
     {
       "rank": "61",
@@ -643,7 +643,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 222210
+      "voteCount": 222212
     },
     {
       "rank": "65",
@@ -653,7 +653,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 214795
+      "voteCount": 214907
     },
     {
       "rank": "66",
@@ -673,7 +673,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 198886
+      "voteCount": 198900
     },
     {
       "rank": "68",
@@ -693,7 +693,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 185630
+      "voteCount": 185631
     },
     {
       "rank": "70",
@@ -753,7 +753,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 164483
+      "voteCount": 164484
     },
     {
       "rank": "76",
@@ -773,7 +773,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 158940
+      "voteCount": 158942
     },
     {
       "rank": "78",
@@ -783,7 +783,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 158352
+      "voteCount": 158365
     },
     {
       "rank": "79",
@@ -803,7 +803,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 155093
+      "voteCount": 155094
     },
     {
       "rank": "81",
@@ -813,7 +813,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 154804
+      "voteCount": 154805
     },
     {
       "rank": "82",
@@ -823,7 +823,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 154441
+      "voteCount": 154443
     },
     {
       "rank": "83",
@@ -843,7 +843,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 152544
+      "voteCount": 152546
     },
     {
       "rank": "85",
@@ -873,7 +873,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 150181
+      "voteCount": 150194
     },
     {
       "rank": "88",
@@ -883,7 +883,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 149284
+      "voteCount": 149286
     },
     {
       "rank": "89",
@@ -893,7 +893,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 140023
+      "voteCount": 140025
     },
     {
       "rank": "90",
@@ -913,7 +913,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 137758
+      "voteCount": 137761
     },
     {
       "rank": "92",
@@ -923,7 +923,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 133564
+      "voteCount": 133596
     },
     {
       "rank": "93",
@@ -953,7 +953,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 115467
+      "voteCount": 115469
     },
     {
       "rank": "96",
@@ -963,7 +963,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 114531
+      "voteCount": 114532
     },
     {
       "rank": "97",
@@ -983,7 +983,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 108975
+      "voteCount": 109010
     },
     {
       "rank": "99",
@@ -1013,7 +1013,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 105685
+      "voteCount": 105686
     },
     {
       "rank": "102",
@@ -1043,7 +1043,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 100637
+      "voteCount": 100650
     },
     {
       "rank": "105",
@@ -1053,7 +1053,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 98322
+      "voteCount": 98401
     },
     {
       "rank": "106",
@@ -1063,7 +1063,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 98282
+      "voteCount": 98283
     },
     {
       "rank": "107",
@@ -1073,7 +1073,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 95309
+      "voteCount": 95311
     },
     {
       "rank": "108",
@@ -1083,7 +1083,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 95179
+      "voteCount": 95180
     },
     {
       "rank": "109",
@@ -1113,7 +1113,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 78888
+      "voteCount": 78890
     },
     {
       "rank": "112",
@@ -1123,7 +1123,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 77910
+      "voteCount": 77916
     },
     {
       "rank": "113",
@@ -1133,7 +1133,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 77657
+      "voteCount": 77658
     },
     {
       "rank": "114",
@@ -1193,7 +1193,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 65887
+      "voteCount": 65966
     },
     {
       "rank": "120",
@@ -1213,7 +1213,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 61986
+      "voteCount": 61989
     },
     {
       "rank": "122",
@@ -1223,7 +1223,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 58825
+      "voteCount": 58826
     },
     {
       "rank": "123",
@@ -1233,7 +1233,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 57738
+      "voteCount": 57739
     },
     {
       "rank": "124",
@@ -1283,7 +1283,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 50886
+      "voteCount": 50887
     },
     {
       "rank": "129",
@@ -1383,7 +1383,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 40532
+      "voteCount": 40533
     },
     {
       "rank": "139",
@@ -1453,7 +1453,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 27197
+      "voteCount": 27199
     },
     {
       "rank": "146",
@@ -1473,7 +1473,7 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 26109
+      "voteCount": 26110
     },
     {
       "rank": "148",
@@ -1553,20 +1553,20 @@ export const src_partylist_results = {
       "firstName": "",
       "partyName": "",
       "partyNameShort": "",
-      "voteCount": 7889
+      "voteCount": 7893
     }
   ],
   "isFeedZero": false,
   "er": {
-    "count": 91165,
+    "count": 91167,
     "total": 93629,
     "percentage": 97.37
   },
   "voter": {
-    "count": 56090400,
+    "count": 56091750,
     "total": 69773653,
-    "percentage": 80.3891,
-    "actualCount": 41020865
+    "percentage": 80.391,
+    "actualCount": 41021504
   },
-  "timestamp": "2025-05-14T07:00:00.000Z"
+  "timestamp": "2025-05-14T07:30:00.000Z"
 } as const;
