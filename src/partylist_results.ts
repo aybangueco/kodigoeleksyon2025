@@ -1568,5 +1568,5 @@ export const src_partylist_results = {
     "percentage": 80.3864,
     "actualCount": 41019883
   },
-  "timestamp": "2025-05-13T22:24:00.000Z"
+  "timestamp": "2025-05-13T23:21:00.000Z"
 } as const;
