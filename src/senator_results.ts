@@ -28,7 +28,7 @@ export const src_senator_results = {
         "percentage": 80.3938,
         "actualCount": 420338433
       },
-      "timestamp": "2025-05-15T03:21:00.000Z"
+      "timestamp": "2025-05-15T03:48:00.000Z"
     },
     {
       "rank": "2",
@@ -53,7 +53,7 @@ export const src_senator_results = {
         "percentage": 80.3938,
         "actualCount": 420338433
       },
-      "timestamp": "2025-05-15T03:21:00.000Z"
+      "timestamp": "2025-05-15T03:48:00.000Z"
     },
     {
       "rank": "3",
@@ -78,7 +78,7 @@ export const src_senator_results = {
         "percentage": 80.3938,
         "actualCount": 420338433
       },
-      "timestamp": "2025-05-15T03:21:00.000Z"
+      "timestamp": "2025-05-15T03:48:00.000Z"
     },
     {
       "rank": "4",
@@ -103,7 +103,7 @@ export const src_senator_results = {
         "percentage": 80.3938,
         "actualCount": 420338433
       },
-      "timestamp": "2025-05-15T03:21:00.000Z"
+      "timestamp": "2025-05-15T03:48:00.000Z"
     },
     {
       "rank": "5",
@@ -128,7 +128,7 @@ export const src_senator_results = {
         "percentage": 80.3938,
         "actualCount": 420338433
       },
-      "timestamp": "2025-05-15T03:21:00.000Z"
+      "timestamp": "2025-05-15T03:48:00.000Z"
     },
     {
       "rank": "6",
@@ -153,7 +153,7 @@ export const src_senator_results = {
         "percentage": 80.3938,
         "actualCount": 420338433
       },
-      "timestamp": "2025-05-15T03:21:00.000Z"
+      "timestamp": "2025-05-15T03:48:00.000Z"
     },
     {
       "rank": "7",
@@ -178,7 +178,7 @@ export const src_senator_results = {
         "percentage": 80.3938,
         "actualCount": 420338433
       },
-      "timestamp": "2025-05-15T03:21:00.000Z"
+      "timestamp": "2025-05-15T03:48:00.000Z"
     },
     {
       "rank": "8",
@@ -203,7 +203,7 @@ export const src_senator_results = {
         "percentage": 80.3938,
         "actualCount": 420338433
       },
-      "timestamp": "2025-05-15T03:21:00.000Z"
+      "timestamp": "2025-05-15T03:48:00.000Z"
     },
     {
       "rank": "9",
@@ -228,7 +228,7 @@ export const src_senator_results = {
         "percentage": 80.3938,
         "actualCount": 420338433
       },
-      "timestamp": "2025-05-15T03:21:00.000Z"
+      "timestamp": "2025-05-15T03:48:00.000Z"
     },
     {
       "rank": "10",
@@ -253,7 +253,7 @@ export const src_senator_results = {
         "percentage": 80.3938,
         "actualCount": 420338433
       },
-      "timestamp": "2025-05-15T03:21:00.000Z"
+      "timestamp": "2025-05-15T03:48:00.000Z"
     },
     {
       "rank": "11",
@@ -278,7 +278,7 @@ export const src_senator_results = {
         "percentage": 80.3938,
         "actualCount": 420338433
       },
-      "timestamp": "2025-05-15T03:21:00.000Z"
+      "timestamp": "2025-05-15T03:48:00.000Z"
     },
     {
       "rank": "12",
@@ -303,7 +303,7 @@ export const src_senator_results = {
         "percentage": 80.3938,
         "actualCount": 420338433
       },
-      "timestamp": "2025-05-15T03:21:00.000Z"
+      "timestamp": "2025-05-15T03:48:00.000Z"
     },
     {
       "rank": "13",
@@ -328,7 +328,7 @@ export const src_senator_results = {
         "percentage": 80.3938,
         "actualCount": 420338433
       },
-      "timestamp": "2025-05-15T03:21:00.000Z"
+      "timestamp": "2025-05-15T03:48:00.000Z"
     },
     {
       "rank": "14",
@@ -353,7 +353,7 @@ export const src_senator_results = {
         "percentage": 80.3938,
         "actualCount": 420338433
       },
-      "timestamp": "2025-05-15T03:21:00.000Z"
+      "timestamp": "2025-05-15T03:48:00.000Z"
     },
     {
       "rank": "15",
@@ -378,7 +378,7 @@ export const src_senator_results = {
         "percentage": 80.3938,
         "actualCount": 420338433
       },
-      "timestamp": "2025-05-15T03:21:00.000Z"
+      "timestamp": "2025-05-15T03:48:00.000Z"
     },
     {
       "rank": "16",
@@ -403,7 +403,7 @@ export const src_senator_results = {
         "percentage": 80.3938,
         "actualCount": 420338433
       },
-      "timestamp": "2025-05-15T03:21:00.000Z"
+      "timestamp": "2025-05-15T03:48:00.000Z"
     },
     {
       "rank": "17",
@@ -428,7 +428,7 @@ export const src_senator_results = {
         "percentage": 80.3938,
         "actualCount": 420338433
       },
-      "timestamp": "2025-05-15T03:21:00.000Z"
+      "timestamp": "2025-05-15T03:48:00.000Z"
     },
     {
       "rank": "18",
@@ -453,7 +453,7 @@ export const src_senator_results = {
         "percentage": 80.3938,
         "actualCount": 420338433
       },
-      "timestamp": "2025-05-15T03:21:00.000Z"
+      "timestamp": "2025-05-15T03:48:00.000Z"
     },
     {
       "rank": "19",
@@ -478,7 +478,7 @@ export const src_senator_results = {
         "percentage": 80.3938,
         "actualCount": 420338433
       },
-      "timestamp": "2025-05-15T03:21:00.000Z"
+      "timestamp": "2025-05-15T03:48:00.000Z"
     },
     {
       "rank": "20",
@@ -503,7 +503,7 @@ export const src_senator_results = {
         "percentage": 80.3938,
         "actualCount": 420338433
       },
-      "timestamp": "2025-05-15T03:21:00.000Z"
+      "timestamp": "2025-05-15T03:48:00.000Z"
     },
     {
       "rank": "21",
@@ -528,7 +528,7 @@ export const src_senator_results = {
         "percentage": 80.3938,
         "actualCount": 420338433
       },
-      "timestamp": "2025-05-15T03:21:00.000Z"
+      "timestamp": "2025-05-15T03:48:00.000Z"
     },
     {
       "rank": "22",
@@ -553,7 +553,7 @@ export const src_senator_results = {
         "percentage": 80.3938,
         "actualCount": 420338433
       },
-      "timestamp": "2025-05-15T03:21:00.000Z"
+      "timestamp": "2025-05-15T03:48:00.000Z"
     },
     {
       "rank": "23",
@@ -578,7 +578,7 @@ export const src_senator_results = {
         "percentage": 80.3938,
         "actualCount": 420338433
       },
-      "timestamp": "2025-05-15T03:21:00.000Z"
+      "timestamp": "2025-05-15T03:48:00.000Z"
     },
     {
       "rank": "24",
@@ -603,7 +603,7 @@ export const src_senator_results = {
         "percentage": 80.3938,
         "actualCount": 420338433
       },
-      "timestamp": "2025-05-15T03:21:00.000Z"
+      "timestamp": "2025-05-15T03:48:00.000Z"
     },
     {
       "rank": "25",
@@ -628,7 +628,7 @@ export const src_senator_results = {
         "percentage": 80.3938,
         "actualCount": 420338433
       },
-      "timestamp": "2025-05-15T03:21:00.000Z"
+      "timestamp": "2025-05-15T03:48:00.000Z"
     },
     {
       "rank": "26",
@@ -653,7 +653,7 @@ export const src_senator_results = {
         "percentage": 80.3938,
         "actualCount": 420338433
       },
-      "timestamp": "2025-05-15T03:21:00.000Z"
+      "timestamp": "2025-05-15T03:48:00.000Z"
     },
     {
       "rank": "27",
@@ -678,7 +678,7 @@ export const src_senator_results = {
         "percentage": 80.3938,
         "actualCount": 420338433
       },
-      "timestamp": "2025-05-15T03:21:00.000Z"
+      "timestamp": "2025-05-15T03:48:00.000Z"
     },
     {
       "rank": "28",
@@ -703,7 +703,7 @@ export const src_senator_results = {
         "percentage": 80.3938,
         "actualCount": 420338433
       },
-      "timestamp": "2025-05-15T03:21:00.000Z"
+      "timestamp": "2025-05-15T03:48:00.000Z"
     },
     {
       "rank": "29",
@@ -728,7 +728,7 @@ export const src_senator_results = {
         "percentage": 80.3938,
         "actualCount": 420338433
       },
-      "timestamp": "2025-05-15T03:21:00.000Z"
+      "timestamp": "2025-05-15T03:48:00.000Z"
     },
     {
       "rank": "30",
@@ -753,7 +753,7 @@ export const src_senator_results = {
         "percentage": 80.3938,
         "actualCount": 420338433
       },
-      "timestamp": "2025-05-15T03:21:00.000Z"
+      "timestamp": "2025-05-15T03:48:00.000Z"
     },
     {
       "rank": "31",
@@ -778,7 +778,7 @@ export const src_senator_results = {
         "percentage": 80.3938,
         "actualCount": 420338433
       },
-      "timestamp": "2025-05-15T03:21:00.000Z"
+      "timestamp": "2025-05-15T03:48:00.000Z"
     },
     {
       "rank": "32",
@@ -803,7 +803,7 @@ export const src_senator_results = {
         "percentage": 80.3938,
         "actualCount": 420338433
       },
-      "timestamp": "2025-05-15T03:21:00.000Z"
+      "timestamp": "2025-05-15T03:48:00.000Z"
     },
     {
       "rank": "33",
@@ -828,7 +828,7 @@ export const src_senator_results = {
         "percentage": 80.3938,
         "actualCount": 420338433
       },
-      "timestamp": "2025-05-15T03:21:00.000Z"
+      "timestamp": "2025-05-15T03:48:00.000Z"
     },
     {
       "rank": "34",
@@ -853,7 +853,7 @@ export const src_senator_results = {
         "percentage": 80.3938,
         "actualCount": 420338433
       },
-      "timestamp": "2025-05-15T03:21:00.000Z"
+      "timestamp": "2025-05-15T03:48:00.000Z"
     },
     {
       "rank": "35",
@@ -878,7 +878,7 @@ export const src_senator_results = {
         "percentage": 80.3938,
         "actualCount": 420338433
       },
-      "timestamp": "2025-05-15T03:21:00.000Z"
+      "timestamp": "2025-05-15T03:48:00.000Z"
     },
     {
       "rank": "36",
@@ -903,7 +903,7 @@ export const src_senator_results = {
         "percentage": 80.3938,
         "actualCount": 420338433
       },
-      "timestamp": "2025-05-15T03:21:00.000Z"
+      "timestamp": "2025-05-15T03:48:00.000Z"
     },
     {
       "rank": "37",
@@ -928,7 +928,7 @@ export const src_senator_results = {
         "percentage": 80.3938,
         "actualCount": 420338433
       },
-      "timestamp": "2025-05-15T03:21:00.000Z"
+      "timestamp": "2025-05-15T03:48:00.000Z"
     },
     {
       "rank": "38",
@@ -953,7 +953,7 @@ export const src_senator_results = {
         "percentage": 80.3938,
         "actualCount": 420338433
       },
-      "timestamp": "2025-05-15T03:21:00.000Z"
+      "timestamp": "2025-05-15T03:48:00.000Z"
     },
     {
       "rank": "39",
@@ -978,7 +978,7 @@ export const src_senator_results = {
         "percentage": 80.3938,
         "actualCount": 420338433
       },
-      "timestamp": "2025-05-15T03:21:00.000Z"
+      "timestamp": "2025-05-15T03:48:00.000Z"
     },
     {
       "rank": "40",
@@ -1003,7 +1003,7 @@ export const src_senator_results = {
         "percentage": 80.3938,
         "actualCount": 420338433
       },
-      "timestamp": "2025-05-15T03:21:00.000Z"
+      "timestamp": "2025-05-15T03:48:00.000Z"
     },
     {
       "rank": "41",
@@ -1028,7 +1028,7 @@ export const src_senator_results = {
         "percentage": 80.3938,
         "actualCount": 420338433
       },
-      "timestamp": "2025-05-15T03:21:00.000Z"
+      "timestamp": "2025-05-15T03:48:00.000Z"
     },
     {
       "rank": "42",
@@ -1053,7 +1053,7 @@ export const src_senator_results = {
         "percentage": 80.3938,
         "actualCount": 420338433
       },
-      "timestamp": "2025-05-15T03:21:00.000Z"
+      "timestamp": "2025-05-15T03:48:00.000Z"
     },
     {
       "rank": "43",
@@ -1078,7 +1078,7 @@ export const src_senator_results = {
         "percentage": 80.3938,
         "actualCount": 420338433
       },
-      "timestamp": "2025-05-15T03:21:00.000Z"
+      "timestamp": "2025-05-15T03:48:00.000Z"
     },
     {
       "rank": "44",
@@ -1103,7 +1103,7 @@ export const src_senator_results = {
         "percentage": 80.3938,
         "actualCount": 420338433
       },
-      "timestamp": "2025-05-15T03:21:00.000Z"
+      "timestamp": "2025-05-15T03:48:00.000Z"
     },
     {
       "rank": "45",
@@ -1128,7 +1128,7 @@ export const src_senator_results = {
         "percentage": 80.3938,
         "actualCount": 420338433
       },
-      "timestamp": "2025-05-15T03:21:00.000Z"
+      "timestamp": "2025-05-15T03:48:00.000Z"
     },
     {
       "rank": "46",
@@ -1153,7 +1153,7 @@ export const src_senator_results = {
         "percentage": 80.3938,
         "actualCount": 420338433
       },
-      "timestamp": "2025-05-15T03:21:00.000Z"
+      "timestamp": "2025-05-15T03:48:00.000Z"
     },
     {
       "rank": "47",
@@ -1178,7 +1178,7 @@ export const src_senator_results = {
         "percentage": 80.3938,
         "actualCount": 420338433
       },
-      "timestamp": "2025-05-15T03:21:00.000Z"
+      "timestamp": "2025-05-15T03:48:00.000Z"
     },
     {
       "rank": "48",
@@ -1203,7 +1203,7 @@ export const src_senator_results = {
         "percentage": 80.3938,
         "actualCount": 420338433
       },
-      "timestamp": "2025-05-15T03:21:00.000Z"
+      "timestamp": "2025-05-15T03:48:00.000Z"
     },
     {
       "rank": "49",
@@ -1228,7 +1228,7 @@ export const src_senator_results = {
         "percentage": 80.3938,
         "actualCount": 420338433
       },
-      "timestamp": "2025-05-15T03:21:00.000Z"
+      "timestamp": "2025-05-15T03:48:00.000Z"
     },
     {
       "rank": "50",
@@ -1253,7 +1253,7 @@ export const src_senator_results = {
         "percentage": 80.3938,
         "actualCount": 420338433
       },
-      "timestamp": "2025-05-15T03:21:00.000Z"
+      "timestamp": "2025-05-15T03:48:00.000Z"
     },
     {
       "rank": "51",
@@ -1278,7 +1278,7 @@ export const src_senator_results = {
         "percentage": 80.3938,
         "actualCount": 420338433
       },
-      "timestamp": "2025-05-15T03:21:00.000Z"
+      "timestamp": "2025-05-15T03:48:00.000Z"
     },
     {
       "rank": "52",
@@ -1303,7 +1303,7 @@ export const src_senator_results = {
         "percentage": 80.3938,
         "actualCount": 420338433
       },
-      "timestamp": "2025-05-15T03:21:00.000Z"
+      "timestamp": "2025-05-15T03:48:00.000Z"
     },
     {
       "rank": "53",
@@ -1328,7 +1328,7 @@ export const src_senator_results = {
         "percentage": 80.3938,
         "actualCount": 420338433
       },
-      "timestamp": "2025-05-15T03:21:00.000Z"
+      "timestamp": "2025-05-15T03:48:00.000Z"
     },
     {
       "rank": "54",
@@ -1353,7 +1353,7 @@ export const src_senator_results = {
         "percentage": 80.3938,
         "actualCount": 420338433
       },
-      "timestamp": "2025-05-15T03:21:00.000Z"
+      "timestamp": "2025-05-15T03:48:00.000Z"
     },
     {
       "rank": "55",
@@ -1378,7 +1378,7 @@ export const src_senator_results = {
         "percentage": 80.3938,
         "actualCount": 420338433
       },
-      "timestamp": "2025-05-15T03:21:00.000Z"
+      "timestamp": "2025-05-15T03:48:00.000Z"
     },
     {
       "rank": "56",
@@ -1403,7 +1403,7 @@ export const src_senator_results = {
         "percentage": 80.3938,
         "actualCount": 420338433
       },
-      "timestamp": "2025-05-15T03:21:00.000Z"
+      "timestamp": "2025-05-15T03:48:00.000Z"
     },
     {
       "rank": "57",
@@ -1428,7 +1428,7 @@ export const src_senator_results = {
         "percentage": 80.3938,
         "actualCount": 420338433
       },
-      "timestamp": "2025-05-15T03:21:00.000Z"
+      "timestamp": "2025-05-15T03:48:00.000Z"
     },
     {
       "rank": "58",
@@ -1453,7 +1453,7 @@ export const src_senator_results = {
         "percentage": 80.3938,
         "actualCount": 420338433
       },
-      "timestamp": "2025-05-15T03:21:00.000Z"
+      "timestamp": "2025-05-15T03:48:00.000Z"
     },
     {
       "rank": "59",
@@ -1478,7 +1478,7 @@ export const src_senator_results = {
         "percentage": 80.3938,
         "actualCount": 420338433
       },
-      "timestamp": "2025-05-15T03:21:00.000Z"
+      "timestamp": "2025-05-15T03:48:00.000Z"
     },
     {
       "rank": "60",
@@ -1503,7 +1503,7 @@ export const src_senator_results = {
         "percentage": 80.3938,
         "actualCount": 420338433
       },
-      "timestamp": "2025-05-15T03:21:00.000Z"
+      "timestamp": "2025-05-15T03:48:00.000Z"
     },
     {
       "rank": "61",
@@ -1528,7 +1528,7 @@ export const src_senator_results = {
         "percentage": 80.3938,
         "actualCount": 420338433
       },
-      "timestamp": "2025-05-15T03:21:00.000Z"
+      "timestamp": "2025-05-15T03:48:00.000Z"
     },
     {
       "rank": "62",
@@ -1553,7 +1553,7 @@ export const src_senator_results = {
         "percentage": 80.3938,
         "actualCount": 420338433
       },
-      "timestamp": "2025-05-15T03:21:00.000Z"
+      "timestamp": "2025-05-15T03:48:00.000Z"
     },
     {
       "rank": "63",
@@ -1578,7 +1578,7 @@ export const src_senator_results = {
         "percentage": 80.3938,
         "actualCount": 420338433
       },
-      "timestamp": "2025-05-15T03:21:00.000Z"
+      "timestamp": "2025-05-15T03:48:00.000Z"
     },
     {
       "rank": "64",
@@ -1603,7 +1603,7 @@ export const src_senator_results = {
         "percentage": 80.3938,
         "actualCount": 420338433
       },
-      "timestamp": "2025-05-15T03:21:00.000Z"
+      "timestamp": "2025-05-15T03:48:00.000Z"
     },
     {
       "rank": "65",
@@ -1628,7 +1628,7 @@ export const src_senator_results = {
         "percentage": 80.3938,
         "actualCount": 420338433
       },
-      "timestamp": "2025-05-15T03:21:00.000Z"
+      "timestamp": "2025-05-15T03:48:00.000Z"
     },
     {
       "rank": "66",
@@ -1653,7 +1653,7 @@ export const src_senator_results = {
         "percentage": 80.3938,
         "actualCount": 420338433
       },
-      "timestamp": "2025-05-15T03:21:00.000Z"
+      "timestamp": "2025-05-15T03:48:00.000Z"
     }
   ],
   "isFeedZero": false,
@@ -1668,5 +1668,5 @@ export const src_senator_results = {
     "percentage": 80.3938,
     "actualCount": 420338433
   },
-  "timestamp": "2025-05-15T03:21:00.000Z"
+  "timestamp": "2025-05-15T03:48:00.000Z"
 } as const;
